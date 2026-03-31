@@ -125,6 +125,16 @@ def slugify(value: str) -> str:
     return normalized.strip("-")
 
 
+def card_scope_sort_order(scope: str) -> int:
+    if scope == "workshops":
+        return 0
+    if scope == "scrappy":
+        return 1
+    if scope == "expedition":
+        return 2
+    return 99
+
+
 def load_found_in_by_item() -> dict[str, list[str]]:
     raw = load_json(FOUND_IN_JSON)
     return {
@@ -348,7 +358,11 @@ def build_requirement_tracker_payload(
     curated_cards = [enrich_manual_card(card_definition, ui_icons) for card_definition in manual_cards]
     cards = sorted(
         workshop_cards + curated_cards,
-        key=lambda card: (int(card.get("sortOrder", 9999)), str(card.get("title", ""))),
+        key=lambda card: (
+            card_scope_sort_order(str(card.get("scope", ""))),
+            int(card.get("sortOrder", 9999)),
+            str(card.get("title", "")),
+        ),
     )
     validate_tracker_data(item_records, cards, found_in_by_item, ui_icons)
 

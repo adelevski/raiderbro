@@ -190,6 +190,11 @@
 
   function sortCards(cards) {
     return cards.slice().sort(function (left, right) {
+      const leftScopeOrder = getCardScopeOrder(left.scope);
+      const rightScopeOrder = getCardScopeOrder(right.scope);
+      if (leftScopeOrder !== rightScopeOrder) {
+        return leftScopeOrder - rightScopeOrder;
+      }
       const leftOrder = Number(left.sortOrder || 9999);
       const rightOrder = Number(right.sortOrder || 9999);
       if (leftOrder !== rightOrder) {
@@ -197,6 +202,13 @@
       }
       return String(left.title || "").localeCompare(String(right.title || ""));
     });
+  }
+
+  function getCardScopeOrder(scope) {
+    if (scope === "workshops") return 0;
+    if (scope === "scrappy") return 1;
+    if (scope === "expedition") return 2;
+    return 99;
   }
 
   function isPlainObject(value) {
@@ -1106,8 +1118,8 @@
     appendDetail(details, "Sell Price", formatNumber(item.sellPrice));
     appendDetail(details, "Stack Size", item.stackSize);
     appendDetail(details, "Found In", item.foundIn && item.foundIn.length ? item.foundIn.join(" | ") : "Unknown");
-    appendDetail(details, "Recycles To", item.recyclesTo || "None");
-    appendDetail(details, "Uses", item.uses || "None");
+    appendListDetail(details, "Recycles To", parseRecycleEntries(item.recyclesTo), formatDetailValue(item.recyclesTo));
+    appendListDetail(details, "Uses", parseUseEntries(item.uses), formatDetailValue(item.uses));
     tooltip.appendChild(details);
 
     return tooltip;
@@ -1158,8 +1170,131 @@
     const dt = document.createElement("dt");
     dt.textContent = label;
     const dd = document.createElement("dd");
-    dd.textContent = value && value.trim ? (value.trim() || "None") : (value || "None");
+    dd.textContent = formatDetailValue(value);
     container.append(dt, dd);
+  }
+
+  function appendListDetail(container, label, entries, fallbackText) {
+    const dt = document.createElement("dt");
+    dt.textContent = label;
+    const dd = document.createElement("dd");
+
+    if (!entries.length) {
+      dd.textContent = fallbackText;
+      container.append(dt, dd);
+      return;
+    }
+
+    const list = document.createElement("ul");
+    list.className = "tooltip-list";
+
+    entries.forEach(function (entry) {
+      list.appendChild(buildTooltipListItem(entry));
+    });
+
+    dd.appendChild(list);
+    container.append(dt, dd);
+  }
+
+  function buildTooltipListItem(entry) {
+    const item = document.createElement("li");
+
+    if (typeof entry === "string") {
+      item.textContent = entry;
+      return item;
+    }
+
+    if (entry.itemName) {
+      const row = document.createElement("span");
+      row.className = "tooltip-list-item";
+      const itemInfo = itemData[entry.itemName] || null;
+
+      const text = document.createElement("span");
+      text.textContent = entry.text;
+      row.appendChild(text);
+
+      if (itemInfo && itemInfo.imageUrl) {
+        const icon = document.createElement("img");
+        icon.className = "tooltip-list-icon";
+        icon.src = itemInfo.imageUrl;
+        icon.alt = itemInfo.displayName || entry.itemName;
+        icon.loading = "lazy";
+        row.appendChild(icon);
+      }
+      item.appendChild(row);
+      return item;
+    }
+
+    if (entry.category) {
+      const category = document.createElement("span");
+      category.className = "tooltip-list-category";
+      category.textContent = entry.category + ": ";
+      item.appendChild(category);
+    }
+    item.appendChild(document.createTextNode(entry.text));
+    return item;
+  }
+
+  function formatDetailValue(value) {
+    if (value && value.trim) {
+      return value.trim() || "None";
+    }
+    return value || "None";
+  }
+
+  function splitPipeValues(value) {
+    const formatted = formatDetailValue(value);
+    if (!formatted || formatted === "None") {
+      return [];
+    }
+    return formatted
+      .split(" | ")
+      .map(function (entry) { return entry.trim(); })
+      .filter(Boolean);
+  }
+
+  function parseRecycleEntries(value) {
+    const formatted = formatDetailValue(value);
+    if (!formatted || formatted === "None" || formatted === "Cannot be recycled") {
+      return [];
+    }
+    return splitPipeValues(formatted).map(function (entry) {
+      const match = entry.match(/^(\d+x)\s+(.+)$/i);
+      if (!match) {
+        return { text: entry };
+      }
+
+      return {
+        itemName: match[2],
+        text: match[1] + " " + match[2],
+      };
+    });
+  }
+
+  function parseUseEntries(value) {
+    const tokens = splitPipeValues(value);
+    const categoryLabels = {
+      workshop: "Workshop",
+      projects: "Project",
+      quests: "Quest",
+    };
+
+    let currentCategory = "";
+    const entries = [];
+    tokens.forEach(function (token) {
+      const normalizedToken = token.toLowerCase();
+      if (categoryLabels[normalizedToken]) {
+        currentCategory = categoryLabels[normalizedToken];
+        return;
+      }
+
+      entries.push({
+        category: currentCategory,
+        text: token,
+      });
+    });
+
+    return entries;
   }
 
   function getMilestoneLabel(card, levelInfo) {

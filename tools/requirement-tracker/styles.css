@@ -408,8 +408,8 @@ button.secondary {
 }
 
 .card-icon {
-  width: 36px;
-  height: 36px;
+  width: 50px;
+  height: 50px;
   object-fit: contain;
   opacity: 0.94;
   flex: 0 0 auto;
@@ -626,6 +626,7 @@ button.secondary {
   flex: 1 1 auto;
   min-width: 0;
   max-width: 100%;
+  gap: 7px;
 }
 
 .item-inline.has-tooltip {
@@ -638,8 +639,8 @@ button.secondary {
 }
 
 .item-icon {
-  width: 34px;
-  height: 34px;
+  width: 50px;
+  height: 50px;
   border-radius: 10px;
   object-fit: cover;
   background: rgba(255, 255, 255, 0.12);
@@ -649,9 +650,12 @@ button.secondary {
 
 .shopping-item .item-icon,
 .unlock-chip .item-icon {
-  width: 24px;
-  height: 24px;
   border-radius: 8px;
+  width: 50px;
+  height: 50px;
+}
+
+.shopping-item .item-icon {
 }
 
 .item-copy {
@@ -665,12 +669,22 @@ button.secondary {
   overflow-wrap: anywhere;
 }
 
+.shopping-item .item-name {
+  font-size: 0.8rem;
+  line-height: 1.04;
+}
+
 .item-need {
   display: block;
   color: var(--muted);
   font-size: 0.78rem;
   line-height: 1.2;
   overflow-wrap: anywhere;
+}
+
+.shopping-item .item-need {
+  font-size: 0.64rem;
+  line-height: 1.02;
 }
 
 .tooltip {
@@ -728,8 +742,8 @@ button.secondary {
 }
 
 .tooltip-header .item-icon {
-  width: 46px;
-  height: 46px;
+  width: 50px;
+  height: 50px;
   border-radius: 12px;
 }
 
@@ -761,6 +775,38 @@ button.secondary {
 
 .tooltip-grid dd {
   margin: 0;
+}
+
+.tooltip-list {
+  margin: 0;
+  padding-left: 18px;
+  display: grid;
+  gap: 4px;
+}
+
+.tooltip-list li {
+  margin: 0;
+}
+
+.tooltip-list-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.tooltip-list-icon {
+  width: 20px;
+  height: 20px;
+  border-radius: 6px;
+  object-fit: cover;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(181, 209, 236, 0.14);
+  flex: 0 0 auto;
+}
+
+.tooltip-list-category {
+  color: var(--muted);
+  font-weight: 600;
 }
 
 .rarity-common {
