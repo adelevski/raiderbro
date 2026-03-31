@@ -48,7 +48,7 @@ body::before {
 .hero,
 .shopping-panel,
 .mini-stat,
-.station-card {
+.tracker-card {
   border: 1px solid var(--line);
   background: var(--panel);
   backdrop-filter: blur(10px);
@@ -108,7 +108,7 @@ body::before {
 
 h1,
 .shopping-title,
-.station-title {
+.card-title {
   font-family: Georgia, "Times New Roman", serif;
 }
 
@@ -343,6 +343,33 @@ button.secondary {
   font-weight: 600;
 }
 
+.tracker-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+  margin-top: 18px;
+  padding: 0 4px;
+}
+
+.footer-note {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.footer-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.footer-button {
+  padding: 8px 12px;
+  font-size: 0.88rem;
+}
+
 .cards-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -352,7 +379,7 @@ button.secondary {
   isolation: isolate;
 }
 
-.station-card {
+.tracker-card {
   border-radius: 22px;
   padding: 18px;
   position: relative;
@@ -361,12 +388,12 @@ button.secondary {
   isolation: isolate;
 }
 
-.station-card:hover,
-.station-card:focus-within {
+.tracker-card:hover,
+.tracker-card:focus-within {
   z-index: 1000;
 }
 
-.station-top {
+.card-header {
   display: flex;
   justify-content: space-between;
   gap: 14px;
@@ -388,7 +415,7 @@ button.secondary {
   flex: 0 0 auto;
 }
 
-.station-title {
+.card-title {
   margin: 6px 0 0;
   font-size: 1.45rem;
 }
@@ -415,7 +442,7 @@ button.secondary {
   color: var(--good);
 }
 
-.workshop-progress-dots {
+.progress-dots {
   display: inline-flex;
   gap: 8px;
   flex-wrap: wrap;
@@ -838,6 +865,11 @@ button.secondary {
     flex-direction: column;
     align-items: start;
   }
+
+  .tracker-footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 
 @media (max-width: 560px) {
@@ -849,7 +881,7 @@ button.secondary {
   .hero,
   .shopping-panel,
   .mini-stat,
-  .station-card {
+  .tracker-card {
     padding: 18px;
     border-radius: 20px;
   }

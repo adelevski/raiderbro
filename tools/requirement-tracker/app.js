@@ -1,6 +1,7 @@
 (function () {
   const storageKey = "raiderbro-requirement-tracker-v1";
   const legacyStorageKey = "raiderbro-station-tracker-v1";
+  const stateVersion = 2;
   const trackerData = normalizeTrackerData(window.REQUIREMENT_TRACKER_DATA || window.STATION_TRACKER_DATA);
   const itemData = window.ITEM_DATA || {};
 
@@ -93,7 +94,13 @@
     }
 
     if (Array.isArray(rawTrackerData.cards)) {
-      return rawTrackerData;
+      return {
+        schemaVersion: Number(rawTrackerData.schemaVersion || 1),
+        generatedAt: rawTrackerData.generatedAt || "",
+        buildId: rawTrackerData.buildId || "",
+        uiIcons: rawTrackerData.uiIcons || { cards: {}, foundIn: {} },
+        cards: sortCards(rawTrackerData.cards),
+      };
     }
 
     if (!Array.isArray(rawTrackerData.stations)) {
@@ -120,7 +127,7 @@
       generatedAt: "",
       buildId: "legacy",
       uiIcons: rawTrackerData.uiIcons || { cards: {}, foundIn: {} },
-      cards: cards,
+      cards: sortCards(cards),
     };
   }
 
@@ -130,6 +137,7 @@
       title: defaults.title,
       kindLabel: card.kindLabel || "Progress",
       scope: card.scope,
+      sortOrder: Number(card.sortOrder || 0),
       iconUrl: card.iconUrl || "",
     };
 
@@ -180,15 +188,69 @@
       .replace(/^-+|-+$/g, "");
   }
 
-  function loadState() {
-    const fallback = {
-      levels: {},
-      progress: {},
-      variants: {},
-      cardOrder: [],
-      shoppingMode: "card",
-      cardScope: "all",
+  function sortCards(cards) {
+    return cards.slice().sort(function (left, right) {
+      const leftOrder = Number(left.sortOrder || 9999);
+      const rightOrder = Number(right.sortOrder || 9999);
+      if (leftOrder !== rightOrder) {
+        return leftOrder - rightOrder;
+      }
+      return String(left.title || "").localeCompare(String(right.title || ""));
+    });
+  }
+
+  function isPlainObject(value) {
+    return Boolean(value) && typeof value === "object" && !Array.isArray(value);
+  }
+
+  function sanitizeNumberMap(value) {
+    if (!isPlainObject(value)) {
+      return {};
+    }
+
+    const sanitized = {};
+    Object.keys(value).forEach(function (key) {
+      const numericValue = Number(value[key]);
+      if (Number.isFinite(numericValue)) {
+        sanitized[key] = numericValue;
+      }
+    });
+    return sanitized;
+  }
+
+  function sanitizeStringMap(value) {
+    if (!isPlainObject(value)) {
+      return {};
+    }
+
+    const sanitized = {};
+    Object.keys(value).forEach(function (key) {
+      const stringValue = String(value[key] || "").trim();
+      if (stringValue) {
+        sanitized[key] = stringValue;
+      }
+    });
+    return sanitized;
+  }
+
+  function sanitizeState(rawState) {
+    const allowedScopes = ["all", "workshops", "scrappy", "expedition"];
+    const candidate = isPlainObject(rawState) ? rawState : {};
+    return {
+      version: stateVersion,
+      levels: sanitizeNumberMap(candidate.levels),
+      progress: sanitizeNumberMap(candidate.progress),
+      variants: sanitizeStringMap(candidate.variants),
+      cardOrder: Array.isArray(candidate.cardOrder)
+        ? candidate.cardOrder.map(function (entry) { return String(entry); }).filter(Boolean)
+        : [],
+      shoppingMode: candidate.shoppingMode === "found" ? "found" : "card",
+      cardScope: allowedScopes.includes(candidate.cardScope) ? candidate.cardScope : "all",
     };
+  }
+
+  function loadState() {
+    const fallback = sanitizeState({});
 
     try {
       const raw = window.localStorage.getItem(storageKey);
@@ -197,22 +259,110 @@
         return fallback;
       }
 
-      const parsed = JSON.parse(fallbackRaw);
-      return {
-        levels: parsed.levels || {},
-        progress: parsed.progress || {},
-        variants: parsed.variants || {},
-        cardOrder: parsed.cardOrder || [],
-        shoppingMode: parsed.shoppingMode === "found" ? "found" : "card",
-        cardScope: parsed.cardScope || "all",
-      };
+      return sanitizeState(JSON.parse(fallbackRaw));
     } catch (error) {
       return fallback;
     }
   }
 
   function saveState() {
-    window.localStorage.setItem(storageKey, JSON.stringify(state));
+    window.localStorage.setItem(storageKey, JSON.stringify(serializeState()));
+  }
+
+  function serializeState() {
+    return sanitizeState(state);
+  }
+
+  function setBuildInfo() {
+    if (!buildInfo) {
+      return;
+    }
+
+    const details = [];
+    if (trackerData.buildId) {
+      details.push("Build " + trackerData.buildId);
+    }
+    if (trackerData.generatedAt) {
+      details.push("Generated " + formatTimestamp(trackerData.generatedAt));
+    }
+    if (trackerData.schemaVersion) {
+      details.push("Schema v" + trackerData.schemaVersion);
+    }
+
+    buildInfo.textContent = details.length ? details.join("  |  ") : "Data build unavailable.";
+  }
+
+  function exportProgress() {
+    const payload = {
+      type: "raiderbro.requirement-tracker-progress",
+      version: stateVersion,
+      exportedAt: new Date().toISOString(),
+      trackerBuildId: trackerData.buildId || "",
+      state: serializeState(),
+    };
+    const blob = new Blob([JSON.stringify(payload, null, 2)], { type: "application/json" });
+    const url = window.URL.createObjectURL(blob);
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = buildExportFileName();
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+    window.URL.revokeObjectURL(url);
+  }
+
+  function importProgress(event) {
+    const file = event.target.files && event.target.files[0];
+    if (!file) {
+      return;
+    }
+
+    const reader = new FileReader();
+    reader.addEventListener("load", function () {
+      try {
+        const parsed = JSON.parse(String(reader.result || ""));
+        const importedState = sanitizeState(parsed && parsed.state ? parsed.state : parsed);
+        state.levels = importedState.levels;
+        state.progress = importedState.progress;
+        state.variants = importedState.variants;
+        state.cardOrder = importedState.cardOrder;
+        state.shoppingMode = importedState.shoppingMode;
+        state.cardScope = importedState.cardScope;
+        hideTooltip();
+        render();
+      } catch (error) {
+        window.alert("Could not import progress from that file.");
+      } finally {
+        importFileInput.value = "";
+      }
+    });
+    reader.addEventListener("error", function () {
+      window.alert("Could not read that progress file.");
+      importFileInput.value = "";
+    });
+    reader.readAsText(file);
+  }
+
+  function buildExportFileName() {
+    const now = new Date();
+    const year = String(now.getFullYear());
+    const month = String(now.getMonth() + 1).padStart(2, "0");
+    const day = String(now.getDate()).padStart(2, "0");
+    return "raiderbro-requirement-tracker-" + year + month + day + ".json";
+  }
+
+  function formatTimestamp(value) {
+    const parsed = new Date(value);
+    if (Number.isNaN(parsed.getTime())) {
+      return String(value);
+    }
+    return new Intl.DateTimeFormat(undefined, {
+      year: "numeric",
+      month: "short",
+      day: "numeric",
+      hour: "numeric",
+      minute: "2-digit",
+    }).format(parsed);
   }
 
   function arraysEqual(left, right) {
@@ -492,7 +642,7 @@
             }
 
             event.preventDefault();
-            reorderCardGroups(dragState.cardName, groupName, dragState.placeAfter);
+            reorderCardGroups(dragState.cardName, groupId, dragState.placeAfter);
             clearDragState();
             renderSummary();
           });
@@ -1036,14 +1186,14 @@
   }
 
   function getCompleteMessage(context) {
-    if (context.baseCard.station === "Expedition") {
+    if (context.baseCard.id === "expedition") {
       return "These tracked expedition stages are complete. Switch the expedition selector when you move to the next one.";
     }
     return "This card is finished for the wipe.";
   }
 
   function getEmptyMessage(context) {
-    if (context.baseCard.station === "Expedition") {
+    if (context.baseCard.id === "expedition") {
       return "These tracked expedition stages are complete. Move the expedition selector when you start the next expedition.";
     }
 

@@ -237,7 +237,8 @@ def build_workshop_cards(
         level_data["crafts"].append(record["item"])
 
     cards: list[dict[str, object]] = []
-    for title, levels in sorted(workshops.items(), key=lambda entry: entry[0]):
+    for title, workshop_data in sorted(workshops.items(), key=lambda entry: entry[0]):
+        levels = workshop_data["levels"]
         normalized_levels = [
             {
                 "level": int(level),
@@ -665,8 +666,8 @@ def main() -> None:
     print(f"Wrote {items_count} rows to {ITEMS_CSV.name}")
     print(f"Wrote tracker item data to {ITEM_DATA_JS.relative_to(ROOT)}")
     print(f"Wrote {workshop_levels_count} workshop levels to normalized requirement datasets")
-    print(f"Wrote normalized station requirements to {STATION_REQUIREMENTS_CSV.relative_to(ROOT)}")
-    print(f"Wrote normalized station crafts to {STATION_CRAFTS_CSV.relative_to(ROOT)}")
+    print(f"Wrote normalized workshop requirements to {STATION_REQUIREMENTS_CSV.relative_to(ROOT)}")
+    print(f"Wrote normalized workshop crafts to {STATION_CRAFTS_CSV.relative_to(ROOT)}")
     print(f"Wrote requirement tracker data to {REQUIREMENT_TRACKER_DATA_JS.relative_to(ROOT)}")
     print(f"Wrote {weapons_count} rows to {WEAPONS_CSV.name}")
 
