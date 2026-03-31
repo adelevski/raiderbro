@@ -6,7 +6,6 @@ window.ITEM_DATA = {
     "sellPrice": "7000",
     "stackSize": "1",
     "category": "Quick Use",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Metal Parts",
@@ -18,9 +17,7 @@ window.ITEM_DATA = {
         "quantity": 6,
         "text": "6x Wires"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Adrenaline Shot": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/1/1b/Adrenaline_Shot.png/75px-Adrenaline_Shot.png.webp",
@@ -28,7 +25,6 @@ window.ITEM_DATA = {
     "sellPrice": "300",
     "stackSize": "5",
     "category": "Quick Use",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Chemicals",
@@ -40,9 +36,7 @@ window.ITEM_DATA = {
         "quantity": 1,
         "text": "1x Plastic Parts"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Advanced ARC Powercell": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/3/31/Advanced_ARC_Powercell.png/75px-Advanced_ARC_Powercell.png.webp",
@@ -50,16 +44,13 @@ window.ITEM_DATA = {
     "sellPrice": "640",
     "stackSize": "5",
     "category": "Topside Material",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "ARC Powercell",
         "quantity": 2,
         "text": "2x ARC Powercell"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Advanced Electrical Components": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/9/9b/Advanced_Electrical_Components.png/75px-Advanced_Electrical_Components.png.webp",
@@ -82,7 +73,6 @@ window.ITEM_DATA = {
         "text": "1x Wires"
       }
     ],
-    "recycleStatus": "",
     "usesEntries": [
       {
         "text": "Gear Bench 3 (5x)",
@@ -123,7 +113,6 @@ window.ITEM_DATA = {
         "text": "1x Steel Spring"
       }
     ],
-    "recycleStatus": "",
     "usesEntries": [
       {
         "text": "Gunsmith 3 (5x)",
@@ -137,10 +126,7 @@ window.ITEM_DATA = {
     "sellPrice": "1800",
     "stackSize": "5",
     "category": "Quick Use",
-    "foundIn": [],
-    "recycleEntries": [],
-    "recycleStatus": "Cannot be recycled",
-    "usesEntries": []
+    "recycleStatus": "Cannot be recycled"
   },
   "Agave": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/4/47/Agave.png/75px-Agave.png.webp",
@@ -148,16 +134,13 @@ window.ITEM_DATA = {
     "sellPrice": "1000",
     "stackSize": "10",
     "category": "Nature",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Assorted Seeds",
         "quantity": 3,
         "text": "3x Assorted Seeds"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Air Freshener": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/0/03/Air_Freshener.png/75px-Air_Freshener.png.webp",
@@ -165,10 +148,7 @@ window.ITEM_DATA = {
     "sellPrice": "2000",
     "stackSize": "5",
     "category": "Trinket",
-    "foundIn": [],
-    "recycleEntries": [],
-    "recycleStatus": "Cannot be recycled",
-    "usesEntries": []
+    "recycleStatus": "Cannot be recycled"
   },
   "Alarm Clock": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/9/95/Alarm_Clock.png/75px-Alarm_Clock.png.webp",
@@ -176,7 +156,6 @@ window.ITEM_DATA = {
     "sellPrice": "1000",
     "stackSize": "3",
     "category": "Recyclable",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Processor",
@@ -188,9 +167,7 @@ window.ITEM_DATA = {
         "quantity": 6,
         "text": "6x Plastic Parts"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Alien Duck": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/3/3e/Alien_Duck.png/75px-Alien_Duck.png.webp",
@@ -198,10 +175,7 @@ window.ITEM_DATA = {
     "sellPrice": "1000",
     "stackSize": "15",
     "category": "Trinket",
-    "foundIn": [],
-    "recycleEntries": [],
-    "recycleStatus": "Cannot be recycled",
-    "usesEntries": []
+    "recycleStatus": "Cannot be recycled"
   },
   "Angled Grip I": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/b/b5/Angled_Grip_I.png/75px-Angled_Grip_I.png.webp",
@@ -209,16 +183,13 @@ window.ITEM_DATA = {
     "sellPrice": "640",
     "stackSize": "1",
     "category": "Mods",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Plastic Parts",
         "quantity": 6,
         "text": "6x Plastic Parts"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Angled Grip II": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/2/2b/Angled_Grip_II.png/75px-Angled_Grip_II.png.webp",
@@ -226,7 +197,6 @@ window.ITEM_DATA = {
     "sellPrice": "2000",
     "stackSize": "1",
     "category": "Mods",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Duct Tape",
@@ -238,9 +208,7 @@ window.ITEM_DATA = {
         "quantity": 1,
         "text": "1x Mechanical Components"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Angled Grip III": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/0/0f/Angled_Grip_III.png/75px-Angled_Grip_III.png.webp",
@@ -248,7 +216,6 @@ window.ITEM_DATA = {
     "sellPrice": "5000",
     "stackSize": "1",
     "category": "Mods",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Mod Components",
@@ -260,9 +227,7 @@ window.ITEM_DATA = {
         "quantity": 2,
         "text": "2x Duct Tape"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Antiseptic": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/f/f5/Antiseptic.png/75px-Antiseptic.png.webp",
@@ -280,7 +245,6 @@ window.ITEM_DATA = {
         "text": "10x Chemicals"
       }
     ],
-    "recycleStatus": "",
     "usesEntries": [
       {
         "text": "Medical Lab 3 (8x)",
@@ -298,7 +262,6 @@ window.ITEM_DATA = {
     "sellPrice": "7000",
     "stackSize": "1",
     "category": "Mods",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Mod Components",
@@ -310,9 +273,7 @@ window.ITEM_DATA = {
         "quantity": 1,
         "text": "1x Processor"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Apricot": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/f/fc/Apricot.png/75px-Apricot.png.webp",
@@ -330,7 +291,6 @@ window.ITEM_DATA = {
         "text": "3x Assorted Seeds"
       }
     ],
-    "recycleStatus": "",
     "usesEntries": [
       {
         "text": "Scrappy 3 (3x)",
@@ -358,7 +318,6 @@ window.ITEM_DATA = {
         "text": "2x Metal Parts"
       }
     ],
-    "recycleStatus": "",
     "usesEntries": [
       {
         "text": "Explosives Station 1 (6x)",
@@ -410,7 +369,6 @@ window.ITEM_DATA = {
         "text": "2x ARC Alloy"
       }
     ],
-    "recycleStatus": "",
     "usesEntries": [
       {
         "text": "Refiner 3 (10x)",
@@ -424,16 +382,13 @@ window.ITEM_DATA = {
     "sellPrice": "1000",
     "stackSize": "3",
     "category": "Recyclable",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Chemicals",
         "quantity": 16,
         "text": "16x Chemicals"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "ARC Flex Rubber": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/2/29/ARC_Flex_Rubber.png/75px-ARC_Flex_Rubber.png.webp",
@@ -441,16 +396,13 @@ window.ITEM_DATA = {
     "sellPrice": "1000",
     "stackSize": "3",
     "category": "Recyclable",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Rubber Parts",
         "quantity": 16,
         "text": "16x Rubber Parts"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "ARC Motion Core": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/a/ad/ARC_Motion_Core.png/75px-ARC_Motion_Core.png.webp",
@@ -468,7 +420,6 @@ window.ITEM_DATA = {
         "text": "2x ARC Alloy"
       }
     ],
-    "recycleStatus": "",
     "usesEntries": [
       {
         "text": "Refiner 2 (5x)",
@@ -482,7 +433,6 @@ window.ITEM_DATA = {
     "sellPrice": "1000",
     "stackSize": "3",
     "category": "Recyclable",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Metal Parts",
@@ -490,7 +440,6 @@ window.ITEM_DATA = {
         "text": "12x Metal Parts"
       }
     ],
-    "recycleStatus": "",
     "usesEntries": [
       {
         "text": "Trophy Display (10x)",
@@ -507,7 +456,6 @@ window.ITEM_DATA = {
     "foundIn": [
       "ARC"
     ],
-    "recycleEntries": [],
     "recycleStatus": "Cannot be recycled",
     "usesEntries": [
       {
@@ -526,7 +474,6 @@ window.ITEM_DATA = {
     "sellPrice": "1000",
     "stackSize": "3",
     "category": "Recyclable",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Plastic Parts",
@@ -534,7 +481,6 @@ window.ITEM_DATA = {
         "text": "14x Plastic Parts"
       }
     ],
-    "recycleStatus": "",
     "usesEntries": [
       {
         "text": "Trophy Display (10x)",
@@ -548,16 +494,13 @@ window.ITEM_DATA = {
     "sellPrice": "1000",
     "stackSize": "3",
     "category": "Recyclable",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Fabric",
         "quantity": 16,
         "text": "16x Fabric"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Assorted Seeds": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/5/51/Assorted_Seeds.png/75px-Assorted_Seeds.png.webp",
@@ -565,10 +508,7 @@ window.ITEM_DATA = {
     "sellPrice": "100",
     "stackSize": "100",
     "category": "Nature",
-    "foundIn": [],
-    "recycleEntries": [],
-    "recycleStatus": "Cannot be recycled",
-    "usesEntries": []
+    "recycleStatus": "Cannot be recycled"
   },
   "Bandage": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/0/0c/Bandage.png/75px-Bandage.png.webp",
@@ -576,16 +516,13 @@ window.ITEM_DATA = {
     "sellPrice": "250",
     "stackSize": "5",
     "category": "Quick Use",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Fabric",
         "quantity": 2,
         "text": "2x Fabric"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Barricade Kit": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/c/cb/Barricade_Kit.png/75px-Barricade_Kit.png.webp",
@@ -593,16 +530,13 @@ window.ITEM_DATA = {
     "sellPrice": "640",
     "stackSize": "3",
     "category": "Quick Use",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Metal Parts",
         "quantity": 4,
         "text": "4x Metal Parts"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Bastion Cell": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/0/06/Bastion_Cell.png/75px-Bastion_Cell.png.webp",
@@ -625,7 +559,6 @@ window.ITEM_DATA = {
         "text": "3x ARC Alloy"
       }
     ],
-    "recycleStatus": "",
     "usesEntries": [
       {
         "text": "Gear Bench 3 (6x)",
@@ -643,7 +576,6 @@ window.ITEM_DATA = {
     "sellPrice": "250",
     "stackSize": "15",
     "category": "Topside Material",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Metal Parts",
@@ -651,7 +583,6 @@ window.ITEM_DATA = {
         "text": "2x Metal Parts"
       }
     ],
-    "recycleStatus": "",
     "usesEntries": [
       {
         "text": "After Rain Comes (2x)",
@@ -681,7 +612,6 @@ window.ITEM_DATA = {
     "sellPrice": "2000",
     "stackSize": "3",
     "category": "Recyclable",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Metal Parts",
@@ -694,7 +624,6 @@ window.ITEM_DATA = {
         "text": "4x Canister"
       }
     ],
-    "recycleStatus": "",
     "usesEntries": [
       {
         "text": "The League (1x)",
@@ -708,7 +637,6 @@ window.ITEM_DATA = {
     "sellPrice": "640",
     "stackSize": "1",
     "category": "Quick Use",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Rubber Parts",
@@ -720,9 +648,7 @@ window.ITEM_DATA = {
         "quantity": 4,
         "text": "4x Plastic Parts"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Integrated Binoculars": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/7/74/Binoculars.png/75px-Binoculars.png.webp",
@@ -730,10 +656,7 @@ window.ITEM_DATA = {
     "sellPrice": "0",
     "stackSize": "",
     "category": "Quick Use",
-    "foundIn": [],
-    "recycleEntries": [],
-    "recycleStatus": "Cannot be recycled",
-    "usesEntries": []
+    "recycleStatus": "Cannot be recycled"
   },
   "Blaze Grenade Trap": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/a/af/Blaze_Grenade_Trap.png/75px-Blaze_Grenade_Trap.png.webp",
@@ -741,10 +664,7 @@ window.ITEM_DATA = {
     "sellPrice": "1000",
     "stackSize": "3",
     "category": "Quick Use",
-    "foundIn": [],
-    "recycleEntries": [],
-    "recycleStatus": "Cannot be recycled",
-    "usesEntries": []
+    "recycleStatus": "Cannot be recycled"
   },
   "Blaze Grenade": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/2/24/Blaze_Grenade.png/75px-Blaze_Grenade.png.webp",
@@ -752,7 +672,6 @@ window.ITEM_DATA = {
     "sellPrice": "1600",
     "stackSize": "5",
     "category": "Quick Use",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Oil",
@@ -764,9 +683,7 @@ window.ITEM_DATA = {
         "quantity": 4,
         "text": "4x Metal Parts"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Bloated Tuna Can": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/0/01/Bloated_Tuna_Can.png/75px-Bloated_Tuna_Can.png.webp",
@@ -774,10 +691,7 @@ window.ITEM_DATA = {
     "sellPrice": "1000",
     "stackSize": "15",
     "category": "Trinket",
-    "foundIn": [],
-    "recycleEntries": [],
-    "recycleStatus": "Cannot be recycled",
-    "usesEntries": []
+    "recycleStatus": "Cannot be recycled"
   },
   "Blue Gate Cellar Key": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/7/7c/Blue_Gate_Key_Variant_1.png/75px-Blue_Gate_Key_Variant_1.png.webp",
@@ -785,10 +699,7 @@ window.ITEM_DATA = {
     "sellPrice": "100",
     "stackSize": "1",
     "category": "Key",
-    "foundIn": [],
-    "recycleEntries": [],
-    "recycleStatus": "Cannot be recycled",
-    "usesEntries": []
+    "recycleStatus": "Cannot be recycled"
   },
   "Blue Gate Village Key": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/7/7c/Blue_Gate_Key_Variant_1.png/75px-Blue_Gate_Key_Variant_1.png.webp",
@@ -796,10 +707,7 @@ window.ITEM_DATA = {
     "sellPrice": "100",
     "stackSize": "1",
     "category": "Key",
-    "foundIn": [],
-    "recycleEntries": [],
-    "recycleStatus": "Cannot be recycled",
-    "usesEntries": []
+    "recycleStatus": "Cannot be recycled"
   },
   "Blue Gate Communication Tower Key": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/d/de/Blue_Gate_Key_Variant_2.png/75px-Blue_Gate_Key_Variant_2.png.webp",
@@ -807,10 +715,7 @@ window.ITEM_DATA = {
     "sellPrice": "100",
     "stackSize": "1",
     "category": "Key",
-    "foundIn": [],
-    "recycleEntries": [],
-    "recycleStatus": "Cannot be recycled",
-    "usesEntries": []
+    "recycleStatus": "Cannot be recycled"
   },
   "Blue Gate Confiscation Room Key": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/d/de/Blue_Gate_Key_Variant_2.png/75px-Blue_Gate_Key_Variant_2.png.webp",
@@ -818,10 +723,7 @@ window.ITEM_DATA = {
     "sellPrice": "100",
     "stackSize": "1",
     "category": "Key",
-    "foundIn": [],
-    "recycleEntries": [],
-    "recycleStatus": "Cannot be recycled",
-    "usesEntries": []
+    "recycleStatus": "Cannot be recycled"
   },
   "Blue Light Stick": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/c/cc/Blue_Light_Stick.png/75px-Blue_Light_Stick.png.webp",
@@ -829,16 +731,13 @@ window.ITEM_DATA = {
     "sellPrice": "150",
     "stackSize": "5",
     "category": "Quick Use",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Chemicals",
         "quantity": 1,
         "text": "1x Chemicals"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Bombardier Cell": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/4/46/Bombardier_Cell.png/75px-Bombardier_Cell.png.webp",
@@ -861,7 +760,6 @@ window.ITEM_DATA = {
         "text": "3x ARC Alloy"
       }
     ],
-    "recycleStatus": "",
     "usesEntries": [
       {
         "text": "Refiner 3 (6x)",
@@ -883,8 +781,6 @@ window.ITEM_DATA = {
     "sellPrice": "7000",
     "stackSize": "1",
     "category": "Trinket",
-    "foundIn": [],
-    "recycleEntries": [],
     "recycleStatus": "Cannot be recycled",
     "usesEntries": [
       {
@@ -899,7 +795,6 @@ window.ITEM_DATA = {
     "sellPrice": "1000",
     "stackSize": "3",
     "category": "Recyclable",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Battery",
@@ -911,9 +806,7 @@ window.ITEM_DATA = {
         "quantity": 6,
         "text": "6x Metal Parts"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Broken Guidance System": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/9/93/Broken_Guidance_System.png/75px-Broken_Guidance_System.png.webp",
@@ -921,7 +814,6 @@ window.ITEM_DATA = {
     "sellPrice": "2000",
     "stackSize": "3",
     "category": "Recyclable",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Processor",
@@ -929,7 +821,6 @@ window.ITEM_DATA = {
         "text": "4x Processor"
       }
     ],
-    "recycleStatus": "",
     "usesEntries": [
       {
         "text": "Expedition 3 (1x)",
@@ -943,7 +834,6 @@ window.ITEM_DATA = {
     "sellPrice": "2000",
     "stackSize": "3",
     "category": "Recyclable",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Wires",
@@ -955,9 +845,7 @@ window.ITEM_DATA = {
         "quantity": 3,
         "text": "3x Sensors"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Broken Taser": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/1/18/Broken_Taser.png/75px-Broken_Taser.png.webp",
@@ -965,7 +853,6 @@ window.ITEM_DATA = {
     "sellPrice": "1000",
     "stackSize": "3",
     "category": "Recyclable",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Battery",
@@ -977,9 +864,7 @@ window.ITEM_DATA = {
         "quantity": 2,
         "text": "2x Wires"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Buried City Hospital Key": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/1/11/Buried_City_Key.png/75px-Buried_City_Key.png.webp",
@@ -987,10 +872,7 @@ window.ITEM_DATA = {
     "sellPrice": "100",
     "stackSize": "1",
     "category": "Key",
-    "foundIn": [],
-    "recycleEntries": [],
-    "recycleStatus": "Cannot be recycled",
-    "usesEntries": []
+    "recycleStatus": "Cannot be recycled"
   },
   "Buried City JKV Employee Access Card": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/1/11/Buried_City_Key.png/75px-Buried_City_Key.png.webp",
@@ -998,10 +880,7 @@ window.ITEM_DATA = {
     "sellPrice": "100",
     "stackSize": "1",
     "category": "Key",
-    "foundIn": [],
-    "recycleEntries": [],
-    "recycleStatus": "Cannot be recycled",
-    "usesEntries": []
+    "recycleStatus": "Cannot be recycled"
   },
   "Buried City Residential Master Key": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/1/11/Buried_City_Key.png/75px-Buried_City_Key.png.webp",
@@ -1009,10 +888,7 @@ window.ITEM_DATA = {
     "sellPrice": "100",
     "stackSize": "1",
     "category": "Key",
-    "foundIn": [],
-    "recycleEntries": [],
-    "recycleStatus": "Cannot be recycled",
-    "usesEntries": []
+    "recycleStatus": "Cannot be recycled"
   },
   "Buried City Town Hall Key": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/1/11/Buried_City_Key.png/75px-Buried_City_Key.png.webp",
@@ -1020,10 +896,7 @@ window.ITEM_DATA = {
     "sellPrice": "100",
     "stackSize": "1",
     "category": "Key",
-    "foundIn": [],
-    "recycleEntries": [],
-    "recycleStatus": "Cannot be recycled",
-    "usesEntries": []
+    "recycleStatus": "Cannot be recycled"
   },
   "Burned ARC Circuitry": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/3/35/Burned_ARC_Circuitry.png/75px-Burned_ARC_Circuitry.png.webp",
@@ -1031,16 +904,13 @@ window.ITEM_DATA = {
     "sellPrice": "640",
     "stackSize": "5",
     "category": "Recyclable",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "ARC Alloy",
         "quantity": 2,
         "text": "2x ARC Alloy"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Burnt-Out Candles": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/0/0a/Burnt-Out_Candles.png/75px-Burnt-Out_Candles.png.webp",
@@ -1048,10 +918,7 @@ window.ITEM_DATA = {
     "sellPrice": "640",
     "stackSize": "15",
     "category": "Trinket",
-    "foundIn": [],
-    "recycleEntries": [],
-    "recycleStatus": "Cannot be recycled",
-    "usesEntries": []
+    "recycleStatus": "Cannot be recycled"
   },
   "Camera Lens": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/a/a6/Camera_Lens.png/75px-Camera_Lens.png.webp",
@@ -1059,7 +926,6 @@ window.ITEM_DATA = {
     "sellPrice": "640",
     "stackSize": "5",
     "category": "Recyclable",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Plastic Parts",
@@ -1067,7 +933,6 @@ window.ITEM_DATA = {
         "text": "8x Plastic Parts"
       }
     ],
-    "recycleStatus": "",
     "usesEntries": [
       {
         "text": "Weather Monitor System (3x)",
@@ -1081,16 +946,13 @@ window.ITEM_DATA = {
     "sellPrice": "640",
     "stackSize": "3",
     "category": "Recyclable",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Metal Parts",
         "quantity": 8,
         "text": "8x Metal Parts"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Candleberries": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/9/9e/Candleberries.png/75px-Candleberries.png.webp",
@@ -1098,16 +960,13 @@ window.ITEM_DATA = {
     "sellPrice": "460",
     "stackSize": "10",
     "category": "Nature",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Assorted Seeds",
         "quantity": 2,
         "text": "2x Assorted Seeds"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Canister": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/5/5f/Canister.png/75px-Canister.png.webp",
@@ -1115,7 +974,6 @@ window.ITEM_DATA = {
     "sellPrice": "300",
     "stackSize": "15",
     "category": "Topside Material",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Plastic Parts",
@@ -1123,7 +981,6 @@ window.ITEM_DATA = {
         "text": "3x Plastic Parts"
       }
     ],
-    "recycleStatus": "",
     "usesEntries": [
       {
         "text": "Weather Monitor System (5x)",
@@ -1141,7 +998,6 @@ window.ITEM_DATA = {
       "Commercial",
       "Residential"
     ],
-    "recycleEntries": [],
     "recycleStatus": "Cannot be recycled",
     "usesEntries": [
       {
@@ -1161,7 +1017,6 @@ window.ITEM_DATA = {
       "Medical",
       "Residential"
     ],
-    "recycleEntries": [],
     "recycleStatus": "Cannot be recycled",
     "usesEntries": [
       {
@@ -1180,8 +1035,6 @@ window.ITEM_DATA = {
     "sellPrice": "1000",
     "stackSize": "3",
     "category": "Trinket",
-    "foundIn": [],
-    "recycleEntries": [],
     "recycleStatus": "Cannot be recycled",
     "usesEntries": [
       {
@@ -1196,7 +1049,6 @@ window.ITEM_DATA = {
     "sellPrice": "640",
     "stackSize": "1",
     "category": "Augment",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Plastic Parts",
@@ -1208,9 +1060,7 @@ window.ITEM_DATA = {
         "quantity": 3,
         "text": "3x Rubber Parts"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Combat Mk. 2": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/5/54/Combat_Mk._2.png/75px-Combat_Mk._2.png.webp",
@@ -1218,7 +1068,6 @@ window.ITEM_DATA = {
     "sellPrice": "2000",
     "stackSize": "1",
     "category": "Augment",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Electrical Components",
@@ -1230,9 +1079,7 @@ window.ITEM_DATA = {
         "quantity": 1,
         "text": "1x Magnet"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Combat Mk. 3 (Aggressive)": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/a/a4/Combat_Mk._3_%28Aggressive%29.png/75px-Combat_Mk._3_%28Aggressive%29.png.webp",
@@ -1240,7 +1087,6 @@ window.ITEM_DATA = {
     "sellPrice": "5000",
     "stackSize": "1",
     "category": "Augment",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Advanced Electrical Components",
@@ -1252,9 +1098,7 @@ window.ITEM_DATA = {
         "quantity": 1,
         "text": "1x Processor"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Combat Mk. 3 (Flanking)": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/7/73/Combat_Mk._3_%28Flanking%29.png/75px-Combat_Mk._3_%28Flanking%29.png.webp",
@@ -1262,7 +1106,6 @@ window.ITEM_DATA = {
     "sellPrice": "5000",
     "stackSize": "1",
     "category": "Augment",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Advanced Electrical Components",
@@ -1274,9 +1117,7 @@ window.ITEM_DATA = {
         "quantity": 1,
         "text": "1x Processor"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Comet Igniter": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/c/c8/Comet_Igniter.png/75px-Comet_Igniter.png.webp",
@@ -1284,7 +1125,6 @@ window.ITEM_DATA = {
     "sellPrice": "1000",
     "stackSize": "3",
     "category": "Recyclable",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "ARC Alloy",
@@ -1297,7 +1137,6 @@ window.ITEM_DATA = {
         "text": "2x Crude Explosives"
       }
     ],
-    "recycleStatus": "",
     "usesEntries": [
       {
         "text": "Weather Monitor System (1x)",
@@ -1311,16 +1150,13 @@ window.ITEM_DATA = {
     "sellPrice": "640",
     "stackSize": "1",
     "category": "Mods",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Metal Parts",
         "quantity": 5,
         "text": "5x Metal Parts"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Compensator II": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/0/0a/Compensator_II.png/75px-Compensator_II.png.webp",
@@ -1328,7 +1164,6 @@ window.ITEM_DATA = {
     "sellPrice": "2000",
     "stackSize": "1",
     "category": "Mods",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Mechanical Components",
@@ -1340,9 +1175,7 @@ window.ITEM_DATA = {
         "quantity": 1,
         "text": "1x Wires"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Compensator III": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/a/af/Compensator_III.png/75px-Compensator_III.png.webp",
@@ -1350,7 +1183,6 @@ window.ITEM_DATA = {
     "sellPrice": "5000",
     "stackSize": "1",
     "category": "Mods",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Mod Components",
@@ -1362,9 +1194,7 @@ window.ITEM_DATA = {
         "quantity": 2,
         "text": "2x Wires"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Complex Gun Parts": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/3/3d/Complex_Gun_Parts.png/75px-Complex_Gun_Parts.png.webp",
@@ -1372,16 +1202,13 @@ window.ITEM_DATA = {
     "sellPrice": "3000",
     "stackSize": "3",
     "category": "Topside Material",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Simple Gun Parts",
         "quantity": 3,
         "text": "3x Simple Gun Parts"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Coolant": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/4/40/Coolant.png/75px-Coolant.png.webp",
@@ -1389,7 +1216,6 @@ window.ITEM_DATA = {
     "sellPrice": "1000",
     "stackSize": "3",
     "category": "Recyclable",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Oil",
@@ -1401,9 +1227,7 @@ window.ITEM_DATA = {
         "quantity": 5,
         "text": "5x Chemicals"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Cooling Coil": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/7/7f/Cooling_Coil.png/75px-Cooling_Coil.png.webp",
@@ -1411,7 +1235,6 @@ window.ITEM_DATA = {
     "sellPrice": "1000",
     "stackSize": "3",
     "category": "Recyclable",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Steel Spring",
@@ -1424,7 +1247,6 @@ window.ITEM_DATA = {
         "text": "6x Chemicals"
       }
     ],
-    "recycleStatus": "",
     "usesEntries": [
       {
         "text": "Expedition 2 (4x)",
@@ -1438,7 +1260,6 @@ window.ITEM_DATA = {
     "sellPrice": "2000",
     "stackSize": "3",
     "category": "Recyclable",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Plastic Parts",
@@ -1451,7 +1272,6 @@ window.ITEM_DATA = {
         "text": "4x Wires"
       }
     ],
-    "recycleStatus": "",
     "usesEntries": [
       {
         "text": "Expedition 1 (5x)",
@@ -1480,7 +1300,6 @@ window.ITEM_DATA = {
         "text": "3x Rubber Parts"
       }
     ],
-    "recycleStatus": "",
     "usesEntries": [
       {
         "text": "Medical Lab 2 (2x)",
@@ -1505,7 +1324,6 @@ window.ITEM_DATA = {
         "text": "3x Chemicals"
       }
     ],
-    "recycleStatus": "",
     "usesEntries": [
       {
         "text": "Explosives Station 2 (5x)",
@@ -1519,16 +1337,13 @@ window.ITEM_DATA = {
     "sellPrice": "270",
     "stackSize": "3",
     "category": "Recyclable",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Plastic Parts",
         "quantity": 4,
         "text": "4x Plastic Parts"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Dam Control Tower Key": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/4/49/Dam_Battlegrounds_Key.png/75px-Dam_Battlegrounds_Key.png.webp",
@@ -1536,10 +1351,7 @@ window.ITEM_DATA = {
     "sellPrice": "100",
     "stackSize": "1",
     "category": "Key",
-    "foundIn": [],
-    "recycleEntries": [],
-    "recycleStatus": "Cannot be recycled",
-    "usesEntries": []
+    "recycleStatus": "Cannot be recycled"
   },
   "Dam Controlled Access Zone Key": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/4/49/Dam_Battlegrounds_Key.png/75px-Dam_Battlegrounds_Key.png.webp",
@@ -1547,10 +1359,7 @@ window.ITEM_DATA = {
     "sellPrice": "100",
     "stackSize": "1",
     "category": "Key",
-    "foundIn": [],
-    "recycleEntries": [],
-    "recycleStatus": "Cannot be recycled",
-    "usesEntries": []
+    "recycleStatus": "Cannot be recycled"
   },
   "Dam Staff Room Key": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/4/49/Dam_Battlegrounds_Key.png/75px-Dam_Battlegrounds_Key.png.webp",
@@ -1558,10 +1367,7 @@ window.ITEM_DATA = {
     "sellPrice": "100",
     "stackSize": "1",
     "category": "Key",
-    "foundIn": [],
-    "recycleEntries": [],
-    "recycleStatus": "Cannot be recycled",
-    "usesEntries": []
+    "recycleStatus": "Cannot be recycled"
   },
   "Dam Surveillance Key": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/4/49/Dam_Battlegrounds_Key.png/75px-Dam_Battlegrounds_Key.png.webp",
@@ -1569,10 +1375,7 @@ window.ITEM_DATA = {
     "sellPrice": "100",
     "stackSize": "1",
     "category": "Key",
-    "foundIn": [],
-    "recycleEntries": [],
-    "recycleStatus": "Cannot be recycled",
-    "usesEntries": []
+    "recycleStatus": "Cannot be recycled"
   },
   "Dam Testing Annex Key": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/4/49/Dam_Battlegrounds_Key.png/75px-Dam_Battlegrounds_Key.png.webp",
@@ -1580,10 +1383,7 @@ window.ITEM_DATA = {
     "sellPrice": "100",
     "stackSize": "1",
     "category": "Key",
-    "foundIn": [],
-    "recycleEntries": [],
-    "recycleStatus": "Cannot be recycled",
-    "usesEntries": []
+    "recycleStatus": "Cannot be recycled"
   },
   "Dam Utility Key": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/4/49/Dam_Battlegrounds_Key.png/75px-Dam_Battlegrounds_Key.png.webp",
@@ -1591,10 +1391,7 @@ window.ITEM_DATA = {
     "sellPrice": "100",
     "stackSize": "1",
     "category": "Key",
-    "foundIn": [],
-    "recycleEntries": [],
-    "recycleStatus": "Cannot be recycled",
-    "usesEntries": []
+    "recycleStatus": "Cannot be recycled"
   },
   "Damaged ARC Motion Core": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/9/9e/Damaged_ARC_Motion_Core.png/75px-Damaged_ARC_Motion_Core.png.webp",
@@ -1602,16 +1399,13 @@ window.ITEM_DATA = {
     "sellPrice": "640",
     "stackSize": "5",
     "category": "Recyclable",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "ARC Alloy",
         "quantity": 2,
         "text": "2x ARC Alloy"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Damaged ARC Powercell": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/5/58/Damaged_ARC_Powercell.png/75px-Damaged_ARC_Powercell.png.webp",
@@ -1619,16 +1413,13 @@ window.ITEM_DATA = {
     "sellPrice": "293",
     "stackSize": "5",
     "category": "Recyclable",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "ARC Alloy",
         "quantity": 1,
         "text": "1x ARC Alloy"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Damaged Fireball Burner": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/d/d8/Damaged_Fireball_Burner.png/75px-Damaged_Fireball_Burner.png.webp",
@@ -1636,16 +1427,13 @@ window.ITEM_DATA = {
     "sellPrice": "270",
     "stackSize": "3",
     "category": "Recyclable",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "ARC Alloy",
         "quantity": 1,
         "text": "1x ARC Alloy"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Damaged Heat Sink": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/1/1f/Damaged_Heat_Sink.png/75px-Damaged_Heat_Sink.png.webp",
@@ -1668,7 +1456,6 @@ window.ITEM_DATA = {
         "text": "6x Metal Parts"
       }
     ],
-    "recycleStatus": "",
     "usesEntries": [
       {
         "text": "Utility Station 2 (2x)",
@@ -1686,16 +1473,13 @@ window.ITEM_DATA = {
     "sellPrice": "640",
     "stackSize": "3",
     "category": "Recyclable",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "ARC Alloy",
         "quantity": 2,
         "text": "2x ARC Alloy"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Damaged Leaper Pulse Unit": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/0/0a/Damaged_Leaper_Pulse_Unit.png/75px-Damaged_Leaper_Pulse_Unit.png.webp",
@@ -1703,16 +1487,13 @@ window.ITEM_DATA = {
     "sellPrice": "1000",
     "stackSize": "3",
     "category": "Recyclable",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "ARC Alloy",
         "quantity": 3,
         "text": "3x ARC Alloy"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Damaged Rocketeer Driver": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/3/3a/Damaged_Rocketeer_Driver.png/75px-Damaged_Rocketeer_Driver.png.webp",
@@ -1720,16 +1501,13 @@ window.ITEM_DATA = {
     "sellPrice": "1000",
     "stackSize": "3",
     "category": "Recyclable",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "ARC Alloy",
         "quantity": 3,
         "text": "3x ARC Alloy"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Damaged Snitch Scanner": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/8/83/Damaged_Snitch_Scanner.png/75px-Damaged_Snitch_Scanner.png.webp",
@@ -1737,10 +1515,7 @@ window.ITEM_DATA = {
     "sellPrice": "659",
     "stackSize": "3",
     "category": "Recyclable",
-    "foundIn": [],
-    "recycleEntries": [],
-    "recycleStatus": "Cannot be recycled",
-    "usesEntries": []
+    "recycleStatus": "Cannot be recycled"
   },
   "Damaged Tick Pod": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/d/d6/Damaged_Tick_Pod.png/75px-Damaged_Tick_Pod.png.webp",
@@ -1748,16 +1523,13 @@ window.ITEM_DATA = {
     "sellPrice": "270",
     "stackSize": "3",
     "category": "Recyclable",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "ARC Alloy",
         "quantity": 1,
         "text": "1x ARC Alloy"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Damaged Wasp Driver": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/e/e6/Damaged_Wasp_Driver.png/75px-Damaged_Wasp_Driver.png.webp",
@@ -1765,16 +1537,13 @@ window.ITEM_DATA = {
     "sellPrice": "270",
     "stackSize": "3",
     "category": "Recyclable",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "ARC Alloy",
         "quantity": 1,
         "text": "1x ARC Alloy"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Dart Board": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/4/4d/Dart_Board.png/75px-Dart_Board.png.webp",
@@ -1782,10 +1551,7 @@ window.ITEM_DATA = {
     "sellPrice": "2000",
     "stackSize": "3",
     "category": "Trinket",
-    "foundIn": [],
-    "recycleEntries": [],
-    "recycleStatus": "Cannot be recycled",
-    "usesEntries": []
+    "recycleStatus": "Cannot be recycled"
   },
   "Deadline": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/c/c7/Deadline.png/75px-Deadline.png.webp",
@@ -1793,7 +1559,6 @@ window.ITEM_DATA = {
     "sellPrice": "6000",
     "stackSize": "1",
     "category": "Quick Use",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "ARC Circuitry",
@@ -1805,9 +1570,7 @@ window.ITEM_DATA = {
         "quantity": 1,
         "text": "1x Explosive Compound"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Defibrillator": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/5/5f/Defibrillator.png/75px-Defibrillator.png.webp",
@@ -1815,7 +1578,6 @@ window.ITEM_DATA = {
     "sellPrice": "1000",
     "stackSize": "3",
     "category": "Quick Use",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Moss",
@@ -1827,9 +1589,7 @@ window.ITEM_DATA = {
         "quantity": 1,
         "text": "1x Plastic Parts"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Integrated Defibrillator": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/5/5f/Defibrillator.png/75px-Defibrillator.png.webp",
@@ -1837,10 +1597,7 @@ window.ITEM_DATA = {
     "sellPrice": "0",
     "stackSize": "1",
     "category": "Quick Use",
-    "foundIn": [],
-    "recycleEntries": [],
-    "recycleStatus": "Cannot be recycled",
-    "usesEntries": []
+    "recycleStatus": "Cannot be recycled"
   },
   "Deflated Football": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/7/7c/Deflated_Football.png/75px-Deflated_Football.png.webp",
@@ -1848,7 +1605,6 @@ window.ITEM_DATA = {
     "sellPrice": "1000",
     "stackSize": "3",
     "category": "Recyclable",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Fabric",
@@ -1861,7 +1617,6 @@ window.ITEM_DATA = {
         "text": "9x Rubber Parts"
       }
     ],
-    "recycleStatus": "",
     "usesEntries": [
       {
         "text": "The League (1x)",
@@ -1875,16 +1630,13 @@ window.ITEM_DATA = {
     "sellPrice": "640",
     "stackSize": "3",
     "category": "Recyclable",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Rubber Parts",
         "quantity": 11,
         "text": "11x Rubber Parts"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Diving Goggles": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/1/1a/Diving_Goggles.png/75px-Diving_Goggles.png.webp",
@@ -1892,16 +1644,13 @@ window.ITEM_DATA = {
     "sellPrice": "640",
     "stackSize": "3",
     "category": "Recyclable",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Rubber Parts",
         "quantity": 12,
         "text": "12x Rubber Parts"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Dog Collar": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/c/c5/Dog_Collar.png/75px-Dog_Collar.png.webp",
@@ -1924,7 +1673,6 @@ window.ITEM_DATA = {
         "text": "8x Fabric"
       }
     ],
-    "recycleStatus": "",
     "usesEntries": [
       {
         "text": "Scrappy 2 (1x)",
@@ -1938,10 +1686,7 @@ window.ITEM_DATA = {
     "sellPrice": "3000",
     "stackSize": "15",
     "category": "Trinket",
-    "foundIn": [],
-    "recycleEntries": [],
-    "recycleStatus": "Cannot be recycled",
-    "usesEntries": []
+    "recycleStatus": "Cannot be recycled"
   },
   "Door Blocker": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/6/68/Door_Blocker.png/75px-Door_Blocker.png.webp",
@@ -1949,16 +1694,13 @@ window.ITEM_DATA = {
     "sellPrice": "270",
     "stackSize": "3",
     "category": "Quick Use",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Metal Parts",
         "quantity": 2,
         "text": "2x Metal Parts"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Dried-Out ARC Resin": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/0/0b/Dried-Out_ARC_Resin.png/75px-Dried-Out_ARC_Resin.png.webp",
@@ -1966,16 +1708,13 @@ window.ITEM_DATA = {
     "sellPrice": "640",
     "stackSize": "3",
     "category": "Recyclable",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Plastic Parts",
         "quantity": 9,
         "text": "9x Plastic Parts"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Duct Tape": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/4/4e/Duct_Tape.png/75px-Duct_Tape.png.webp",
@@ -1983,7 +1722,6 @@ window.ITEM_DATA = {
     "sellPrice": "300",
     "stackSize": "15",
     "category": "Topside Material",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Fabric",
@@ -1991,7 +1729,6 @@ window.ITEM_DATA = {
         "text": "3x Fabric"
       }
     ],
-    "recycleStatus": "",
     "usesEntries": [
       {
         "text": "Weather Monitor System (10x)",
@@ -2016,7 +1753,6 @@ window.ITEM_DATA = {
         "text": "6x Fabric"
       }
     ],
-    "recycleStatus": "",
     "usesEntries": [
       {
         "text": "Medical Lab 2 (5x)",
@@ -2061,7 +1797,6 @@ window.ITEM_DATA = {
         "text": "3x Rubber Parts"
       }
     ],
-    "recycleStatus": "",
     "usesEntries": [
       {
         "text": "Gear Bench 2 (5x)",
@@ -2091,10 +1826,7 @@ window.ITEM_DATA = {
     "sellPrice": "1000",
     "stackSize": "5",
     "category": "Trinket",
-    "foundIn": [],
-    "recycleEntries": [],
-    "recycleStatus": "Cannot be recycled",
-    "usesEntries": []
+    "recycleStatus": "Cannot be recycled"
   },
   "Energy Clip": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/0/08/Energy_Clip.png/75px-Energy_Clip.png.webp",
@@ -2102,10 +1834,7 @@ window.ITEM_DATA = {
     "sellPrice": "200",
     "stackSize": "5",
     "category": "Ammunition",
-    "foundIn": [],
-    "recycleEntries": [],
-    "recycleStatus": "Cannot be recycled",
-    "usesEntries": []
+    "recycleStatus": "Cannot be recycled"
   },
   "Exodus Modules": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/1/1b/Exodus_Modules.png/75px-Exodus_Modules.png.webp",
@@ -2128,7 +1857,6 @@ window.ITEM_DATA = {
         "text": "2x Processor"
       }
     ],
-    "recycleStatus": "",
     "usesEntries": [
       {
         "text": "Expedition 1 (1x)",
@@ -2154,10 +1882,7 @@ window.ITEM_DATA = {
     "sellPrice": "1000",
     "stackSize": "15",
     "category": "Trinket",
-    "foundIn": [],
-    "recycleEntries": [],
-    "recycleStatus": "Cannot be recycled",
-    "usesEntries": []
+    "recycleStatus": "Cannot be recycled"
   },
   "Expired Respirator": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/b/ba/Expired_Respirator.png/75px-Expired_Respirator.png.webp",
@@ -2165,7 +1890,6 @@ window.ITEM_DATA = {
     "sellPrice": "640",
     "stackSize": "3",
     "category": "Recyclable",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Fabric",
@@ -2178,7 +1902,6 @@ window.ITEM_DATA = {
         "text": "8x Rubber Parts"
       }
     ],
-    "recycleStatus": "",
     "usesEntries": [
       {
         "text": "Trophy Display (3x)",
@@ -2203,7 +1926,6 @@ window.ITEM_DATA = {
         "text": "2x Crude Explosives"
       }
     ],
-    "recycleStatus": "",
     "usesEntries": [
       {
         "text": "Explosives Station 3 (5x)",
@@ -2217,7 +1939,6 @@ window.ITEM_DATA = {
     "sellPrice": "1500",
     "stackSize": "3",
     "category": "Quick Use",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Sensors",
@@ -2229,9 +1950,7 @@ window.ITEM_DATA = {
         "quantity": 2,
         "text": "2x Oil"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Extended Barrel": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/2/2f/Extended_Barrel.png/75px-Extended_Barrel.png.webp",
@@ -2239,7 +1958,6 @@ window.ITEM_DATA = {
     "sellPrice": "5000",
     "stackSize": "1",
     "category": "Mods",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Mod Components",
@@ -2251,9 +1969,7 @@ window.ITEM_DATA = {
         "quantity": 1,
         "text": "1x Wires"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Extended Light Mag I": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/2/23/Extended_Light_Mag_I.png/75px-Extended_Light_Mag_I.png.webp",
@@ -2261,16 +1977,13 @@ window.ITEM_DATA = {
     "sellPrice": "640",
     "stackSize": "1",
     "category": "Mods",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Plastic Parts",
         "quantity": 6,
         "text": "6x Plastic Parts"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Extended Light Mag II": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/c/cf/Extended_Light_Mag_II.png/75px-Extended_Light_Mag_II.png.webp",
@@ -2278,7 +1991,6 @@ window.ITEM_DATA = {
     "sellPrice": "2000",
     "stackSize": "1",
     "category": "Mods",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Mechanical Components",
@@ -2290,9 +2002,7 @@ window.ITEM_DATA = {
         "quantity": 1,
         "text": "1x Steel Spring"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Extended Light Mag III": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/4/40/Extended_Light_Mag_III.png/75px-Extended_Light_Mag_III.png.webp",
@@ -2300,7 +2010,6 @@ window.ITEM_DATA = {
     "sellPrice": "5000",
     "stackSize": "1",
     "category": "Mods",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Mod Components",
@@ -2312,9 +2021,7 @@ window.ITEM_DATA = {
         "quantity": 2,
         "text": "2x Steel Spring"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Extended Medium Mag I": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/4/44/Extended_Medium_Mag_I.png/75px-Extended_Medium_Mag_I.png.webp",
@@ -2322,16 +2029,13 @@ window.ITEM_DATA = {
     "sellPrice": "640",
     "stackSize": "1",
     "category": "Mods",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Plastic Parts",
         "quantity": 6,
         "text": "6x Plastic Parts"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Extended Medium Mag II": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/5/50/Extended_Medium_Mag_II.png/75px-Extended_Medium_Mag_II.png.webp",
@@ -2339,7 +2043,6 @@ window.ITEM_DATA = {
     "sellPrice": "2000",
     "stackSize": "1",
     "category": "Mods",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Mechanical Components",
@@ -2351,9 +2054,7 @@ window.ITEM_DATA = {
         "quantity": 1,
         "text": "1x Steel Spring"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Extended Medium Mag III": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/a/a1/Extended_Medium_Mag_III.png/75px-Extended_Medium_Mag_III.png.webp",
@@ -2361,7 +2062,6 @@ window.ITEM_DATA = {
     "sellPrice": "5000",
     "stackSize": "1",
     "category": "Mods",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Mod Components",
@@ -2373,9 +2073,7 @@ window.ITEM_DATA = {
         "quantity": 2,
         "text": "2x Steel Spring"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Extended Shotgun Mag I": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/9/9b/Extended_Shotgun_Mag_I.png/75px-Extended_Shotgun_Mag_I.png.webp",
@@ -2383,16 +2081,13 @@ window.ITEM_DATA = {
     "sellPrice": "640",
     "stackSize": "1",
     "category": "Mods",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Plastic Parts",
         "quantity": 6,
         "text": "6x Plastic Parts"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Extended Shotgun Mag II": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/4/4f/Extended_Shotgun_Mag_II.png/75px-Extended_Shotgun_Mag_II.png.webp",
@@ -2400,7 +2095,6 @@ window.ITEM_DATA = {
     "sellPrice": "2000",
     "stackSize": "1",
     "category": "Mods",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Mechanical Components",
@@ -2412,9 +2106,7 @@ window.ITEM_DATA = {
         "quantity": 1,
         "text": "1x Steel Spring"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Extended Shotgun Mag III": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/7/77/Extended_Shotgun_Mag_III.png/75px-Extended_Shotgun_Mag_III.png.webp",
@@ -2422,7 +2114,6 @@ window.ITEM_DATA = {
     "sellPrice": "5000",
     "stackSize": "1",
     "category": "Mods",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Mod Components",
@@ -2434,9 +2125,7 @@ window.ITEM_DATA = {
         "quantity": 2,
         "text": "2x Steel Spring"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Fabric": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/2/2b/Fabric.png/75px-Fabric.png.webp",
@@ -2449,7 +2138,6 @@ window.ITEM_DATA = {
       "Medical",
       "Residential"
     ],
-    "recycleEntries": [],
     "recycleStatus": "Cannot be recycled",
     "usesEntries": [
       {
@@ -2468,10 +2156,7 @@ window.ITEM_DATA = {
     "sellPrice": "640",
     "stackSize": "15",
     "category": "Trinket",
-    "foundIn": [],
-    "recycleEntries": [],
-    "recycleStatus": "Cannot be recycled",
-    "usesEntries": []
+    "recycleStatus": "Cannot be recycled"
   },
   "Familiar Duck": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/4/4f/Familiar_Duck.png/75px-Familiar_Duck.png.webp",
@@ -2479,10 +2164,7 @@ window.ITEM_DATA = {
     "sellPrice": "7000",
     "stackSize": "15",
     "category": "Trinket",
-    "foundIn": [],
-    "recycleEntries": [],
-    "recycleStatus": "Cannot be recycled",
-    "usesEntries": []
+    "recycleStatus": "Cannot be recycled"
   },
   "Fertilizer": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/2/25/Fertilizer.png/75px-Fertilizer.png.webp",
@@ -2490,16 +2172,13 @@ window.ITEM_DATA = {
     "sellPrice": "1000",
     "stackSize": "5",
     "category": "Nature",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Assorted Seeds",
         "quantity": 2,
         "text": "2x Assorted Seeds"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Film Reel": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/4/44/Film_Reel.png/75px-Film_Reel.png.webp",
@@ -2507,10 +2186,7 @@ window.ITEM_DATA = {
     "sellPrice": "2000",
     "stackSize": "3",
     "category": "Trinket",
-    "foundIn": [],
-    "recycleEntries": [],
-    "recycleStatus": "Cannot be recycled",
-    "usesEntries": []
+    "recycleStatus": "Cannot be recycled"
   },
   "Fine Wristwatch": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/9/94/Fine_Wristwatch.png/75px-Fine_Wristwatch.png.webp",
@@ -2518,8 +2194,6 @@ window.ITEM_DATA = {
     "sellPrice": "3000",
     "stackSize": "3",
     "category": "Trinket",
-    "foundIn": [],
-    "recycleEntries": [],
     "recycleStatus": "Cannot be recycled",
     "usesEntries": [
       {
@@ -2549,7 +2223,6 @@ window.ITEM_DATA = {
         "text": "1x Crude Explosives"
       }
     ],
-    "recycleStatus": "",
     "usesEntries": [
       {
         "text": "Refiner 2 (8x)",
@@ -2563,16 +2236,13 @@ window.ITEM_DATA = {
     "sellPrice": "270",
     "stackSize": "5",
     "category": "Quick Use",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Plastic Parts",
         "quantity": 3,
         "text": "3x Plastic Parts"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Firefly Burner": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/0/04/Firefly_Burner.png/75px-Firefly_Burner.png.webp",
@@ -2595,7 +2265,6 @@ window.ITEM_DATA = {
         "text": "2x Crude Explosives"
       }
     ],
-    "recycleStatus": "",
     "usesEntries": [
       {
         "text": "Expedition 3 (5x)",
@@ -2613,16 +2282,13 @@ window.ITEM_DATA = {
     "sellPrice": "2000",
     "stackSize": "1",
     "category": "Quick Use",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Explosive Compound",
         "quantity": 1,
         "text": "1x Explosive Compound"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Flame Spray": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/7/73/Flame_Spray.png/75px-Flame_Spray.png.webp",
@@ -2630,7 +2296,6 @@ window.ITEM_DATA = {
     "sellPrice": "2000",
     "stackSize": "1",
     "category": "Quick Use",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Canister",
@@ -2642,9 +2307,7 @@ window.ITEM_DATA = {
         "quantity": 1,
         "text": "1x Fireball Burner"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Flashy Duck": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/f/f1/Flashy_Duck.png/75px-Flashy_Duck.png.webp",
@@ -2652,10 +2315,7 @@ window.ITEM_DATA = {
     "sellPrice": "3000",
     "stackSize": "15",
     "category": "Trinket",
-    "foundIn": [],
-    "recycleEntries": [],
-    "recycleStatus": "Cannot be recycled",
-    "usesEntries": []
+    "recycleStatus": "Cannot be recycled"
   },
   "Flow Controller": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/b/b6/Flow_Controller.png/75px-Flow_Controller.png.webp",
@@ -2663,7 +2323,6 @@ window.ITEM_DATA = {
     "sellPrice": "3000",
     "stackSize": "3",
     "category": "Recyclable",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Advanced Mechanical Components",
@@ -2676,7 +2335,6 @@ window.ITEM_DATA = {
         "text": "1x Sensors"
       }
     ],
-    "recycleStatus": "",
     "usesEntries": [
       {
         "text": "Snap And Salvage (1x)",
@@ -2690,16 +2348,13 @@ window.ITEM_DATA = {
     "sellPrice": "4000",
     "stackSize": "1",
     "category": "Nature",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Explosive Compound",
         "quantity": 3,
         "text": "3x Explosive Compound"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Free Loadout Augment": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/c/cf/Free_Loadout_Augment.png/75px-Free_Loadout_Augment.png.webp",
@@ -2707,10 +2362,7 @@ window.ITEM_DATA = {
     "sellPrice": "100",
     "stackSize": "1",
     "category": "Augment",
-    "foundIn": [],
-    "recycleEntries": [],
-    "recycleStatus": "Cannot be recycled",
-    "usesEntries": []
+    "recycleStatus": "Cannot be recycled"
   },
   "Frequency Modulation Box": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/3/36/Frequency_Modulation_Box.png/75px-Frequency_Modulation_Box.png.webp",
@@ -2718,7 +2370,6 @@ window.ITEM_DATA = {
     "sellPrice": "3000",
     "stackSize": "3",
     "category": "Recyclable",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Advanced Electrical Components",
@@ -2731,7 +2382,6 @@ window.ITEM_DATA = {
         "text": "1x Speaker Component"
       }
     ],
-    "recycleStatus": "",
     "usesEntries": [
       {
         "text": "Expedition 1 (5x)",
@@ -2760,7 +2410,6 @@ window.ITEM_DATA = {
         "text": "5x Plastic Parts"
       }
     ],
-    "recycleStatus": "",
     "usesEntries": [
       {
         "text": "Utility Station 3 (3x)",
@@ -2774,10 +2423,7 @@ window.ITEM_DATA = {
     "sellPrice": "1800",
     "stackSize": "5",
     "category": "Quick Use",
-    "foundIn": [],
-    "recycleEntries": [],
-    "recycleStatus": "Cannot be recycled",
-    "usesEntries": []
+    "recycleStatus": "Cannot be recycled"
   },
   "Frying Pan": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/7/74/Frying_Pan.png/75px-Frying_Pan.png.webp",
@@ -2785,16 +2431,13 @@ window.ITEM_DATA = {
     "sellPrice": "640",
     "stackSize": "3",
     "category": "Recyclable",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Metal Parts",
         "quantity": 8,
         "text": "8x Metal Parts"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Garlic Press": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/8/88/Garlic_Press.png/75px-Garlic_Press.png.webp",
@@ -2802,16 +2445,13 @@ window.ITEM_DATA = {
     "sellPrice": "1000",
     "stackSize": "3",
     "category": "Recyclable",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Metal Parts",
         "quantity": 12,
         "text": "12x Metal Parts"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Gas Grenade Trap": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/3/33/Gas_Grenade_Trap.png/75px-Gas_Grenade_Trap.png.webp",
@@ -2819,10 +2459,7 @@ window.ITEM_DATA = {
     "sellPrice": "300",
     "stackSize": "3",
     "category": "Quick Use",
-    "foundIn": [],
-    "recycleEntries": [],
-    "recycleStatus": "Cannot be recycled",
-    "usesEntries": []
+    "recycleStatus": "Cannot be recycled"
   },
   "Gas Grenade": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/f/fe/Gas_Grenade.png/75px-Gas_Grenade.png.webp",
@@ -2830,7 +2467,6 @@ window.ITEM_DATA = {
     "sellPrice": "270",
     "stackSize": "3",
     "category": "Quick Use",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Chemicals",
@@ -2842,9 +2478,7 @@ window.ITEM_DATA = {
         "quantity": 1,
         "text": "1x Rubber Parts"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Gas Mine": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/c/ce/Gas_Mine.png/75px-Gas_Mine.png.webp",
@@ -2852,7 +2486,6 @@ window.ITEM_DATA = {
     "sellPrice": "270",
     "stackSize": "3",
     "category": "Quick Use",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Chemicals",
@@ -2864,9 +2497,7 @@ window.ITEM_DATA = {
         "quantity": 1,
         "text": "1x Rubber Parts"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Geiger Counter": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/3/37/Geiger_Counter.png/75px-Geiger_Counter.png.webp",
@@ -2874,7 +2505,6 @@ window.ITEM_DATA = {
     "sellPrice": "3500",
     "stackSize": "3",
     "category": "Recyclable",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Exodus Modules",
@@ -2887,7 +2517,6 @@ window.ITEM_DATA = {
         "text": "3x Battery"
       }
     ],
-    "recycleStatus": "",
     "usesEntries": [
       {
         "text": "Trophy Display (3x)",
@@ -2901,10 +2530,7 @@ window.ITEM_DATA = {
     "sellPrice": "1000",
     "stackSize": "15",
     "category": "Trinket",
-    "foundIn": [],
-    "recycleEntries": [],
-    "recycleStatus": "Cannot be recycled",
-    "usesEntries": []
+    "recycleStatus": "Cannot be recycled"
   },
   "Great Mullein": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/0/0d/Great_Mullein.png/75px-Great_Mullein.png.webp",
@@ -2912,7 +2538,6 @@ window.ITEM_DATA = {
     "sellPrice": "300",
     "stackSize": "15",
     "category": "Topside Material",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Assorted Seeds",
@@ -2920,7 +2545,6 @@ window.ITEM_DATA = {
         "text": "2x Assorted Seeds"
       }
     ],
-    "recycleStatus": "",
     "usesEntries": [
       {
         "text": "Doctor's Orders (1x)",
@@ -2934,16 +2558,13 @@ window.ITEM_DATA = {
     "sellPrice": "150",
     "stackSize": "5",
     "category": "Quick Use",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Chemicals",
         "quantity": 1,
         "text": "1x Chemicals"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Headphones": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/0/0f/Headphones.png/75px-Headphones.png.webp",
@@ -2951,7 +2572,6 @@ window.ITEM_DATA = {
     "sellPrice": "1000",
     "stackSize": "3",
     "category": "Recyclable",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Speaker Component",
@@ -2963,9 +2583,7 @@ window.ITEM_DATA = {
         "quantity": 7,
         "text": "7x Rubber Parts"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Heavy Ammo": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/6/6f/Heavy_Ammo.png/75px-Heavy_Ammo.png.webp",
@@ -2973,10 +2591,7 @@ window.ITEM_DATA = {
     "sellPrice": "12",
     "stackSize": "40",
     "category": "Ammunition",
-    "foundIn": [],
-    "recycleEntries": [],
-    "recycleStatus": "Cannot be recycled",
-    "usesEntries": []
+    "recycleStatus": "Cannot be recycled"
   },
   "Heavy Fuze Grenade": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/e/ea/Heavy_Fuze_Grenade.png/75px-Heavy_Fuze_Grenade.png.webp",
@@ -2984,7 +2599,6 @@ window.ITEM_DATA = {
     "sellPrice": "1600",
     "stackSize": "3",
     "category": "Quick Use",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Oil",
@@ -2996,9 +2610,7 @@ window.ITEM_DATA = {
         "quantity": 2,
         "text": "2x Rubber Parts"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Heavy Gun Parts": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/3/33/Heavy_Gun_Parts.png/75px-Heavy_Gun_Parts.png.webp",
@@ -3006,16 +2618,13 @@ window.ITEM_DATA = {
     "sellPrice": "700",
     "stackSize": "5",
     "category": "Topside Material",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Simple Gun Parts",
         "quantity": 2,
         "text": "2x Simple Gun Parts"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Heavy Shield": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/f/f9/Heavy_Shield.png/75px-Heavy_Shield.png.webp",
@@ -3023,7 +2632,6 @@ window.ITEM_DATA = {
     "sellPrice": "5500",
     "stackSize": "1",
     "category": "Shield",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Voltage Converter",
@@ -3035,9 +2643,7 @@ window.ITEM_DATA = {
         "quantity": 2,
         "text": "2x ARC Circuitry"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Herbal Bandage": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/c/c5/Herbal_Bandage.png/75px-Herbal_Bandage.png.webp",
@@ -3045,7 +2651,6 @@ window.ITEM_DATA = {
     "sellPrice": "900",
     "stackSize": "5",
     "category": "Quick Use",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Assorted Seeds",
@@ -3057,9 +2662,7 @@ window.ITEM_DATA = {
         "quantity": 5,
         "text": "5x Fabric"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Horizontal Grip": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/8/89/Horizontal_Grip.png/75px-Horizontal_Grip.png.webp",
@@ -3067,7 +2670,6 @@ window.ITEM_DATA = {
     "sellPrice": "7000",
     "stackSize": "1",
     "category": "Mods",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Mod Components",
@@ -3079,9 +2681,7 @@ window.ITEM_DATA = {
         "quantity": 2,
         "text": "2x Duct Tape"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Hornet Driver": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/b/bb/Hornet_Driver.png/75px-Hornet_Driver.png.webp",
@@ -3104,7 +2704,6 @@ window.ITEM_DATA = {
         "text": "1x Electrical Components"
       }
     ],
-    "recycleStatus": "",
     "usesEntries": [
       {
         "text": "Gear Bench 2 (5x)",
@@ -3126,16 +2725,13 @@ window.ITEM_DATA = {
     "sellPrice": "640",
     "stackSize": "3",
     "category": "Recyclable",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Chemicals",
         "quantity": 11,
         "text": "11x Chemicals"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Humidifier": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/4/4b/Humidifier.png/75px-Humidifier.png.webp",
@@ -3158,7 +2754,6 @@ window.ITEM_DATA = {
         "text": "2x Wires"
       }
     ],
-    "recycleStatus": "",
     "usesEntries": [
       {
         "text": "Expedition 1 (5x)",
@@ -3172,16 +2767,13 @@ window.ITEM_DATA = {
     "sellPrice": "640",
     "stackSize": "3",
     "category": "Recyclable",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Metal Parts",
         "quantity": 7,
         "text": "7x Metal Parts"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Impure ARC Coolant": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/a/a0/Impure_ARC_Coolant.png/75px-Impure_ARC_Coolant.png.webp",
@@ -3189,16 +2781,13 @@ window.ITEM_DATA = {
     "sellPrice": "640",
     "stackSize": "3",
     "category": "Recyclable",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Chemicals",
         "quantity": 12,
         "text": "12x Chemicals"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Industrial Battery": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/c/c9/Industrial_Battery.png/75px-Industrial_Battery.png.webp",
@@ -3221,7 +2810,6 @@ window.ITEM_DATA = {
         "text": "7x Chemicals"
       }
     ],
-    "recycleStatus": "",
     "usesEntries": [
       {
         "text": "Gear Bench 3 (3x)",
@@ -3250,7 +2838,6 @@ window.ITEM_DATA = {
         "text": "5x Metal Parts"
       }
     ],
-    "recycleStatus": "",
     "usesEntries": [
       {
         "text": "Expedition 3 (3x)",
@@ -3264,7 +2851,6 @@ window.ITEM_DATA = {
     "sellPrice": "1000",
     "stackSize": "3",
     "category": "Recyclable",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Magnet",
@@ -3276,9 +2862,7 @@ window.ITEM_DATA = {
         "quantity": 4,
         "text": "4x Metal Parts"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Integrated Shield Recharger": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/a/a7/Integrated_Shield_Recharger.png/75px-Integrated_Shield_Recharger.png.webp",
@@ -3286,10 +2870,7 @@ window.ITEM_DATA = {
     "sellPrice": "0",
     "stackSize": "",
     "category": "Quick Use",
-    "foundIn": [],
-    "recycleEntries": [],
-    "recycleStatus": "Cannot be recycled",
-    "usesEntries": []
+    "recycleStatus": "Cannot be recycled"
   },
   "Ion Sputter": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/e/e7/Ion_Sputter.png/75px-Ion_Sputter.png.webp",
@@ -3297,7 +2878,6 @@ window.ITEM_DATA = {
     "sellPrice": "6000",
     "stackSize": "3",
     "category": "Recyclable",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Exodus Modules",
@@ -3310,7 +2890,6 @@ window.ITEM_DATA = {
         "text": "4x Voltage Converter"
       }
     ],
-    "recycleStatus": "",
     "usesEntries": [
       {
         "text": "With A View (1x)",
@@ -3328,7 +2907,6 @@ window.ITEM_DATA = {
     "sellPrice": "850",
     "stackSize": "3",
     "category": "Quick Use",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Battery",
@@ -3340,9 +2918,7 @@ window.ITEM_DATA = {
         "quantity": 2,
         "text": "2x Plastic Parts"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Kinetic Converter": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/7/71/Kinetic_Converter.png/75px-Kinetic_Converter.png.webp",
@@ -3350,7 +2926,6 @@ window.ITEM_DATA = {
     "sellPrice": "7000",
     "stackSize": "1",
     "category": "Mods",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Mod Components",
@@ -3362,9 +2937,7 @@ window.ITEM_DATA = {
         "quantity": 2,
         "text": "2x Duct Tape"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Laboratory Reagents": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/e/e5/Laboratory_Reagents.png/75px-Laboratory_Reagents.png.webp",
@@ -3387,7 +2960,6 @@ window.ITEM_DATA = {
         "text": "3x Crude Explosives"
       }
     ],
-    "recycleStatus": "",
     "usesEntries": [
       {
         "text": "Explosives Station 3 (3x)",
@@ -3401,10 +2973,7 @@ window.ITEM_DATA = {
     "sellPrice": "10000",
     "stackSize": "3",
     "category": "Trinket",
-    "foundIn": [],
-    "recycleEntries": [],
-    "recycleStatus": "Cannot be recycled",
-    "usesEntries": []
+    "recycleStatus": "Cannot be recycled"
   },
   "Launcher Ammo": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/9/99/Launcher_Ammo.png/75px-Launcher_Ammo.png.webp",
@@ -3412,10 +2981,7 @@ window.ITEM_DATA = {
     "sellPrice": "250",
     "stackSize": "24",
     "category": "Ammunition",
-    "foundIn": [],
-    "recycleEntries": [],
-    "recycleStatus": "Cannot be recycled",
-    "usesEntries": []
+    "recycleStatus": "Cannot be recycled"
   },
   "Leaper Pulse Unit": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/a/a0/Leaper_Pulse_Unit.png/75px-Leaper_Pulse_Unit.png.webp",
@@ -3438,7 +3004,6 @@ window.ITEM_DATA = {
         "text": "3x ARC Alloy"
       }
     ],
-    "recycleStatus": "",
     "usesEntries": [
       {
         "text": "Utility Station 3 (4x)",
@@ -3474,7 +3039,6 @@ window.ITEM_DATA = {
         "text": "3x Assorted Seeds"
       }
     ],
-    "recycleStatus": "",
     "usesEntries": [
       {
         "text": "Scrappy 3 (3x)",
@@ -3488,7 +3052,6 @@ window.ITEM_DATA = {
     "sellPrice": "300",
     "stackSize": "5",
     "category": "Quick Use",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Chemicals",
@@ -3500,9 +3063,7 @@ window.ITEM_DATA = {
         "quantity": 1,
         "text": "1x Plastic Parts"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Light Ammo": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/2/22/Light_Ammo.png/75px-Light_Ammo.png.webp",
@@ -3510,10 +3071,7 @@ window.ITEM_DATA = {
     "sellPrice": "4",
     "stackSize": "100",
     "category": "Ammunition",
-    "foundIn": [],
-    "recycleEntries": [],
-    "recycleStatus": "Cannot be recycled",
-    "usesEntries": []
+    "recycleStatus": "Cannot be recycled"
   },
   "Light Gun Parts": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/c/c9/Light_Gun_Parts.png/75px-Light_Gun_Parts.png.webp",
@@ -3521,16 +3079,13 @@ window.ITEM_DATA = {
     "sellPrice": "700",
     "stackSize": "5",
     "category": "Topside Material",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Simple Gun Parts",
         "quantity": 2,
         "text": "2x Simple Gun Parts"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Light Impact Grenade": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/4/4c/Light_Impact_Grenade.png/75px-Light_Impact_Grenade.png.webp",
@@ -3538,7 +3093,6 @@ window.ITEM_DATA = {
     "sellPrice": "270",
     "stackSize": "5",
     "category": "Quick Use",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Chemicals",
@@ -3550,9 +3104,7 @@ window.ITEM_DATA = {
         "quantity": 1,
         "text": "1x Plastic Parts"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Light Shield": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/4/40/Light_Shield.png/75px-Light_Shield.png.webp",
@@ -3560,16 +3112,13 @@ window.ITEM_DATA = {
     "sellPrice": "640",
     "stackSize": "1",
     "category": "Shield",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Plastic Parts",
         "quantity": 4,
         "text": "4x Plastic Parts"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Lightweight Stock": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/c/cb/Lightweight_Stock.png/75px-Lightweight_Stock.png.webp",
@@ -3577,7 +3126,6 @@ window.ITEM_DATA = {
     "sellPrice": "5000",
     "stackSize": "1",
     "category": "Mods",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Duct Tape",
@@ -3589,9 +3137,7 @@ window.ITEM_DATA = {
         "quantity": 1,
         "text": "1x Mod Components"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Light Bulb": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/2/2c/Light_Bulb.png/75px-Light_Bulb.png.webp",
@@ -3599,8 +3145,6 @@ window.ITEM_DATA = {
     "sellPrice": "2000",
     "stackSize": "3",
     "category": "Trinket",
-    "foundIn": [],
-    "recycleEntries": [],
     "recycleStatus": "Cannot be recycled",
     "usesEntries": [
       {
@@ -3619,7 +3163,6 @@ window.ITEM_DATA = {
     "sellPrice": "640",
     "stackSize": "1",
     "category": "Augment",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Plastic Parts",
@@ -3631,9 +3174,7 @@ window.ITEM_DATA = {
         "quantity": 3,
         "text": "3x Rubber Parts"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Looting Mk. 2": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/7/7c/Looting_Mk._2.png/75px-Looting_Mk._2.png.webp",
@@ -3641,7 +3182,6 @@ window.ITEM_DATA = {
     "sellPrice": "2000",
     "stackSize": "1",
     "category": "Augment",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Electrical Components",
@@ -3653,9 +3193,7 @@ window.ITEM_DATA = {
         "quantity": 1,
         "text": "1x Magnet"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Looting Mk. 3 (Cautious)": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/6/68/Looting_Mk._3_%28Cautious%29.png/75px-Looting_Mk._3_%28Cautious%29.png.webp",
@@ -3663,7 +3201,6 @@ window.ITEM_DATA = {
     "sellPrice": "5000",
     "stackSize": "1",
     "category": "Augment",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Advanced Electrical Components",
@@ -3675,9 +3212,7 @@ window.ITEM_DATA = {
         "quantity": 1,
         "text": "1x Processor"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Looting Mk. 3 (Safekeeper)": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/c/c6/Looting_Mk._3_%28Safekeeper%29.png/75px-Looting_Mk._3_%28Safekeeper%29.png.webp",
@@ -3685,7 +3220,6 @@ window.ITEM_DATA = {
     "sellPrice": "5000",
     "stackSize": "1",
     "category": "Augment",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Advanced Electrical Components",
@@ -3697,9 +3231,7 @@ window.ITEM_DATA = {
         "quantity": 1,
         "text": "1x Processor"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Looting Mk. 3 (Survivor)": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/7/74/Looting_Mk._3_%28Survivor%29.png/75px-Looting_Mk._3_%28Survivor%29.png.webp",
@@ -3707,7 +3239,6 @@ window.ITEM_DATA = {
     "sellPrice": "5000",
     "stackSize": "1",
     "category": "Augment",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Advanced Electrical Components",
@@ -3719,9 +3250,7 @@ window.ITEM_DATA = {
         "quantity": 1,
         "text": "1x Processor"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Lure Grenade Trap": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/9/92/Lure_Grenade_Trap.png/75px-Lure_Grenade_Trap.png.webp",
@@ -3729,10 +3258,7 @@ window.ITEM_DATA = {
     "sellPrice": "1000",
     "stackSize": "3",
     "category": "Quick Use",
-    "foundIn": [],
-    "recycleEntries": [],
-    "recycleStatus": "Cannot be recycled",
-    "usesEntries": []
+    "recycleStatus": "Cannot be recycled"
   },
   "Lure Grenade": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/7/77/Lure_Grenade.png/75px-Lure_Grenade.png.webp",
@@ -3740,16 +3266,13 @@ window.ITEM_DATA = {
     "sellPrice": "1000",
     "stackSize": "3",
     "category": "Quick Use",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Speaker Component",
         "quantity": 1,
         "text": "1x Speaker Component"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Magnet": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/8/8c/Magnet.png/75px-Magnet.png.webp",
@@ -3757,16 +3280,13 @@ window.ITEM_DATA = {
     "sellPrice": "300",
     "stackSize": "15",
     "category": "Topside Material",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Metal Parts",
         "quantity": 2,
         "text": "2x Metal Parts"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Magnetic Accelerator": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/5/5e/Magnetic_Accelerator.png/75px-Magnetic_Accelerator.png.webp",
@@ -3774,7 +3294,6 @@ window.ITEM_DATA = {
     "sellPrice": "5500",
     "stackSize": "3",
     "category": "Refined Material",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Advanced Mechanical Components",
@@ -3787,7 +3306,6 @@ window.ITEM_DATA = {
         "text": "1x ARC Motion Core"
       }
     ],
-    "recycleStatus": "",
     "usesEntries": [
       {
         "text": "Expedition 1 (3x)",
@@ -3805,7 +3323,6 @@ window.ITEM_DATA = {
     "sellPrice": "6000",
     "stackSize": "3",
     "category": "Recyclable",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Magnetic Accelerator",
@@ -3818,7 +3335,6 @@ window.ITEM_DATA = {
         "text": "1x Steel Spring"
       }
     ],
-    "recycleStatus": "",
     "usesEntries": [
       {
         "text": "Snap And Salvage (1x)",
@@ -3832,7 +3348,6 @@ window.ITEM_DATA = {
     "sellPrice": "11000",
     "stackSize": "1",
     "category": "Recyclable",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Magnetic Accelerator",
@@ -3845,7 +3360,6 @@ window.ITEM_DATA = {
         "text": "1x Power Rod"
       }
     ],
-    "recycleStatus": "",
     "usesEntries": [
       {
         "text": "Trophy Display (3x)",
@@ -3874,7 +3388,6 @@ window.ITEM_DATA = {
         "text": "3x Metal Parts"
       }
     ],
-    "recycleStatus": "",
     "usesEntries": [
       {
         "text": "Gunsmith 2 (5x)",
@@ -3888,10 +3401,7 @@ window.ITEM_DATA = {
     "sellPrice": "6",
     "stackSize": "80",
     "category": "Ammunition",
-    "foundIn": [],
-    "recycleEntries": [],
-    "recycleStatus": "Cannot be recycled",
-    "usesEntries": []
+    "recycleStatus": "Cannot be recycled"
   },
   "Medium Gun Parts": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/9/9a/Medium_Gun_Parts.png/75px-Medium_Gun_Parts.png.webp",
@@ -3899,16 +3409,13 @@ window.ITEM_DATA = {
     "sellPrice": "700",
     "stackSize": "5",
     "category": "Topside Material",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Simple Gun Parts",
         "quantity": 2,
         "text": "2x Simple Gun Parts"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Medium Shield": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/4/41/Medium_Shield.png/75px-Medium_Shield.png.webp",
@@ -3916,16 +3423,13 @@ window.ITEM_DATA = {
     "sellPrice": "2000",
     "stackSize": "1",
     "category": "Shield",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "ARC Circuitry",
         "quantity": 1,
         "text": "1x ARC Circuitry"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Metal Brackets": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/6/62/Metal_Brackets.png/75px-Metal_Brackets.png.webp",
@@ -3933,16 +3437,13 @@ window.ITEM_DATA = {
     "sellPrice": "640",
     "stackSize": "3",
     "category": "Recyclable",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Metal Parts",
         "quantity": 8,
         "text": "8x Metal Parts"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Metal Parts": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/8/89/Metal_Parts.png/75px-Metal_Parts.png.webp",
@@ -3956,7 +3457,6 @@ window.ITEM_DATA = {
       "Mechanical",
       "Technological"
     ],
-    "recycleEntries": [],
     "recycleStatus": "Cannot be recycled",
     "usesEntries": [
       {
@@ -3991,7 +3491,6 @@ window.ITEM_DATA = {
     "sellPrice": "3000",
     "stackSize": "3",
     "category": "Recyclable",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Advanced Mechanical Components",
@@ -4003,9 +3502,7 @@ window.ITEM_DATA = {
         "quantity": 3,
         "text": "3x Magnet"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Mini Centrifuge": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/9/9f/Mini_Centrifuge.png/75px-Mini_Centrifuge.png.webp",
@@ -4013,7 +3510,6 @@ window.ITEM_DATA = {
     "sellPrice": "3000",
     "stackSize": "3",
     "category": "Recyclable",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Advanced Mechanical Components",
@@ -4025,9 +3521,7 @@ window.ITEM_DATA = {
         "quantity": 2,
         "text": "2x Canister"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Mod Components": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/0/0f/Mod_Components.png/75px-Mod_Components.png.webp",
@@ -4035,7 +3529,6 @@ window.ITEM_DATA = {
     "sellPrice": "1750",
     "stackSize": "5",
     "category": "Refined Material",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Mechanical Components",
@@ -4047,9 +3540,7 @@ window.ITEM_DATA = {
         "quantity": 1,
         "text": "1x Steel Spring"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Moss": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/6/64/Moss.png/75px-Moss.png.webp",
@@ -4057,16 +3548,13 @@ window.ITEM_DATA = {
     "sellPrice": "500",
     "stackSize": "10",
     "category": "Topside Material",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Assorted Seeds",
         "quantity": 3,
         "text": "3x Assorted Seeds"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Motor": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/0/0f/Motor.png/75px-Motor.png.webp",
@@ -4089,7 +3577,6 @@ window.ITEM_DATA = {
         "text": "2x Oil"
       }
     ],
-    "recycleStatus": "",
     "usesEntries": [
       {
         "text": "Refiner 3 (3x)",
@@ -4106,7 +3593,6 @@ window.ITEM_DATA = {
     "foundIn": [
       "Nature"
     ],
-    "recycleEntries": [],
     "recycleStatus": "Cannot be recycled",
     "usesEntries": [
       {
@@ -4121,10 +3607,7 @@ window.ITEM_DATA = {
     "sellPrice": "5000",
     "stackSize": "3",
     "category": "Trinket",
-    "foundIn": [],
-    "recycleEntries": [],
-    "recycleStatus": "Cannot be recycled",
-    "usesEntries": []
+    "recycleStatus": "Cannot be recycled"
   },
   "Music Album": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/9/90/Music_Album.png/75px-Music_Album.png.webp",
@@ -4132,10 +3615,7 @@ window.ITEM_DATA = {
     "sellPrice": "3000",
     "stackSize": "3",
     "category": "Trinket",
-    "foundIn": [],
-    "recycleEntries": [],
-    "recycleStatus": "Cannot be recycled",
-    "usesEntries": []
+    "recycleStatus": "Cannot be recycled"
   },
   "Muzzle Brake I": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/4/4f/Muzzle_Brake_I.png/75px-Muzzle_Brake_I.png.webp",
@@ -4143,16 +3623,13 @@ window.ITEM_DATA = {
     "sellPrice": "640",
     "stackSize": "1",
     "category": "Mods",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Metal Parts",
         "quantity": 5,
         "text": "5x Metal Parts"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Muzzle Brake II": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/2/23/Muzzle_Brake_II.png/75px-Muzzle_Brake_II.png.webp",
@@ -4160,7 +3637,6 @@ window.ITEM_DATA = {
     "sellPrice": "2000",
     "stackSize": "1",
     "category": "Mods",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Mechanical Components",
@@ -4172,9 +3648,7 @@ window.ITEM_DATA = {
         "quantity": 1,
         "text": "1x Wires"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Muzzle Brake III": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/a/a2/Muzzle_Brake_III.png/75px-Muzzle_Brake_III.png.webp",
@@ -4182,7 +3656,6 @@ window.ITEM_DATA = {
     "sellPrice": "5000",
     "stackSize": "1",
     "category": "Mods",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Mod Components",
@@ -4194,9 +3667,7 @@ window.ITEM_DATA = {
         "quantity": 2,
         "text": "2x Wires"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Noisemaker": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/5/5c/Noisemaker.png/75px-Noisemaker.png.webp",
@@ -4204,16 +3675,13 @@ window.ITEM_DATA = {
     "sellPrice": "640",
     "stackSize": "3",
     "category": "Quick Use",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Speaker Component",
         "quantity": 1,
         "text": "1x Speaker Component"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Number Plate": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/5/51/Number_Plate.png/75px-Number_Plate.png.webp",
@@ -4221,16 +3689,13 @@ window.ITEM_DATA = {
     "sellPrice": "270",
     "stackSize": "3",
     "category": "Recyclable",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Metal Parts",
         "quantity": 3,
         "text": "3x Metal Parts"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Oil": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/0/06/Oil.png/75px-Oil.png.webp",
@@ -4238,7 +3703,6 @@ window.ITEM_DATA = {
     "sellPrice": "300",
     "stackSize": "15",
     "category": "Topside Material",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Chemicals",
@@ -4246,7 +3710,6 @@ window.ITEM_DATA = {
         "text": "3x Chemicals"
       }
     ],
-    "recycleStatus": "",
     "usesEntries": [
       {
         "text": "Weather Monitor System (3x)",
@@ -4270,7 +3733,6 @@ window.ITEM_DATA = {
         "text": "2x Assorted Seeds"
       }
     ],
-    "recycleStatus": "",
     "usesEntries": [
       {
         "text": "Scrappy 4 (6x)",
@@ -4284,7 +3746,6 @@ window.ITEM_DATA = {
     "sellPrice": "5000",
     "stackSize": "1",
     "category": "Mods",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Duct Tape",
@@ -4296,9 +3757,7 @@ window.ITEM_DATA = {
         "quantity": 1,
         "text": "1x Mod Components"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Painted Box": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/5/53/Painted_Box.png/75px-Painted_Box.png.webp",
@@ -4306,10 +3765,7 @@ window.ITEM_DATA = {
     "sellPrice": "2000",
     "stackSize": "3",
     "category": "Trinket",
-    "foundIn": [],
-    "recycleEntries": [],
-    "recycleStatus": "Cannot be recycled",
-    "usesEntries": []
+    "recycleStatus": "Cannot be recycled"
   },
   "Patrol Car Key": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/b/b0/Patrol_Car_Key.png/75px-Patrol_Car_Key.png.webp",
@@ -4317,10 +3773,7 @@ window.ITEM_DATA = {
     "sellPrice": "100",
     "stackSize": "1",
     "category": "Key",
-    "foundIn": [],
-    "recycleEntries": [],
-    "recycleStatus": "Cannot be recycled",
-    "usesEntries": []
+    "recycleStatus": "Cannot be recycled"
   },
   "Photoelectric Cloak": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/0/06/Photoelectric_Cloak.png/75px-Photoelectric_Cloak.png.webp",
@@ -4328,7 +3781,6 @@ window.ITEM_DATA = {
     "sellPrice": "5000",
     "stackSize": "1",
     "category": "Quick Use",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Advanced Electrical Components",
@@ -4340,9 +3792,7 @@ window.ITEM_DATA = {
         "quantity": 1,
         "text": "1x Speaker Component"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Plastic Parts": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/c/c9/Plastic_Parts.png/75px-Plastic_Parts.png.webp",
@@ -4355,7 +3805,6 @@ window.ITEM_DATA = {
       "Residential",
       "Technological"
     ],
-    "recycleEntries": [],
     "recycleStatus": "Cannot be recycled",
     "usesEntries": [
       {
@@ -4382,10 +3831,7 @@ window.ITEM_DATA = {
     "sellPrice": "5000",
     "stackSize": "3",
     "category": "Trinket",
-    "foundIn": [],
-    "recycleEntries": [],
-    "recycleStatus": "Cannot be recycled",
-    "usesEntries": []
+    "recycleStatus": "Cannot be recycled"
   },
   "Polluted Air Filter": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/6/6e/Polluted_Air_Filter.png/75px-Polluted_Air_Filter.png.webp",
@@ -4393,7 +3839,6 @@ window.ITEM_DATA = {
     "sellPrice": "1000",
     "stackSize": "3",
     "category": "Recyclable",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Oil",
@@ -4405,9 +3850,7 @@ window.ITEM_DATA = {
         "quantity": 6,
         "text": "6x Fabric"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Pop Trigger": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/c/c6/Pop_Trigger.png/75px-Pop_Trigger.png.webp",
@@ -4430,7 +3873,6 @@ window.ITEM_DATA = {
         "text": "1x Crude Explosives"
       }
     ],
-    "recycleStatus": "",
     "usesEntries": [
       {
         "text": "Explosives Station 2 (5x)",
@@ -4448,7 +3890,6 @@ window.ITEM_DATA = {
     "sellPrice": "2000",
     "stackSize": "1",
     "category": "Recyclable",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Battery",
@@ -4461,7 +3902,6 @@ window.ITEM_DATA = {
         "text": "6x Wires"
       }
     ],
-    "recycleStatus": "",
     "usesEntries": [
       {
         "text": "Movie Night (1x)",
@@ -4475,10 +3915,7 @@ window.ITEM_DATA = {
     "sellPrice": "2000",
     "stackSize": "3",
     "category": "Trinket",
-    "foundIn": [],
-    "recycleEntries": [],
-    "recycleStatus": "Cannot be recycled",
-    "usesEntries": []
+    "recycleStatus": "Cannot be recycled"
   },
   "Pottery": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/c/c0/Pottery.png/75px-Pottery.png.webp",
@@ -4486,10 +3923,7 @@ window.ITEM_DATA = {
     "sellPrice": "2000",
     "stackSize": "3",
     "category": "Trinket",
-    "foundIn": [],
-    "recycleEntries": [],
-    "recycleStatus": "Cannot be recycled",
-    "usesEntries": []
+    "recycleStatus": "Cannot be recycled"
   },
   "Power Bank": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/7/77/Power_Bank.png/75px-Power_Bank.png.webp",
@@ -4497,7 +3931,6 @@ window.ITEM_DATA = {
     "sellPrice": "1000",
     "stackSize": "3",
     "category": "Recyclable",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Battery",
@@ -4509,9 +3942,7 @@ window.ITEM_DATA = {
         "quantity": 2,
         "text": "2x Wires"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Power Cable": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/f/f8/Power_Cable.png/75px-Power_Cable.png.webp",
@@ -4531,7 +3962,6 @@ window.ITEM_DATA = {
         "text": "4x Wires"
       }
     ],
-    "recycleStatus": "",
     "usesEntries": [
       {
         "text": "Gear Bench 2 (3x)",
@@ -4545,7 +3975,6 @@ window.ITEM_DATA = {
     "sellPrice": "5000",
     "stackSize": "3",
     "category": "Refined Material",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Advanced Electrical Components",
@@ -4558,7 +3987,6 @@ window.ITEM_DATA = {
         "text": "1x ARC Circuitry"
       }
     ],
-    "recycleStatus": "",
     "usesEntries": [
       {
         "text": "Tribute To Toledo (1x)",
@@ -4582,7 +4010,6 @@ window.ITEM_DATA = {
         "text": "3x Assorted Seeds"
       }
     ],
-    "recycleStatus": "",
     "usesEntries": [
       {
         "text": "Scrappy 4 (6x)",
@@ -4596,7 +4023,6 @@ window.ITEM_DATA = {
     "sellPrice": "500",
     "stackSize": "5",
     "category": "Topside Material",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Plastic Parts",
@@ -4608,9 +4034,7 @@ window.ITEM_DATA = {
         "quantity": 1,
         "text": "1x Wires"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Projector": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/0/04/Projector.png/75px-Projector.png.webp",
@@ -4618,7 +4042,6 @@ window.ITEM_DATA = {
     "sellPrice": "1000",
     "stackSize": "3",
     "category": "Recyclable",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Processor",
@@ -4630,9 +4053,7 @@ window.ITEM_DATA = {
         "quantity": 2,
         "text": "2x Wires"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Pulse Mine": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/a/af/Pulse_Mine.png/75px-Pulse_Mine.png.webp",
@@ -4640,16 +4061,13 @@ window.ITEM_DATA = {
     "sellPrice": "470",
     "stackSize": "3",
     "category": "Quick Use",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Chemicals",
         "quantity": 6,
         "text": "6x Chemicals"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Queen Reactor": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/6/6b/Queen_Reactor.png/75px-Queen_Reactor.png.webp",
@@ -4657,7 +4075,6 @@ window.ITEM_DATA = {
     "sellPrice": "11000",
     "stackSize": "1",
     "category": "Recyclable",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Magnetic Accelerator",
@@ -4670,7 +4087,6 @@ window.ITEM_DATA = {
         "text": "1x Power Rod"
       }
     ],
-    "recycleStatus": "",
     "usesEntries": [
       {
         "text": "Trophy Display (3x)",
@@ -4684,7 +4100,6 @@ window.ITEM_DATA = {
     "sellPrice": "3000",
     "stackSize": "3",
     "category": "Recyclable",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Sensors",
@@ -4696,9 +4111,7 @@ window.ITEM_DATA = {
         "quantity": 2,
         "text": "2x Speaker Component"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Radio": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/3/31/Radio.png/75px-Radio.png.webp",
@@ -4706,7 +4119,6 @@ window.ITEM_DATA = {
     "sellPrice": "1000",
     "stackSize": "3",
     "category": "Recyclable",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Sensors",
@@ -4718,9 +4130,7 @@ window.ITEM_DATA = {
         "quantity": 1,
         "text": "1x Speaker Component"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Raider Hatch Key": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/6/68/Raider_Hatch_Key.png/75px-Raider_Hatch_Key.png.webp",
@@ -4728,10 +4138,7 @@ window.ITEM_DATA = {
     "sellPrice": "2000",
     "stackSize": "1",
     "category": "Key",
-    "foundIn": [],
-    "recycleEntries": [],
-    "recycleStatus": "Cannot be recycled",
-    "usesEntries": []
+    "recycleStatus": "Cannot be recycled"
   },
   "Recorder": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/6/6d/Recorder.png/75px-Recorder.png.webp",
@@ -4739,16 +4146,13 @@ window.ITEM_DATA = {
     "sellPrice": "1000",
     "stackSize": "1",
     "category": "Quick Use",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Plastic Parts",
         "quantity": 10,
         "text": "10x Plastic Parts"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Red Coral Jewelry": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/1/1a/Red_Coral_Jewelry.png/75px-Red_Coral_Jewelry.png.webp",
@@ -4756,10 +4160,7 @@ window.ITEM_DATA = {
     "sellPrice": "5000",
     "stackSize": "3",
     "category": "Trinket",
-    "foundIn": [],
-    "recycleEntries": [],
-    "recycleStatus": "Cannot be recycled",
-    "usesEntries": []
+    "recycleStatus": "Cannot be recycled"
   },
   "Red Light Stick": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/9/93/Red_Light_Stick.png/75px-Red_Light_Stick.png.webp",
@@ -4767,16 +4168,13 @@ window.ITEM_DATA = {
     "sellPrice": "150",
     "stackSize": "5",
     "category": "Quick Use",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Chemicals",
         "quantity": 1,
         "text": "1x Chemicals"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Remote Control": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/f/f4/Remote_Control.png/75px-Remote_Control.png.webp",
@@ -4784,7 +4182,6 @@ window.ITEM_DATA = {
     "sellPrice": "1000",
     "stackSize": "3",
     "category": "Recyclable",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Sensors",
@@ -4796,9 +4193,7 @@ window.ITEM_DATA = {
         "quantity": 7,
         "text": "7x Plastic Parts"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Remote Raider Flare": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/f/ff/Remote_Raider_Flare.png/75px-Remote_Raider_Flare.png.webp",
@@ -4806,7 +4201,6 @@ window.ITEM_DATA = {
     "sellPrice": "270",
     "stackSize": "3",
     "category": "Quick Use",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Chemicals",
@@ -4818,9 +4212,7 @@ window.ITEM_DATA = {
         "quantity": 1,
         "text": "1x Rubber Parts"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Resin": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/2/2c/Resin.png/75px-Resin.png.webp",
@@ -4828,10 +4220,7 @@ window.ITEM_DATA = {
     "sellPrice": "1000",
     "stackSize": "10",
     "category": "Nature",
-    "foundIn": [],
-    "recycleEntries": [],
-    "recycleStatus": "Cannot be recycled",
-    "usesEntries": []
+    "recycleStatus": "Cannot be recycled"
   },
   "Ripped Safety Vest": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/a/a8/Ripped_Safety_Vest.png/75px-Ripped_Safety_Vest.png.webp",
@@ -4839,7 +4228,6 @@ window.ITEM_DATA = {
     "sellPrice": "1000",
     "stackSize": "3",
     "category": "Recyclable",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Durable Cloth",
@@ -4851,9 +4239,7 @@ window.ITEM_DATA = {
         "quantity": 1,
         "text": "1x Magnet"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Rocket Thruster": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/8/8a/Rocket_Thruster.png/75px-Rocket_Thruster.png.webp",
@@ -4861,7 +4247,6 @@ window.ITEM_DATA = {
     "sellPrice": "2000",
     "stackSize": "3",
     "category": "Recyclable",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Synthesized Fuel",
@@ -4873,9 +4258,7 @@ window.ITEM_DATA = {
         "quantity": 6,
         "text": "6x Metal Parts"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Rocketeer Driver": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/e/ef/Rocketeer_Driver.png/75px-Rocketeer_Driver.png.webp",
@@ -4898,7 +4281,6 @@ window.ITEM_DATA = {
         "text": "3x ARC Alloy"
       }
     ],
-    "recycleStatus": "",
     "usesEntries": [
       {
         "text": "Explosives Station 3 (3x)",
@@ -4920,16 +4302,13 @@ window.ITEM_DATA = {
     "sellPrice": "640",
     "stackSize": "10",
     "category": "Nature",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Assorted Seeds",
         "quantity": 1,
         "text": "1x Assorted Seeds"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Rope": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/b/b4/Rope.png/75px-Rope.png.webp",
@@ -4937,16 +4316,13 @@ window.ITEM_DATA = {
     "sellPrice": "500",
     "stackSize": "5",
     "category": "Topside Material",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Fabric",
         "quantity": 5,
         "text": "5x Fabric"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Rosary": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/7/77/Rosary.png/75px-Rosary.png.webp",
@@ -4954,10 +4330,7 @@ window.ITEM_DATA = {
     "sellPrice": "2000",
     "stackSize": "3",
     "category": "Trinket",
-    "foundIn": [],
-    "recycleEntries": [],
-    "recycleStatus": "Cannot be recycled",
-    "usesEntries": []
+    "recycleStatus": "Cannot be recycled"
   },
   "Rotary Encoder": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/e/e4/Rotary_Encoder.png/75px-Rotary_Encoder.png.webp",
@@ -4965,7 +4338,6 @@ window.ITEM_DATA = {
     "sellPrice": "3000",
     "stackSize": "3",
     "category": "Recyclable",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Electrical Components",
@@ -4978,7 +4350,6 @@ window.ITEM_DATA = {
         "text": "2x Processor"
       }
     ],
-    "recycleStatus": "",
     "usesEntries": [
       {
         "text": "With A View (1x)",
@@ -4992,10 +4363,7 @@ window.ITEM_DATA = {
     "sellPrice": "1000",
     "stackSize": "15",
     "category": "Trinket",
-    "foundIn": [],
-    "recycleEntries": [],
-    "recycleStatus": "Cannot be recycled",
-    "usesEntries": []
+    "recycleStatus": "Cannot be recycled"
   },
   "Rubber Pad": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/1/1a/Rubber_Pad.png/75px-Rubber_Pad.png.webp",
@@ -5003,16 +4371,13 @@ window.ITEM_DATA = {
     "sellPrice": "1000",
     "stackSize": "3",
     "category": "Recyclable",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Rubber Parts",
         "quantity": 18,
         "text": "18x Rubber Parts"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Rubber Parts": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/9/93/Rubber_Parts.png/75px-Rubber_Parts.png.webp",
@@ -5025,7 +4390,6 @@ window.ITEM_DATA = {
       "Industrial",
       "Mechanical"
     ],
-    "recycleEntries": [],
     "recycleStatus": "Cannot be recycled",
     "usesEntries": [
       {
@@ -5044,7 +4408,6 @@ window.ITEM_DATA = {
     "sellPrice": "2000",
     "stackSize": "3",
     "category": "Recyclable",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Rubber Parts",
@@ -5056,9 +4419,7 @@ window.ITEM_DATA = {
         "quantity": 3,
         "text": "3x Steel Spring"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Ruined Augment": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/a/aa/Ruined_Augment.png/75px-Ruined_Augment.png.webp",
@@ -5066,7 +4427,6 @@ window.ITEM_DATA = {
     "sellPrice": "270",
     "stackSize": "1",
     "category": "Recyclable",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Plastic Parts",
@@ -5078,9 +4438,7 @@ window.ITEM_DATA = {
         "quantity": 2,
         "text": "2x Rubber Parts"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Ruined Baton": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/e/ee/Ruined_Baton.png/75px-Ruined_Baton.png.webp",
@@ -5088,7 +4446,6 @@ window.ITEM_DATA = {
     "sellPrice": "640",
     "stackSize": "3",
     "category": "Recyclable",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Rubber Parts",
@@ -5100,9 +4457,7 @@ window.ITEM_DATA = {
         "quantity": 6,
         "text": "6x Metal Parts"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Ruined Handcuffs": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/7/7c/Ruined_Handcuffs.png/75px-Ruined_Handcuffs.png.webp",
@@ -5110,16 +4465,13 @@ window.ITEM_DATA = {
     "sellPrice": "640",
     "stackSize": "3",
     "category": "Recyclable",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Metal Parts",
         "quantity": 8,
         "text": "8x Metal Parts"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Ruined Parachute": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/5/5c/Ruined_Parachute.png/75px-Ruined_Parachute.png.webp",
@@ -5127,16 +4479,13 @@ window.ITEM_DATA = {
     "sellPrice": "640",
     "stackSize": "3",
     "category": "Recyclable",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Fabric",
         "quantity": 10,
         "text": "10x Fabric"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Ruined Riot Shield": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/c/cb/Ruined_Riot_Shield.png/75px-Ruined_Riot_Shield.png.webp",
@@ -5144,7 +4493,6 @@ window.ITEM_DATA = {
     "sellPrice": "1000",
     "stackSize": "3",
     "category": "Recyclable",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Plastic Parts",
@@ -5156,9 +4504,7 @@ window.ITEM_DATA = {
         "quantity": 6,
         "text": "6x Rubber Parts"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Ruined Tactical Vest": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/c/c2/Ruined_Tactical_Vest.png/75px-Ruined_Tactical_Vest.png.webp",
@@ -5166,7 +4512,6 @@ window.ITEM_DATA = {
     "sellPrice": "640",
     "stackSize": "3",
     "category": "Recyclable",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Magnet",
@@ -5178,9 +4523,7 @@ window.ITEM_DATA = {
         "quantity": 5,
         "text": "5x Fabric"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Rusted Bolts": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/b/bf/Rusted_Bolts.png/75px-Rusted_Bolts.png.webp",
@@ -5188,7 +4531,6 @@ window.ITEM_DATA = {
     "sellPrice": "640",
     "stackSize": "3",
     "category": "Recyclable",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Metal Parts",
@@ -5196,7 +4538,6 @@ window.ITEM_DATA = {
         "text": "8x Metal Parts"
       }
     ],
-    "recycleStatus": "",
     "usesEntries": [
       {
         "text": "Trophy Display (3x)",
@@ -5229,7 +4570,6 @@ window.ITEM_DATA = {
         "text": "4x Metal Parts"
       }
     ],
-    "recycleStatus": "",
     "usesEntries": [
       {
         "text": "Gunsmith 3 (3x)",
@@ -5258,7 +4598,6 @@ window.ITEM_DATA = {
         "text": "2x Syringe"
       }
     ],
-    "recycleStatus": "",
     "usesEntries": [
       {
         "text": "Medical Lab 3 (3x)",
@@ -5288,7 +4627,6 @@ window.ITEM_DATA = {
         "text": "8x Metal Parts"
       }
     ],
-    "recycleStatus": "",
     "usesEntries": [
       {
         "text": "Gunsmith 2 (3x)",
@@ -5302,16 +4640,13 @@ window.ITEM_DATA = {
     "sellPrice": "640",
     "stackSize": "3",
     "category": "Recyclable",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Metal Parts",
         "quantity": 8,
         "text": "8x Metal Parts"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Sample Cleaner": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/d/d8/Sample_Cleaner.png/75px-Sample_Cleaner.png.webp",
@@ -5319,7 +4654,6 @@ window.ITEM_DATA = {
     "sellPrice": "3000",
     "stackSize": "3",
     "category": "Recyclable",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Assorted Seeds",
@@ -5331,9 +4665,7 @@ window.ITEM_DATA = {
         "quantity": 2,
         "text": "2x Electrical Components"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Ancient Fort Security Code": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/1/1d/Security_Code.png/75px-Security_Code.png.webp",
@@ -5341,10 +4673,7 @@ window.ITEM_DATA = {
     "sellPrice": "0",
     "stackSize": "1",
     "category": "Key",
-    "foundIn": [],
-    "recycleEntries": [],
-    "recycleStatus": "Cannot be recycled",
-    "usesEntries": []
+    "recycleStatus": "Cannot be recycled"
   },
   "Pilgrim's Peak Security Code": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/1/1d/Security_Code.png/75px-Security_Code.png.webp",
@@ -5352,10 +4681,7 @@ window.ITEM_DATA = {
     "sellPrice": "0",
     "stackSize": "1",
     "category": "Key",
-    "foundIn": [],
-    "recycleEntries": [],
-    "recycleStatus": "Cannot be recycled",
-    "usesEntries": []
+    "recycleStatus": "Cannot be recycled"
   },
   "Raider's Refuge Security Code": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/1/1d/Security_Code.png/75px-Security_Code.png.webp",
@@ -5363,10 +4689,7 @@ window.ITEM_DATA = {
     "sellPrice": "0",
     "stackSize": "1",
     "category": "Key",
-    "foundIn": [],
-    "recycleEntries": [],
-    "recycleStatus": "Cannot be recycled",
-    "usesEntries": []
+    "recycleStatus": "Cannot be recycled"
   },
   "Reinforced Reception Security Code": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/1/1d/Security_Code.png/75px-Security_Code.png.webp",
@@ -5374,10 +4697,7 @@ window.ITEM_DATA = {
     "sellPrice": "0",
     "stackSize": "1",
     "category": "Key",
-    "foundIn": [],
-    "recycleEntries": [],
-    "recycleStatus": "Cannot be recycled",
-    "usesEntries": []
+    "recycleStatus": "Cannot be recycled"
   },
   "Seeker Grenade": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/3/35/Seeker_Grenade.png/75px-Seeker_Grenade.png.webp",
@@ -5385,16 +4705,13 @@ window.ITEM_DATA = {
     "sellPrice": "640",
     "stackSize": "5",
     "category": "Quick Use",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Crude Explosives",
         "quantity": 1,
         "text": "1x Crude Explosives"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Sensors": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/9/9c/Sensors.png/75px-Sensors.png.webp",
@@ -5402,7 +4719,6 @@ window.ITEM_DATA = {
     "sellPrice": "500",
     "stackSize": "5",
     "category": "Topside Material",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Metal Parts",
@@ -5415,7 +4731,6 @@ window.ITEM_DATA = {
         "text": "1x Wires"
       }
     ],
-    "recycleStatus": "",
     "usesEntries": [
       {
         "text": "Expedition 1 (20x)",
@@ -5448,7 +4763,6 @@ window.ITEM_DATA = {
         "text": "2x Mechanical Components"
       }
     ],
-    "recycleStatus": "",
     "usesEntries": [
       {
         "text": "Gunsmith 3 (4x)",
@@ -5462,16 +4776,13 @@ window.ITEM_DATA = {
     "sellPrice": "1000",
     "stackSize": "1",
     "category": "Quick Use",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Plastic Parts",
         "quantity": 10,
         "text": "10x Plastic Parts"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Shield Recharger": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/4/44/Shield_Recharger.png/75px-Shield_Recharger.png.webp",
@@ -5479,16 +4790,13 @@ window.ITEM_DATA = {
     "sellPrice": "520",
     "stackSize": "5",
     "category": "Quick Use",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Rubber Parts",
         "quantity": 4,
         "text": "4x Rubber Parts"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Shotgun Ammo": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/6/61/Shotgun_Ammo.png/75px-Shotgun_Ammo.png.webp",
@@ -5496,10 +4804,7 @@ window.ITEM_DATA = {
     "sellPrice": "20",
     "stackSize": "20",
     "category": "Ammunition",
-    "foundIn": [],
-    "recycleEntries": [],
-    "recycleStatus": "Cannot be recycled",
-    "usesEntries": []
+    "recycleStatus": "Cannot be recycled"
   },
   "Shotgun Choke I": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/0/07/Shotgun_Choke_I.png/75px-Shotgun_Choke_I.png.webp",
@@ -5507,16 +4812,13 @@ window.ITEM_DATA = {
     "sellPrice": "640",
     "stackSize": "1",
     "category": "Mods",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Metal Parts",
         "quantity": 5,
         "text": "5x Metal Parts"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Shotgun Choke II": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/6/63/Shotgun_Choke_II.png/75px-Shotgun_Choke_II.png.webp",
@@ -5524,7 +4826,6 @@ window.ITEM_DATA = {
     "sellPrice": "2000",
     "stackSize": "1",
     "category": "Mods",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Mechanical Components",
@@ -5536,9 +4837,7 @@ window.ITEM_DATA = {
         "quantity": 1,
         "text": "1x Wires"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Shotgun Choke III": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/3/36/Shotgun_Choke_III.png/75px-Shotgun_Choke_III.png.webp",
@@ -5546,7 +4845,6 @@ window.ITEM_DATA = {
     "sellPrice": "5000",
     "stackSize": "1",
     "category": "Mods",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Mod Components",
@@ -5558,9 +4856,7 @@ window.ITEM_DATA = {
         "quantity": 2,
         "text": "2x Wires"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Shotgun Silencer": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/4/4d/Shotgun_Silencer.png/75px-Shotgun_Silencer.png.webp",
@@ -5568,7 +4864,6 @@ window.ITEM_DATA = {
     "sellPrice": "5000",
     "stackSize": "1",
     "category": "Mods",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Mod Components",
@@ -5580,9 +4875,7 @@ window.ITEM_DATA = {
         "quantity": 1,
         "text": "1x Wires"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Showstopper": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/1/18/Showstopper.png/75px-Showstopper.png.webp",
@@ -5590,7 +4883,6 @@ window.ITEM_DATA = {
     "sellPrice": "2100",
     "stackSize": "5",
     "category": "Quick Use",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Electrical Components",
@@ -5602,9 +4894,7 @@ window.ITEM_DATA = {
         "quantity": 1,
         "text": "1x Voltage Converter"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Shrapnel Grenade": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/5/5f/Shrapnel_Grenade.png/75px-Shrapnel_Grenade.png.webp",
@@ -5612,7 +4902,6 @@ window.ITEM_DATA = {
     "sellPrice": "800",
     "stackSize": "5",
     "category": "Quick Use",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Crude Explosives",
@@ -5624,9 +4913,7 @@ window.ITEM_DATA = {
         "quantity": 1,
         "text": "1x Metal Parts"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Shredder Gyro": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/9/96/Shredder_Gyro.png/75px-Shredder_Gyro.png.webp",
@@ -5634,7 +4921,6 @@ window.ITEM_DATA = {
     "sellPrice": "2000",
     "stackSize": "3",
     "category": "Recyclable",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "ARC Alloy",
@@ -5647,7 +4933,6 @@ window.ITEM_DATA = {
         "text": "2x Mechanical Components"
       }
     ],
-    "recycleStatus": "",
     "usesEntries": [
       {
         "text": "Expedition 2 (10x)",
@@ -5665,7 +4950,6 @@ window.ITEM_DATA = {
     "sellPrice": "3000",
     "stackSize": "3",
     "category": "Recyclable",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Electrical Components",
@@ -5677,9 +4961,7 @@ window.ITEM_DATA = {
         "quantity": 2,
         "text": "2x Voltage Converter"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Silencer I": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/f/f7/Silencer_I.png/75px-Silencer_I.png.webp",
@@ -5687,7 +4969,6 @@ window.ITEM_DATA = {
     "sellPrice": "2000",
     "stackSize": "1",
     "category": "Mods",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Mechanical Components",
@@ -5699,9 +4980,7 @@ window.ITEM_DATA = {
         "quantity": 1,
         "text": "1x Wires"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Silencer II": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/c/c0/Silencer_II.png/75px-Silencer_II.png.webp",
@@ -5709,7 +4988,6 @@ window.ITEM_DATA = {
     "sellPrice": "5000",
     "stackSize": "1",
     "category": "Mods",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Mod Components",
@@ -5721,9 +4999,7 @@ window.ITEM_DATA = {
         "quantity": 2,
         "text": "2x Wires"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Silencer III": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/3/3e/Silencer_III.png/75px-Silencer_III.png.webp",
@@ -5731,7 +5007,6 @@ window.ITEM_DATA = {
     "sellPrice": "7000",
     "stackSize": "1",
     "category": "Mods",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Mod Components",
@@ -5743,9 +5018,7 @@ window.ITEM_DATA = {
         "quantity": 3,
         "text": "3x Wires"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Silver Teaspoon Set": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/9/90/Silver_Teaspoon_Set.png/75px-Silver_Teaspoon_Set.png.webp",
@@ -5753,10 +5026,7 @@ window.ITEM_DATA = {
     "sellPrice": "3000",
     "stackSize": "3",
     "category": "Trinket",
-    "foundIn": [],
-    "recycleEntries": [],
-    "recycleStatus": "Cannot be recycled",
-    "usesEntries": []
+    "recycleStatus": "Cannot be recycled"
   },
   "Simple Gun Parts": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/d/da/Simple_Gun_Parts.png/75px-Simple_Gun_Parts.png.webp",
@@ -5764,16 +5034,13 @@ window.ITEM_DATA = {
     "sellPrice": "330",
     "stackSize": "10",
     "category": "Topside Material",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Metal Parts",
         "quantity": 2,
         "text": "2x Metal Parts"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Smoke Grenade Trap": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/a/ac/Smoke_Grenade_Trap.png/75px-Smoke_Grenade_Trap.png.webp",
@@ -5781,10 +5048,7 @@ window.ITEM_DATA = {
     "sellPrice": "640",
     "stackSize": "3",
     "category": "Quick Use",
-    "foundIn": [],
-    "recycleEntries": [],
-    "recycleStatus": "Cannot be recycled",
-    "usesEntries": []
+    "recycleStatus": "Cannot be recycled"
   },
   "Smoke Grenade": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/d/d5/Smoke_Grenade.png/75px-Smoke_Grenade.png.webp",
@@ -5792,7 +5056,6 @@ window.ITEM_DATA = {
     "sellPrice": "1000",
     "stackSize": "5",
     "category": "Quick Use",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Canister",
@@ -5804,9 +5067,7 @@ window.ITEM_DATA = {
         "quantity": 2,
         "text": "2x Chemicals"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Snap Blast Grenade": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/7/77/Snap_Blast_Grenade.png/75px-Snap_Blast_Grenade.png.webp",
@@ -5814,7 +5075,6 @@ window.ITEM_DATA = {
     "sellPrice": "800",
     "stackSize": "3",
     "category": "Quick Use",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Chemicals",
@@ -5826,9 +5086,7 @@ window.ITEM_DATA = {
         "quantity": 1,
         "text": "1x Magnet"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Snap Hook": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/5/56/Snap_Hook.png/75px-Snap_Hook.png.webp",
@@ -5836,7 +5094,6 @@ window.ITEM_DATA = {
     "sellPrice": "14000",
     "stackSize": "1",
     "category": "Quick Use",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Power Rod",
@@ -5848,9 +5105,7 @@ window.ITEM_DATA = {
         "quantity": 3,
         "text": "3x Rope"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Snitch Scanner": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/e/e5/Snitch_Scanner.png/75px-Snitch_Scanner.png.webp",
@@ -5873,7 +5128,6 @@ window.ITEM_DATA = {
         "text": "1x Electrical Components"
       }
     ],
-    "recycleStatus": "",
     "usesEntries": [
       {
         "text": "Utility Station 2 (6x)",
@@ -5895,10 +5149,7 @@ window.ITEM_DATA = {
     "sellPrice": "10",
     "stackSize": "5",
     "category": "Nature",
-    "foundIn": [],
-    "recycleEntries": [],
-    "recycleStatus": "Cannot be recycled",
-    "usesEntries": []
+    "recycleStatus": "Cannot be recycled"
   },
   "Spaceport Container Storage Key": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/9/98/Spaceport_Key.png/75px-Spaceport_Key.png.webp",
@@ -5906,10 +5157,7 @@ window.ITEM_DATA = {
     "sellPrice": "100",
     "stackSize": "1",
     "category": "Key",
-    "foundIn": [],
-    "recycleEntries": [],
-    "recycleStatus": "Cannot be recycled",
-    "usesEntries": []
+    "recycleStatus": "Cannot be recycled"
   },
   "Spaceport Control Tower Key": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/9/98/Spaceport_Key.png/75px-Spaceport_Key.png.webp",
@@ -5917,10 +5165,7 @@ window.ITEM_DATA = {
     "sellPrice": "100",
     "stackSize": "1",
     "category": "Key",
-    "foundIn": [],
-    "recycleEntries": [],
-    "recycleStatus": "Cannot be recycled",
-    "usesEntries": []
+    "recycleStatus": "Cannot be recycled"
   },
   "Spaceport Trench Tower Key": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/9/98/Spaceport_Key.png/75px-Spaceport_Key.png.webp",
@@ -5928,10 +5173,7 @@ window.ITEM_DATA = {
     "sellPrice": "100",
     "stackSize": "1",
     "category": "Key",
-    "foundIn": [],
-    "recycleEntries": [],
-    "recycleStatus": "Cannot be recycled",
-    "usesEntries": []
+    "recycleStatus": "Cannot be recycled"
   },
   "Spaceport Warehouse Key": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/9/98/Spaceport_Key.png/75px-Spaceport_Key.png.webp",
@@ -5939,10 +5181,7 @@ window.ITEM_DATA = {
     "sellPrice": "100",
     "stackSize": "1",
     "category": "Key",
-    "foundIn": [],
-    "recycleEntries": [],
-    "recycleStatus": "Cannot be recycled",
-    "usesEntries": []
+    "recycleStatus": "Cannot be recycled"
   },
   "Speaker Component": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/e/ee/Speaker_Component.png/75px-Speaker_Component.png.webp",
@@ -5950,7 +5189,6 @@ window.ITEM_DATA = {
     "sellPrice": "500",
     "stackSize": "5",
     "category": "Topside Material",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Plastic Parts",
@@ -5962,9 +5200,7 @@ window.ITEM_DATA = {
         "quantity": 3,
         "text": "3x Rubber Parts"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Spectrometer": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/0/0e/Spectrometer.png/75px-Spectrometer.png.webp",
@@ -5972,7 +5208,6 @@ window.ITEM_DATA = {
     "sellPrice": "3000",
     "stackSize": "3",
     "category": "Recyclable",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Advanced Electrical Components",
@@ -5984,9 +5219,7 @@ window.ITEM_DATA = {
         "quantity": 1,
         "text": "1x Sensors"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Spectrum Analyzer": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/0/0a/Spectrum_Analyzer.png/75px-Spectrum_Analyzer.png.webp",
@@ -5994,7 +5227,6 @@ window.ITEM_DATA = {
     "sellPrice": "3500",
     "stackSize": "3",
     "category": "Recyclable",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Exodus Modules",
@@ -6006,9 +5238,7 @@ window.ITEM_DATA = {
         "quantity": 1,
         "text": "1x Sensors"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Spotter Relay": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/5/58/Spotter_Relay.png/75px-Spotter_Relay.png.webp",
@@ -6016,7 +5246,6 @@ window.ITEM_DATA = {
     "sellPrice": "1000",
     "stackSize": "3",
     "category": "Recyclable",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "ARC Alloy",
@@ -6029,7 +5258,6 @@ window.ITEM_DATA = {
         "text": "1x Electrical Components"
       }
     ],
-    "recycleStatus": "",
     "usesEntries": [
       {
         "text": "Trophy Display (10x)",
@@ -6043,7 +5271,6 @@ window.ITEM_DATA = {
     "sellPrice": "2000",
     "stackSize": "3",
     "category": "Recyclable",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Durable Cloth",
@@ -6055,9 +5282,7 @@ window.ITEM_DATA = {
         "quantity": 2,
         "text": "2x Steel Spring"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Stable Stock I": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/8/8d/Stable_Stock_I.png/75px-Stable_Stock_I.png.webp",
@@ -6065,16 +5290,13 @@ window.ITEM_DATA = {
     "sellPrice": "640",
     "stackSize": "1",
     "category": "Mods",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Rubber Parts",
         "quantity": 6,
         "text": "6x Rubber Parts"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Stable Stock II": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/b/b4/Stable_Stock_II.png/75px-Stable_Stock_II.png.webp",
@@ -6082,7 +5304,6 @@ window.ITEM_DATA = {
     "sellPrice": "2000",
     "stackSize": "1",
     "category": "Mods",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Duct Tape",
@@ -6094,9 +5315,7 @@ window.ITEM_DATA = {
         "quantity": 1,
         "text": "1x Mechanical Components"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Stable Stock III": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/e/eb/Stable_Stock_III.png/75px-Stable_Stock_III.png.webp",
@@ -6104,7 +5323,6 @@ window.ITEM_DATA = {
     "sellPrice": "5000",
     "stackSize": "1",
     "category": "Mods",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Mod Components",
@@ -6116,9 +5334,7 @@ window.ITEM_DATA = {
         "quantity": 2,
         "text": "2x Duct Tape"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Statuette": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/8/8a/Statuette.png/75px-Statuette.png.webp",
@@ -6126,10 +5342,7 @@ window.ITEM_DATA = {
     "sellPrice": "3000",
     "stackSize": "3",
     "category": "Trinket",
-    "foundIn": [],
-    "recycleEntries": [],
-    "recycleStatus": "Cannot be recycled",
-    "usesEntries": []
+    "recycleStatus": "Cannot be recycled"
   },
   "Steel Spring": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/d/db/Steel_Spring.png/75px-Steel_Spring.png.webp",
@@ -6147,7 +5360,6 @@ window.ITEM_DATA = {
         "text": "2x Metal Parts"
       }
     ],
-    "recycleStatus": "",
     "usesEntries": [
       {
         "text": "Expedition 1 (15x)",
@@ -6173,10 +5385,7 @@ window.ITEM_DATA = {
     "sellPrice": "250",
     "stackSize": "1",
     "category": "Key",
-    "foundIn": [],
-    "recycleEntries": [],
-    "recycleStatus": "Cannot be recycled",
-    "usesEntries": []
+    "recycleStatus": "Cannot be recycled"
   },
   "Stella Montis Medical Storage Key": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/1/19/Stella_Montis_Key.png/75px-Stella_Montis_Key.png.webp",
@@ -6184,10 +5393,7 @@ window.ITEM_DATA = {
     "sellPrice": "100",
     "stackSize": "1",
     "category": "Key",
-    "foundIn": [],
-    "recycleEntries": [],
-    "recycleStatus": "Cannot be recycled",
-    "usesEntries": []
+    "recycleStatus": "Cannot be recycled"
   },
   "Stella Montis Security Checkpoint Key": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/1/19/Stella_Montis_Key.png/75px-Stella_Montis_Key.png.webp",
@@ -6195,10 +5401,7 @@ window.ITEM_DATA = {
     "sellPrice": "100",
     "stackSize": "1",
     "category": "Key",
-    "foundIn": [],
-    "recycleEntries": [],
-    "recycleStatus": "Cannot be recycled",
-    "usesEntries": []
+    "recycleStatus": "Cannot be recycled"
   },
   "Stella Montis Archives Key": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/1/19/Stella_Montis_Key.png/75px-Stella_Montis_Key.png.webp",
@@ -6206,10 +5409,7 @@ window.ITEM_DATA = {
     "sellPrice": "100",
     "stackSize": "1",
     "category": "Key",
-    "foundIn": [],
-    "recycleEntries": [],
-    "recycleStatus": "Cannot be recycled",
-    "usesEntries": []
+    "recycleStatus": "Cannot be recycled"
   },
   "Sterilized Bandage": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/9/99/Sterilized_Bandage.png/75px-Sterilized_Bandage.png.webp",
@@ -6217,7 +5417,6 @@ window.ITEM_DATA = {
     "sellPrice": "2000",
     "stackSize": "3",
     "category": "Quick Use",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Antiseptic",
@@ -6229,9 +5428,7 @@ window.ITEM_DATA = {
         "quantity": 1,
         "text": "1x Fabric"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Surge Shield Recharger": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/c/c9/Surge_Shield_Recharger.png/75px-Surge_Shield_Recharger.png.webp",
@@ -6239,16 +5436,13 @@ window.ITEM_DATA = {
     "sellPrice": "1200",
     "stackSize": "5",
     "category": "Quick Use",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Electrical Components",
         "quantity": 1,
         "text": "1x Electrical Components"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Surveyor Vault": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/a/a9/Surveyor_Vault.png/75px-Surveyor_Vault.png.webp",
@@ -6271,7 +5465,6 @@ window.ITEM_DATA = {
         "text": "1x Mechanical Components"
       }
     ],
-    "recycleStatus": "",
     "usesEntries": [
       {
         "text": "Medical Lab 3 (5x)",
@@ -6308,7 +5501,6 @@ window.ITEM_DATA = {
         "text": "1x Plastic Parts"
       }
     ],
-    "recycleStatus": "",
     "usesEntries": [
       {
         "text": "Explosives Station 2 (3x)",
@@ -6322,7 +5514,6 @@ window.ITEM_DATA = {
     "sellPrice": "500",
     "stackSize": "5",
     "category": "Topside Material",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Chemicals",
@@ -6335,7 +5526,6 @@ window.ITEM_DATA = {
         "text": "3x Plastic Parts"
       }
     ],
-    "recycleStatus": "",
     "usesEntries": [
       {
         "text": "Doctor's Orders (1x)",
@@ -6349,7 +5539,6 @@ window.ITEM_DATA = {
     "sellPrice": "640",
     "stackSize": "1",
     "category": "Augment",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Plastic Parts",
@@ -6361,9 +5550,7 @@ window.ITEM_DATA = {
         "quantity": 3,
         "text": "3x Rubber Parts"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Tactical Mk. 2": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/6/6c/Tactical_Mk._2.png/75px-Tactical_Mk._2.png.webp",
@@ -6371,7 +5558,6 @@ window.ITEM_DATA = {
     "sellPrice": "2000",
     "stackSize": "1",
     "category": "Augment",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Electrical Components",
@@ -6383,9 +5569,7 @@ window.ITEM_DATA = {
         "quantity": 1,
         "text": "1x Magnet"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Tactical Mk. 3 (Defensive)": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/a/a9/Tactical_Mk._3_%28Defensive%29.png/75px-Tactical_Mk._3_%28Defensive%29.png.webp",
@@ -6393,7 +5577,6 @@ window.ITEM_DATA = {
     "sellPrice": "5000",
     "stackSize": "1",
     "category": "Augment",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Advanced Electrical Components",
@@ -6405,9 +5588,7 @@ window.ITEM_DATA = {
         "quantity": 1,
         "text": "1x Processor"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Tactical Mk. 3 (Healing)": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/1/12/Tactical_Mk._3_%28Healing%29.png/75px-Tactical_Mk._3_%28Healing%29.png.webp",
@@ -6415,7 +5596,6 @@ window.ITEM_DATA = {
     "sellPrice": "5000",
     "stackSize": "1",
     "category": "Augment",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Advanced Electrical Components",
@@ -6427,9 +5607,7 @@ window.ITEM_DATA = {
         "quantity": 1,
         "text": "1x Processor"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Tactical Mk. 3 (Revival)": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/e/e0/Tactical_Mk._3_%28Revival%29.png/75px-Tactical_Mk._3_%28Revival%29.png.webp",
@@ -6437,7 +5615,6 @@ window.ITEM_DATA = {
     "sellPrice": "5000",
     "stackSize": "1",
     "category": "Augment",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Advanced Electrical Components",
@@ -6449,9 +5626,7 @@ window.ITEM_DATA = {
         "quantity": 1,
         "text": "1x Processor"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Tagging Grenade": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/e/e5/Tagging_Grenade.png/75px-Tagging_Grenade.png.webp",
@@ -6459,7 +5634,6 @@ window.ITEM_DATA = {
     "sellPrice": "1000",
     "stackSize": "3",
     "category": "Quick Use",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Plastic Parts",
@@ -6471,9 +5645,7 @@ window.ITEM_DATA = {
         "quantity": 1,
         "text": "1x Sensors"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Tattered ARC Lining": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/3/35/Tattered_ARC_Lining.png/75px-Tattered_ARC_Lining.png.webp",
@@ -6481,16 +5653,13 @@ window.ITEM_DATA = {
     "sellPrice": "640",
     "stackSize": "3",
     "category": "Recyclable",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Fabric",
         "quantity": 12,
         "text": "12x Fabric"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Tattered Clothes": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/c/c4/Tattered_Clothes.png/75px-Tattered_Clothes.png.webp",
@@ -6498,16 +5667,13 @@ window.ITEM_DATA = {
     "sellPrice": "640",
     "stackSize": "3",
     "category": "Recyclable",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Fabric",
         "quantity": 11,
         "text": "11x Fabric"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Telemetry Transceiver": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/a/a8/Telemetry_Transceiver.png/75px-Telemetry_Transceiver.png.webp",
@@ -6515,7 +5681,6 @@ window.ITEM_DATA = {
     "sellPrice": "3000",
     "stackSize": "3",
     "category": "Recyclable",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Advanced Electrical Components",
@@ -6527,9 +5692,7 @@ window.ITEM_DATA = {
         "quantity": 1,
         "text": "1x Processor"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Thermostat": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/9/9a/Thermostat.png/75px-Thermostat.png.webp",
@@ -6537,7 +5700,6 @@ window.ITEM_DATA = {
     "sellPrice": "1000",
     "stackSize": "3",
     "category": "Recyclable",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Sensors",
@@ -6549,9 +5711,7 @@ window.ITEM_DATA = {
         "quantity": 7,
         "text": "7x Rubber Parts"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Tick Pod": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/9/95/Tick_Pod.png/75px-Tick_Pod.png.webp",
@@ -6574,7 +5734,6 @@ window.ITEM_DATA = {
         "text": "2x Chemicals"
       }
     ],
-    "recycleStatus": "",
     "usesEntries": [
       {
         "text": "Medical Lab 2 (8x)",
@@ -6607,7 +5766,6 @@ window.ITEM_DATA = {
         "text": "5x Plastic Parts"
       }
     ],
-    "recycleStatus": "",
     "usesEntries": [
       {
         "text": "Refiner 2 (3x)",
@@ -6621,16 +5779,13 @@ window.ITEM_DATA = {
     "sellPrice": "640",
     "stackSize": "3",
     "category": "Recyclable",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Fabric",
         "quantity": 12,
         "text": "12x Fabric"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Torn Book": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/c/cc/Torn_Book.png/75px-Torn_Book.png.webp",
@@ -6638,10 +5793,7 @@ window.ITEM_DATA = {
     "sellPrice": "1000",
     "stackSize": "5",
     "category": "Trinket",
-    "foundIn": [],
-    "recycleEntries": [],
-    "recycleStatus": "Cannot be recycled",
-    "usesEntries": []
+    "recycleStatus": "Cannot be recycled"
   },
   "Trailblazer": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/8/89/Trailblazer.png/75px-Trailblazer.png.webp",
@@ -6649,16 +5801,13 @@ window.ITEM_DATA = {
     "sellPrice": "2200",
     "stackSize": "3",
     "category": "Quick Use",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Crude Explosives",
         "quantity": 2,
         "text": "2x Crude Explosives"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Trigger 'Nade": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/0/09/Trigger_Nade.png/75px-Trigger_Nade.png.webp",
@@ -6666,7 +5815,6 @@ window.ITEM_DATA = {
     "sellPrice": "1000",
     "stackSize": "3",
     "category": "Quick Use",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Chemicals",
@@ -6678,9 +5826,7 @@ window.ITEM_DATA = {
         "quantity": 1,
         "text": "1x Processor"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Tropical Duck": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/c/cc/Tropical_Duck.png/75px-Tropical_Duck.png.webp",
@@ -6688,10 +5834,7 @@ window.ITEM_DATA = {
     "sellPrice": "1000",
     "stackSize": "15",
     "category": "Trinket",
-    "foundIn": [],
-    "recycleEntries": [],
-    "recycleStatus": "Cannot be recycled",
-    "usesEntries": []
+    "recycleStatus": "Cannot be recycled"
   },
   "Turbo Pump": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/f/f1/Turbo_Pump.png/75px-Turbo_Pump.png.webp",
@@ -6699,7 +5842,6 @@ window.ITEM_DATA = {
     "sellPrice": "2000",
     "stackSize": "3",
     "category": "Recyclable",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Mechanical Components",
@@ -6711,9 +5853,7 @@ window.ITEM_DATA = {
         "quantity": 3,
         "text": "3x Oil"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Unusable Weapon": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/3/37/Unusable_Weapon.png/75px-Unusable_Weapon.png.webp",
@@ -6721,7 +5861,6 @@ window.ITEM_DATA = {
     "sellPrice": "2000",
     "stackSize": "3",
     "category": "Recyclable",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Metal Parts",
@@ -6733,9 +5872,7 @@ window.ITEM_DATA = {
         "quantity": 5,
         "text": "5x Simple Gun Parts"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Vase": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/6/6e/Vase.png/75px-Vase.png.webp",
@@ -6743,10 +5880,7 @@ window.ITEM_DATA = {
     "sellPrice": "3000",
     "stackSize": "3",
     "category": "Trinket",
-    "foundIn": [],
-    "recycleEntries": [],
-    "recycleStatus": "Cannot be recycled",
-    "usesEntries": []
+    "recycleStatus": "Cannot be recycled"
   },
   "Vertical Grip I": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/4/4d/Vertical_Grip_I.png/75px-Vertical_Grip_I.png.webp",
@@ -6754,16 +5888,13 @@ window.ITEM_DATA = {
     "sellPrice": "640",
     "stackSize": "1",
     "category": "Mods",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Plastic Parts",
         "quantity": 6,
         "text": "6x Plastic Parts"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Vertical Grip II": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/3/3c/Vertical_Grip_II.png/75px-Vertical_Grip_II.png.webp",
@@ -6771,7 +5902,6 @@ window.ITEM_DATA = {
     "sellPrice": "2000",
     "stackSize": "1",
     "category": "Mods",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Duct Tape",
@@ -6783,9 +5913,7 @@ window.ITEM_DATA = {
         "quantity": 1,
         "text": "1x Mechanical Components"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Vertical Grip III": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/2/20/Vertical_Grip_III.png/75px-Vertical_Grip_III.png.webp",
@@ -6793,7 +5921,6 @@ window.ITEM_DATA = {
     "sellPrice": "5000",
     "stackSize": "1",
     "category": "Mods",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Duct Tape",
@@ -6805,9 +5932,7 @@ window.ITEM_DATA = {
         "quantity": 2,
         "text": "2x Mechanical Components"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Very Comfortable Pillow": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/a/a4/Very_Comfortable_Pillow.png/75px-Very_Comfortable_Pillow.png.webp",
@@ -6819,7 +5944,6 @@ window.ITEM_DATA = {
       "Commercial",
       "Residential"
     ],
-    "recycleEntries": [],
     "recycleStatus": "Cannot be recycled",
     "usesEntries": [
       {
@@ -6834,7 +5958,6 @@ window.ITEM_DATA = {
     "sellPrice": "2200",
     "stackSize": "3",
     "category": "Quick Use",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Syringe",
@@ -6846,9 +5969,7 @@ window.ITEM_DATA = {
         "quantity": 4,
         "text": "4x Chemicals"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Vita Spray": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/1/1d/Vita_Spray.png/75px-Vita_Spray.png.webp",
@@ -6856,7 +5977,6 @@ window.ITEM_DATA = {
     "sellPrice": "3400",
     "stackSize": "1",
     "category": "Quick Use",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Antiseptic",
@@ -6868,9 +5988,7 @@ window.ITEM_DATA = {
         "quantity": 1,
         "text": "1x Canister"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Volcanic Rock": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/2/26/Volcanic_Rock.png/75px-Volcanic_Rock.png.webp",
@@ -6878,10 +5996,7 @@ window.ITEM_DATA = {
     "sellPrice": "270",
     "stackSize": "5",
     "category": "Misc",
-    "foundIn": [],
-    "recycleEntries": [],
-    "recycleStatus": "Cannot be recycled",
-    "usesEntries": []
+    "recycleStatus": "Cannot be recycled"
   },
   "Voltage Converter": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/c/c7/Voltage_Converter.png/75px-Voltage_Converter.png.webp",
@@ -6889,7 +6004,6 @@ window.ITEM_DATA = {
     "sellPrice": "500",
     "stackSize": "5",
     "category": "Topside Material",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Rubber Parts",
@@ -6902,7 +6016,6 @@ window.ITEM_DATA = {
         "text": "1x Wires"
       }
     ],
-    "recycleStatus": "",
     "usesEntries": [
       {
         "text": "Weather Monitor System (3x)",
@@ -6931,7 +6044,6 @@ window.ITEM_DATA = {
         "text": "1x Electrical Components"
       }
     ],
-    "recycleStatus": "",
     "usesEntries": [
       {
         "text": "Gunsmith 1 (8x)",
@@ -6957,7 +6069,6 @@ window.ITEM_DATA = {
     "sellPrice": "1000",
     "stackSize": "3",
     "category": "Recyclable",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Rubber Parts",
@@ -6969,9 +6080,7 @@ window.ITEM_DATA = {
         "quantity": 3,
         "text": "3x Canister"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Water Pump": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/2/28/Water_Pump.png/75px-Water_Pump.png.webp",
@@ -6979,7 +6088,6 @@ window.ITEM_DATA = {
     "sellPrice": "1000",
     "stackSize": "3",
     "category": "Recyclable",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Oil",
@@ -6992,7 +6100,6 @@ window.ITEM_DATA = {
         "text": "4x Metal Parts"
       }
     ],
-    "recycleStatus": "",
     "usesEntries": [
       {
         "text": "Weather Monitor System (1x)",
@@ -7006,7 +6113,6 @@ window.ITEM_DATA = {
     "sellPrice": "200",
     "stackSize": "15",
     "category": "Topside Material",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Rubber Parts",
@@ -7014,7 +6120,6 @@ window.ITEM_DATA = {
         "text": "2x Rubber Parts"
       }
     ],
-    "recycleStatus": "",
     "usesEntries": [
       {
         "text": "After Rain Comes (5x)",
@@ -7052,7 +6157,6 @@ window.ITEM_DATA = {
     "sellPrice": "6000",
     "stackSize": "1",
     "category": "Quick Use",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "ARC Motion Core",
@@ -7064,9 +6168,7 @@ window.ITEM_DATA = {
         "quantity": 1,
         "text": "1x Explosive Compound"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Yellow Light Stick": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/1/1f/Yellow_Light_Stick.png/75px-Yellow_Light_Stick.png.webp",
@@ -7074,16 +6176,13 @@ window.ITEM_DATA = {
     "sellPrice": "150",
     "stackSize": "5",
     "category": "Quick Use",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Chemicals",
         "quantity": 1,
         "text": "1x Chemicals"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   },
   "Zipline": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/f/f9/Zipline.png/75px-Zipline.png.webp",
@@ -7091,7 +6190,6 @@ window.ITEM_DATA = {
     "sellPrice": "1000",
     "stackSize": "3",
     "category": "Quick Use",
-    "foundIn": [],
     "recycleEntries": [
       {
         "item": "Metal Parts",
@@ -7103,8 +6201,6 @@ window.ITEM_DATA = {
         "quantity": 1,
         "text": "1x Rope"
       }
-    ],
-    "recycleStatus": "",
-    "usesEntries": []
+    ]
   }
 };
