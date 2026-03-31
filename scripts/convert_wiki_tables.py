@@ -39,6 +39,11 @@ ROW_RE = re.compile(r"<tr\b.*?>(.*?)</tr>", re.IGNORECASE | re.DOTALL)
 CELL_RE = re.compile(r"<(td|th)\b.*?>(.*?)</\1>", re.IGNORECASE | re.DOTALL)
 NUMBER_RE = re.compile(r"^-?\d[\d,]*(?:\.\d+)?$")
 REQUIREMENT_RE = re.compile(r"^(?P<quantity>\d+)x\s+(?P<item>.+)$")
+USE_CATEGORY_LABELS = {
+    "workshop": "Workshop",
+    "projects": "Project",
+    "quests": "Quest",
+}
 
 
 @dataclass
@@ -123,16 +128,6 @@ def load_json(path: Path) -> object:
 def slugify(value: str) -> str:
     normalized = re.sub(r"[^a-z0-9]+", "-", value.strip().lower())
     return normalized.strip("-")
-
-
-def card_scope_sort_order(scope: str) -> int:
-    if scope == "workshops":
-        return 0
-    if scope == "scrappy":
-        return 1
-    if scope == "expedition":
-        return 2
-    return 99
 
 
 def load_found_in_by_item() -> dict[str, list[str]]:
@@ -359,7 +354,6 @@ def build_requirement_tracker_payload(
     cards = sorted(
         workshop_cards + curated_cards,
         key=lambda card: (
-            card_scope_sort_order(str(card.get("scope", ""))),
             int(card.get("sortOrder", 9999)),
             str(card.get("title", "")),
         ),
@@ -443,6 +437,56 @@ def write_text(path: Path, content: str) -> None:
     path.write_text(content, encoding="utf-8")
 
 
+def build_recycle_entries(raw_text: str) -> list[dict[str, object]]:
+    formatted = raw_text.strip()
+    if not formatted or formatted == "Cannot be recycled":
+        return []
+
+    entries: list[dict[str, object]] = []
+    for entry in split_pipe_list(formatted):
+        match = REQUIREMENT_RE.fullmatch(entry)
+        if not match:
+            entries.append({"text": entry})
+            continue
+        quantity = int(match.group("quantity"))
+        item_name = match.group("item")
+        entries.append(
+            {
+                "item": item_name,
+                "quantity": quantity,
+                "text": f"{quantity}x {item_name}",
+            }
+        )
+    return entries
+
+
+def build_recycle_status(raw_text: str) -> str:
+    formatted = raw_text.strip()
+    if not formatted:
+        return "None"
+    if formatted == "Cannot be recycled":
+        return formatted
+    return ""
+
+
+def build_use_entries(raw_text: str) -> list[dict[str, str]]:
+    tokens = split_pipe_list(raw_text)
+    current_category = ""
+    entries: list[dict[str, str]] = []
+
+    for token in tokens:
+        normalized = token.lower()
+        if normalized in USE_CATEGORY_LABELS:
+            current_category = USE_CATEGORY_LABELS[normalized]
+            continue
+        entry = {"text": token}
+        if current_category:
+            entry["category"] = current_category
+        entries.append(entry)
+
+    return entries
+
+
 def parse_item_records(found_in_by_item: dict[str, list[str]]) -> list[dict[str, str]]:
     header_map = {
         "Image": "image_src",
@@ -486,23 +530,20 @@ def build_items_csv(found_in_by_item: dict[str, list[str]]) -> tuple[int, list[d
 
 
 def write_item_data(records: list[dict[str, str]], found_in_by_item: dict[str, list[str]]) -> None:
-    payload: dict[str, dict[str, str]] = {}
+    payload: dict[str, dict[str, object]] = {}
     for record in records:
         item_name = record["item"]
         image_src = record["image_src"]
         payload[item_name] = {
-            "item": item_name,
-            "displayName": item_name,
-            "imageSrc": image_src,
             "imageUrl": f"{WIKI_BASE_URL}{image_src}" if image_src.startswith("/") else image_src,
             "rarity": record["rarity"],
-            "recyclesTo": record["recycles_to"],
             "sellPrice": record["sell_price"],
             "stackSize": record["stack_size"],
             "category": record["category"],
-            "uses": record["uses"],
             "foundIn": found_in_by_item.get(item_name, []),
-            "unit": "count",
+            "recycleEntries": build_recycle_entries(record["recycles_to"]),
+            "recycleStatus": build_recycle_status(record["recycles_to"]),
+            "usesEntries": build_use_entries(record["uses"]),
         }
 
     content = (

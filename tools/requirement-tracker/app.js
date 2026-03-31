@@ -2,9 +2,22 @@
   const storageKey = "raiderbro-requirement-tracker-v1";
   const legacyStorageKey = "raiderbro-station-tracker-v1";
   const stateVersion = 2;
-  const trackerData = normalizeTrackerData(window.REQUIREMENT_TRACKER_DATA || window.STATION_TRACKER_DATA);
+  const stateUtils = window.RequirementTrackerState || {};
+  const tooltipUtils = window.RequirementTrackerTooltip || {};
+  const normalizeTrackerData = stateUtils.normalizeTrackerData;
+  const sanitizeState = stateUtils.sanitizeState;
+  const arraysEqual = stateUtils.arraysEqual;
+  const formatTimestamp = stateUtils.formatTimestamp;
+  const createTooltipManager = tooltipUtils.createTooltipManager;
+  const rawTrackerData = window.REQUIREMENT_TRACKER_DATA || window.STATION_TRACKER_DATA;
   const itemData = window.ITEM_DATA || {};
 
+  if (!normalizeTrackerData || !sanitizeState || !arraysEqual || !formatTimestamp || !createTooltipManager) {
+    document.body.innerHTML = "<p style='padding:24px;font-family:sans-serif'>Missing tracker runtime scripts. Reload the requirement tracker files.</p>";
+    return;
+  }
+
+  const trackerData = normalizeTrackerData(rawTrackerData);
   if (!trackerData || !Array.isArray(trackerData.cards)) {
     document.body.innerHTML = "<p style='padding:24px;font-family:sans-serif'>Missing requirement tracker data. Run python scripts/convert_wiki_tables.py first.</p>";
     return;
@@ -27,12 +40,15 @@
   const scopeWorkshopsButton = document.getElementById("scope-workshops");
   const scopeScrappyButton = document.getElementById("scope-scrappy");
   const scopeExpeditionButton = document.getElementById("scope-expedition");
-  const floatingTooltip = createFloatingTooltip();
+  const tooltipManager = createTooltipManager(itemData, { formatNumber: formatNumber, getRarityClass: getRarityClass });
+  const floatingTooltip = tooltipManager.element;
   const dragState = { cardName: "", targetName: "", placeAfter: false };
+  let saveStateTimer = 0;
 
   document.body.appendChild(floatingTooltip);
-  window.addEventListener("scroll", hideTooltip, true);
-  window.addEventListener("resize", hideTooltip);
+  window.addEventListener("scroll", tooltipManager.hideTooltip, true);
+  window.addEventListener("resize", tooltipManager.hideTooltip);
+  window.addEventListener("pagehide", flushSaveState);
   setBuildInfo();
 
   resetButton.addEventListener("click", function () {
@@ -88,179 +104,6 @@
 
   render();
 
-  function normalizeTrackerData(rawTrackerData) {
-    if (!rawTrackerData) {
-      return null;
-    }
-
-    if (Array.isArray(rawTrackerData.cards)) {
-      return {
-        schemaVersion: Number(rawTrackerData.schemaVersion || 1),
-        generatedAt: rawTrackerData.generatedAt || "",
-        buildId: rawTrackerData.buildId || "",
-        uiIcons: rawTrackerData.uiIcons || { cards: {}, foundIn: {} },
-        cards: sortCards(rawTrackerData.cards),
-      };
-    }
-
-    if (!Array.isArray(rawTrackerData.stations)) {
-      return rawTrackerData;
-    }
-
-    const cards = rawTrackerData.stations.map(function (card) {
-      return normalizeLegacyCard(card, {
-        id: "workshop-" + slugify(card.station),
-        title: card.station,
-      });
-    });
-
-    if (rawTrackerData.scrappy) {
-      cards.push(normalizeLegacyCard(rawTrackerData.scrappy, { id: "scrappy", title: "Scrappy" }));
-    }
-
-    if (rawTrackerData.expedition) {
-      cards.push(normalizeLegacyCard(rawTrackerData.expedition, { id: "expedition", title: "Expedition" }));
-    }
-
-    return {
-      schemaVersion: 1,
-      generatedAt: "",
-      buildId: "legacy",
-      uiIcons: rawTrackerData.uiIcons || { cards: {}, foundIn: {} },
-      cards: sortCards(cards),
-    };
-  }
-
-  function normalizeLegacyCard(card, defaults) {
-    const normalized = {
-      id: defaults.id,
-      title: defaults.title,
-      kindLabel: card.kindLabel || "Progress",
-      scope: card.scope,
-      sortOrder: Number(card.sortOrder || 0),
-      iconUrl: card.iconUrl || "",
-    };
-
-    if (Array.isArray(card.variants)) {
-      normalized.variants = card.variants.map(function (variant) {
-        return {
-          id: variant.id,
-          title: variant.title || variant.label || variant.id,
-          minLevel: Number(variant.minLevel || 0),
-          maxLevel: Number(variant.maxLevel || 0),
-          zeroLabel: variant.zeroLabel || "Not started",
-          completeLabel: variant.completeLabel || "Complete",
-          levels: normalizeLegacyLevels(variant.levels || []),
-        };
-      });
-      return normalized;
-    }
-
-    normalized.minLevel = Number(card.minLevel || 0);
-    normalized.maxLevel = Number(card.maxLevel || 0);
-    normalized.levels = normalizeLegacyLevels(card.levels || []);
-    return normalized;
-  }
-
-  function normalizeLegacyLevels(levels) {
-    return levels.map(function (level) {
-      return {
-        level: Number(level.level),
-        label: level.label,
-        progressLabel: level.progressLabel,
-        description: level.description,
-        requirements: (level.requirements || []).map(function (requirement) {
-          return {
-            item: requirement.item,
-            quantity: Number(requirement.quantity),
-          };
-        }),
-        crafts: level.crafts || [],
-      };
-    });
-  }
-
-  function slugify(value) {
-    return String(value || "")
-      .trim()
-      .toLowerCase()
-      .replace(/[^a-z0-9]+/g, "-")
-      .replace(/^-+|-+$/g, "");
-  }
-
-  function sortCards(cards) {
-    return cards.slice().sort(function (left, right) {
-      const leftScopeOrder = getCardScopeOrder(left.scope);
-      const rightScopeOrder = getCardScopeOrder(right.scope);
-      if (leftScopeOrder !== rightScopeOrder) {
-        return leftScopeOrder - rightScopeOrder;
-      }
-      const leftOrder = Number(left.sortOrder || 9999);
-      const rightOrder = Number(right.sortOrder || 9999);
-      if (leftOrder !== rightOrder) {
-        return leftOrder - rightOrder;
-      }
-      return String(left.title || "").localeCompare(String(right.title || ""));
-    });
-  }
-
-  function getCardScopeOrder(scope) {
-    if (scope === "workshops") return 0;
-    if (scope === "scrappy") return 1;
-    if (scope === "expedition") return 2;
-    return 99;
-  }
-
-  function isPlainObject(value) {
-    return Boolean(value) && typeof value === "object" && !Array.isArray(value);
-  }
-
-  function sanitizeNumberMap(value) {
-    if (!isPlainObject(value)) {
-      return {};
-    }
-
-    const sanitized = {};
-    Object.keys(value).forEach(function (key) {
-      const numericValue = Number(value[key]);
-      if (Number.isFinite(numericValue)) {
-        sanitized[key] = numericValue;
-      }
-    });
-    return sanitized;
-  }
-
-  function sanitizeStringMap(value) {
-    if (!isPlainObject(value)) {
-      return {};
-    }
-
-    const sanitized = {};
-    Object.keys(value).forEach(function (key) {
-      const stringValue = String(value[key] || "").trim();
-      if (stringValue) {
-        sanitized[key] = stringValue;
-      }
-    });
-    return sanitized;
-  }
-
-  function sanitizeState(rawState) {
-    const allowedScopes = ["all", "workshops", "scrappy", "expedition"];
-    const candidate = isPlainObject(rawState) ? rawState : {};
-    return {
-      version: stateVersion,
-      levels: sanitizeNumberMap(candidate.levels),
-      progress: sanitizeNumberMap(candidate.progress),
-      variants: sanitizeStringMap(candidate.variants),
-      cardOrder: Array.isArray(candidate.cardOrder)
-        ? candidate.cardOrder.map(function (entry) { return String(entry); }).filter(Boolean)
-        : [],
-      shoppingMode: candidate.shoppingMode === "found" ? "found" : "card",
-      cardScope: allowedScopes.includes(candidate.cardScope) ? candidate.cardScope : "all",
-    };
-  }
-
   function loadState() {
     const fallback = sanitizeState({});
 
@@ -279,6 +122,24 @@
 
   function saveState() {
     window.localStorage.setItem(storageKey, JSON.stringify(serializeState()));
+  }
+
+  function scheduleSaveState() {
+    if (saveStateTimer) {
+      window.clearTimeout(saveStateTimer);
+    }
+    saveStateTimer = window.setTimeout(function () {
+      saveStateTimer = 0;
+      saveState();
+    }, 150);
+  }
+
+  function flushSaveState() {
+    if (saveStateTimer) {
+      window.clearTimeout(saveStateTimer);
+      saveStateTimer = 0;
+    }
+    saveState();
   }
 
   function serializeState() {
@@ -340,7 +201,7 @@
         state.cardOrder = importedState.cardOrder;
         state.shoppingMode = importedState.shoppingMode;
         state.cardScope = importedState.cardScope;
-        hideTooltip();
+        tooltipManager.hideTooltip();
         render();
       } catch (error) {
         window.alert("Could not import progress from that file.");
@@ -361,30 +222,6 @@
     const month = String(now.getMonth() + 1).padStart(2, "0");
     const day = String(now.getDate()).padStart(2, "0");
     return "raiderbro-requirement-tracker-" + year + month + day + ".json";
-  }
-
-  function formatTimestamp(value) {
-    const parsed = new Date(value);
-    if (Number.isNaN(parsed.getTime())) {
-      return String(value);
-    }
-    return new Intl.DateTimeFormat(undefined, {
-      year: "numeric",
-      month: "short",
-      day: "numeric",
-      hour: "numeric",
-      minute: "2-digit",
-    }).format(parsed);
-  }
-
-  function arraysEqual(left, right) {
-    if (!Array.isArray(left) || !Array.isArray(right) || left.length !== right.length) {
-      return false;
-    }
-
-    return left.every(function (value, index) {
-      return value === right[index];
-    });
   }
 
   function getAllCards() {
@@ -557,7 +394,6 @@
             category: item.category || "Unknown",
             foundIn: item.foundIn || [],
             cards: [],
-            unit: item.unit || "count",
           });
         }
 
@@ -582,7 +418,7 @@
     scopeExpeditionButton.classList.toggle("active", state.cardScope === "expedition");
     getCardOrder();
     renderShoppingList(aggregateNeeds);
-    saveState();
+    scheduleSaveState();
   }
 
   function renderShoppingList(aggregateNeeds) {
@@ -788,7 +624,6 @@
     card.className = "tracker-card";
     const isWorkshopCard = context.baseCard.scope === "workshops";
     const isScrappyCard = context.baseCard.id === "scrappy";
-    const showHelperStatus = context.baseCard.id !== "expedition";
 
     const top = document.createElement("div");
     top.className = "card-header";
@@ -889,21 +724,6 @@
 
       progressGroup.append(progressLabel, progressSelect);
       levelRow.appendChild(progressGroup);
-
-      if (showHelperStatus) {
-        const helper = document.createElement("div");
-        helper.className = "control-group helper-group";
-        const helperLabel = document.createElement("p");
-        helperLabel.className = "label";
-        helperLabel.textContent = "Track Status";
-        const helperValue = document.createElement("p");
-        helperValue.className = "requirement-meta";
-        helperValue.textContent = nextLevel
-          ? "Track materials for " + getMilestoneLabel(context.activeCard, nextLevel)
-          : getCompleteMessage(context);
-        helper.append(helperLabel, helperValue);
-        levelRow.appendChild(helper);
-      }
 
       card.appendChild(levelRow);
     }
@@ -1047,7 +867,7 @@
       const icon = document.createElement("img");
       icon.className = "item-icon";
       icon.src = item.imageUrl;
-      icon.alt = item.displayName || itemName;
+      icon.alt = itemName;
       icon.loading = "lazy";
       wrapper.appendChild(icon);
     }
@@ -1057,7 +877,7 @@
 
     const name = document.createElement("span");
     name.className = "item-name";
-    name.textContent = item && item.displayName ? item.displayName : itemName;
+    name.textContent = itemName;
     copy.appendChild(name);
 
     if (settings.extraText) {
@@ -1072,229 +892,19 @@
     if (item) {
       wrapper.tabIndex = 0;
       wrapper.addEventListener("mouseenter", function () {
-        showTooltip(item, wrapper);
+        tooltipManager.showTooltip(itemName, item, wrapper);
       });
       wrapper.addEventListener("mousemove", function () {
-        positionTooltip(wrapper);
+        tooltipManager.positionTooltip(wrapper);
       });
-      wrapper.addEventListener("mouseleave", hideTooltip);
+      wrapper.addEventListener("mouseleave", tooltipManager.hideTooltip);
       wrapper.addEventListener("focus", function () {
-        showTooltip(item, wrapper);
+        tooltipManager.showTooltip(itemName, item, wrapper);
       });
-      wrapper.addEventListener("blur", hideTooltip);
+      wrapper.addEventListener("blur", tooltipManager.hideTooltip);
     }
 
     return wrapper;
-  }
-
-  function buildTooltipContent(item) {
-    const tooltip = document.createElement("div");
-    const header = document.createElement("span");
-    header.className = "tooltip-header";
-
-    if (item.imageUrl) {
-      const icon = document.createElement("img");
-      icon.className = "item-icon";
-      icon.src = item.imageUrl;
-      icon.alt = item.displayName || item.item;
-      icon.loading = "lazy";
-      header.appendChild(icon);
-    }
-
-    const titleWrap = document.createElement("span");
-    const title = document.createElement("p");
-    title.className = "tooltip-title";
-    title.textContent = item.displayName || item.item;
-    const rarity = document.createElement("p");
-    rarity.className = "tooltip-rarity";
-    rarity.textContent = item.rarity;
-    titleWrap.append(title, rarity);
-    header.appendChild(titleWrap);
-    tooltip.appendChild(header);
-
-    const details = document.createElement("dl");
-    details.className = "tooltip-grid";
-    appendDetail(details, "Category", item.category);
-    appendDetail(details, "Sell Price", formatNumber(item.sellPrice));
-    appendDetail(details, "Stack Size", item.stackSize);
-    appendDetail(details, "Found In", item.foundIn && item.foundIn.length ? item.foundIn.join(" | ") : "Unknown");
-    appendListDetail(details, "Recycles To", parseRecycleEntries(item.recyclesTo), formatDetailValue(item.recyclesTo));
-    appendListDetail(details, "Uses", parseUseEntries(item.uses), formatDetailValue(item.uses));
-    tooltip.appendChild(details);
-
-    return tooltip;
-  }
-
-  function createFloatingTooltip() {
-    const tooltip = document.createElement("div");
-    tooltip.className = "floating-tooltip";
-    return tooltip;
-  }
-
-  function showTooltip(item, anchor) {
-    floatingTooltip.className = "floating-tooltip visible " + getRarityClass(item.rarity);
-    floatingTooltip.innerHTML = "";
-    floatingTooltip.appendChild(buildTooltipContent(item));
-    positionTooltip(anchor);
-  }
-
-  function positionTooltip(anchor) {
-    if (!floatingTooltip.classList.contains("visible")) {
-      return;
-    }
-
-    const margin = 12;
-    const rect = anchor.getBoundingClientRect();
-    const tooltipRect = floatingTooltip.getBoundingClientRect();
-
-    let left = rect.right + margin;
-    if (left + tooltipRect.width > window.innerWidth - margin) {
-      left = Math.max(margin, rect.left - tooltipRect.width - margin);
-    }
-
-    let top = rect.bottom + margin;
-    if (top + tooltipRect.height > window.innerHeight - margin) {
-      top = Math.max(margin, rect.top - tooltipRect.height - margin);
-    }
-
-    floatingTooltip.style.left = left + "px";
-    floatingTooltip.style.top = top + "px";
-  }
-
-  function hideTooltip() {
-    floatingTooltip.className = "floating-tooltip";
-    floatingTooltip.innerHTML = "";
-  }
-
-  function appendDetail(container, label, value) {
-    const dt = document.createElement("dt");
-    dt.textContent = label;
-    const dd = document.createElement("dd");
-    dd.textContent = formatDetailValue(value);
-    container.append(dt, dd);
-  }
-
-  function appendListDetail(container, label, entries, fallbackText) {
-    const dt = document.createElement("dt");
-    dt.textContent = label;
-    const dd = document.createElement("dd");
-
-    if (!entries.length) {
-      dd.textContent = fallbackText;
-      container.append(dt, dd);
-      return;
-    }
-
-    const list = document.createElement("ul");
-    list.className = "tooltip-list";
-
-    entries.forEach(function (entry) {
-      list.appendChild(buildTooltipListItem(entry));
-    });
-
-    dd.appendChild(list);
-    container.append(dt, dd);
-  }
-
-  function buildTooltipListItem(entry) {
-    const item = document.createElement("li");
-
-    if (typeof entry === "string") {
-      item.textContent = entry;
-      return item;
-    }
-
-    if (entry.itemName) {
-      const row = document.createElement("span");
-      row.className = "tooltip-list-item";
-      const itemInfo = itemData[entry.itemName] || null;
-
-      const text = document.createElement("span");
-      text.textContent = entry.text;
-      row.appendChild(text);
-
-      if (itemInfo && itemInfo.imageUrl) {
-        const icon = document.createElement("img");
-        icon.className = "tooltip-list-icon";
-        icon.src = itemInfo.imageUrl;
-        icon.alt = itemInfo.displayName || entry.itemName;
-        icon.loading = "lazy";
-        row.appendChild(icon);
-      }
-      item.appendChild(row);
-      return item;
-    }
-
-    if (entry.category) {
-      const category = document.createElement("span");
-      category.className = "tooltip-list-category";
-      category.textContent = entry.category + ": ";
-      item.appendChild(category);
-    }
-    item.appendChild(document.createTextNode(entry.text));
-    return item;
-  }
-
-  function formatDetailValue(value) {
-    if (value && value.trim) {
-      return value.trim() || "None";
-    }
-    return value || "None";
-  }
-
-  function splitPipeValues(value) {
-    const formatted = formatDetailValue(value);
-    if (!formatted || formatted === "None") {
-      return [];
-    }
-    return formatted
-      .split(" | ")
-      .map(function (entry) { return entry.trim(); })
-      .filter(Boolean);
-  }
-
-  function parseRecycleEntries(value) {
-    const formatted = formatDetailValue(value);
-    if (!formatted || formatted === "None" || formatted === "Cannot be recycled") {
-      return [];
-    }
-    return splitPipeValues(formatted).map(function (entry) {
-      const match = entry.match(/^(\d+x)\s+(.+)$/i);
-      if (!match) {
-        return { text: entry };
-      }
-
-      return {
-        itemName: match[2],
-        text: match[1] + " " + match[2],
-      };
-    });
-  }
-
-  function parseUseEntries(value) {
-    const tokens = splitPipeValues(value);
-    const categoryLabels = {
-      workshop: "Workshop",
-      projects: "Project",
-      quests: "Quest",
-    };
-
-    let currentCategory = "";
-    const entries = [];
-    tokens.forEach(function (token) {
-      const normalizedToken = token.toLowerCase();
-      if (categoryLabels[normalizedToken]) {
-        currentCategory = categoryLabels[normalizedToken];
-        return;
-      }
-
-      entries.push({
-        category: currentCategory,
-        text: token,
-      });
-    });
-
-    return entries;
   }
 
   function getMilestoneLabel(card, levelInfo) {
@@ -1320,13 +930,6 @@
     return levelInfo.progressLabel || levelInfo.label || ("Level " + level);
   }
 
-  function getCompleteMessage(context) {
-    if (context.baseCard.id === "expedition") {
-      return "These tracked expedition stages are complete. Switch the expedition selector when you move to the next one.";
-    }
-    return "This card is finished for the wipe.";
-  }
-
   function getEmptyMessage(context) {
     if (context.baseCard.id === "expedition") {
       return "These tracked expedition stages are complete. Move the expedition selector when you start the next expedition.";
@@ -1345,10 +948,9 @@
   }
 
   function formatShoppingTotal(itemName, value) {
-    const item = itemData[itemName] || {};
     const number = Number(value);
     const formatted = Number.isFinite(number) ? number.toLocaleString() : String(value);
-    return item.unit === "coin" ? formatted + "c" : "x" + formatted;
+    return "x" + formatted;
   }
 
   function formatNumber(value) {
