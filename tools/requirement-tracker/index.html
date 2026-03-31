@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Raiderbro Requirement Tracker</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="shell">
+    <header class="hero">
+      <div class="hero-brand">
+        <div class="arc-logo" aria-label="ARC Raiders">
+          <img
+            class="arc-logo-stripes"
+            src="https://storage.googleapis.com/web-arc-raiders-cms-assets/temp/stripes/stripes.png"
+            alt=""
+          >
+        </div>
+        <div class="hero-copy">
+          <h1>Requirement Tracker</h1>
+        </div>
+      </div>
+      <div class="hero-actions">
+        <div class="hero-metrics">
+          <div class="mini-stat">
+            <p class="label">Cards Maxed</p>
+            <p id="maxed-count" class="mini-number">0 / 0</p>
+          </div>
+          <div class="mini-stat">
+            <p class="label">Open Upgrades</p>
+            <p id="open-upgrades" class="mini-number">0</p>
+          </div>
+        </div>
+        <button id="reset-progress" class="secondary" type="button">Reset Wipe Progress</button>
+      </div>
+    </header>
+
+    <section class="shopping-panel">
+      <div class="shopping-header">
+        <div>
+          <p class="label">Need Right Now</p>
+          <h2 class="shopping-title">Global Shopping List</h2>
+        </div>
+        <div class="shopping-toggle" role="tablist" aria-label="Shopping list grouping">
+          <button id="group-by-card" class="toggle-button active" type="button">By Card</button>
+          <button id="group-by-found" class="toggle-button" type="button">By Found In</button>
+        </div>
+      </div>
+      <div id="shopping-list" class="shopping-board"></div>
+    </section>
+
+    <section class="card-filter-bar">
+      <p class="label">Visible Cards</p>
+      <div class="card-scope-toggle" role="tablist" aria-label="Tracker card scope">
+        <button id="scope-all" class="toggle-button active" type="button">All</button>
+        <button id="scope-workshops" class="toggle-button" type="button">Workshops</button>
+        <button id="scope-scrappy" class="toggle-button" type="button">Scrappy</button>
+        <button id="scope-expedition" class="toggle-button" type="button">Expedition</button>
+      </div>
+    </section>
+
+    <section>
+      <div id="cards-grid" class="cards-grid"></div>
+    </section>
+
+    <footer class="tracker-footer">
+      <p id="tracker-build-info" class="footer-note">Data build unavailable.</p>
+      <div class="footer-actions">
+        <button id="export-progress" class="secondary footer-button" type="button">Export Progress</button>
+        <button id="import-progress" class="secondary footer-button" type="button">Import Progress</button>
+        <input id="import-progress-file" type="file" accept=".json,application/json" hidden>
+      </div>
+    </footer>
+  </div>
+
+  <script src="item_data.js"></script>
+  <script src="requirement_tracker_data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

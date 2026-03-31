@@ -1,0 +1,49 @@
+{
+  "id": "scrappy",
+  "title": "Scrappy",
+  "kindLabel": "Companion",
+  "scope": "scrappy",
+  "iconKey": "Scrappy",
+  "sortOrder": 10,
+  "minLevel": 1,
+  "levels": [
+    {
+      "level": 1,
+      "requirements": [],
+      "crafts": []
+    },
+    {
+      "level": 2,
+      "requirements": [
+        { "item": "Dog Collar", "quantity": 1 }
+      ],
+      "crafts": []
+    },
+    {
+      "level": 3,
+      "requirements": [
+        { "item": "Lemon", "quantity": 3 },
+        { "item": "Apricot", "quantity": 3 }
+      ],
+      "crafts": []
+    },
+    {
+      "level": 4,
+      "requirements": [
+        { "item": "Prickly Pear", "quantity": 6 },
+        { "item": "Olives", "quantity": 6 },
+        { "item": "Cat Bed", "quantity": 1 }
+      ],
+      "crafts": []
+    },
+    {
+      "level": 5,
+      "requirements": [
+        { "item": "Mushroom", "quantity": 12 },
+        { "item": "Apricot", "quantity": 12 },
+        { "item": "Very Comfortable Pillow", "quantity": 3 }
+      ],
+      "crafts": []
+    }
+  ]
+}

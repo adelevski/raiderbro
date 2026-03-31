@@ -1,0 +1,80 @@
+station,level,item
+Gunsmith,1,Ferro
+Gunsmith,1,Hairpin
+Gunsmith,1,Kettle
+Gunsmith,1,Rattler
+Gunsmith,1,Stitcher
+Gunsmith,1,Angled Grip I
+Gunsmith,1,Compensator I
+Gunsmith,1,Extended Light Mag I
+Gunsmith,1,Extended Medium Mag I
+Gunsmith,1,Extended Shotgun Mag I
+Gunsmith,1,Muzzle Brake I
+Gunsmith,1,Shotgun Choke I
+Gunsmith,1,Stable Stock I
+Gunsmith,1,Vertical Grip I
+Gunsmith,2,Arpeggio
+Gunsmith,3,Bettina
+Gunsmith,3,Renegade
+Gunsmith,3,Hullcracker
+Gear Bench,1,Light Shield
+Gear Bench,1,Medium Shield
+Gear Bench,1,Combat Mk. 1
+Gear Bench,1,Looting Mk. 1
+Gear Bench,1,Tactical Mk. 1
+Gear Bench,2,Heavy Shield
+Gear Bench,2,Combat Mk. 2
+Gear Bench,2,Looting Mk. 2
+Gear Bench,2,Tactical Mk. 2
+Gear Bench,3,Combat Mk. 3 (Aggressive)
+Gear Bench,3,Combat Mk. 3 (Flanking)
+Gear Bench,3,Looting Mk. 3 (Cautious)
+Gear Bench,3,Looting Mk. 3 (Survivor)
+Gear Bench,3,Tactical Mk. 3 (Defensive)
+Gear Bench,3,Tactical Mk. 3 (Healing)
+Medical Lab,1,Herbal Bandage
+Medical Lab,1,Shield Recharger
+Medical Lab,1,Adrenaline Shot
+Medical Lab,1,Bandage
+Medical Lab,2,Sterilized Bandage
+Medical Lab,2,Surge Shield Recharger
+Medical Lab,3,Vita Spray
+Medical Lab,3,Vita Shot
+Explosives Station,1,Gas Grenade
+Explosives Station,1,Light Impact Grenade
+Explosives Station,2,Blaze Grenade
+Explosives Station,2,Shrapnel Grenade
+Explosives Station,2,Snap Blast Grenade
+Explosives Station,3,Heavy Fuze Grenade
+Explosives Station,3,Explosive Mine
+Explosives Station,3,Wolfpack
+Utility Station,1,Barricade Kit
+Utility Station,1,Binoculars
+Utility Station,1,Door Blocker
+Utility Station,1,Firecracker
+Utility Station,1,Li'l Smoke Grenade
+Utility Station,1,Remote Raider Flare
+Utility Station,1,Smoke Grenade
+Utility Station,2,Lure Grenade
+Utility Station,2,Raider Hatch Key
+Utility Station,2,Zipline
+Utility Station,3,Photoelectric Cloak
+Utility Station,3,Snap Hook
+Utility Station,3,Tagging Grenade
+Refiner,1,Crude Explosives
+Refiner,1,Durable Cloth
+Refiner,1,Electrical Components
+Refiner,1,Mechanical Components
+Refiner,2,Advanced Electrical Components
+Refiner,2,Advanced Mechanical Components
+Refiner,2,Antiseptic
+Refiner,2,ARC Circuitry
+Refiner,2,ARC Motion Core
+Refiner,2,Explosive Compound
+Refiner,2,Heavy Gun Parts
+Refiner,2,Light Gun Parts
+Refiner,2,Medium Gun Parts
+Refiner,2,Mod Components
+Refiner,3,Magnetic Accelerator
+Refiner,3,Power Rod
+Refiner,3,Complex Gun Parts

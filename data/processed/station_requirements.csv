@@ -1,0 +1,49 @@
+station,level,item,quantity
+Gunsmith,1,Metal Parts,20
+Gunsmith,1,Rubber Parts,30
+Gunsmith,2,Rusted Tools,3
+Gunsmith,2,Mechanical Components,5
+Gunsmith,2,Wasp Driver,8
+Gunsmith,3,Rusted Gear,3
+Gunsmith,3,Advanced Mechanical Components,5
+Gunsmith,3,Sentinel Firing Core,4
+Gear Bench,1,Plastic Parts,25
+Gear Bench,1,Fabric,30
+Gear Bench,2,Power Cable,3
+Gear Bench,2,Electrical Components,5
+Gear Bench,2,Hornet Driver,5
+Gear Bench,3,Industrial Battery,3
+Gear Bench,3,Advanced Electrical Components,5
+Gear Bench,3,Bastion Cell,6
+Medical Lab,1,Fabric,50
+Medical Lab,1,ARC Alloy,6
+Medical Lab,2,Cracked Bioscanner,2
+Medical Lab,2,Durable Cloth,5
+Medical Lab,2,Tick Pod,8
+Medical Lab,3,Rusted Shut Medical Kit,3
+Medical Lab,3,Antiseptic,8
+Medical Lab,3,Surveyor Vault,5
+Explosives Station,1,Chemicals,50
+Explosives Station,1,ARC Alloy,6
+Explosives Station,2,Synthesized Fuel,3
+Explosives Station,2,Crude Explosives,5
+Explosives Station,2,Pop Trigger,5
+Explosives Station,3,Laboratory Reagents,3
+Explosives Station,3,Explosive Compound,5
+Explosives Station,3,Rocketeer Driver,3
+Utility Station,1,Plastic Parts,50
+Utility Station,1,ARC Alloy,6
+Utility Station,2,Damaged Heat Sink,2
+Utility Station,2,Electrical Components,5
+Utility Station,2,Snitch Scanner,6
+Utility Station,3,Fried Motherboard,3
+Utility Station,3,Advanced Electrical Components,5
+Utility Station,3,Leaper Pulse Unit,4
+Refiner,1,Metal Parts,60
+Refiner,1,ARC Powercell,5
+Refiner,2,Toaster,3
+Refiner,2,ARC Motion Core,5
+Refiner,2,Fireball Burner,8
+Refiner,3,Motor,3
+Refiner,3,ARC Circuitry,10
+Refiner,3,Bombardier Cell,6

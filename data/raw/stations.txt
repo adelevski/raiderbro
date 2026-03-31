@@ -1,0 +1,291 @@
+# Gunsmith
+
+<table class="wikitable">
+<tbody><tr>
+<th>Level</th>
+<th>Requirements</th>
+<th>Crafts
+</th></tr>
+<tr>
+<td style="text-align:center;"><big>1</big></td>
+<td>
+<ul><li>20× <a href="/wiki/Metal_Parts" title="Metal Parts">Metal Parts</a></li>
+<li>30× <a href="/wiki/Rubber_Parts" title="Rubber Parts">Rubber Parts</a></li></ul>
+</td>
+<td>
+<ul><li><a href="/wiki/Ferro" title="Ferro">Ferro</a></li>
+<li><a href="/wiki/Hairpin" title="Hairpin">Hairpin</a></li>
+<li><a href="/wiki/Kettle" title="Kettle">Kettle</a></li>
+<li><a href="/wiki/Rattler" title="Rattler">Rattler</a></li>
+<li><a href="/wiki/Stitcher" title="Stitcher">Stitcher</a></li>
+<li><a href="/wiki/Angled_Grip_I" title="Angled Grip I">Angled Grip I</a></li>
+<li><a href="/wiki/Compensator_I" title="Compensator I">Compensator I</a></li>
+<li><a href="/wiki/Extended_Light_Mag_I" title="Extended Light Mag I">Extended Light Mag I</a></li>
+<li><a href="/wiki/Extended_Medium_Mag_I" title="Extended Medium Mag I">Extended Medium Mag I</a></li>
+<li><a href="/wiki/Extended_Shotgun_Mag_I" title="Extended Shotgun Mag I">Extended Shotgun Mag I</a></li>
+<li><a href="/wiki/Muzzle_Brake_I" title="Muzzle Brake I">Muzzle Brake I</a></li>
+<li><a href="/wiki/Shotgun_Choke_I" title="Shotgun Choke I">Shotgun Choke I</a></li>
+<li><a href="/wiki/Stable_Stock_I" title="Stable Stock I">Stable Stock I</a></li>
+<li><a href="/wiki/Vertical_Grip_I" title="Vertical Grip I">Vertical Grip I</a></li></ul>
+</td></tr>
+<tr>
+<td style="text-align:center;"><big>2</big></td>
+<td>
+<ul><li>3× <a href="/wiki/Rusted_Tools" title="Rusted Tools">Rusted Tools</a></li>
+<li>5× <a href="/wiki/Mechanical_Components" title="Mechanical Components">Mechanical Components</a></li>
+<li>8× <a href="/wiki/Wasp_Driver" title="Wasp Driver">Wasp Driver</a></li></ul>
+</td>
+<td>
+<ul><li><a href="/wiki/Arpeggio" title="Arpeggio">Arpeggio</a></li></ul>
+</td></tr>
+<tr>
+<td style="text-align:center;"><big>3</big></td>
+<td>
+<ul><li>3× <a href="/wiki/Rusted_Gear" title="Rusted Gear">Rusted Gear</a></li>
+<li>5× <a href="/wiki/Advanced_Mechanical_Components" title="Advanced Mechanical Components">Advanced Mechanical Components</a></li>
+<li>4× <a href="/wiki/Sentinel_Firing_Core" title="Sentinel Firing Core">Sentinel Firing Core</a></li></ul>
+</td>
+<td>
+<ul><li><a href="/wiki/Bettina" title="Bettina">Bettina</a></li>
+<li><a href="/wiki/Renegade" title="Renegade">Renegade</a></li>
+<li><a href="/wiki/Hullcracker" title="Hullcracker">Hullcracker</a></li></ul>
+</td></tr></tbody></table>
+
+
+# Gear Bench
+
+<table class="wikitable">
+<tbody><tr>
+<th>Level</th>
+<th>Requirements</th>
+<th>Crafts
+</th></tr>
+<tr>
+<td style="text-align:center;"><big>1</big></td>
+<td>
+<ul><li>25× <a href="/wiki/Plastic_Parts" title="Plastic Parts">Plastic Parts</a></li>
+<li>30× <a href="/wiki/Fabric" title="Fabric">Fabric</a></li></ul>
+</td>
+<td>
+<ul><li><a href="/wiki/Light_Shield" title="Light Shield">Light Shield</a></li>
+<li><a href="/wiki/Medium_Shield" title="Medium Shield">Medium Shield</a></li>
+<li><a href="/wiki/Combat_Mk._1" title="Combat Mk. 1">Combat Mk. 1</a></li>
+<li><a href="/wiki/Looting_Mk._1" title="Looting Mk. 1">Looting Mk. 1</a></li>
+<li><a href="/wiki/Tactical_Mk._1" title="Tactical Mk. 1">Tactical Mk. 1</a></li></ul>
+</td></tr>
+<tr>
+<td style="text-align:center;"><big>2</big></td>
+<td>
+<ul><li>3× <a href="/wiki/Power_Cable" title="Power Cable">Power Cable</a></li>
+<li>5× <a href="/wiki/Electrical_Components" title="Electrical Components">Electrical Components</a></li>
+<li>5× <a href="/wiki/Hornet_Driver" title="Hornet Driver">Hornet Driver</a></li></ul>
+</td>
+<td>
+<ul><li><a href="/wiki/Heavy_Shield" title="Heavy Shield">Heavy Shield</a></li>
+<li><a href="/wiki/Combat_Mk._2" title="Combat Mk. 2">Combat Mk. 2</a></li>
+<li><a href="/wiki/Looting_Mk._2" title="Looting Mk. 2">Looting Mk. 2</a></li>
+<li><a href="/wiki/Tactical_Mk._2" title="Tactical Mk. 2">Tactical Mk. 2</a></li></ul>
+</td></tr>
+<tr>
+<td style="text-align:center;"><big>3</big></td>
+<td>
+<ul><li>3× <a href="/wiki/Industrial_Battery" title="Industrial Battery">Industrial Battery</a></li>
+<li>5× <a href="/wiki/Advanced_Electrical_Components" title="Advanced Electrical Components">Advanced Electrical Components</a></li>
+<li>6× <a href="/wiki/Bastion_Cell" title="Bastion Cell">Bastion Cell</a></li></ul>
+</td>
+<td>
+<ul><li><a href="/wiki/Combat_Mk._3_(Aggressive)" title="Combat Mk. 3 (Aggressive)">Combat Mk. 3 (Aggressive)</a></li>
+<li><a href="/wiki/Combat_Mk._3_(Flanking)" title="Combat Mk. 3 (Flanking)">Combat Mk. 3 (Flanking)</a></li>
+<li><a href="/wiki/Looting_Mk._3_(Cautious)" title="Looting Mk. 3 (Cautious)">Looting Mk. 3 (Cautious)</a></li>
+<li><a href="/wiki/Looting_Mk._3_(Survivor)" title="Looting Mk. 3 (Survivor)">Looting Mk. 3 (Survivor)</a></li>
+<li><a href="/wiki/Tactical_Mk._3_(Defensive)" title="Tactical Mk. 3 (Defensive)">Tactical Mk. 3 (Defensive)</a></li>
+<li><a href="/wiki/Tactical_Mk._3_(Healing)" title="Tactical Mk. 3 (Healing)">Tactical Mk. 3 (Healing)</a></li></ul>
+</td></tr></tbody></table>
+
+# Medical Lab
+
+<table class="wikitable">
+<tbody><tr>
+<th>Level</th>
+<th>Requirements</th>
+<th>Crafts
+</th></tr>
+<tr>
+<td style="text-align:center;"><big>1</big></td>
+<td>
+<ul><li>50× <a href="/wiki/Fabric" title="Fabric">Fabric</a></li>
+<li>6× <a href="/wiki/ARC_Alloy" title="ARC Alloy">ARC Alloy</a></li></ul>
+</td>
+<td>
+<ul><li><a href="/wiki/Herbal_Bandage" title="Herbal Bandage">Herbal Bandage</a></li>
+<li><a href="/wiki/Shield_Recharger" title="Shield Recharger">Shield Recharger</a></li>
+<li><a href="/wiki/Adrenaline_Shot" title="Adrenaline Shot">Adrenaline Shot</a></li>
+<li><a href="/wiki/Bandage" title="Bandage">Bandage</a></li></ul>
+</td></tr>
+<tr>
+<td style="text-align:center;"><big>2</big></td>
+<td>
+<ul><li>2× <a href="/wiki/Cracked_Bioscanner" title="Cracked Bioscanner">Cracked Bioscanner</a></li>
+<li>5× <a href="/wiki/Durable_Cloth" title="Durable Cloth">Durable Cloth</a></li>
+<li>8× <a href="/wiki/Tick_Pod" title="Tick Pod">Tick Pod</a></li></ul>
+</td>
+<td>
+<ul><li><a href="/wiki/Sterilized_Bandage" title="Sterilized Bandage">Sterilized Bandage</a></li>
+<li><a href="/wiki/Surge_Shield_Recharger" title="Surge Shield Recharger">Surge Shield Recharger</a></li></ul>
+</td></tr>
+<tr>
+<td style="text-align:center;"><big>3</big></td>
+<td>
+<ul><li>3× <a href="/wiki/Rusted_Shut_Medical_Kit" title="Rusted Shut Medical Kit">Rusted Shut Medical Kit</a></li>
+<li>8× <a href="/wiki/Antiseptic" title="Antiseptic">Antiseptic</a></li>
+<li>5× <a href="/wiki/Surveyor_Vault" title="Surveyor Vault">Surveyor Vault</a></li></ul>
+</td>
+<td>
+<ul><li><a href="/wiki/Vita_Spray" title="Vita Spray">Vita Spray</a></li>
+<li><a href="/wiki/Vita_Shot" title="Vita Shot">Vita Shot</a></li></ul>
+</td></tr></tbody></table>
+
+# Explosives Station
+
+<table class="wikitable">
+<tbody><tr>
+<th>Level</th>
+<th>Requirements</th>
+<th>Crafts
+</th></tr>
+<tr>
+<td style="text-align:center;"><big>1</big></td>
+<td>
+<ul><li>50× <a href="/wiki/Chemicals" title="Chemicals">Chemicals</a></li>
+<li>6× <a href="/wiki/ARC_Alloy" title="ARC Alloy">ARC Alloy</a></li></ul>
+</td>
+<td>
+<ul><li><a href="/wiki/Gas_Grenade" title="Gas Grenade">Gas Grenade</a></li>
+<li><a href="/wiki/Light_Impact_Grenade" title="Light Impact Grenade">Light Impact Grenade</a></li></ul>
+</td></tr>
+<tr>
+<td style="text-align:center;"><big>2</big></td>
+<td>
+<ul><li>3× <a href="/wiki/Synthesized_Fuel" title="Synthesized Fuel">Synthesized Fuel</a></li>
+<li>5× <a href="/wiki/Crude_Explosives" title="Crude Explosives">Crude Explosives</a></li>
+<li>5× <a href="/wiki/Pop_Trigger" title="Pop Trigger">Pop Trigger</a></li></ul>
+</td>
+<td>
+<ul><li><a href="/wiki/Blaze_Grenade" title="Blaze Grenade">Blaze Grenade</a></li>
+<li><a href="/wiki/Shrapnel_Grenade" title="Shrapnel Grenade">Shrapnel Grenade</a></li>
+<li><a href="/wiki/Snap_Blast_Grenade" title="Snap Blast Grenade">Snap Blast Grenade</a></li></ul>
+</td></tr>
+<tr>
+<td style="text-align:center;"><big>3</big></td>
+<td>
+<ul><li>3× <a href="/wiki/Laboratory_Reagents" title="Laboratory Reagents">Laboratory Reagents</a></li>
+<li>5× <a href="/wiki/Explosive_Compound" title="Explosive Compound">Explosive Compound</a></li>
+<li>3× <a href="/wiki/Rocketeer_Driver" title="Rocketeer Driver">Rocketeer Driver</a></li></ul>
+</td>
+<td>
+<ul><li><a href="/wiki/Heavy_Fuze_Grenade" title="Heavy Fuze Grenade">Heavy Fuze Grenade</a></li>
+<li><a href="/wiki/Explosive_Mine" title="Explosive Mine">Explosive Mine</a></li>
+<li><a href="/wiki/Wolfpack" title="Wolfpack">Wolfpack</a></li></ul>
+</td></tr></tbody></table>
+
+# Utility Station
+
+<table class="wikitable">
+<tbody><tr>
+<th>Level</th>
+<th>Requirements</th>
+<th>Crafts
+</th></tr>
+<tr>
+<td style="text-align:center;"><big>1</big></td>
+<td>
+<ul><li>50× <a href="/wiki/Plastic_Parts" title="Plastic Parts">Plastic Parts</a></li>
+<li>6× <a href="/wiki/ARC_Alloy" title="ARC Alloy">ARC Alloy</a></li></ul>
+</td>
+<td>
+<ul><li><a href="/wiki/Barricade_Kit" title="Barricade Kit">Barricade Kit</a></li>
+<li><a href="/wiki/Binoculars" title="Binoculars">Binoculars</a></li>
+<li><a href="/wiki/Door_Blocker" title="Door Blocker">Door Blocker</a></li>
+<li><a href="/wiki/Firecracker" title="Firecracker">Firecracker</a></li>
+<li><a href="/wiki/Li%27l_Smoke_Grenade" title="Li'l Smoke Grenade">Li'l Smoke Grenade</a></li>
+<li><a href="/wiki/Remote_Raider_Flare" title="Remote Raider Flare">Remote Raider Flare</a></li>
+<li><a href="/wiki/Smoke_Grenade" title="Smoke Grenade">Smoke Grenade</a></li></ul>
+</td></tr>
+<tr>
+<td style="text-align:center;"><big>2</big></td>
+<td>
+<ul><li>2× <a href="/wiki/Damaged_Heat_Sink" title="Damaged Heat Sink">Damaged Heat Sink</a></li>
+<li>5× <a href="/wiki/Electrical_Components" title="Electrical Components">Electrical Components</a></li>
+<li>6× <a href="/wiki/Snitch_Scanner" title="Snitch Scanner">Snitch Scanner</a></li></ul>
+</td>
+<td>
+<ul><li><a href="/wiki/Lure_Grenade" title="Lure Grenade">Lure Grenade</a></li>
+<li><a href="/wiki/Raider_Hatch_Key" title="Raider Hatch Key">Raider Hatch Key</a></li>
+<li><a href="/wiki/Zipline" title="Zipline">Zipline</a></li></ul>
+</td></tr>
+<tr>
+<td style="text-align:center;"><big>3</big></td>
+<td>
+<ul><li>3× <a href="/wiki/Fried_Motherboard" title="Fried Motherboard">Fried Motherboard</a></li>
+<li>5× <a href="/wiki/Advanced_Electrical_Components" title="Advanced Electrical Components">Advanced Electrical Components</a></li>
+<li>4× <a href="/wiki/Leaper_Pulse_Unit" title="Leaper Pulse Unit">Leaper Pulse Unit</a></li></ul>
+</td>
+<td>
+<ul><li><a href="/wiki/Photoelectric_Cloak" title="Photoelectric Cloak">Photoelectric Cloak</a></li>
+<li><a href="/wiki/Snap_Hook" title="Snap Hook">Snap Hook</a></li>
+<li><a href="/wiki/Tagging_Grenade" title="Tagging Grenade">Tagging Grenade</a></li></ul>
+</td></tr></tbody></table>
+
+# Refiner
+
+<table class="wikitable">
+<tbody><tr>
+<th>Level</th>
+<th>Requirements</th>
+<th>Crafts
+</th></tr>
+<tr>
+<td style="text-align:center;"><big>1</big></td>
+<td>
+<ul><li>60× <a href="/wiki/Metal_Parts" title="Metal Parts">Metal Parts</a></li>
+<li>5× <a href="/wiki/ARC_Powercell" title="ARC Powercell">ARC Powercell</a></li></ul>
+</td>
+<td>
+<ul><li><a href="/wiki/Crude_Explosives" title="Crude Explosives">Crude Explosives</a></li>
+<li><a href="/wiki/Durable_Cloth" title="Durable Cloth">Durable Cloth</a></li>
+<li><a href="/wiki/Electrical_Components" title="Electrical Components">Electrical Components</a></li>
+<li><a href="/wiki/Mechanical_Components" title="Mechanical Components">Mechanical Components</a></li></ul>
+</td></tr>
+<tr>
+<td style="text-align:center;"><big>2</big></td>
+<td>
+<ul><li>3× <a href="/wiki/Toaster" title="Toaster">Toaster</a></li>
+<li>5× <a href="/wiki/ARC_Motion_Core" title="ARC Motion Core">ARC Motion Core</a></li>
+<li>8× <a href="/wiki/Fireball_Burner" title="Fireball Burner">Fireball Burner</a></li></ul>
+</td>
+<td>
+<ul><li><a href="/wiki/Advanced_Electrical_Components" title="Advanced Electrical Components">Advanced Electrical Components</a></li>
+<li><a href="/wiki/Advanced_Mechanical_Components" title="Advanced Mechanical Components">Advanced Mechanical Components</a></li>
+<li><a href="/wiki/Antiseptic" title="Antiseptic">Antiseptic</a></li>
+<li><a href="/wiki/ARC_Circuitry" title="ARC Circuitry">ARC Circuitry</a></li>
+<li><a href="/wiki/ARC_Motion_Core" title="ARC Motion Core">ARC Motion Core</a></li>
+<li><a href="/wiki/Explosive_Compound" title="Explosive Compound">Explosive Compound</a></li>
+<li><a href="/wiki/Heavy_Gun_Parts" title="Heavy Gun Parts">Heavy Gun Parts</a></li>
+<li><a href="/wiki/Light_Gun_Parts" title="Light Gun Parts">Light Gun Parts</a></li>
+<li><a href="/wiki/Medium_Gun_Parts" title="Medium Gun Parts">Medium Gun Parts</a></li>
+<li><a href="/wiki/Mod_Components" title="Mod Components">Mod Components</a></li></ul>
+</td></tr>
+<tr>
+<td style="text-align:center;"><big>3</big></td>
+<td>
+<ul><li>3× <a href="/wiki/Motor" title="Motor">Motor</a></li>
+<li>10× <a href="/wiki/ARC_Circuitry" title="ARC Circuitry">ARC Circuitry</a></li>
+<li>6× <a href="/wiki/Bombardier_Cell" title="Bombardier Cell">Bombardier Cell</a></li></ul>
+</td>
+<td>
+<ul><li><a href="/wiki/Magnetic_Accelerator" title="Magnetic Accelerator">Magnetic Accelerator</a></li>
+<li><a href="/wiki/Power_Rod" title="Power Rod">Power Rod</a></li>
+<li><a href="/wiki/Complex_Gun_Parts" title="Complex Gun Parts">Complex Gun Parts</a></li></ul>
+</td>
+</tr>
+</tbody></table>

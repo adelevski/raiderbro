@@ -1,0 +1,27 @@
+{
+  "cards": {
+    "Workbench": "Icon_Workbench.png",
+    "Explosives Station": "Icon_Grenade.png",
+    "Gear Bench": "Icon_Shield.png",
+    "Gunsmith": "Icon_WeaponMod.png",
+    "Medical Lab": "Icon_Regenerative.png",
+    "Refiner": "Icon_Refiner.png",
+    "Scrappy": "Icon_Scrappy.png",
+    "Utility Station": "Icon_Utility.png",
+    "Expedition": "Expedition 1 Indicator Icon.png"
+  },
+  "foundIn": {
+    "ARC": "Icon_ARC.png",
+    "Commercial": "Icon_Commercial.png",
+    "Electrical": "Icon_Electrical.png",
+    "Exodus": "Icon_Exodus.png",
+    "Industrial": "Icon_Industrial.png",
+    "Mechanical": "Icon_Mechanical.png",
+    "Medical": "Icon_Medical.png",
+    "Nature": "Icon_Nature.png",
+    "Old World": "Icon_Old World.png",
+    "Residential": "Icon_Residential.png",
+    "Security": "Icon_Security.png",
+    "Technological": "Icon_Technological.png"
+  }
+}

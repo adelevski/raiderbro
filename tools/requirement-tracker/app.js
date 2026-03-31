@@ -1,0 +1,1086 @@
+(function () {
+  const storageKey = "raiderbro-requirement-tracker-v1";
+  const legacyStorageKey = "raiderbro-station-tracker-v1";
+  const trackerData = normalizeTrackerData(window.REQUIREMENT_TRACKER_DATA || window.STATION_TRACKER_DATA);
+  const itemData = window.ITEM_DATA || {};
+
+  if (!trackerData || !Array.isArray(trackerData.cards)) {
+    document.body.innerHTML = "<p style='padding:24px;font-family:sans-serif'>Missing requirement tracker data. Run python scripts/convert_wiki_tables.py first.</p>";
+    return;
+  }
+
+  const uiIcons = trackerData.uiIcons || { cards: {}, foundIn: {} };
+  const state = loadState();
+  const cardsGrid = document.getElementById("cards-grid");
+  const maxedCount = document.getElementById("maxed-count");
+  const openUpgrades = document.getElementById("open-upgrades");
+  const shoppingList = document.getElementById("shopping-list");
+  const resetButton = document.getElementById("reset-progress");
+  const exportButton = document.getElementById("export-progress");
+  const importButton = document.getElementById("import-progress");
+  const importFileInput = document.getElementById("import-progress-file");
+  const buildInfo = document.getElementById("tracker-build-info");
+  const groupByCardButton = document.getElementById("group-by-card");
+  const groupByFoundButton = document.getElementById("group-by-found");
+  const scopeAllButton = document.getElementById("scope-all");
+  const scopeWorkshopsButton = document.getElementById("scope-workshops");
+  const scopeScrappyButton = document.getElementById("scope-scrappy");
+  const scopeExpeditionButton = document.getElementById("scope-expedition");
+  const floatingTooltip = createFloatingTooltip();
+  const dragState = { cardName: "", targetName: "", placeAfter: false };
+
+  document.body.appendChild(floatingTooltip);
+  window.addEventListener("scroll", hideTooltip, true);
+  window.addEventListener("resize", hideTooltip);
+  setBuildInfo();
+
+  resetButton.addEventListener("click", function () {
+    const confirmed = window.confirm("Clear all tracked workshop, Scrappy, Expedition, and material progress for the next wipe?");
+    if (!confirmed) {
+      return;
+    }
+
+    window.localStorage.removeItem(storageKey);
+    window.localStorage.removeItem(legacyStorageKey);
+    state.levels = {};
+    state.progress = {};
+    state.variants = {};
+    state.cardOrder = [];
+    render();
+  });
+
+  exportButton.addEventListener("click", exportProgress);
+  importButton.addEventListener("click", function () {
+    importFileInput.click();
+  });
+  importFileInput.addEventListener("change", importProgress);
+
+  groupByCardButton.addEventListener("click", function () {
+    state.shoppingMode = "card";
+    renderSummary();
+  });
+
+  groupByFoundButton.addEventListener("click", function () {
+    state.shoppingMode = "found";
+    renderSummary();
+  });
+
+  scopeAllButton.addEventListener("click", function () {
+    state.cardScope = "all";
+    render();
+  });
+
+  scopeWorkshopsButton.addEventListener("click", function () {
+    state.cardScope = "workshops";
+    render();
+  });
+
+  scopeScrappyButton.addEventListener("click", function () {
+    state.cardScope = "scrappy";
+    render();
+  });
+
+  scopeExpeditionButton.addEventListener("click", function () {
+    state.cardScope = "expedition";
+    render();
+  });
+
+  render();
+
+  function normalizeTrackerData(rawTrackerData) {
+    if (!rawTrackerData) {
+      return null;
+    }
+
+    if (Array.isArray(rawTrackerData.cards)) {
+      return rawTrackerData;
+    }
+
+    if (!Array.isArray(rawTrackerData.stations)) {
+      return rawTrackerData;
+    }
+
+    const cards = rawTrackerData.stations.map(function (card) {
+      return normalizeLegacyCard(card, {
+        id: "workshop-" + slugify(card.station),
+        title: card.station,
+      });
+    });
+
+    if (rawTrackerData.scrappy) {
+      cards.push(normalizeLegacyCard(rawTrackerData.scrappy, { id: "scrappy", title: "Scrappy" }));
+    }
+
+    if (rawTrackerData.expedition) {
+      cards.push(normalizeLegacyCard(rawTrackerData.expedition, { id: "expedition", title: "Expedition" }));
+    }
+
+    return {
+      schemaVersion: 1,
+      generatedAt: "",
+      buildId: "legacy",
+      uiIcons: rawTrackerData.uiIcons || { cards: {}, foundIn: {} },
+      cards: cards,
+    };
+  }
+
+  function normalizeLegacyCard(card, defaults) {
+    const normalized = {
+      id: defaults.id,
+      title: defaults.title,
+      kindLabel: card.kindLabel || "Progress",
+      scope: card.scope,
+      iconUrl: card.iconUrl || "",
+    };
+
+    if (Array.isArray(card.variants)) {
+      normalized.variants = card.variants.map(function (variant) {
+        return {
+          id: variant.id,
+          title: variant.title || variant.label || variant.id,
+          minLevel: Number(variant.minLevel || 0),
+          maxLevel: Number(variant.maxLevel || 0),
+          zeroLabel: variant.zeroLabel || "Not started",
+          completeLabel: variant.completeLabel || "Complete",
+          levels: normalizeLegacyLevels(variant.levels || []),
+        };
+      });
+      return normalized;
+    }
+
+    normalized.minLevel = Number(card.minLevel || 0);
+    normalized.maxLevel = Number(card.maxLevel || 0);
+    normalized.levels = normalizeLegacyLevels(card.levels || []);
+    return normalized;
+  }
+
+  function normalizeLegacyLevels(levels) {
+    return levels.map(function (level) {
+      return {
+        level: Number(level.level),
+        label: level.label,
+        progressLabel: level.progressLabel,
+        description: level.description,
+        requirements: (level.requirements || []).map(function (requirement) {
+          return {
+            item: requirement.item,
+            quantity: Number(requirement.quantity),
+          };
+        }),
+        crafts: level.crafts || [],
+      };
+    });
+  }
+
+  function slugify(value) {
+    return String(value || "")
+      .trim()
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, "-")
+      .replace(/^-+|-+$/g, "");
+  }
+
+  function loadState() {
+    const fallback = {
+      levels: {},
+      progress: {},
+      variants: {},
+      cardOrder: [],
+      shoppingMode: "card",
+      cardScope: "all",
+    };
+
+    try {
+      const raw = window.localStorage.getItem(storageKey);
+      const fallbackRaw = raw || window.localStorage.getItem(legacyStorageKey);
+      if (!fallbackRaw) {
+        return fallback;
+      }
+
+      const parsed = JSON.parse(fallbackRaw);
+      return {
+        levels: parsed.levels || {},
+        progress: parsed.progress || {},
+        variants: parsed.variants || {},
+        cardOrder: parsed.cardOrder || [],
+        shoppingMode: parsed.shoppingMode === "found" ? "found" : "card",
+        cardScope: parsed.cardScope || "all",
+      };
+    } catch (error) {
+      return fallback;
+    }
+  }
+
+  function saveState() {
+    window.localStorage.setItem(storageKey, JSON.stringify(state));
+  }
+
+  function arraysEqual(left, right) {
+    if (!Array.isArray(left) || !Array.isArray(right) || left.length !== right.length) {
+      return false;
+    }
+
+    return left.every(function (value, index) {
+      return value === right[index];
+    });
+  }
+
+  function getAllCards() {
+    return trackerData.cards || [];
+  }
+
+  function getVisibleCards() {
+    return getAllCards().filter(function (card) {
+      return state.cardScope === "all" || card.scope === state.cardScope;
+    });
+  }
+
+  function getDefaultCardOrder() {
+    return getAllCards().map(function (card) {
+      return card.id;
+    });
+  }
+
+  function getCardOrder() {
+    const defaultOrder = getDefaultCardOrder();
+    const storedOrder = Array.isArray(state.cardOrder)
+      ? state.cardOrder.filter(function (name) {
+          return defaultOrder.includes(name);
+        })
+      : [];
+
+    defaultOrder.forEach(function (name) {
+      if (!storedOrder.includes(name)) {
+        storedOrder.push(name);
+      }
+    });
+
+    if (!arraysEqual(storedOrder, state.cardOrder)) {
+      state.cardOrder = storedOrder;
+    }
+
+    return storedOrder;
+  }
+
+  function reorderCardGroups(draggedName, targetName, placeAfter) {
+    if (!draggedName || !targetName || draggedName === targetName) {
+      return;
+    }
+
+    const nextOrder = getCardOrder().slice();
+    const draggedIndex = nextOrder.indexOf(draggedName);
+    const targetIndex = nextOrder.indexOf(targetName);
+
+    if (draggedIndex === -1 || targetIndex === -1) {
+      return;
+    }
+
+    nextOrder.splice(draggedIndex, 1);
+    const adjustedTargetIndex = nextOrder.indexOf(targetName) + (placeAfter ? 1 : 0);
+    nextOrder.splice(adjustedTargetIndex, 0, draggedName);
+    state.cardOrder = nextOrder;
+  }
+
+  function clearDragHints() {
+    Array.from(shoppingList.querySelectorAll(".shopping-group")).forEach(function (group) {
+      group.classList.remove("drag-target-before", "drag-target-after");
+    });
+  }
+
+  function clearDragState() {
+    dragState.cardName = "";
+    dragState.targetName = "";
+    dragState.placeAfter = false;
+    clearDragHints();
+    Array.from(shoppingList.querySelectorAll(".shopping-group")).forEach(function (group) {
+      group.classList.remove("is-dragging");
+    });
+  }
+
+  function getCardContext(card) {
+    const hasVariants = Array.isArray(card.variants) && card.variants.length > 0;
+    const selectedVariantId = hasVariants
+      ? state.variants[card.id] || card.variants[0].id
+      : "";
+    const activeCard = hasVariants
+      ? card.variants.find(function (variant) {
+          return variant.id === selectedVariantId;
+        }) || card.variants[0]
+      : card;
+
+    if (hasVariants && state.variants[card.id] !== activeCard.id) {
+      state.variants[card.id] = activeCard.id;
+    }
+
+    return {
+      baseCard: card,
+      activeCard: activeCard,
+      variantId: hasVariants ? activeCard.id : "",
+      displayTitle: hasVariants ? activeCard.title : card.title,
+      levelStateKey: hasVariants ? [card.id, activeCard.id].join("::") : card.id,
+      iconUrl: card.iconUrl || uiIcons.cards[card.title] || uiIcons.cards[card.id] || "",
+      kindLabel: card.kindLabel || "Progress",
+    };
+  }
+
+  function getCurrentLevel(context) {
+    const minimumLevel = Number(context.activeCard.minLevel || context.baseCard.minLevel || 0);
+    const maximumLevel = Number(context.activeCard.maxLevel || context.baseCard.maxLevel || 0);
+    const level = Number(state.levels[context.levelStateKey] ?? minimumLevel);
+    return Math.max(minimumLevel, Math.min(level, maximumLevel));
+  }
+
+  function getNextLevelData(context, currentLevel) {
+    const targetLevel = currentLevel + 1;
+    return context.activeCard.levels.find(function (levelInfo) {
+      return levelInfo.level === targetLevel;
+    }) || null;
+  }
+
+  function progressKey(context, level, itemName) {
+    const keyParts = [context.baseCard.id];
+    if (context.variantId) {
+      keyParts.push(context.variantId);
+    }
+    keyParts.push(level, itemName);
+    return keyParts.join("::");
+  }
+
+  function render() {
+    cardsGrid.innerHTML = "";
+
+    getVisibleCards().forEach(function (card) {
+      const context = getCardContext(card);
+      const currentLevel = getCurrentLevel(context);
+      const nextLevel = getNextLevelData(context, currentLevel);
+      cardsGrid.appendChild(renderTrackerCard(context, currentLevel, nextLevel));
+    });
+
+    renderSummary();
+  }
+
+  function renderSummary() {
+    let maxedCards = 0;
+    let upgradeCount = 0;
+    const aggregateNeeds = new Map();
+    const allCards = getAllCards();
+
+    allCards.forEach(function (card) {
+      const context = getCardContext(card);
+      const currentLevel = getCurrentLevel(context);
+      const nextLevel = getNextLevelData(context, currentLevel);
+
+      if (currentLevel >= context.activeCard.maxLevel) {
+        maxedCards += 1;
+      }
+
+      if (!nextLevel) {
+        return;
+      }
+
+      upgradeCount += 1;
+      nextLevel.requirements.forEach(function (requirement) {
+        const key = progressKey(context, nextLevel.level, requirement.item);
+        const have = Number(state.progress[key] || 0);
+        const need = Math.max(requirement.quantity - have, 0);
+        if (need <= 0) {
+          return;
+        }
+
+        if (!aggregateNeeds.has(requirement.item)) {
+          const item = itemData[requirement.item] || {};
+          aggregateNeeds.set(requirement.item, {
+            item: requirement.item,
+            total: 0,
+            category: item.category || "Unknown",
+            foundIn: item.foundIn || [],
+            cards: [],
+            unit: item.unit || "count",
+          });
+        }
+
+        const aggregateEntry = aggregateNeeds.get(requirement.item);
+        aggregateEntry.total += need;
+        aggregateEntry.cards.push({
+          cardId: context.baseCard.id,
+          cardTitle: context.baseCard.title,
+          cardLabel: context.displayTitle,
+          need: need,
+        });
+      });
+    });
+
+    maxedCount.textContent = maxedCards + " / " + allCards.length;
+    openUpgrades.textContent = String(upgradeCount);
+    groupByCardButton.classList.toggle("active", state.shoppingMode !== "found");
+    groupByFoundButton.classList.toggle("active", state.shoppingMode === "found");
+    scopeAllButton.classList.toggle("active", state.cardScope === "all");
+    scopeWorkshopsButton.classList.toggle("active", state.cardScope === "workshops");
+    scopeScrappyButton.classList.toggle("active", state.cardScope === "scrappy");
+    scopeExpeditionButton.classList.toggle("active", state.cardScope === "expedition");
+    getCardOrder();
+    renderShoppingList(aggregateNeeds);
+    saveState();
+  }
+
+  function renderShoppingList(aggregateNeeds) {
+    shoppingList.innerHTML = "";
+
+    if (aggregateNeeds.size === 0) {
+      const done = document.createElement("p");
+      done.className = "shopping-empty";
+      done.textContent = "You are caught up on every tracked upgrade right now.";
+      shoppingList.appendChild(done);
+      return;
+    }
+
+    const grouped = state.shoppingMode === "found"
+      ? groupNeedsByFoundIn(aggregateNeeds)
+      : groupNeedsByCard(aggregateNeeds);
+
+    const orderedEntries = Array.from(grouped.entries());
+    if (state.shoppingMode === "card") {
+      const cardOrder = getCardOrder();
+      orderedEntries.sort(function (a, b) {
+        return cardOrder.indexOf(a[0]) - cardOrder.indexOf(b[0]);
+      });
+    } else {
+      orderedEntries.sort(function (a, b) {
+        return a[1].title.localeCompare(b[1].title);
+      });
+    }
+
+    orderedEntries
+      .forEach(function (groupEntry) {
+        const groupId = groupEntry[0];
+        const group = groupEntry[1];
+        const groupCard = document.createElement("section");
+        groupCard.className = "shopping-group";
+        groupCard.classList.toggle("is-reorderable", state.shoppingMode === "card");
+        groupCard.draggable = state.shoppingMode === "card";
+
+        if (state.shoppingMode === "card") {
+          groupCard.addEventListener("dragstart", function (event) {
+            dragState.cardName = groupId;
+            dragState.targetName = "";
+            dragState.placeAfter = false;
+            groupCard.classList.add("is-dragging");
+            if (event.dataTransfer) {
+              event.dataTransfer.effectAllowed = "move";
+              event.dataTransfer.setData("text/plain", groupId);
+            }
+          });
+
+          groupCard.addEventListener("dragover", function (event) {
+            if (!dragState.cardName || dragState.cardName === groupId) {
+              return;
+            }
+
+            event.preventDefault();
+            clearDragHints();
+            const rect = groupCard.getBoundingClientRect();
+            const placeAfter = event.clientX > rect.left + rect.width / 2;
+            dragState.targetName = groupId;
+            dragState.placeAfter = placeAfter;
+            groupCard.classList.add(placeAfter ? "drag-target-after" : "drag-target-before");
+          });
+
+          groupCard.addEventListener("drop", function (event) {
+            if (!dragState.cardName || dragState.cardName === groupId) {
+              clearDragState();
+              return;
+            }
+
+            event.preventDefault();
+            reorderCardGroups(dragState.cardName, groupName, dragState.placeAfter);
+            clearDragState();
+            renderSummary();
+          });
+
+          groupCard.addEventListener("dragend", clearDragState);
+        }
+
+        const title = document.createElement("div");
+        title.className = "shopping-group-head";
+
+        const iconUrl = state.shoppingMode === "found"
+          ? (uiIcons.foundIn[groupId] || "")
+          : (uiIcons.cards[group.title] || uiIcons.cards[groupId] || "");
+
+        if (iconUrl) {
+          const icon = document.createElement("img");
+          icon.className = "group-icon";
+          icon.src = iconUrl;
+          icon.alt = group.title;
+          icon.loading = "lazy";
+          title.appendChild(icon);
+        }
+
+        const groupTitle = document.createElement("h3");
+        groupTitle.className = "shopping-group-title";
+        groupTitle.textContent = group.title;
+        title.appendChild(groupTitle);
+        groupCard.appendChild(title);
+
+        const groupList = document.createElement("div");
+        groupList.className = "shopping-group-list";
+
+        group.items
+          .sort(function (a, b) {
+            return a.item.localeCompare(b.item);
+          })
+          .forEach(function (itemEntry) {
+            const row = document.createElement("div");
+            row.className = "shopping-item";
+
+            const head = document.createElement("div");
+            head.className = "shopping-item-head";
+            const itemInline = createItemInline(itemEntry.item, {
+              extraText: itemEntry.secondaryLabel,
+            });
+
+            const total = document.createElement("span");
+            total.className = "shopping-total";
+            total.textContent = formatShoppingTotal(itemEntry.item, itemEntry.total);
+            head.append(itemInline, total);
+            row.appendChild(head);
+            groupList.appendChild(row);
+          });
+
+        groupCard.appendChild(groupList);
+        shoppingList.appendChild(groupCard);
+      });
+  }
+
+  function groupNeedsByCard(aggregateNeeds) {
+    const grouped = new Map();
+
+    Array.from(aggregateNeeds.values()).forEach(function (entry) {
+      const cardIds = Array.from(new Set(entry.cards.map(function (cardEntry) {
+        return cardEntry.cardId;
+      })));
+
+      cardIds.forEach(function (cardId) {
+        if (!grouped.has(cardId)) {
+          grouped.set(cardId, {
+            title: entry.cards.find(function (cardEntry) {
+              return cardEntry.cardId === cardId;
+            }).cardTitle,
+            items: [],
+          });
+        }
+
+        grouped.get(cardId).items.push({
+          item: entry.item,
+          total: entry.cards
+            .filter(function (cardEntry) {
+              return cardEntry.cardId === cardId;
+            })
+            .reduce(function (sum, cardEntry) {
+              return sum + cardEntry.need;
+            }, 0),
+          secondaryLabel: entry.category || "Unknown type",
+        });
+      });
+    });
+
+    return grouped;
+  }
+
+  function groupNeedsByFoundIn(aggregateNeeds) {
+    const grouped = new Map();
+
+    Array.from(aggregateNeeds.values()).forEach(function (entry) {
+      const foundInValues = entry.foundIn && entry.foundIn.length ? entry.foundIn : ["Unknown"];
+
+      foundInValues.forEach(function (sourceName) {
+        if (!grouped.has(sourceName)) {
+          grouped.set(sourceName, {
+            title: sourceName,
+            items: [],
+          });
+        }
+
+        grouped.get(sourceName).items.push({
+          item: entry.item,
+          total: entry.total,
+          secondaryLabel: buildCardLabel(entry.cards),
+        });
+      });
+    });
+
+    return grouped;
+  }
+
+  function buildCardLabel(cards) {
+    const names = Array.from(new Set(cards.map(function (cardEntry) {
+      return cardEntry.cardLabel || cardEntry.cardTitle;
+    }))).sort(function (a, b) {
+      return a.localeCompare(b);
+    });
+    return names.join(", ");
+  }
+
+  function renderTrackerCard(context, currentLevel, nextLevel) {
+    const card = document.createElement("article");
+    card.className = "tracker-card";
+    const isWorkshopCard = context.baseCard.scope === "workshops";
+    const isScrappyCard = context.baseCard.id === "scrappy";
+    const showHelperStatus = context.baseCard.id !== "expedition";
+
+    const top = document.createElement("div");
+    top.className = "card-header";
+
+    const titleWrap = document.createElement("div");
+    titleWrap.className = "card-title-wrap";
+
+    if (context.iconUrl) {
+      const icon = document.createElement("img");
+      icon.className = "card-icon";
+      icon.src = context.iconUrl;
+      icon.alt = context.baseCard.title;
+      icon.loading = "lazy";
+      titleWrap.appendChild(icon);
+    }
+
+    const titleCopy = document.createElement("div");
+    const meta = document.createElement("p");
+    meta.className = "meta";
+    meta.textContent = context.kindLabel;
+    const title = document.createElement("h2");
+    title.className = "card-title";
+    title.textContent = context.baseCard.title;
+    titleCopy.append(meta, title);
+
+    if (context.variantId) {
+      const subtitle = document.createElement("p");
+      subtitle.className = "card-subtitle";
+      subtitle.textContent = context.displayTitle;
+      titleCopy.appendChild(subtitle);
+    }
+
+    titleWrap.appendChild(titleCopy);
+
+    if (isWorkshopCard || isScrappyCard) {
+      top.append(titleWrap, renderProgressDots(context, currentLevel));
+    } else {
+      const status = document.createElement("div");
+      status.className = "status-pill" + (currentLevel >= context.activeCard.maxLevel ? " maxed" : "");
+      status.textContent = currentLevel >= context.activeCard.maxLevel
+        ? (context.activeCard.completeLabel || "Complete")
+        : "Next: " + getMilestoneLabel(context.activeCard, nextLevel);
+      top.append(titleWrap, status);
+    }
+
+    card.appendChild(top);
+
+    if (!isWorkshopCard && !isScrappyCard) {
+      const levelRow = document.createElement("div");
+      levelRow.className = "level-row";
+
+      if (Array.isArray(context.baseCard.variants) && context.baseCard.variants.length) {
+        const variantGroup = document.createElement("div");
+        variantGroup.className = "control-group";
+        const variantLabel = document.createElement("label");
+        variantLabel.className = "label";
+        variantLabel.textContent = "Current Track";
+        const variantSelect = document.createElement("select");
+
+        context.baseCard.variants.forEach(function (variant) {
+          const option = document.createElement("option");
+          option.value = variant.id;
+          option.textContent = variant.title;
+          option.selected = variant.id === context.variantId;
+          variantSelect.appendChild(option);
+        });
+
+        variantSelect.addEventListener("change", function (event) {
+          state.variants[context.baseCard.id] = event.target.value;
+          render();
+        });
+
+        variantGroup.append(variantLabel, variantSelect);
+        levelRow.appendChild(variantGroup);
+      }
+
+      const progressGroup = document.createElement("div");
+      progressGroup.className = "control-group";
+      const progressLabel = document.createElement("label");
+      progressLabel.className = "label";
+      progressLabel.textContent = "Current Progress";
+      const progressSelect = document.createElement("select");
+
+      const minimumLevel = Number(context.activeCard.minLevel || context.baseCard.minLevel || 0);
+      const maximumLevel = Number(context.activeCard.maxLevel || context.baseCard.maxLevel || 0);
+      for (let level = minimumLevel; level <= maximumLevel; level += 1) {
+        const option = document.createElement("option");
+        option.value = String(level);
+        option.textContent = getProgressOptionLabel(context.activeCard, level);
+        option.selected = level === currentLevel;
+        progressSelect.appendChild(option);
+      }
+
+      progressSelect.addEventListener("change", function (event) {
+        state.levels[context.levelStateKey] = Number(event.target.value);
+        render();
+      });
+
+      progressGroup.append(progressLabel, progressSelect);
+      levelRow.appendChild(progressGroup);
+
+      if (showHelperStatus) {
+        const helper = document.createElement("div");
+        helper.className = "control-group helper-group";
+        const helperLabel = document.createElement("p");
+        helperLabel.className = "label";
+        helperLabel.textContent = "Track Status";
+        const helperValue = document.createElement("p");
+        helperValue.className = "requirement-meta";
+        helperValue.textContent = nextLevel
+          ? "Track materials for " + getMilestoneLabel(context.activeCard, nextLevel)
+          : getCompleteMessage(context);
+        helper.append(helperLabel, helperValue);
+        levelRow.appendChild(helper);
+      }
+
+      card.appendChild(levelRow);
+    }
+
+    const nextUpgradePanel = document.createElement("section");
+    nextUpgradePanel.className = "next-upgrade";
+
+    if (!nextLevel) {
+      const empty = document.createElement("p");
+      empty.className = "empty-upgrade";
+      empty.textContent = getEmptyMessage(context);
+      nextUpgradePanel.appendChild(empty);
+      card.appendChild(nextUpgradePanel);
+      return card;
+    }
+
+    const heading = document.createElement("h3");
+    heading.textContent = "Requirements for " + getMilestoneLabel(context.activeCard, nextLevel);
+    nextUpgradePanel.appendChild(heading);
+
+    if (nextLevel.description) {
+      const description = document.createElement("p");
+      description.className = "stage-description";
+      description.textContent = nextLevel.description;
+      nextUpgradePanel.appendChild(description);
+    }
+
+    const requirementList = document.createElement("div");
+    requirementList.className = "requirement-list";
+
+    nextLevel.requirements.forEach(function (requirement) {
+      const key = progressKey(context, nextLevel.level, requirement.item);
+      const have = Number(state.progress[key] || 0);
+      const clampedHave = Math.max(0, Math.min(have, requirement.quantity));
+
+      if (clampedHave !== have) {
+        state.progress[key] = clampedHave;
+      }
+
+      const row = document.createElement("div");
+      row.className = "requirement";
+      row.classList.toggle("is-complete", clampedHave >= requirement.quantity);
+
+      const main = document.createElement("div");
+      main.className = "requirement-main";
+      main.appendChild(createItemInline(requirement.item));
+
+      const progress = document.createElement("div");
+      progress.className = "requirement-progress";
+
+      const input = document.createElement("input");
+      input.type = "number";
+      input.min = "0";
+      input.max = String(requirement.quantity);
+      input.step = "1";
+      input.value = String(clampedHave);
+      input.setAttribute("aria-label", requirement.item + " count");
+      input.classList.toggle("wide-input", requirement.quantity >= 1000);
+      input.addEventListener("wheel", function (event) {
+        event.preventDefault();
+      }, { passive: false });
+      input.addEventListener("input", function (event) {
+        const nextValue = Number(event.target.value || 0);
+        const safeValue = Math.max(0, Math.min(nextValue, requirement.quantity));
+        state.progress[key] = safeValue;
+        input.value = String(safeValue);
+        row.classList.toggle("is-complete", safeValue >= requirement.quantity);
+        renderSummary();
+      });
+
+      const count = document.createElement("span");
+      count.className = "requirement-count";
+      count.textContent = "/" + formatRequirementValue(requirement.quantity);
+
+      progress.append(input, count);
+      row.append(main, progress);
+      requirementList.appendChild(row);
+    });
+
+    nextUpgradePanel.appendChild(requirementList);
+
+    if (nextLevel.crafts && nextLevel.crafts.length > 0) {
+      const unlocks = document.createElement("div");
+      unlocks.className = "unlocks";
+      const unlockTitle = document.createElement("h4");
+      unlockTitle.textContent = "Unlocks at " + getMilestoneLabel(context.activeCard, nextLevel);
+      unlocks.appendChild(unlockTitle);
+
+      const unlockList = document.createElement("div");
+      unlockList.className = "unlock-list";
+      nextLevel.crafts.forEach(function (craft) {
+        const chip = document.createElement("span");
+        chip.className = "unlock-chip";
+        chip.appendChild(createItemInline(craft));
+        unlockList.appendChild(chip);
+      });
+
+      unlocks.appendChild(unlockList);
+      nextUpgradePanel.appendChild(unlocks);
+    }
+
+    card.appendChild(nextUpgradePanel);
+    return card;
+  }
+
+  function renderProgressDots(context, currentLevel) {
+    const dots = document.createElement("div");
+    dots.className = "progress-dots";
+    dots.setAttribute("role", "radiogroup");
+    dots.setAttribute("aria-label", context.baseCard.title + " progress");
+
+    const minimumLevel = Number(context.activeCard.minLevel || context.baseCard.minLevel || 0);
+    const maximumLevel = Number(context.activeCard.maxLevel || context.baseCard.maxLevel || 0);
+
+    for (let level = minimumLevel; level <= maximumLevel; level += 1) {
+      const dot = document.createElement("button");
+      dot.type = "button";
+      dot.className = "level-dot" + (level === currentLevel ? " active" : "");
+      dot.textContent = String(level);
+      dot.title = level === 0 ? "Unbuilt" : "Level " + level;
+      dot.setAttribute("aria-pressed", level === currentLevel ? "true" : "false");
+      dot.addEventListener("click", function () {
+        state.levels[context.levelStateKey] = level;
+        render();
+      });
+      dots.appendChild(dot);
+    }
+
+    return dots;
+  }
+
+  function createItemInline(itemName, options) {
+    const settings = options || {};
+    const item = itemData[itemName] || null;
+    const rarityClass = item ? getRarityClass(item.rarity) : "";
+
+    const wrapper = document.createElement("span");
+    wrapper.className = "item-inline" + (item ? " has-tooltip " + rarityClass : "");
+
+    if (item && item.imageUrl) {
+      const icon = document.createElement("img");
+      icon.className = "item-icon";
+      icon.src = item.imageUrl;
+      icon.alt = item.displayName || itemName;
+      icon.loading = "lazy";
+      wrapper.appendChild(icon);
+    }
+
+    const copy = document.createElement("span");
+    copy.className = "item-copy";
+
+    const name = document.createElement("span");
+    name.className = "item-name";
+    name.textContent = item && item.displayName ? item.displayName : itemName;
+    copy.appendChild(name);
+
+    if (settings.extraText) {
+      const extra = document.createElement("span");
+      extra.className = "item-need";
+      extra.textContent = settings.extraText;
+      copy.appendChild(extra);
+    }
+
+    wrapper.appendChild(copy);
+
+    if (item) {
+      wrapper.tabIndex = 0;
+      wrapper.addEventListener("mouseenter", function () {
+        showTooltip(item, wrapper);
+      });
+      wrapper.addEventListener("mousemove", function () {
+        positionTooltip(wrapper);
+      });
+      wrapper.addEventListener("mouseleave", hideTooltip);
+      wrapper.addEventListener("focus", function () {
+        showTooltip(item, wrapper);
+      });
+      wrapper.addEventListener("blur", hideTooltip);
+    }
+
+    return wrapper;
+  }
+
+  function buildTooltipContent(item) {
+    const tooltip = document.createElement("div");
+    const header = document.createElement("span");
+    header.className = "tooltip-header";
+
+    if (item.imageUrl) {
+      const icon = document.createElement("img");
+      icon.className = "item-icon";
+      icon.src = item.imageUrl;
+      icon.alt = item.displayName || item.item;
+      icon.loading = "lazy";
+      header.appendChild(icon);
+    }
+
+    const titleWrap = document.createElement("span");
+    const title = document.createElement("p");
+    title.className = "tooltip-title";
+    title.textContent = item.displayName || item.item;
+    const rarity = document.createElement("p");
+    rarity.className = "tooltip-rarity";
+    rarity.textContent = item.rarity;
+    titleWrap.append(title, rarity);
+    header.appendChild(titleWrap);
+    tooltip.appendChild(header);
+
+    const details = document.createElement("dl");
+    details.className = "tooltip-grid";
+    appendDetail(details, "Category", item.category);
+    appendDetail(details, "Sell Price", formatNumber(item.sellPrice));
+    appendDetail(details, "Stack Size", item.stackSize);
+    appendDetail(details, "Found In", item.foundIn && item.foundIn.length ? item.foundIn.join(" | ") : "Unknown");
+    appendDetail(details, "Recycles To", item.recyclesTo || "None");
+    appendDetail(details, "Uses", item.uses || "None");
+    tooltip.appendChild(details);
+
+    return tooltip;
+  }
+
+  function createFloatingTooltip() {
+    const tooltip = document.createElement("div");
+    tooltip.className = "floating-tooltip";
+    return tooltip;
+  }
+
+  function showTooltip(item, anchor) {
+    floatingTooltip.className = "floating-tooltip visible " + getRarityClass(item.rarity);
+    floatingTooltip.innerHTML = "";
+    floatingTooltip.appendChild(buildTooltipContent(item));
+    positionTooltip(anchor);
+  }
+
+  function positionTooltip(anchor) {
+    if (!floatingTooltip.classList.contains("visible")) {
+      return;
+    }
+
+    const margin = 12;
+    const rect = anchor.getBoundingClientRect();
+    const tooltipRect = floatingTooltip.getBoundingClientRect();
+
+    let left = rect.right + margin;
+    if (left + tooltipRect.width > window.innerWidth - margin) {
+      left = Math.max(margin, rect.left - tooltipRect.width - margin);
+    }
+
+    let top = rect.bottom + margin;
+    if (top + tooltipRect.height > window.innerHeight - margin) {
+      top = Math.max(margin, rect.top - tooltipRect.height - margin);
+    }
+
+    floatingTooltip.style.left = left + "px";
+    floatingTooltip.style.top = top + "px";
+  }
+
+  function hideTooltip() {
+    floatingTooltip.className = "floating-tooltip";
+    floatingTooltip.innerHTML = "";
+  }
+
+  function appendDetail(container, label, value) {
+    const dt = document.createElement("dt");
+    dt.textContent = label;
+    const dd = document.createElement("dd");
+    dd.textContent = value && value.trim ? (value.trim() || "None") : (value || "None");
+    container.append(dt, dd);
+  }
+
+  function getMilestoneLabel(card, levelInfo) {
+    if (!levelInfo) {
+      return "";
+    }
+    return levelInfo.label || ("Level " + levelInfo.level);
+  }
+
+  function getProgressOptionLabel(card, level) {
+    if (level === 0) {
+      return card.zeroLabel || "Not built yet";
+    }
+
+    const levelInfo = card.levels.find(function (entry) {
+      return entry.level === level;
+    });
+
+    if (!levelInfo) {
+      return "Level " + level;
+    }
+
+    return levelInfo.progressLabel || levelInfo.label || ("Level " + level);
+  }
+
+  function getCompleteMessage(context) {
+    if (context.baseCard.station === "Expedition") {
+      return "These tracked expedition stages are complete. Switch the expedition selector when you move to the next one.";
+    }
+    return "This card is finished for the wipe.";
+  }
+
+  function getEmptyMessage(context) {
+    if (context.baseCard.station === "Expedition") {
+      return "These tracked expedition stages are complete. Move the expedition selector when you start the next expedition.";
+    }
+
+    if (context.baseCard.scope === "workshops") {
+      return "No materials needed here. Set this back down if you want to re-plan a fresh wipe path.";
+    }
+
+    return "No materials needed here right now.";
+  }
+
+  function formatRequirementValue(value) {
+    const number = Number(value);
+    return Number.isFinite(number) ? number.toLocaleString() : String(value);
+  }
+
+  function formatShoppingTotal(itemName, value) {
+    const item = itemData[itemName] || {};
+    const number = Number(value);
+    const formatted = Number.isFinite(number) ? number.toLocaleString() : String(value);
+    return item.unit === "coin" ? formatted + "c" : "x" + formatted;
+  }
+
+  function formatNumber(value) {
+    const number = Number(value);
+    if (Number.isFinite(number)) {
+      return number.toLocaleString();
+    }
+    return value;
+  }
+
+  function getRarityClass(rarity) {
+    const normalized = String(rarity || "").trim().toLowerCase();
+    if (normalized === "common") return "rarity-common";
+    if (normalized === "uncommon") return "rarity-uncommon";
+    if (normalized === "rare") return "rarity-rare";
+    if (normalized === "epic") return "rarity-epic";
+    if (normalized === "legendary") return "rarity-legendary";
+    return "";
+  }
+})();

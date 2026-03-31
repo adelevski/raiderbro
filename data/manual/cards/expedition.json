@@ -1,0 +1,193 @@
+{
+  "id": "expedition",
+  "title": "Expedition",
+  "kindLabel": "Project",
+  "scope": "expedition",
+  "iconKey": "Expedition",
+  "sortOrder": 20,
+  "variants": [
+    {
+      "id": "expedition-1",
+      "title": "Expedition 1",
+      "minLevel": 0,
+      "zeroLabel": "Not started",
+      "completeLabel": "Outfitting complete",
+      "levels": [
+        {
+          "level": 1,
+          "label": "Foundation (1/6)",
+          "progressLabel": "Foundation complete",
+          "description": "Building the base structure and frame of the caravan.",
+          "requirements": [
+            { "item": "Metal Parts", "quantity": 150 },
+            { "item": "Rubber Parts", "quantity": 200 },
+            { "item": "ARC Alloy", "quantity": 80 },
+            { "item": "Steel Spring", "quantity": 15 }
+          ],
+          "crafts": []
+        },
+        {
+          "level": 2,
+          "label": "Core Systems (2/6)",
+          "progressLabel": "Core Systems complete",
+          "description": "Connecting wiring, ventilation, and essential power systems.",
+          "requirements": [
+            { "item": "Durable Cloth", "quantity": 35 },
+            { "item": "Wires", "quantity": 30 },
+            { "item": "Electrical Components", "quantity": 30 },
+            { "item": "Cooling Fan", "quantity": 5 }
+          ],
+          "crafts": []
+        },
+        {
+          "level": 3,
+          "label": "Framework (3/6)",
+          "progressLabel": "Framework complete",
+          "description": "Building walls and roof, installing core systems, and defining the interior layout.",
+          "requirements": [
+            { "item": "Light Bulb", "quantity": 5 },
+            { "item": "Battery", "quantity": 30 },
+            { "item": "Sensors", "quantity": 20 },
+            { "item": "Exodus Modules", "quantity": 1 }
+          ],
+          "crafts": []
+        },
+        {
+          "level": 4,
+          "label": "Outfitting (4/6)",
+          "progressLabel": "Outfitting complete",
+          "description": "Adding storage, workbenches, utilities, and personal touches.",
+          "requirements": [
+            { "item": "Humidifier", "quantity": 5 },
+            { "item": "Advanced Electrical Components", "quantity": 5 },
+            { "item": "Magnetic Accelerator", "quantity": 3 },
+            { "item": "Leaper Pulse Unit", "quantity": 3 }
+          ],
+          "crafts": []
+        }
+      ]
+    },
+    {
+      "id": "expedition-2",
+      "title": "Expedition 2",
+      "minLevel": 0,
+      "zeroLabel": "Not started",
+      "completeLabel": "Outfitting complete",
+      "levels": [
+        {
+          "level": 1,
+          "label": "Foundation (1/6)",
+          "progressLabel": "Foundation complete",
+          "description": "Building the base structure and frame of the caravan.",
+          "requirements": [
+            { "item": "Metal Parts", "quantity": 150 },
+            { "item": "Plastic Parts", "quantity": 200 },
+            { "item": "ARC Alloy", "quantity": 80 },
+            { "item": "Steel Spring", "quantity": 15 }
+          ],
+          "crafts": []
+        },
+        {
+          "level": 2,
+          "label": "Core Systems (2/6)",
+          "progressLabel": "Core Systems complete",
+          "description": "Connecting wiring, ventilation, and essential power systems.",
+          "requirements": [
+            { "item": "Durable Cloth", "quantity": 35 },
+            { "item": "Wires", "quantity": 25 },
+            { "item": "Electrical Components", "quantity": 20 },
+            { "item": "Cooling Coil", "quantity": 4 }
+          ],
+          "crafts": []
+        },
+        {
+          "level": 3,
+          "label": "Framework (3/6)",
+          "progressLabel": "Framework complete",
+          "description": "Building walls and roof, installing core systems, and defining the interior layout.",
+          "requirements": [
+            { "item": "Light Bulb", "quantity": 4 },
+            { "item": "Battery", "quantity": 30 },
+            { "item": "Shredder Gyro", "quantity": 10 },
+            { "item": "Exodus Modules", "quantity": 1 }
+          ],
+          "crafts": []
+        },
+        {
+          "level": 4,
+          "label": "Outfitting (4/6)",
+          "progressLabel": "Outfitting complete",
+          "description": "Adding storage, workbenches, utilities, and personal touches.",
+          "requirements": [
+            { "item": "Frequency Modulation Box", "quantity": 5 },
+            { "item": "Advanced Electrical Components", "quantity": 5 },
+            { "item": "Ion Sputter", "quantity": 3 },
+            { "item": "Leaper Pulse Unit", "quantity": 3 }
+          ],
+          "crafts": []
+        }
+      ]
+    },
+    {
+      "id": "expedition-3",
+      "title": "Expedition 3",
+      "minLevel": 0,
+      "zeroLabel": "Not started",
+      "completeLabel": "Outfitting complete",
+      "levels": [
+        {
+          "level": 1,
+          "label": "Foundation (1/6)",
+          "progressLabel": "Foundation complete",
+          "description": "Building the base structure and frame of the caravan.",
+          "requirements": [
+            { "item": "Metal Parts", "quantity": 150 },
+            { "item": "Chemicals", "quantity": 100 },
+            { "item": "ARC Alloy", "quantity": 80 },
+            { "item": "Steel Spring", "quantity": 15 }
+          ],
+          "crafts": []
+        },
+        {
+          "level": 2,
+          "label": "Core Systems (2/6)",
+          "progressLabel": "Core Systems complete",
+          "description": "Connecting wiring, ventilation, and essential power systems.",
+          "requirements": [
+            { "item": "Durable Cloth", "quantity": 30 },
+            { "item": "Wires", "quantity": 25 },
+            { "item": "Electrical Components", "quantity": 20 },
+            { "item": "Industrial Charger", "quantity": 3 }
+          ],
+          "crafts": []
+        },
+        {
+          "level": 3,
+          "label": "Framework (3/6)",
+          "progressLabel": "Framework complete",
+          "description": "Building walls and roof, installing core systems, and defining the interior layout.",
+          "requirements": [
+            { "item": "Coffee Pot", "quantity": 1 },
+            { "item": "Battery", "quantity": 25 },
+            { "item": "Firefly Burner", "quantity": 5 },
+            { "item": "Exodus Modules", "quantity": 1 }
+          ],
+          "crafts": []
+        },
+        {
+          "level": 4,
+          "label": "Outfitting (4/6)",
+          "progressLabel": "Outfitting complete",
+          "description": "Adding storage, workbenches, utilities, and personal touches.",
+          "requirements": [
+            { "item": "Broken Guidance System", "quantity": 1 },
+            { "item": "Advanced Electrical Components", "quantity": 5 },
+            { "item": "Breathtaking Snow Globe", "quantity": 3 },
+            { "item": "Bombardier Cell", "quantity": 2 }
+          ],
+          "crafts": []
+        }
+      ]
+    }
+  ]
+}
