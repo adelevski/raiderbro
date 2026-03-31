@@ -22,14 +22,11 @@
         </div>
       </div>
       <div class="hero-actions">
+        <button id="include-future-needs" class="future-toggle-button" type="button" aria-pressed="false">Include Future</button>
         <div class="hero-metrics">
           <div class="mini-stat">
             <p class="label">Cards Maxed</p>
             <p id="maxed-count" class="mini-number">0 / 0</p>
-          </div>
-          <div class="mini-stat">
-            <p class="label">Open Upgrades</p>
-            <p id="open-upgrades" class="mini-number">0</p>
           </div>
         </div>
         <button id="reset-progress" class="secondary" type="button">Reset Wipe Progress</button>
@@ -39,12 +36,14 @@
     <section class="shopping-panel">
       <div class="shopping-header">
         <div>
-          <p class="label">Need Right Now</p>
+          <p id="shopping-summary-label" class="label">Need Right Now</p>
           <h2 class="shopping-title">Global Shopping List</h2>
         </div>
-        <div class="shopping-toggle" role="tablist" aria-label="Shopping list grouping">
-          <button id="group-by-card" class="toggle-button active" type="button">By Card</button>
-          <button id="group-by-found" class="toggle-button" type="button">By Found In</button>
+        <div class="shopping-controls">
+          <div class="shopping-toggle" role="tablist" aria-label="Shopping list grouping">
+            <button id="group-by-card" class="toggle-button active" type="button">By Card</button>
+            <button id="group-by-found" class="toggle-button" type="button">By Found In</button>
+          </div>
         </div>
       </div>
       <div id="shopping-list" class="shopping-board"></div>

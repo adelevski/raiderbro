@@ -28,8 +28,8 @@
   const state = loadState();
   const cardsGrid = document.getElementById("cards-grid");
   const maxedCount = document.getElementById("maxed-count");
-  const openUpgrades = document.getElementById("open-upgrades");
   const shoppingList = document.getElementById("shopping-list");
+  const shoppingSummaryLabel = document.getElementById("shopping-summary-label");
   const resetButton = document.getElementById("reset-progress");
   const exportButton = document.getElementById("export-progress");
   const importButton = document.getElementById("import-progress");
@@ -37,6 +37,7 @@
   const buildInfo = document.getElementById("tracker-build-info");
   const groupByCardButton = document.getElementById("group-by-card");
   const groupByFoundButton = document.getElementById("group-by-found");
+  const includeFutureNeedsToggle = document.getElementById("include-future-needs");
   const scopeAllButton = document.getElementById("scope-all");
   const scopeWorkshopsButton = document.getElementById("scope-workshops");
   const scopeScrappyButton = document.getElementById("scope-scrappy");
@@ -87,6 +88,11 @@
   groupByFoundButton.addEventListener("click", function () {
     state.shoppingMode = "found";
     renderSummary();
+  });
+
+  includeFutureNeedsToggle.addEventListener("click", function () {
+    state.includeFutureNeeds = !state.includeFutureNeeds;
+    render();
   });
 
   scopeAllButton.addEventListener("click", function () {
@@ -207,6 +213,7 @@
         state.variants = importedState.variants;
         state.cardOrder = importedState.cardOrder;
         state.shoppingMode = importedState.shoppingMode;
+        state.includeFutureNeeds = importedState.includeFutureNeeds;
         state.cardScope = importedState.cardScope;
         tooltipManager.hideTooltip();
         render();
@@ -343,6 +350,17 @@
     }) || null;
   }
 
+  function getSummaryLevels(context, currentLevel) {
+    if (state.includeFutureNeeds) {
+      return context.activeCard.levels.filter(function (levelInfo) {
+        return levelInfo.level > currentLevel;
+      });
+    }
+
+    const nextLevel = getNextLevelData(context, currentLevel);
+    return nextLevel ? [nextLevel] : [];
+  }
+
   function progressKey(context, level, itemName) {
     const keyParts = [context.baseCard.id];
     if (context.variantId) {
@@ -367,8 +385,7 @@
 
   function renderSummary() {
     let maxedCards = 0;
-    let upgradeCount = 0;
-    const aggregateNeeds = new Map();
+    const needEntries = [];
     const allCards = getAllCards();
 
     allCards.forEach(function (card) {
@@ -384,39 +401,40 @@
         return;
       }
 
-      upgradeCount += 1;
-      nextLevel.requirements.forEach(function (requirement) {
-        const key = progressKey(context, nextLevel.level, requirement.item);
-        const have = Number(state.progress[key] || 0);
-        const need = Math.max(requirement.quantity - have, 0);
-        if (need <= 0) {
-          return;
-        }
+      getSummaryLevels(context, currentLevel).forEach(function (levelInfo) {
+        levelInfo.requirements.forEach(function (requirement) {
+          const key = progressKey(context, levelInfo.level, requirement.item);
+          const have = Number(state.progress[key] || 0);
+          const need = Math.max(requirement.quantity - have, 0);
+          if (need <= 0) {
+            return;
+          }
 
-        if (!aggregateNeeds.has(requirement.item)) {
           const item = itemData[requirement.item] || {};
-          aggregateNeeds.set(requirement.item, {
+          needEntries.push({
             item: requirement.item,
-            total: 0,
-            category: item.category || "Unknown",
+            need: need,
+            category: item.category || "Unknown type",
             foundIn: item.foundIn || [],
-            cards: [],
+            cardId: context.baseCard.id,
+            cardTitle: context.baseCard.title,
+            cardLabel: context.displayTitle,
+            milestoneId: context.levelStateKey + "::" + levelInfo.level,
+            milestoneLabel: getMilestoneLabel(context.activeCard, levelInfo),
+            milestoneOrder: Number(levelInfo.level),
           });
-        }
-
-        const aggregateEntry = aggregateNeeds.get(requirement.item);
-        aggregateEntry.total += need;
-        aggregateEntry.cards.push({
-          cardId: context.baseCard.id,
-          cardTitle: context.baseCard.title,
-          cardLabel: context.displayTitle,
-          need: need,
         });
       });
     });
 
     maxedCount.textContent = maxedCards + " / " + allCards.length;
-    openUpgrades.textContent = String(upgradeCount);
+    if (shoppingSummaryLabel) {
+      shoppingSummaryLabel.textContent = state.includeFutureNeeds
+        ? "Need Across Future Levels"
+        : "Need Right Now";
+    }
+    includeFutureNeedsToggle.classList.toggle("active", Boolean(state.includeFutureNeeds));
+    includeFutureNeedsToggle.setAttribute("aria-pressed", state.includeFutureNeeds ? "true" : "false");
     groupByCardButton.classList.toggle("active", state.shoppingMode !== "found");
     groupByFoundButton.classList.toggle("active", state.shoppingMode === "found");
     scopeAllButton.classList.toggle("active", state.cardScope === "all");
@@ -424,14 +442,14 @@
     scopeScrappyButton.classList.toggle("active", state.cardScope === "scrappy");
     scopeExpeditionButton.classList.toggle("active", state.cardScope === "expedition");
     getCardOrder();
-    renderShoppingList(aggregateNeeds);
+    renderShoppingList(needEntries);
     scheduleSaveState();
   }
 
-  function renderShoppingList(aggregateNeeds) {
+  function renderShoppingList(needEntries) {
     shoppingList.innerHTML = "";
 
-    if (aggregateNeeds.size === 0) {
+    if (!needEntries.length) {
       const done = document.createElement("p");
       done.className = "shopping-empty";
       done.textContent = "You are caught up on every tracked upgrade right now.";
@@ -440,8 +458,8 @@
     }
 
     const grouped = state.shoppingMode === "found"
-      ? groupNeedsByFoundIn(aggregateNeeds)
-      : groupNeedsByCard(aggregateNeeds);
+      ? groupNeedsByFoundIn(needEntries)
+      : groupNeedsByCard(needEntries);
 
     const orderedEntries = Array.from(grouped.entries());
     if (state.shoppingMode === "card") {
@@ -527,103 +545,173 @@
         title.appendChild(groupTitle);
         groupCard.appendChild(title);
 
-        const groupList = document.createElement("div");
-        groupList.className = "shopping-group-list";
+        if (group.sections && group.sections.length) {
+          const sectionWrap = document.createElement("div");
+          sectionWrap.className = "shopping-section-list";
 
-        group.items
-          .sort(function (a, b) {
-            return a.item.localeCompare(b.item);
-          })
-          .forEach(function (itemEntry) {
-            const row = document.createElement("div");
-            row.className = "shopping-item";
+          group.sections.forEach(function (section) {
+            const sectionCard = document.createElement("section");
+            sectionCard.className = "shopping-section";
 
-            const head = document.createElement("div");
-            head.className = "shopping-item-head";
-            const itemInline = createItemInline(itemEntry.item, {
-              extraText: itemEntry.secondaryLabel,
-            });
+            const sectionTitle = document.createElement("h4");
+            sectionTitle.className = "shopping-section-title";
+            sectionTitle.textContent = section.title;
+            sectionCard.appendChild(sectionTitle);
 
-            const total = document.createElement("span");
-            total.className = "shopping-total";
-            total.textContent = formatShoppingTotal(itemEntry.item, itemEntry.total);
-            head.append(itemInline, total);
-            row.appendChild(head);
-            groupList.appendChild(row);
+            const sectionList = document.createElement("div");
+            sectionList.className = "shopping-group-list";
+            renderShoppingItems(sectionList, section.items);
+            sectionCard.appendChild(sectionList);
+            sectionWrap.appendChild(sectionCard);
           });
 
-        groupCard.appendChild(groupList);
+          groupCard.appendChild(sectionWrap);
+        } else {
+          const groupList = document.createElement("div");
+          groupList.className = "shopping-group-list";
+          renderShoppingItems(groupList, group.items);
+          groupCard.appendChild(groupList);
+        }
         shoppingList.appendChild(groupCard);
       });
   }
 
-  function groupNeedsByCard(aggregateNeeds) {
+  function renderShoppingItems(container, items) {
+    items
+      .sort(function (a, b) {
+        return a.item.localeCompare(b.item);
+      })
+      .forEach(function (itemEntry) {
+        const row = document.createElement("div");
+        row.className = "shopping-item";
+
+        const head = document.createElement("div");
+        head.className = "shopping-item-head";
+        const itemInline = createItemInline(itemEntry.item, {
+          extraText: itemEntry.secondaryLabel,
+        });
+
+        const total = document.createElement("span");
+        total.className = "shopping-total";
+        total.textContent = formatShoppingTotal(itemEntry.item, itemEntry.total);
+        head.append(itemInline, total);
+        row.appendChild(head);
+        container.appendChild(row);
+      });
+  }
+
+  function buildNeedLabel(needEntry) {
+    return needEntry.cardLabel + " " + needEntry.milestoneLabel;
+  }
+
+  function buildShoppingItems(needEntries, secondaryLabelBuilder) {
+    const aggregated = new Map();
+
+    needEntries.forEach(function (needEntry) {
+      if (!aggregated.has(needEntry.item)) {
+        aggregated.set(needEntry.item, {
+          item: needEntry.item,
+          total: 0,
+          secondaryLabels: [],
+        });
+      }
+
+      const aggregateEntry = aggregated.get(needEntry.item);
+      aggregateEntry.total += needEntry.need;
+      const secondaryLabel = secondaryLabelBuilder ? secondaryLabelBuilder(needEntry) : "";
+      if (secondaryLabel && !aggregateEntry.secondaryLabels.includes(secondaryLabel)) {
+        aggregateEntry.secondaryLabels.push(secondaryLabel);
+      }
+    });
+
+    return Array.from(aggregated.values()).map(function (aggregateEntry) {
+      return {
+        item: aggregateEntry.item,
+        total: aggregateEntry.total,
+        secondaryLabel: aggregateEntry.secondaryLabels.sort(function (a, b) {
+          return a.localeCompare(b);
+        }).join(", "),
+      };
+    });
+  }
+
+  function groupNeedsByCard(needEntries) {
     const grouped = new Map();
 
-    Array.from(aggregateNeeds.values()).forEach(function (entry) {
-      const cardIds = Array.from(new Set(entry.cards.map(function (cardEntry) {
-        return cardEntry.cardId;
-      })));
+    needEntries.forEach(function (needEntry) {
+      if (!grouped.has(needEntry.cardId)) {
+        grouped.set(needEntry.cardId, {
+          title: needEntry.cardTitle,
+          entries: [],
+          sectionsById: new Map(),
+        });
+      }
 
-      cardIds.forEach(function (cardId) {
-        if (!grouped.has(cardId)) {
-          grouped.set(cardId, {
-            title: entry.cards.find(function (cardEntry) {
-              return cardEntry.cardId === cardId;
-            }).cardTitle,
-            items: [],
+      const group = grouped.get(needEntry.cardId);
+      if (state.includeFutureNeeds) {
+        if (!group.sectionsById.has(needEntry.milestoneId)) {
+          group.sectionsById.set(needEntry.milestoneId, {
+            title: needEntry.milestoneLabel,
+            order: needEntry.milestoneOrder,
+            entries: [],
           });
         }
+        group.sectionsById.get(needEntry.milestoneId).entries.push(needEntry);
+      } else {
+        group.entries.push(needEntry);
+      }
+    });
 
-        grouped.get(cardId).items.push({
-          item: entry.item,
-          total: entry.cards
-            .filter(function (cardEntry) {
-              return cardEntry.cardId === cardId;
-            })
-            .reduce(function (sum, cardEntry) {
-              return sum + cardEntry.need;
-            }, 0),
-          secondaryLabel: entry.category || "Unknown type",
+    Array.from(grouped.values()).forEach(function (group) {
+      if (state.includeFutureNeeds) {
+        group.sections = Array.from(group.sectionsById.values())
+          .sort(function (a, b) {
+            return a.order - b.order;
+          })
+          .map(function (section) {
+            return {
+              title: section.title,
+              items: buildShoppingItems(section.entries, function (needEntry) {
+                return needEntry.category;
+              }),
+            };
+          });
+      } else {
+        group.items = buildShoppingItems(group.entries, function (needEntry) {
+          return needEntry.category;
         });
-      });
+      }
+      delete group.entries;
+      delete group.sectionsById;
     });
 
     return grouped;
   }
 
-  function groupNeedsByFoundIn(aggregateNeeds) {
+  function groupNeedsByFoundIn(needEntries) {
     const grouped = new Map();
 
-    Array.from(aggregateNeeds.values()).forEach(function (entry) {
-      const foundInValues = entry.foundIn && entry.foundIn.length ? entry.foundIn : ["Unknown"];
+    needEntries.forEach(function (needEntry) {
+      const foundInValues = needEntry.foundIn && needEntry.foundIn.length ? needEntry.foundIn : ["Unknown"];
 
       foundInValues.forEach(function (sourceName) {
         if (!grouped.has(sourceName)) {
           grouped.set(sourceName, {
             title: sourceName,
-            items: [],
+            entries: [],
           });
         }
 
-        grouped.get(sourceName).items.push({
-          item: entry.item,
-          total: entry.total,
-          secondaryLabel: buildCardLabel(entry.cards),
-        });
+        grouped.get(sourceName).entries.push(needEntry);
       });
     });
 
-    return grouped;
-  }
-
-  function buildCardLabel(cards) {
-    const names = Array.from(new Set(cards.map(function (cardEntry) {
-      return cardEntry.cardLabel || cardEntry.cardTitle;
-    }))).sort(function (a, b) {
-      return a.localeCompare(b);
+    Array.from(grouped.values()).forEach(function (group) {
+      group.items = buildShoppingItems(group.entries, buildNeedLabel);
+      delete group.entries;
     });
-    return names.join(", ");
+
+    return grouped;
   }
 
   function renderTrackerCard(context, currentLevel, nextLevel) {
@@ -737,8 +825,9 @@
 
     const nextUpgradePanel = document.createElement("section");
     nextUpgradePanel.className = "next-upgrade";
+    const pendingLevels = getSummaryLevels(context, currentLevel);
 
-    if (!nextLevel) {
+    if (!pendingLevels.length) {
       const empty = document.createElement("p");
       empty.className = "empty-upgrade";
       empty.textContent = getEmptyMessage(context);
@@ -747,22 +836,35 @@
       return card;
     }
 
-    const heading = document.createElement("h3");
-    heading.textContent = "Requirements for " + getMilestoneLabel(context.activeCard, nextLevel);
-    nextUpgradePanel.appendChild(heading);
+    pendingLevels.forEach(function (levelInfo, index) {
+      nextUpgradePanel.appendChild(renderUpgradeSection(context, levelInfo, index > 0));
+    });
 
-    if (nextLevel.description) {
+    card.appendChild(nextUpgradePanel);
+    return card;
+  }
+
+  function renderUpgradeSection(context, levelInfo, addDivider) {
+    const section = document.createElement("div");
+    section.className = "upgrade-section";
+    section.classList.toggle("is-separated", addDivider);
+
+    const heading = document.createElement("h3");
+    heading.textContent = "Requirements for " + getMilestoneLabel(context.activeCard, levelInfo);
+    section.appendChild(heading);
+
+    if (levelInfo.description) {
       const description = document.createElement("p");
       description.className = "stage-description";
-      description.textContent = nextLevel.description;
-      nextUpgradePanel.appendChild(description);
+      description.textContent = levelInfo.description;
+      section.appendChild(description);
     }
 
     const requirementList = document.createElement("div");
     requirementList.className = "requirement-list";
 
-    nextLevel.requirements.forEach(function (requirement) {
-      const key = progressKey(context, nextLevel.level, requirement.item);
+    levelInfo.requirements.forEach(function (requirement) {
+      const key = progressKey(context, levelInfo.level, requirement.item);
       const have = Number(state.progress[key] || 0);
       const clampedHave = Math.max(0, Math.min(have, requirement.quantity));
 
@@ -810,18 +912,18 @@
       requirementList.appendChild(row);
     });
 
-    nextUpgradePanel.appendChild(requirementList);
+    section.appendChild(requirementList);
 
-    if (nextLevel.crafts && nextLevel.crafts.length > 0) {
+    if (levelInfo.crafts && levelInfo.crafts.length > 0) {
       const unlocks = document.createElement("div");
       unlocks.className = "unlocks";
       const unlockTitle = document.createElement("h4");
-      unlockTitle.textContent = "Unlocks at " + getMilestoneLabel(context.activeCard, nextLevel);
+      unlockTitle.textContent = "Unlocks at " + getMilestoneLabel(context.activeCard, levelInfo);
       unlocks.appendChild(unlockTitle);
 
       const unlockList = document.createElement("div");
       unlockList.className = "unlock-list";
-      nextLevel.crafts.forEach(function (craft) {
+      levelInfo.crafts.forEach(function (craft) {
         const catalogEntry = resolveCatalogEntry(craft);
         const rarityClass = getCatalogEntryRarityClass(catalogEntry);
         const chip = document.createElement("span");
@@ -831,11 +933,10 @@
       });
 
       unlocks.appendChild(unlockList);
-      nextUpgradePanel.appendChild(unlocks);
+      section.appendChild(unlocks);
     }
 
-    card.appendChild(nextUpgradePanel);
-    return card;
+    return section;
   }
 
   function renderProgressDots(context, currentLevel) {

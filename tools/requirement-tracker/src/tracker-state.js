@@ -157,6 +157,7 @@
         ? candidate.cardOrder.map(function (entry) { return String(entry); }).filter(Boolean)
         : [],
       shoppingMode: candidate.shoppingMode === "found" ? "found" : "card",
+      includeFutureNeeds: Boolean(candidate.includeFutureNeeds),
       cardScope: allowedScopes.includes(candidate.cardScope) ? candidate.cardScope : "all",
     };
   }

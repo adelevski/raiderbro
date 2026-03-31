@@ -23,5 +23,31 @@
     "Residential": "Icon_Residential.png",
     "Security": "Icon_Security.png",
     "Technological": "Icon_Technological.png"
+  },
+  "currencies": {
+    "Coins": "Icon Coins.png"
+  },
+  "ammoTypes": {
+    "Energy Clip": "Ammo Energy.png",
+    "Heavy Ammo": "Ammo Heavy.png",
+    "Launcher Ammo": "Ammo Launcher.png",
+    "Light Ammo": "Ammo Light.png",
+    "Medium Ammo": "Ammo Medium.png",
+    "Shotgun Ammo": "Ammo Shotgun.png"
+  },
+  "itemCategories": {
+    "Ammunition": "Ammo Light.png",
+    "Augment": "Icon Augment.png",
+    "Basic Material": "Icon Material.png",
+    "Key": "Icon Key.png",
+    "Misc": "Icon Misc.png",
+    "Mods": "Icon_WeaponMod.png",
+    "Nature": "Icon Nature.png",
+    "Quick Use": "Icon Utility.png",
+    "Recyclable": "Icon Material.png",
+    "Refined Material": "Icon Material.png",
+    "Shield": "Icon Shield.png",
+    "Topside Material": "Icon Material.png",
+    "Trinket": "Icon Trinket.png"
   }
 }

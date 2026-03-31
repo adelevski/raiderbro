@@ -79,10 +79,10 @@
 
       const details = document.createElement("dl");
       details.className = "tooltip-grid";
-      appendDetail(details, "Category", item.category);
-      appendDetail(details, "Sell Price", formatNumber(item.sellPrice));
+      appendIconEntryDetail(details, "Category", item.category, item.categoryIconUrl, "None");
+      appendIconEntryDetail(details, "Sell Price", formatNumber(item.sellPrice), item.sellPriceIconUrl, "None");
       appendDetail(details, "Stack Size", item.stackSize);
-      appendDetail(details, "Found In", item.foundIn && item.foundIn.length ? item.foundIn.join(" | ") : "Unknown");
+      appendIconEntriesDetail(details, "Found In", item.foundInEntries || item.foundIn || [], "Unknown");
       appendListDetail(details, "Recycles To", item.recycleEntries || [], item.recycleStatus || "None", itemData, getRarityClass);
       appendListDetail(details, "Uses", item.usesEntries || [], "None", itemData, getRarityClass);
       tooltip.appendChild(details);
@@ -102,7 +102,7 @@
       const details = document.createElement("dl");
       details.className = "tooltip-grid";
       appendDetail(details, "Type", weapon.type);
-      appendDetail(details, "Ammo Type", weapon.ammoType);
+      appendIconEntryDetail(details, "Ammo Type", weapon.ammoType, weapon.ammoTypeIconUrl, "None");
       appendDetail(details, "Firing Mode", weapon.firingMode);
       appendDetail(details, "Damage", formatNumber(weapon.damage));
       appendDetail(details, "Fire Rate", formatNumber(weapon.fireRate));
@@ -175,6 +175,51 @@
     dt.textContent = label;
     const dd = document.createElement("dd");
     dd.textContent = formatDetailValue(value);
+    container.append(dt, dd);
+  }
+
+  function appendIconEntryDetail(container, label, text, iconUrl, fallbackText) {
+    const entries = text ? [{ text: text, iconUrl: iconUrl || "" }] : [];
+    appendIconEntriesDetail(container, label, entries, fallbackText || "None");
+  }
+
+  function appendIconEntriesDetail(container, label, entries, fallbackText) {
+    const dt = document.createElement("dt");
+    dt.textContent = label;
+    const dd = document.createElement("dd");
+    const normalizedEntries = normalizeIconEntries(entries);
+
+    if (!normalizedEntries.length) {
+      dd.textContent = fallbackText;
+      container.append(dt, dd);
+      return;
+    }
+
+    const row = document.createElement("span");
+    row.className = "tooltip-detail-inline" + (normalizedEntries.length > 1 ? " is-multi" : "");
+
+    normalizedEntries.forEach(function (entry) {
+      const entryElement = document.createElement("span");
+      entryElement.className = "tooltip-detail-entry";
+
+      const text = document.createElement("span");
+      text.className = "tooltip-detail-entry-text";
+      text.textContent = entry.text;
+      entryElement.appendChild(text);
+
+      if (entry.iconUrl) {
+        const icon = document.createElement("img");
+        icon.className = "tooltip-detail-icon";
+        icon.src = entry.iconUrl;
+        icon.alt = entry.text;
+        icon.loading = "lazy";
+        entryElement.appendChild(icon);
+      }
+
+      row.appendChild(entryElement);
+    });
+
+    dd.appendChild(row);
     container.append(dt, dd);
   }
 
@@ -267,6 +312,29 @@
       return value.trim() || "None";
     }
     return value || "None";
+  }
+
+  function normalizeIconEntries(entries) {
+    return (entries || [])
+      .map(function (entry) {
+        if (!entry) {
+          return null;
+        }
+        if (typeof entry === "string") {
+          return { text: formatDetailValue(entry), iconUrl: "" };
+        }
+
+        const text = formatDetailValue(entry.text || entry.label || entry.name || "");
+        if (!text || text === "None") {
+          return null;
+        }
+
+        return {
+          text: text,
+          iconUrl: entry.iconUrl || "",
+        };
+      })
+      .filter(Boolean);
   }
 
   window.RequirementTrackerTooltip = {

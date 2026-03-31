@@ -166,6 +166,18 @@ def load_ui_icon_filenames() -> dict[str, dict[str, str]]:
             str(name): str(filename)
             for name, filename in raw.get("foundIn", {}).items()
         },
+        "currencies": {
+            str(name): str(filename)
+            for name, filename in raw.get("currencies", {}).items()
+        },
+        "ammoTypes": {
+            str(name): str(filename)
+            for name, filename in raw.get("ammoTypes", {}).items()
+        },
+        "itemCategories": {
+            str(name): str(filename)
+            for name, filename in raw.get("itemCategories", {}).items()
+        },
     }
 
 
@@ -321,6 +333,7 @@ def validate_tracker_data(
     ui_icons: dict[str, dict[str, str]],
 ) -> None:
     item_names = {record["item"] for record in item_records}
+    item_categories = {record["category"] for record in item_records if record.get("category")}
     card_ids = [str(card["id"]) for card in cards]
 
     if len(set(card_ids)) != len(card_ids):
@@ -338,6 +351,13 @@ def validate_tracker_data(
     missing_found_in_icons = sorted(category for category in used_found_in_categories if category not in ui_icons["foundIn"])
     if missing_found_in_icons:
         raise ValueError(f"Missing found-in icons for categories: {missing_found_in_icons}")
+
+    missing_item_category_icons = sorted(category for category in item_categories if category not in ui_icons["itemCategories"])
+    if missing_item_category_icons:
+        raise ValueError(f"Missing item category icons for categories: {missing_item_category_icons}")
+
+    if "Coins" not in ui_icons["currencies"]:
+        raise ValueError("Missing currency icon for Coins.")
 
     for card in cards:
         if not card.get("title"):
@@ -549,32 +569,53 @@ def parse_item_records(found_in_by_item: dict[str, list[str]]) -> list[dict[str,
     return records
 
 
-def build_items_csv(found_in_by_item: dict[str, list[str]]) -> tuple[int, list[dict[str, str]]]:
+def build_items_csv(
+    found_in_by_item: dict[str, list[str]],
+    ui_icons: dict[str, dict[str, str]],
+) -> tuple[int, list[dict[str, str]]]:
     records = parse_item_records(found_in_by_item)
     write_csv(
         ITEMS_CSV,
         ["image_src", "item", "rarity", "recycles_to", "sell_price", "stack_size", "category", "uses", "found_in"],
         records,
     )
-    write_item_data(records, found_in_by_item)
+    write_item_data(records, found_in_by_item, ui_icons)
     return len(records), records
 
 
-def write_item_data(records: list[dict[str, str]], found_in_by_item: dict[str, list[str]]) -> None:
+def build_named_icon_entries(names: list[str], icon_filenames: dict[str, str]) -> list[dict[str, str]]:
+    entries: list[dict[str, str]] = []
+    for name in names:
+        entry = {"text": name}
+        icon_filename = icon_filenames.get(name, "")
+        if icon_filename:
+            entry["iconUrl"] = icon_url_from_filename(icon_filename)
+        entries.append(entry)
+    return entries
+
+
+def write_item_data(
+    records: list[dict[str, str]],
+    found_in_by_item: dict[str, list[str]],
+    ui_icons: dict[str, dict[str, str]],
+) -> None:
     payload: dict[str, dict[str, object]] = {}
     for record in records:
         item_name = record["item"]
         image_src = record["image_src"]
+        found_in = found_in_by_item.get(item_name, [])
         item_payload: dict[str, object] = {
             "imageUrl": f"{WIKI_BASE_URL}{image_src}" if image_src.startswith("/") else image_src,
             "rarity": record["rarity"],
             "sellPrice": record["sell_price"],
             "stackSize": record["stack_size"],
             "category": record["category"],
+            "categoryIconUrl": icon_url_from_filename(ui_icons["itemCategories"].get(record["category"], "")),
+            "sellPriceIconUrl": icon_url_from_filename(ui_icons["currencies"].get("Coins", "")),
         }
-        found_in = found_in_by_item.get(item_name, [])
         if found_in:
             item_payload["foundIn"] = found_in
+            item_payload["foundInEntries"] = build_named_icon_entries(found_in, ui_icons["foundIn"])
 
         recycle_entries = build_recycle_entries(record["recycles_to"])
         if recycle_entries:
@@ -742,6 +783,7 @@ def build_weapon_mod_slot_entries(
 def validate_weapon_metadata(
     weapon_records: list[dict[str, str]],
     weapon_metadata: dict[str, dict[str, str]],
+    ui_icons: dict[str, dict[str, str]],
 ) -> None:
     weapon_names = {record["name"] for record in weapon_records}
     rarity_names = set(weapon_metadata["rarities"])
@@ -767,10 +809,20 @@ def validate_weapon_metadata(
     if missing_mod_slot_icons:
         raise ValueError(f"Missing mod slot icons for: {missing_mod_slot_icons}")
 
+    ammo_types = {
+        record["ammo_type"]
+        for record in weapon_records
+        if record.get("ammo_type") and record["ammo_type"].upper() != "N/A"
+    }
+    missing_ammo_icons = sorted(ammo_type for ammo_type in ammo_types if ammo_type not in ui_icons["ammoTypes"])
+    if missing_ammo_icons:
+        raise ValueError(f"Missing ammo type icons for: {missing_ammo_icons}")
+
 
 def write_weapon_data(
     records: list[dict[str, str]],
     weapon_metadata: dict[str, dict[str, str]],
+    ui_icons: dict[str, dict[str, str]],
 ) -> None:
     payload: dict[str, dict[str, object]] = {}
     for record in records:
@@ -780,6 +832,7 @@ def write_weapon_data(
             "rarity": weapon_metadata["rarities"][record["name"]],
             "type": record["type"],
             "ammoType": record["ammo_type"],
+            "ammoTypeIconUrl": icon_url_from_filename(ui_icons["ammoTypes"].get(record["ammo_type"], "")),
             "firingMode": record["firing_mode"],
             "damage": record["damage"],
             "fireRate": record["fire_rate"],
@@ -798,9 +851,9 @@ def write_weapon_data(
     write_text(WEAPON_DATA_JS, content)
 
 
-def build_weapons_csv(weapon_metadata: dict[str, dict[str, str]]) -> int:
+def build_weapons_csv(weapon_metadata: dict[str, dict[str, str]], ui_icons: dict[str, dict[str, str]]) -> int:
     records = parse_weapon_records()
-    validate_weapon_metadata(records, weapon_metadata)
+    validate_weapon_metadata(records, weapon_metadata, ui_icons)
     write_csv(
         WEAPONS_CSV,
         [
@@ -825,7 +878,7 @@ def build_weapons_csv(weapon_metadata: dict[str, dict[str, str]]) -> int:
             for record in records
         ],
     )
-    write_weapon_data(records, weapon_metadata)
+    write_weapon_data(records, weapon_metadata, ui_icons)
     return len(records)
 
 
@@ -842,7 +895,7 @@ def validate_source_data() -> dict[str, int]:
     item_records = parse_item_records(found_in_by_item)
     requirement_records, craft_records = parse_workshop_records()
     weapon_records = parse_weapon_records()
-    validate_weapon_metadata(weapon_records, weapon_metadata)
+    validate_weapon_metadata(weapon_records, weapon_metadata, ui_icons)
     payload = build_requirement_tracker_payload(
         requirement_records,
         craft_records,
@@ -862,9 +915,9 @@ def validate_source_data() -> dict[str, int]:
 def main() -> None:
     found_in_by_item, ui_icons, manual_cards = load_manual_tracker_config()
     weapon_metadata = load_weapon_metadata()
-    items_count, item_records = build_items_csv(found_in_by_item)
+    items_count, item_records = build_items_csv(found_in_by_item, ui_icons)
     workshop_levels_count = build_workshop_datasets(item_records, manual_cards, found_in_by_item, ui_icons)
-    weapons_count = build_weapons_csv(weapon_metadata)
+    weapons_count = build_weapons_csv(weapon_metadata, ui_icons)
 
     print(f"Wrote {items_count} rows to {ITEMS_CSV.name}")
     print(f"Wrote tracker item data to {ITEM_DATA_JS.relative_to(ROOT)}")

@@ -157,7 +157,7 @@ button.secondary {
 
 .hero-actions {
   display: flex;
-  align-items: stretch;
+  align-items: center;
   gap: 8px;
   flex-wrap: wrap;
 }
@@ -179,6 +179,23 @@ button.secondary {
   margin: 4px 0 0;
   font-family: Georgia, "Times New Roman", serif;
   font-size: 1.05rem;
+}
+
+.future-toggle-button {
+  padding: 9px 13px;
+  border-radius: 16px;
+  border: 1px solid rgba(181, 209, 236, 0.12);
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--muted);
+  font-size: 0.84rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.future-toggle-button.active {
+  background: rgba(103, 183, 255, 0.16);
+  color: var(--ink);
+  border-color: rgba(103, 183, 255, 0.24);
 }
 
 .shopping-panel {
@@ -239,6 +256,14 @@ button.secondary {
 .shopping-title {
   margin: 6px 0 0;
   font-size: 1.7rem;
+}
+
+.shopping-controls {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
 }
 
 .shopping-board {
@@ -308,6 +333,31 @@ button.secondary {
   align-items: start;
   grid-auto-rows: min-content;
   min-width: 0;
+}
+
+.shopping-section-list {
+  display: grid;
+  gap: 10px;
+}
+
+.shopping-section {
+  display: grid;
+  gap: 8px;
+  padding-top: 8px;
+  border-top: 1px dashed rgba(181, 209, 236, 0.16);
+}
+
+.shopping-section:first-child {
+  padding-top: 0;
+  border-top: 0;
+}
+
+.shopping-section-title {
+  margin: 0;
+  font-size: 0.76rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
 }
 
 .shopping-item {
@@ -513,6 +563,17 @@ button.secondary {
   border: 1px solid rgba(181, 209, 236, 0.12);
 }
 
+.upgrade-section {
+  display: grid;
+  gap: 0;
+}
+
+.upgrade-section.is-separated {
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px dashed rgba(181, 209, 236, 0.16);
+}
+
 .next-upgrade h3,
 .unlocks h4 {
   margin: 0 0 10px;
@@ -582,9 +643,7 @@ button.secondary {
   border-color: rgba(119, 212, 159, 0.38);
 }
 
-.requirement.is-complete .requirement-count,
-.requirement.is-complete .item-name,
-.requirement.is-complete .item-need {
+.requirement.is-complete .requirement-count {
   color: var(--good);
 }
 
@@ -609,7 +668,6 @@ button.secondary {
   padding: 5px;
   border-radius: 14px;
   background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(181, 209, 236, 0.16);
   color: var(--accent-strong);
 }
 
@@ -666,26 +724,6 @@ button.secondary {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-}
-
-.unlock-chip.rarity-common {
-  border-color: rgba(170, 178, 189, 0.75);
-}
-
-.unlock-chip.rarity-uncommon {
-  border-color: rgba(103, 216, 137, 0.82);
-}
-
-.unlock-chip.rarity-rare {
-  border-color: rgba(110, 176, 255, 0.82);
-}
-
-.unlock-chip.rarity-epic {
-  border-color: rgba(189, 131, 255, 0.82);
-}
-
-.unlock-chip.rarity-legendary {
-  border-color: rgba(255, 215, 91, 0.88);
 }
 
 .shopping-item .item-icon {
@@ -834,6 +872,40 @@ button.secondary {
   color: var(--ink);
 }
 
+.tooltip-detail-inline {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+}
+
+.tooltip-detail-inline.is-multi {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 8px;
+}
+
+.tooltip-detail-entry {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 0;
+}
+
+.tooltip-detail-entry-text {
+  color: var(--ink);
+}
+
+.tooltip-detail-icon {
+  width: 18px;
+  height: 18px;
+  border-radius: 6px;
+  object-fit: contain;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(181, 209, 236, 0.14);
+  flex: 0 0 auto;
+}
+
 .tooltip-list {
   margin: 0;
   padding-left: 18px;
@@ -867,12 +939,36 @@ button.secondary {
   font-weight: 600;
 }
 
+.item-inline.rarity-common .item-icon {
+  border-color: rgba(170, 178, 189, 0.75);
+}
+
+.item-inline.rarity-uncommon .item-icon {
+  border-color: rgba(103, 216, 137, 0.82);
+}
+
+.item-inline.rarity-rare .item-icon {
+  border-color: rgba(110, 176, 255, 0.82);
+}
+
+.item-inline.rarity-epic .item-icon {
+  border-color: rgba(189, 131, 255, 0.82);
+}
+
+.item-inline.rarity-legendary .item-icon {
+  border-color: rgba(255, 215, 91, 0.88);
+}
+
 .rarity-common {
   color: #b3bac3;
 }
 
 .floating-tooltip.rarity-common {
   border-color: #aab2bd;
+}
+
+.floating-tooltip.rarity-common > div > .tooltip-header .item-icon {
+  border-color: rgba(170, 178, 189, 0.75);
 }
 
 .rarity-uncommon {
@@ -883,12 +979,20 @@ button.secondary {
   border-color: #67d889;
 }
 
+.floating-tooltip.rarity-uncommon > div > .tooltip-header .item-icon {
+  border-color: rgba(103, 216, 137, 0.82);
+}
+
 .rarity-rare {
   color: #6eb0ff;
 }
 
 .floating-tooltip.rarity-rare {
   border-color: #6eb0ff;
+}
+
+.floating-tooltip.rarity-rare > div > .tooltip-header .item-icon {
+  border-color: rgba(110, 176, 255, 0.82);
 }
 
 .rarity-epic {
@@ -899,12 +1003,20 @@ button.secondary {
   border-color: #bd83ff;
 }
 
+.floating-tooltip.rarity-epic > div > .tooltip-header .item-icon {
+  border-color: rgba(189, 131, 255, 0.82);
+}
+
 .rarity-legendary {
   color: #ffd75b;
 }
 
 .floating-tooltip.rarity-legendary {
   border-color: #ffd75b;
+}
+
+.floating-tooltip.rarity-legendary > div > .tooltip-header .item-icon {
+  border-color: rgba(255, 215, 91, 0.88);
 }
 
 .tooltip-title-meta.rarity-common {
