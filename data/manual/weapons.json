@@ -1,0 +1,35 @@
+{
+  "rarities": {
+    "Anvil": "Uncommon",
+    "Aphelion": "Legendary",
+    "Arpeggio": "Uncommon",
+    "Bettina": "Epic",
+    "Bobcat": "Epic",
+    "Burletta": "Uncommon",
+    "Equalizer": "Legendary",
+    "Ferro": "Common",
+    "Hairpin": "Common",
+    "Hullcracker": "Epic",
+    "Il Toro": "Uncommon",
+    "Jupiter": "Legendary",
+    "Kettle": "Common",
+    "Osprey": "Rare",
+    "Rattler": "Common",
+    "Renegade": "Rare",
+    "Stitcher": "Common",
+    "Tempest": "Epic",
+    "Torrente": "Rare",
+    "Venator": "Rare",
+    "Vulcano": "Epic"
+  },
+  "modSlotIcons": {
+    "Light Magazine": "Mods Light-Mag.png",
+    "Medium Magazine": "Mods Medium-Mag.png",
+    "Muzzle": "Mods Muzzle.png",
+    "Shotgun Magazine": "Mods Shotgun-Mag.png",
+    "Shotgun Muzzle": "Mods Shotgun-Muzzle.png",
+    "Stock": "Mods Stock.png",
+    "Tech Mod": "Mods Tech-Mod.png",
+    "Underbarrel": "Mods Underbarrel.png"
+  }
+}

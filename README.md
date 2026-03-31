@@ -1,26 +1,23 @@
 # raiderbro
 
-This repo is for the purposes of developing useful mini-scripts/tools for Arc Raiders. 
+Lightweight data prep and utility tools for ARC Raiders.
 
-## Data Prep
+## Structure
 
-Run `python scripts/convert_wiki_tables.py` to regenerate the processed datasets and requirement tracker data from the raw wiki tables.
-Run `python scripts/validate_data.py` to validate the raw/manual tracker inputs without rewriting generated files.
+- `data/raw/`: pasted wiki tables such as `items.txt`, `workshops.txt`, and `weapons.txt`
+- `data/manual/`: curated tracker metadata such as `cards/`, `found_in.json`, `ui_icons.json`, and `weapons.json`
+- `data/processed/`: generated CSV datasets
+- `scripts/`: dataset generation and validation
+- `tools/requirement-tracker/src/`: authored tracker UI code
+- `tools/requirement-tracker/generated/`: generated runtime data for the tracker
 
-- Raw wiki table dumps live in `data/raw/`.
-- Curated tracker metadata lives in `data/manual/`.
-- `data/manual/cards/` holds non-table requirement cards like Scrappy and Expedition.
-- `data/manual/found_in.json` and `data/manual/ui_icons.json` hold curated source and icon mappings.
-- Processed CSV datasets live in `data/processed/`.
-- Tool-specific files live under `tools/`.
+## Commands
+
+- `python scripts/convert_wiki_tables.py`: regenerate CSVs and tracker data
+- `python scripts/validate_data.py`: validate source data without rewriting outputs
 
 ## Requirement Tracker
 
-Open `tools/requirement-tracker/index.html` in a browser for a lightweight requirement tracker.
+Open `tools/requirement-tracker/index.html` in a browser.
 
-- Track workshop levels, Scrappy progress, and the first four Expedition stages with separate card views under one shared tracker.
-- For the next level only, enter how many of each required material you already have.
-- The global shopping list always stays visible and can group by card or by `Found in` source categories from the wiki.
-- Item icons are pulled from the ARC Raiders wiki image paths and hovering an item shows its loot-table details.
-- The page saves locally in your browser, supports import/export of wipe progress, and includes a reset button for a fresh wipe.
-- The browser app reads generated runtime data from `tools/requirement-tracker/item_data.js` and `tools/requirement-tracker/requirement_tracker_data.js`.
+The tracker keeps one shared shopping list across workshop cards, Scrappy, and Expedition progress. State is stored locally in the browser, and the page reads generated data from `tools/requirement-tracker/generated/item_data.js` and `tools/requirement-tracker/generated/requirement_tracker_data.js`.

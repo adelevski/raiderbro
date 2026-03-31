@@ -11,6 +11,7 @@
   const createTooltipManager = tooltipUtils.createTooltipManager;
   const rawTrackerData = window.REQUIREMENT_TRACKER_DATA || window.STATION_TRACKER_DATA;
   const itemData = window.ITEM_DATA || {};
+  const weaponData = window.WEAPON_DATA || {};
 
   if (!normalizeTrackerData || !sanitizeState || !arraysEqual || !formatTimestamp || !createTooltipManager) {
     document.body.innerHTML = "<p style='padding:24px;font-family:sans-serif'>Missing tracker runtime scripts. Reload the requirement tracker files.</p>";
@@ -40,7 +41,13 @@
   const scopeWorkshopsButton = document.getElementById("scope-workshops");
   const scopeScrappyButton = document.getElementById("scope-scrappy");
   const scopeExpeditionButton = document.getElementById("scope-expedition");
-  const tooltipManager = createTooltipManager(itemData, { formatNumber: formatNumber, getRarityClass: getRarityClass });
+  const tooltipManager = createTooltipManager({
+    items: itemData,
+    weapons: weaponData,
+  }, {
+    formatNumber: formatNumber,
+    getRarityClass: getRarityClass,
+  });
   const floatingTooltip = tooltipManager.element;
   const dragState = { cardName: "", targetName: "", placeAfter: false };
   let saveStateTimer = 0;
@@ -815,9 +822,11 @@
       const unlockList = document.createElement("div");
       unlockList.className = "unlock-list";
       nextLevel.crafts.forEach(function (craft) {
+        const catalogEntry = resolveCatalogEntry(craft);
+        const rarityClass = getCatalogEntryRarityClass(catalogEntry);
         const chip = document.createElement("span");
-        chip.className = "unlock-chip";
-        chip.appendChild(createItemInline(craft));
+        chip.className = "unlock-chip" + (rarityClass ? " " + rarityClass : "");
+        chip.appendChild(createItemInline(craft, { iconOnly: true }));
         unlockList.appendChild(chip);
       });
 
@@ -855,51 +864,79 @@
     return dots;
   }
 
+  function resolveCatalogEntry(entryName) {
+    if (itemData[entryName]) {
+      return { kind: "item", data: itemData[entryName] };
+    }
+    if (weaponData[entryName]) {
+      return { kind: "weapon", data: weaponData[entryName] };
+    }
+    return null;
+  }
+
+  function getCatalogEntryRarityClass(catalogEntry) {
+    if (!catalogEntry || !catalogEntry.data || !catalogEntry.data.rarity) {
+      return "";
+    }
+    return getRarityClass(catalogEntry.data.rarity);
+  }
+
   function createItemInline(itemName, options) {
     const settings = options || {};
-    const item = itemData[itemName] || null;
-    const rarityClass = item ? getRarityClass(item.rarity) : "";
+    const catalogEntry = resolveCatalogEntry(itemName);
+    const visualData = catalogEntry ? catalogEntry.data : null;
+    const rarityClass = getCatalogEntryRarityClass(catalogEntry);
+    const hideCopy = Boolean(settings.iconOnly && visualData && visualData.imageUrl);
 
     const wrapper = document.createElement("span");
-    wrapper.className = "item-inline" + (item ? " has-tooltip " + rarityClass : "");
+    wrapper.className = "item-inline"
+      + (catalogEntry ? " has-tooltip" : "")
+      + (rarityClass ? " " + rarityClass : "")
+      + (hideCopy ? " icon-only" : "");
 
-    if (item && item.imageUrl) {
+    if (visualData && visualData.imageUrl) {
       const icon = document.createElement("img");
       icon.className = "item-icon";
-      icon.src = item.imageUrl;
+      icon.src = visualData.imageUrl;
       icon.alt = itemName;
       icon.loading = "lazy";
       wrapper.appendChild(icon);
     }
 
-    const copy = document.createElement("span");
-    copy.className = "item-copy";
+    if (!hideCopy) {
+      const copy = document.createElement("span");
+      copy.className = "item-copy";
 
-    const name = document.createElement("span");
-    name.className = "item-name";
-    name.textContent = itemName;
-    copy.appendChild(name);
+      const name = document.createElement("span");
+      name.className = "item-name";
+      name.textContent = itemName;
+      copy.appendChild(name);
 
-    if (settings.extraText) {
-      const extra = document.createElement("span");
-      extra.className = "item-need";
-      extra.textContent = settings.extraText;
-      copy.appendChild(extra);
+      if (settings.extraText) {
+        const extra = document.createElement("span");
+        extra.className = "item-need";
+        extra.textContent = settings.extraText;
+        copy.appendChild(extra);
+      }
+
+      wrapper.appendChild(copy);
     }
 
-    wrapper.appendChild(copy);
-
-    if (item) {
+    if (catalogEntry) {
+      if (hideCopy) {
+        wrapper.setAttribute("aria-label", itemName);
+        wrapper.title = itemName;
+      }
       wrapper.tabIndex = 0;
       wrapper.addEventListener("mouseenter", function () {
-        tooltipManager.showTooltip(itemName, item, wrapper);
+        tooltipManager.showTooltip(itemName, catalogEntry, wrapper);
       });
       wrapper.addEventListener("mousemove", function () {
         tooltipManager.positionTooltip(wrapper);
       });
       wrapper.addEventListener("mouseleave", tooltipManager.hideTooltip);
       wrapper.addEventListener("focus", function () {
-        tooltipManager.showTooltip(itemName, item, wrapper);
+        tooltipManager.showTooltip(itemName, catalogEntry, wrapper);
       });
       wrapper.addEventListener("blur", tooltipManager.hideTooltip);
     }

@@ -18,20 +18,23 @@ RAW_DATA = ROOT / "data" / "raw"
 PROCESSED_DATA = ROOT / "data" / "processed"
 MANUAL_DATA = ROOT / "data" / "manual"
 REQUIREMENT_TRACKER_DIR = ROOT / "tools" / "requirement-tracker"
+REQUIREMENT_TRACKER_GENERATED_DIR = REQUIREMENT_TRACKER_DIR / "generated"
 
 ITEMS_TXT = RAW_DATA / "items.txt"
-STATIONS_TXT = RAW_DATA / "stations.txt"
+WORKSHOPS_TXT = RAW_DATA / "workshops.txt"
 WEAPONS_TXT = RAW_DATA / "weapons.txt"
 ITEMS_CSV = PROCESSED_DATA / "items.csv"
-STATION_REQUIREMENTS_CSV = PROCESSED_DATA / "station_requirements.csv"
-STATION_CRAFTS_CSV = PROCESSED_DATA / "station_crafts.csv"
-REQUIREMENT_TRACKER_DATA_JS = REQUIREMENT_TRACKER_DIR / "requirement_tracker_data.js"
-ITEM_DATA_JS = REQUIREMENT_TRACKER_DIR / "item_data.js"
+WORKSHOP_REQUIREMENTS_CSV = PROCESSED_DATA / "workshop_requirements.csv"
+WORKSHOP_CRAFTS_CSV = PROCESSED_DATA / "workshop_crafts.csv"
+REQUIREMENT_TRACKER_DATA_JS = REQUIREMENT_TRACKER_GENERATED_DIR / "requirement_tracker_data.js"
+ITEM_DATA_JS = REQUIREMENT_TRACKER_GENERATED_DIR / "item_data.js"
+WEAPON_DATA_JS = REQUIREMENT_TRACKER_GENERATED_DIR / "weapon_data.js"
 WEAPONS_CSV = PROCESSED_DATA / "weapons.csv"
 WIKI_BASE_URL = "https://arcraiders.wiki"
 FOUND_IN_JSON = MANUAL_DATA / "found_in.json"
 UI_ICONS_JSON = MANUAL_DATA / "ui_icons.json"
 MANUAL_CARDS_DIR = MANUAL_DATA / "cards"
+WEAPON_METADATA_JSON = MANUAL_DATA / "weapons.json"
 
 SECTION_RE = re.compile(r"^#\s+(.*?)\s*$", re.MULTILINE)
 TABLE_RE = re.compile(r"<table\b.*?</table>", re.IGNORECASE | re.DOTALL)
@@ -121,8 +124,22 @@ def icon_url_from_filename(filename: str) -> str:
     return mediawiki_file_url(filename)
 
 
+def absolute_wiki_url(path: str) -> str:
+    if path.startswith("/"):
+        return f"{WIKI_BASE_URL}{path}"
+    return path
+
+
 def load_json(path: Path) -> object:
     return json.loads(path.read_text(encoding="utf-8"))
+
+
+def normalize_weapon_name(name: str) -> str:
+    return re.sub(r"\s*\[\d+\]$", "", name.strip())
+
+
+def wiki_page_url(title: str) -> str:
+    return f"{WIKI_BASE_URL}/wiki/{normalize_mediawiki_filename(title)}"
 
 
 def slugify(value: str) -> str:
@@ -158,6 +175,20 @@ def load_manual_cards() -> list[dict[str, object]]:
         for path in sorted(MANUAL_CARDS_DIR.glob("*.json"))
     ]
     return sorted(cards, key=lambda card: (card.get("sortOrder", 9999), card.get("title", "")))
+
+
+def load_weapon_metadata() -> dict[str, dict[str, str]]:
+    raw = load_json(WEAPON_METADATA_JSON)
+    return {
+        "rarities": {
+            normalize_weapon_name(str(name)): str(rarity)
+            for name, rarity in raw.get("rarities", {}).items()
+        },
+        "modSlotIcons": {
+            str(name): str(filename)
+            for name, filename in raw.get("modSlotIcons", {}).items()
+        },
+    }
 
 
 def normalize_level_entries(levels: list[dict[str, object]]) -> list[dict[str, object]]:
@@ -221,7 +252,7 @@ def build_workshop_cards(
     workshops: dict[str, dict[str, object]] = {}
 
     for record in requirement_records:
-        title = record["station"]
+        title = record["workshop"]
         level = record["level"]
         workshop = workshops.setdefault(title, {"levels": {}})
         levels = workshop["levels"]
@@ -234,7 +265,7 @@ def build_workshop_cards(
         )
 
     for record in craft_records:
-        title = record["station"]
+        title = record["workshop"]
         level = record["level"]
         workshop = workshops.setdefault(title, {"levels": {}})
         levels = workshop["levels"]
@@ -570,17 +601,17 @@ def parse_workshop_records() -> tuple[list[dict[str, str]], list[dict[str, str]]
     requirement_records: list[dict[str, str]] = []
     craft_records: list[dict[str, str]] = []
 
-    for station, section_html in split_sections(STATIONS_TXT.read_text(encoding="utf-8")):
+    for workshop_title, section_html in split_sections(WORKSHOPS_TXT.read_text(encoding="utf-8")):
         headers, rows = extract_table(find_table(section_html))
         if headers != ["Level", "Requirements", "Crafts"]:
-            raise ValueError(f"Unexpected station headers for {station}: {headers}")
+            raise ValueError(f"Unexpected workshop headers for {workshop_title}: {headers}")
 
         for row in rows:
             for requirement in split_pipe_list(row[1].text):
                 quantity, item = parse_requirement(requirement)
                 requirement_records.append(
                     {
-                        "station": station,
+                        "workshop": workshop_title,
                         "level": normalize_number(row[0].text),
                         "item": item,
                         "quantity": quantity,
@@ -590,7 +621,7 @@ def parse_workshop_records() -> tuple[list[dict[str, str]], list[dict[str, str]]
             for craft in split_pipe_list(row[2].text):
                 craft_records.append(
                     {
-                        "station": station,
+                        "workshop": workshop_title,
                         "level": normalize_number(row[0].text),
                         "item": craft,
                     }
@@ -606,8 +637,8 @@ def build_workshop_datasets(
     ui_icons: dict[str, dict[str, str]],
 ) -> int:
     requirement_records, craft_records = parse_workshop_records()
-    write_csv(STATION_REQUIREMENTS_CSV, ["station", "level", "item", "quantity"], requirement_records)
-    write_csv(STATION_CRAFTS_CSV, ["station", "level", "item"], craft_records)
+    write_csv(WORKSHOP_REQUIREMENTS_CSV, ["workshop", "level", "item", "quantity"], requirement_records)
+    write_csv(WORKSHOP_CRAFTS_CSV, ["workshop", "level", "item"], craft_records)
     write_requirement_tracker_data(
         requirement_records,
         craft_records,
@@ -616,8 +647,8 @@ def build_workshop_datasets(
         found_in_by_item,
         ui_icons,
     )
-    station_levels = {(record["station"], record["level"]) for record in requirement_records}
-    return len(station_levels)
+    workshop_levels = {(record["workshop"], record["level"]) for record in requirement_records}
+    return len(workshop_levels)
 
 
 def split_pipe_list(text: str) -> list[str]:
@@ -678,22 +709,123 @@ def parse_weapon_records() -> list[dict[str, str]]:
             for header, cell in zip(headers, row):
                 key = header_map[header]
                 value = cell.text
+                if key == "name":
+                    value = normalize_weapon_name(value)
                 if key in {"damage", "fire_rate", "relative_dps", "range"}:
                     value = normalize_number(value)
                 record[key] = value
+                if header == "Name":
+                    record["image_url"] = absolute_wiki_url(cell.image_src)
+                    record["page_url"] = wiki_page_url(record["name"])
             record["type"] = weapon_type
             records.append(record)
 
     return records
 
 
-def build_weapons_csv() -> int:
+def build_weapon_mod_slot_entries(
+    raw_text: str,
+    mod_slot_icons: dict[str, str],
+) -> list[dict[str, str]]:
+    entries: list[dict[str, str]] = []
+    for mod_slot_name in split_pipe_list(raw_text):
+        if mod_slot_name.upper() == "N/A":
+            continue
+        entry = {"name": mod_slot_name}
+        icon_filename = mod_slot_icons.get(mod_slot_name, "")
+        if icon_filename:
+            entry["iconUrl"] = icon_url_from_filename(icon_filename)
+        entries.append(entry)
+    return entries
+
+
+def validate_weapon_metadata(
+    weapon_records: list[dict[str, str]],
+    weapon_metadata: dict[str, dict[str, str]],
+) -> None:
+    weapon_names = {record["name"] for record in weapon_records}
+    rarity_names = set(weapon_metadata["rarities"])
+    missing_rarity = sorted(weapon_names - rarity_names)
+    if missing_rarity:
+        raise ValueError(f"Missing weapon rarities for: {missing_rarity}")
+
+    unknown_rarity_entries = sorted(rarity_names - weapon_names)
+    if unknown_rarity_entries:
+        raise ValueError(f"Weapon rarity metadata references unknown weapons: {unknown_rarity_entries}")
+
+    mod_slot_names = {
+        mod_slot_name
+        for record in weapon_records
+        for mod_slot_name in split_pipe_list(record["mod_slots"])
+        if mod_slot_name.upper() != "N/A"
+    }
+    missing_mod_slot_icons = sorted(
+        mod_slot_name
+        for mod_slot_name in mod_slot_names
+        if mod_slot_name not in weapon_metadata["modSlotIcons"]
+    )
+    if missing_mod_slot_icons:
+        raise ValueError(f"Missing mod slot icons for: {missing_mod_slot_icons}")
+
+
+def write_weapon_data(
+    records: list[dict[str, str]],
+    weapon_metadata: dict[str, dict[str, str]],
+) -> None:
+    payload: dict[str, dict[str, object]] = {}
+    for record in records:
+        payload[record["name"]] = {
+            "imageUrl": record["image_url"],
+            "pageUrl": record["page_url"],
+            "rarity": weapon_metadata["rarities"][record["name"]],
+            "type": record["type"],
+            "ammoType": record["ammo_type"],
+            "firingMode": record["firing_mode"],
+            "damage": record["damage"],
+            "fireRate": record["fire_rate"],
+            "relativeDps": record["relative_dps"],
+            "range": record["range"],
+            "modSlots": build_weapon_mod_slot_entries(
+                record["mod_slots"],
+                weapon_metadata["modSlotIcons"],
+            ),
+        }
+
+    content = (
+        "// Generated by scripts/convert_wiki_tables.py\n"
+        f"window.WEAPON_DATA = {json.dumps(payload, indent=2)};\n"
+    )
+    write_text(WEAPON_DATA_JS, content)
+
+
+def build_weapons_csv(weapon_metadata: dict[str, dict[str, str]]) -> int:
     records = parse_weapon_records()
+    validate_weapon_metadata(records, weapon_metadata)
     write_csv(
         WEAPONS_CSV,
-        ["name", "ammo_type", "firing_mode", "damage", "fire_rate", "relative_dps", "range", "mod_slots", "type"],
-        records,
+        [
+            "name",
+            "image_url",
+            "page_url",
+            "rarity",
+            "ammo_type",
+            "firing_mode",
+            "damage",
+            "fire_rate",
+            "relative_dps",
+            "range",
+            "mod_slots",
+            "type",
+        ],
+        [
+            {
+                **record,
+                "rarity": weapon_metadata["rarities"][record["name"]],
+            }
+            for record in records
+        ],
     )
+    write_weapon_data(records, weapon_metadata)
     return len(records)
 
 
@@ -706,9 +838,11 @@ def load_manual_tracker_config() -> tuple[dict[str, list[str]], dict[str, dict[s
 
 def validate_source_data() -> dict[str, int]:
     found_in_by_item, ui_icons, manual_cards = load_manual_tracker_config()
+    weapon_metadata = load_weapon_metadata()
     item_records = parse_item_records(found_in_by_item)
     requirement_records, craft_records = parse_workshop_records()
     weapon_records = parse_weapon_records()
+    validate_weapon_metadata(weapon_records, weapon_metadata)
     payload = build_requirement_tracker_payload(
         requirement_records,
         craft_records,
@@ -721,22 +855,24 @@ def validate_source_data() -> dict[str, int]:
         "items": len(item_records),
         "cards": len(payload["cards"]),
         "weapons": len(weapon_records),
-        "workshopLevels": len({(record["station"], record["level"]) for record in requirement_records}),
+        "workshopLevels": len({(record["workshop"], record["level"]) for record in requirement_records}),
     }
 
 
 def main() -> None:
     found_in_by_item, ui_icons, manual_cards = load_manual_tracker_config()
+    weapon_metadata = load_weapon_metadata()
     items_count, item_records = build_items_csv(found_in_by_item)
     workshop_levels_count = build_workshop_datasets(item_records, manual_cards, found_in_by_item, ui_icons)
-    weapons_count = build_weapons_csv()
+    weapons_count = build_weapons_csv(weapon_metadata)
 
     print(f"Wrote {items_count} rows to {ITEMS_CSV.name}")
     print(f"Wrote tracker item data to {ITEM_DATA_JS.relative_to(ROOT)}")
     print(f"Wrote {workshop_levels_count} workshop levels to normalized requirement datasets")
-    print(f"Wrote normalized workshop requirements to {STATION_REQUIREMENTS_CSV.relative_to(ROOT)}")
-    print(f"Wrote normalized workshop crafts to {STATION_CRAFTS_CSV.relative_to(ROOT)}")
+    print(f"Wrote normalized workshop requirements to {WORKSHOP_REQUIREMENTS_CSV.relative_to(ROOT)}")
+    print(f"Wrote normalized workshop crafts to {WORKSHOP_CRAFTS_CSV.relative_to(ROOT)}")
     print(f"Wrote requirement tracker data to {REQUIREMENT_TRACKER_DATA_JS.relative_to(ROOT)}")
+    print(f"Wrote weapon data to {WEAPON_DATA_JS.relative_to(ROOT)}")
     print(f"Wrote {weapons_count} rows to {WEAPONS_CSV.name}")
 
 

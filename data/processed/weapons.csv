@@ -1,22 +1,22 @@
-name,ammo_type,firing_mode,damage,fire_rate,relative_dps,range,mod_slots,type
-Kettle,Light Ammo,Semi-Automatic,8.5,30,280,42.8,Muzzle | Underbarrel | Light Magazine | Stock,Assault Rifles
-Rattler,Medium Ammo,Fully-Automatic,9,33.3,299.7,56.2,Muzzle | Underbarrel | Stock,Assault Rifles
-Arpeggio,Medium Ammo,3-Round Burst,9.5,18.3,173.9,55.9,Muzzle | Underbarrel | Medium Magazine | Stock,Assault Rifles
-Tempest,Medium Ammo,Fully-Automatic,10,36.7,367,55.9,Muzzle | Underbarrel | Medium Magazine,Assault Rifles
-Bettina,Heavy Ammo,Fully-Automatic,14,32,448,51.3,Muzzle | Underbarrel | Stock,Assault Rifles
-Renegade,Medium Ammo,Lever-Action,35,21,735,68.8,Muzzle | Medium Magazine | Stock,Battle Rifles
-Ferro,Heavy Ammo,Break-Action,40,6.6,264,53.1,Muzzle | Underbarrel | Stock,Battle Rifles
-Aphelion [1],Energy Clip,2-Round Burst,25,9,216,76,Underbarrel | Stock,Battle Rifles
-Stitcher,Light Ammo,Fully-Automatic,6.5,45.3,317.1,42.1,Muzzle | Underbarrel | Light Magazine | Stock,SMGs
-Bobcat,Light Ammo,Fully-Automatic,6,66.7,400,44,Muzzle | Underbarrel | Light Magazine | Stock,SMGs
-Il Toro,Shotgun Ammo,Pump-Action,67.5,14,965.3,20,Shotgun Muzzle | Underbarrel | Shotgun Magazine | Stock,Shotguns
-Vulcano,Shotgun Ammo,Semi-Automatic,49.5,26.3,1302.9,26,Shotgun Muzzle | Underbarrel | Shotgun Magazine | Stock,Shotguns
-Hairpin,Light Ammo,Slide-Action,20,9,180,38.6,Light Magazine,Pistols
-Burletta,Light Ammo,Semi-Automatic,10,28,280,41.7,Muzzle | Light Magazine,Pistols
-Venator,Medium Ammo,Semi-Automatic,16,36.7,660.6,48.4,Underbarrel | Medium Magazine,Pistols
-Anvil,Heavy Ammo,Single-Action,40,16.3,652,50.2,Muzzle | Tech Mod,Hand Cannons
-Torrente,Medium Ammo,Fully-Automatic,8,58.3,466.4,49.9,Muzzle | Medium Magazine | Stock,LMGs
-Osprey,Medium Ammo,Bolt-Action,45,17.7,796.5,80.3,Muzzle | Underbarrel | Medium Magazine | Stock,Sniper Rifles
-Jupiter,Energy Clip,Bolt-Action,60,7.7,423.5,71.7,N/A,Sniper Rifles
-Hullcracker,Launcher Ammo,Pump-Action,100,20.3,2030,38.9,Underbarrel | Stock,Specials
-Equalizer,Energy Clip,Fully-Automatic,8,33.3,266.4,68.6,N/A,Specials
+name,image_url,page_url,rarity,ammo_type,firing_mode,damage,fire_rate,relative_dps,range,mod_slots,type
+Kettle,https://arcraiders.wiki/w/images/thumb/c/c1/Kettle-Level1.png/160px-Kettle-Level1.png.webp,https://arcraiders.wiki/wiki/Kettle,Common,Light Ammo,Semi-Automatic,8.5,30,280,42.8,Muzzle | Underbarrel | Light Magazine | Stock,Assault Rifles
+Rattler,https://arcraiders.wiki/w/images/thumb/b/be/Rattler-Level1.png/160px-Rattler-Level1.png.webp,https://arcraiders.wiki/wiki/Rattler,Common,Medium Ammo,Fully-Automatic,9,33.3,299.7,56.2,Muzzle | Underbarrel | Stock,Assault Rifles
+Arpeggio,https://arcraiders.wiki/w/images/thumb/6/6c/Arpeggio-Level1.png/160px-Arpeggio-Level1.png.webp,https://arcraiders.wiki/wiki/Arpeggio,Uncommon,Medium Ammo,3-Round Burst,9.5,18.3,173.9,55.9,Muzzle | Underbarrel | Medium Magazine | Stock,Assault Rifles
+Tempest,https://arcraiders.wiki/w/images/thumb/c/c9/Tempest-Level1.png/160px-Tempest-Level1.png.webp,https://arcraiders.wiki/wiki/Tempest,Epic,Medium Ammo,Fully-Automatic,10,36.7,367,55.9,Muzzle | Underbarrel | Medium Magazine,Assault Rifles
+Bettina,https://arcraiders.wiki/w/images/thumb/a/ac/Bettina.png/160px-Bettina.png.webp,https://arcraiders.wiki/wiki/Bettina,Epic,Heavy Ammo,Fully-Automatic,14,32,448,51.3,Muzzle | Underbarrel | Stock,Assault Rifles
+Renegade,https://arcraiders.wiki/w/images/thumb/b/b5/Renegade-Level1.png/160px-Renegade-Level1.png.webp,https://arcraiders.wiki/wiki/Renegade,Rare,Medium Ammo,Lever-Action,35,21,735,68.8,Muzzle | Medium Magazine | Stock,Battle Rifles
+Ferro,https://arcraiders.wiki/w/images/thumb/b/b0/Ferro-Level1.png/160px-Ferro-Level1.png.webp,https://arcraiders.wiki/wiki/Ferro,Common,Heavy Ammo,Break-Action,40,6.6,264,53.1,Muzzle | Underbarrel | Stock,Battle Rifles
+Aphelion,https://arcraiders.wiki/w/images/thumb/8/88/Aphelion.png/160px-Aphelion.png.webp,https://arcraiders.wiki/wiki/Aphelion,Legendary,Energy Clip,2-Round Burst,25,9,216,76,Underbarrel | Stock,Battle Rifles
+Stitcher,https://arcraiders.wiki/w/images/thumb/3/3a/Stitcher-Level1.png/160px-Stitcher-Level1.png.webp,https://arcraiders.wiki/wiki/Stitcher,Common,Light Ammo,Fully-Automatic,6.5,45.3,317.1,42.1,Muzzle | Underbarrel | Light Magazine | Stock,SMGs
+Bobcat,https://arcraiders.wiki/w/images/thumb/3/36/Bobcat-Level1.png/160px-Bobcat-Level1.png.webp,https://arcraiders.wiki/wiki/Bobcat,Epic,Light Ammo,Fully-Automatic,6,66.7,400,44,Muzzle | Underbarrel | Light Magazine | Stock,SMGs
+Il Toro,https://arcraiders.wiki/w/images/thumb/5/50/Il_Toro-Level1.png/160px-Il_Toro-Level1.png.webp,https://arcraiders.wiki/wiki/Il_Toro,Uncommon,Shotgun Ammo,Pump-Action,67.5,14,965.3,20,Shotgun Muzzle | Underbarrel | Shotgun Magazine | Stock,Shotguns
+Vulcano,https://arcraiders.wiki/w/images/thumb/d/da/Vulcano-Level1.png/160px-Vulcano-Level1.png.webp,https://arcraiders.wiki/wiki/Vulcano,Epic,Shotgun Ammo,Semi-Automatic,49.5,26.3,1302.9,26,Shotgun Muzzle | Underbarrel | Shotgun Magazine | Stock,Shotguns
+Hairpin,https://arcraiders.wiki/w/images/thumb/6/65/Hairpin-Level1.png/160px-Hairpin-Level1.png.webp,https://arcraiders.wiki/wiki/Hairpin,Common,Light Ammo,Slide-Action,20,9,180,38.6,Light Magazine,Pistols
+Burletta,https://arcraiders.wiki/w/images/thumb/d/d4/Burletta-Level1.png/160px-Burletta-Level1.png.webp,https://arcraiders.wiki/wiki/Burletta,Uncommon,Light Ammo,Semi-Automatic,10,28,280,41.7,Muzzle | Light Magazine,Pistols
+Venator,https://arcraiders.wiki/w/images/thumb/b/b4/Venator-Level1.png/160px-Venator-Level1.png.webp,https://arcraiders.wiki/wiki/Venator,Rare,Medium Ammo,Semi-Automatic,16,36.7,660.6,48.4,Underbarrel | Medium Magazine,Pistols
+Anvil,https://arcraiders.wiki/w/images/thumb/0/00/Anvil-Level1.png/160px-Anvil-Level1.png.webp,https://arcraiders.wiki/wiki/Anvil,Uncommon,Heavy Ammo,Single-Action,40,16.3,652,50.2,Muzzle | Tech Mod,Hand Cannons
+Torrente,https://arcraiders.wiki/w/images/thumb/1/1e/Torrente-Level1.png/160px-Torrente-Level1.png.webp,https://arcraiders.wiki/wiki/Torrente,Rare,Medium Ammo,Fully-Automatic,8,58.3,466.4,49.9,Muzzle | Medium Magazine | Stock,LMGs
+Osprey,https://arcraiders.wiki/w/images/thumb/a/ae/Osprey-Level1.png/160px-Osprey-Level1.png.webp,https://arcraiders.wiki/wiki/Osprey,Rare,Medium Ammo,Bolt-Action,45,17.7,796.5,80.3,Muzzle | Underbarrel | Medium Magazine | Stock,Sniper Rifles
+Jupiter,https://arcraiders.wiki/w/images/thumb/6/68/Jupiter.png/160px-Jupiter.png.webp,https://arcraiders.wiki/wiki/Jupiter,Legendary,Energy Clip,Bolt-Action,60,7.7,423.5,71.7,N/A,Sniper Rifles
+Hullcracker,https://arcraiders.wiki/w/images/thumb/b/ba/Hullcracker-Level1.png/160px-Hullcracker-Level1.png.webp,https://arcraiders.wiki/wiki/Hullcracker,Epic,Launcher Ammo,Pump-Action,100,20.3,2030,38.9,Underbarrel | Stock,Specials
+Equalizer,https://arcraiders.wiki/w/images/thumb/9/96/Equalizer.png/160px-Equalizer.png.webp,https://arcraiders.wiki/wiki/Equalizer,Legendary,Energy Clip,Fully-Automatic,8,33.3,266.4,68.6,N/A,Specials

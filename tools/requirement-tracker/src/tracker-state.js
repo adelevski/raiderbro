@@ -19,9 +19,10 @@
     }
 
     const cards = rawTrackerData.stations.map(function (card) {
+      const workshopTitle = card.workshop || card.station || "";
       return normalizeLegacyCard(card, {
-        id: "workshop-" + slugify(card.station),
-        title: card.station,
+        id: "workshop-" + slugify(workshopTitle),
+        title: workshopTitle,
       });
     });
 
