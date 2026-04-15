@@ -1,0 +1,116 @@
+{
+  "id": "trophy-display",
+  "title": "Trophy Display",
+  "kindLabel": "Project",
+  "scope": "projects",
+  "iconFilename": "Trophy_Display_card.png",
+  "sortOrder": 30,
+  "resetOnWipe": false,
+  "minLevel": 0,
+  "zeroLabel": "Stage 1 in progress",
+  "completeLabel": "Display complete",
+  "levels": [
+    {
+      "level": 1,
+      "label": "Roaming Threats (1/5)",
+      "progressLabel": "Roaming Threats complete",
+      "description": "The earthbound machines rolling and trudging across the surface, forcing Raiders to watch their every step.",
+      "requirements": [
+        { "item": "Rusted Bolts", "quantity": 3 },
+        { "item": "Pop Trigger", "quantity": 15 },
+        { "item": "Tick Pod", "quantity": 15 },
+        { "item": "Surveyor Vault", "quantity": 5 }
+      ],
+      "rewards": [
+        { "item": "Mod Components", "quantity": 10 },
+        { "item": "Power Rod", "quantity": 3 },
+        { "item": "Raider Tokens", "quantity": 10 },
+        { "item": "Light Gun Parts Blueprint", "quantity": 1 }
+      ],
+      "crafts": []
+    },
+    {
+      "level": 2,
+      "label": "Soaring Menaces (2/5)",
+      "progressLabel": "Soaring Menaces complete",
+      "description": "The airborne machines dominating the skies, raining peril down upon unsuspecting Raiders.",
+      "requirements": [
+        { "item": "Spotter Relay", "quantity": 10 },
+        { "item": "Expired Respirator", "quantity": 3 },
+        { "item": "Wasp Driver", "quantity": 20 },
+        { "item": "Hornet Driver", "quantity": 15 }
+      ],
+      "rewards": [
+        { "item": "Vita Spray", "quantity": 3 },
+        { "item": "Photoelectric Cloak", "quantity": 3 },
+        { "item": "Raider Tokens", "quantity": 20 },
+        { "item": "Vita Shot Blueprint", "quantity": 1 }
+      ],
+      "crafts": []
+    },
+    {
+      "level": 3,
+      "label": "Ferocious Foes (3/5)",
+      "progressLabel": "Ferocious Foes complete",
+      "description": "A clear escalation of topside dangers, these machines have doled out severe punishments to overconfident Raiders.",
+      "requirements": [
+        { "item": "ARC Performance Steel", "quantity": 10 },
+        { "item": "Shredder Gyro", "quantity": 5 },
+        { "item": "Leaper Pulse Unit", "quantity": 10 },
+        { "item": "Bastion Cell", "quantity": 5 }
+      ],
+      "rewards": [
+        { "item": "Kinetic Converter", "quantity": 1 },
+        { "item": "Anvil Splitter", "quantity": 3 },
+        { "item": "Raider Tokens", "quantity": 30 },
+        { "item": "Shotgun Silencer Blueprint", "quantity": 1 }
+      ],
+      "crafts": []
+    },
+    {
+      "level": 4,
+      "label": "Dominant Dangers (4/5)",
+      "progressLabel": "Dominant Dangers complete",
+      "description": "The vicious threats leaving behind a trail of downed Raiders, dominating their surroundings with tenacity and grit.",
+      "requirements": [
+        { "item": "ARC Synthetic Resin", "quantity": 10 },
+        { "item": "Magnetic Accelerator", "quantity": 10 },
+        { "item": "Rocketeer Driver", "quantity": 8 },
+        { "item": "Queen Reactor", "quantity": 3 }
+      ],
+      "rewards": [
+        { "item": "Bobcat IV", "quantity": 1 },
+        { "item": "Wolfpack", "quantity": 5 },
+        { "item": "Raider Tokens", "quantity": 40 },
+        { "item": "Bobcat Blueprint", "quantity": 1 }
+      ],
+      "crafts": []
+    },
+    {
+      "level": 5,
+      "label": "Imposing Behemoths (5/5)",
+      "progressLabel": "Imposing Behemoths complete",
+      "description": "The colossal foes making the earth tremble, and the epitome of big-game hunting.",
+      "requirements": [
+        { "item": "Exodus Modules", "quantity": 5 },
+        { "item": "Geiger Counter", "quantity": 3 },
+        { "item": "Bombardier Cell", "quantity": 8 },
+        { "item": "Matriarch Reactor", "quantity": 3 }
+      ],
+      "rewards": [
+        { "item": "Snap Hook", "quantity": 2 },
+        { "item": "Aphelion", "quantity": 1 },
+        { "item": "Raider Tokens", "quantity": 50 },
+        { "item": "Snap Hook Blueprint", "quantity": 1 }
+      ],
+      "crafts": []
+    }
+  ],
+  "completionRewards": [
+    { "item": "Howl Emote", "quantity": 1 },
+    { "item": "Jupiter", "quantity": 1 },
+    { "item": "Acoustic Guitar", "quantity": 1 },
+    { "item": "Energy Clip", "quantity": 5 },
+    { "item": "Coins", "quantity": 300000 }
+  ]
+}

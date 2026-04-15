@@ -10,6 +10,7 @@
         generatedAt: rawTrackerData.generatedAt || "",
         buildId: rawTrackerData.buildId || "",
         uiIcons: rawTrackerData.uiIcons || { cards: {}, foundIn: {} },
+        rewardCatalog: rawTrackerData.rewardCatalog || {},
         cards: sortCards(rawTrackerData.cards),
       };
     }
@@ -39,6 +40,7 @@
       generatedAt: "",
       buildId: "legacy",
       uiIcons: rawTrackerData.uiIcons || { cards: {}, foundIn: {} },
+      rewardCatalog: {},
       cards: sortCards(cards),
     };
   }
@@ -146,7 +148,7 @@
   }
 
   function sanitizeState(rawState, stateVersion) {
-    const allowedScopes = ["all", "workshops", "scrappy", "expedition"];
+    const allowedScopes = ["all", "workshops", "scrappy", "expedition", "projects"];
     const candidate = isPlainObject(rawState) ? rawState : {};
     return {
       version: stateVersion,

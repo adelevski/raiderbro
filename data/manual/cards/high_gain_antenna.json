@@ -1,0 +1,71 @@
+{
+  "id": "high-gain-antenna",
+  "title": "High-Gain Antenna",
+  "kindLabel": "Project",
+  "scope": "projects",
+  "iconFilename": "High_gain_antenna_system_card.png",
+  "sortOrder": 31,
+  "resetOnWipe": false,
+  "minLevel": 0,
+  "zeroLabel": "Stage 1 in progress",
+  "completeLabel": "Antenna complete",
+  "levels": [
+    {
+      "level": 1,
+      "label": "Sturdy Base (1/3)",
+      "progressLabel": "Sturdy Base complete",
+      "description": "An extra-sturdy base that can withstand anything from bitter winds to sudden cloudbursts.",
+      "requirements": [
+        { "item": "ARC Alloy", "quantity": 50 },
+        { "item": "ARC Flex Rubber", "quantity": 10 },
+        { "item": "ARC Performance Steel", "quantity": 10 },
+        { "item": "Advanced ARC Powercell", "quantity": 15 }
+      ],
+      "rewards": [
+        { "item": "Torrente II", "quantity": 1 },
+        { "item": "Extended Medium Mag III", "quantity": 1 },
+        { "item": "Extended Barrel", "quantity": 1 },
+        { "item": "Padded Stock", "quantity": 1 }
+      ],
+      "crafts": []
+    },
+    {
+      "level": 2,
+      "label": "Data Logger (2/3)",
+      "progressLabel": "Data Logger complete",
+      "description": "A closed-circuit interface to monitor and analyze distributed data points over time.",
+      "requirements": [
+        { "item": "ARC Coolant", "quantity": 15 },
+        { "item": "ARC Thermo Lining", "quantity": 15 },
+        { "item": "Vaporizer Regulator", "quantity": 4 },
+        { "item": "Assessor Matrix", "quantity": 6 }
+      ],
+      "rewards": [
+        { "item": "Bobcat", "quantity": 1 },
+        { "item": "Extended Light Mag III", "quantity": 1 },
+        { "item": "Vertical Grip III", "quantity": 1 },
+        { "item": "Raider Tokens", "quantity": 100 }
+      ],
+      "crafts": []
+    },
+    {
+      "level": 3,
+      "label": "Parabolic Dish (3/3)",
+      "progressLabel": "Parabolic Dish complete",
+      "description": "A custom-built parabolic dish designed to capture distant signals in even the most stormy of conditions.",
+      "requirements": [
+        { "item": "Surveyor Vault", "quantity": 10 },
+        { "item": "ARC Synthetic Resin", "quantity": 20 },
+        { "item": "Vaporizer Regulator", "quantity": 15 },
+        { "item": "Assessor Matrix", "quantity": 18 }
+      ],
+      "rewards": [
+        { "item": "Vita Spray", "quantity": 1 },
+        { "item": "Photoelectric Cloak", "quantity": 1 },
+        { "item": "Snap Hook", "quantity": 1 },
+        { "item": "Raider Tokens", "quantity": 400 }
+      ],
+      "crafts": []
+    }
+  ]
+}

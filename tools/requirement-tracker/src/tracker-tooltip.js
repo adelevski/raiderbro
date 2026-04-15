@@ -117,7 +117,33 @@
       if (catalogEntry.kind === "weapon") {
         return buildWeaponTooltipContent(entryName, catalogEntry.data);
       }
+      if (catalogEntry.kind === "reward") {
+        return buildRewardTooltipContent(entryName, catalogEntry.data);
+      }
       return buildItemTooltipContent(entryName, catalogEntry.data);
+    }
+
+    function buildRewardTooltipContent(rewardName, reward) {
+      const tooltip = document.createElement("div");
+      tooltip.appendChild(buildTooltipHeader(rewardName, reward.imageUrl, reward.rarity, []));
+
+      if (reward.description) {
+        const description = document.createElement("p");
+        description.className = "tooltip-description";
+        description.textContent = reward.description;
+        tooltip.appendChild(description);
+      }
+
+      if (reward.details && reward.details.length) {
+        const details = document.createElement("dl");
+        details.className = "tooltip-grid";
+        reward.details.forEach(function (detail) {
+          appendDetail(details, detail.label, detail.value);
+        });
+        tooltip.appendChild(details);
+      }
+
+      return tooltip;
     }
 
     function showTooltip(entryName, catalogEntry, anchor) {

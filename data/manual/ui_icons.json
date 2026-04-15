@@ -25,7 +25,8 @@
     "Technological": "Icon_Technological.png"
   },
   "currencies": {
-    "Coins": "Icon Coins.png"
+    "Coins": "Icon Coins.png",
+    "Raider Tokens": "Icon Raider Token.png"
   },
   "ammoTypes": {
     "Energy Clip": "Ammo Energy.png",

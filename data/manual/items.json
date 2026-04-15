@@ -1,0 +1,22 @@
+{
+  "Assessor Matrix": {
+    "imageFilename": "Assessor_Matrix.png",
+    "rarity": "Epic",
+    "recycles_to": "1x Advanced Mechanical Components | 3x Advanced ARC Powercell",
+    "sell_price": "5000",
+    "stack_size": "1",
+    "category": "Recyclable",
+    "found_in": ["ARC"],
+    "uses": "projects | High-Gain Antenna Data Logger (6x) | projects | High-Gain Antenna Parabolic Dish (18x)"
+  },
+  "Vaporizer Regulator": {
+    "imageFilename": "Vaporizer_Regulator.png",
+    "rarity": "Epic",
+    "recycles_to": "1x Advanced Electrical Components | 2x ARC Circuitry",
+    "sell_price": "6000",
+    "stack_size": "1",
+    "category": "Recyclable",
+    "found_in": ["ARC"],
+    "uses": "projects | High-Gain Antenna Data Logger (4x) | projects | High-Gain Antenna Parabolic Dish (15x) | workshop | Gunsmith 3 (2x)"
+  }
+}

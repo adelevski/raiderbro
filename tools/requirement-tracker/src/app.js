@@ -25,6 +25,7 @@
   }
 
   const uiIcons = trackerData.uiIcons || { cards: {}, foundIn: {} };
+  const rewardData = trackerData.rewardCatalog || {};
   const state = loadState();
   const cardsGrid = document.getElementById("cards-grid");
   const maxedCount = document.getElementById("maxed-count");
@@ -42,9 +43,11 @@
   const scopeWorkshopsButton = document.getElementById("scope-workshops");
   const scopeScrappyButton = document.getElementById("scope-scrappy");
   const scopeExpeditionButton = document.getElementById("scope-expedition");
+  const scopeProjectsButton = document.getElementById("scope-projects");
   const tooltipManager = createTooltipManager({
     items: itemData,
     weapons: weaponData,
+    rewards: rewardData,
   }, {
     formatNumber: formatNumber,
     getRarityClass: getRarityClass,
@@ -52,25 +55,25 @@
   const floatingTooltip = tooltipManager.element;
   const dragState = { cardName: "", targetName: "", placeAfter: false };
   let saveStateTimer = 0;
+  let shoppingResizeTimer = 0;
 
   document.body.appendChild(floatingTooltip);
   window.addEventListener("scroll", tooltipManager.hideTooltip, true);
   window.addEventListener("resize", tooltipManager.hideTooltip);
+  window.addEventListener("resize", function () {
+    window.clearTimeout(shoppingResizeTimer);
+    shoppingResizeTimer = window.setTimeout(renderSummary, 80);
+  });
   window.addEventListener("pagehide", flushSaveState);
   setBuildInfo();
 
   resetButton.addEventListener("click", function () {
-    const confirmed = window.confirm("Clear all tracked workshop, Scrappy, Expedition, and material progress for the next wipe?");
+    const confirmed = window.confirm("Clear tracked wipe progress for workshops, Scrappy, and Expedition while keeping long-term project progress?");
     if (!confirmed) {
       return;
     }
 
-    window.localStorage.removeItem(storageKey);
-    window.localStorage.removeItem(legacyStorageKey);
-    state.levels = {};
-    state.progress = {};
-    state.variants = {};
-    state.cardOrder = [];
+    resetWipeProgress();
     render();
   });
 
@@ -115,6 +118,13 @@
     render();
   });
 
+  if (scopeProjectsButton) {
+    scopeProjectsButton.addEventListener("click", function () {
+      state.cardScope = "projects";
+      render();
+    });
+  }
+
   render();
 
   function loadState() {
@@ -131,6 +141,49 @@
     } catch (error) {
       return fallback;
     }
+  }
+
+  function resetWipeProgress() {
+    const wipeCardIds = getAllCards()
+      .filter(function (card) {
+        return card.resetOnWipe !== false;
+      })
+      .map(function (card) {
+        return card.id;
+      });
+
+    window.localStorage.removeItem(storageKey);
+    window.localStorage.removeItem(legacyStorageKey);
+    state.levels = filterNumberMapByCardIds(state.levels, wipeCardIds, false);
+    state.progress = filterNumberMapByCardIds(state.progress, wipeCardIds, false);
+    state.variants = filterStringMapByCardIds(state.variants, wipeCardIds, false);
+    state.cardOrder = [];
+  }
+
+  function filterNumberMapByCardIds(map, cardIds, keepMatches) {
+    const filtered = {};
+    Object.keys(map || {}).forEach(function (key) {
+      const shouldMatch = cardIds.includes(getCardIdFromStateKey(key));
+      if ((keepMatches && shouldMatch) || (!keepMatches && !shouldMatch)) {
+        filtered[key] = map[key];
+      }
+    });
+    return filtered;
+  }
+
+  function filterStringMapByCardIds(map, cardIds, keepMatches) {
+    const filtered = {};
+    Object.keys(map || {}).forEach(function (key) {
+      const shouldMatch = cardIds.includes(getCardIdFromStateKey(key));
+      if ((keepMatches && shouldMatch) || (!keepMatches && !shouldMatch)) {
+        filtered[key] = map[key];
+      }
+    });
+    return filtered;
+  }
+
+  function getCardIdFromStateKey(key) {
+    return String(key || "").split("::")[0];
   }
 
   function saveState() {
@@ -336,11 +389,57 @@
     };
   }
 
+  function getLevelBounds(context) {
+    return {
+      minimumLevel: Number(context.activeCard.minLevel || context.baseCard.minLevel || 0),
+      maximumLevel: Number(context.activeCard.maxLevel || context.baseCard.maxLevel || 0),
+    };
+  }
+
+  function getStoredCurrentLevel(context) {
+    const bounds = getLevelBounds(context);
+    const level = Number(state.levels[context.levelStateKey] ?? bounds.minimumLevel);
+    return Math.max(bounds.minimumLevel, Math.min(level, bounds.maximumLevel));
+  }
+
+  function shouldAutoAdvanceCard(context) {
+    return context.baseCard.scope === "workshops" || context.baseCard.scope === "projects";
+  }
+
+  function isLevelCompleteForProgress(context, levelInfo) {
+    return (levelInfo.requirements || []).every(function (requirement) {
+      const key = progressKey(context, levelInfo.level, requirement.item);
+      const have = Number(state.progress[key] || 0);
+      const clampedHave = Math.max(0, Math.min(have, Number(requirement.quantity)));
+      return clampedHave >= Number(requirement.quantity);
+    });
+  }
+
+  function syncAutoAdvancedLevel(context) {
+    const bounds = getLevelBounds(context);
+    const originalLevel = getStoredCurrentLevel(context);
+    let resolvedLevel = originalLevel;
+
+    if (shouldAutoAdvanceCard(context)) {
+      while (resolvedLevel < bounds.maximumLevel) {
+        const nextLevel = getNextLevelData(context, resolvedLevel);
+        if (!nextLevel || !isLevelCompleteForProgress(context, nextLevel)) {
+          break;
+        }
+        resolvedLevel += 1;
+      }
+    }
+
+    if (resolvedLevel !== originalLevel) {
+      state.levels[context.levelStateKey] = resolvedLevel;
+      return { changed: true, level: resolvedLevel };
+    }
+
+    return { changed: false, level: originalLevel };
+  }
+
   function getCurrentLevel(context) {
-    const minimumLevel = Number(context.activeCard.minLevel || context.baseCard.minLevel || 0);
-    const maximumLevel = Number(context.activeCard.maxLevel || context.baseCard.maxLevel || 0);
-    const level = Number(state.levels[context.levelStateKey] ?? minimumLevel);
-    return Math.max(minimumLevel, Math.min(level, maximumLevel));
+    return getStoredCurrentLevel(context);
   }
 
   function getNextLevelData(context, currentLevel) {
@@ -383,6 +482,61 @@
     renderSummary();
   }
 
+  function preserveViewportAnchor(anchorTarget, callback) {
+    const resolveAnchor = createAnchorResolver(anchorTarget);
+    const beforeElement = resolveAnchor();
+    const beforeTop = beforeElement && beforeElement.isConnected
+      ? beforeElement.getBoundingClientRect().top
+      : null;
+
+    callback();
+
+    if (beforeTop === null) {
+      return;
+    }
+
+    const adjustScroll = function () {
+      const afterElement = resolveAnchor();
+      if (!afterElement || !afterElement.isConnected) {
+        return;
+      }
+
+      const afterTop = afterElement.getBoundingClientRect().top;
+      const delta = beforeTop - afterTop;
+      if (Math.abs(delta) > 0.5) {
+        window.scrollBy(0, delta);
+      }
+    };
+
+    adjustScroll();
+    window.requestAnimationFrame(function () {
+      adjustScroll();
+      window.requestAnimationFrame(adjustScroll);
+    });
+  }
+
+  function createAnchorResolver(anchorTarget) {
+    if (typeof anchorTarget === "function") {
+      return anchorTarget;
+    }
+
+    if (typeof anchorTarget === "string") {
+      return function () {
+        return document.querySelector(anchorTarget);
+      };
+    }
+
+    return function () {
+      return anchorTarget;
+    };
+  }
+
+  function escapeAttributeValue(value) {
+    return String(value)
+      .replace(/\\/g, "\\\\")
+      .replace(/"/g, "\\\"");
+  }
+
   function renderSummary() {
     let maxedCards = 0;
     const needEntries = [];
@@ -417,6 +571,7 @@
             category: item.category || "Unknown type",
             foundIn: item.foundIn || [],
             cardId: context.baseCard.id,
+            cardScope: context.baseCard.scope,
             cardTitle: context.baseCard.title,
             cardLabel: context.displayTitle,
             milestoneId: context.levelStateKey + "::" + levelInfo.level,
@@ -441,6 +596,9 @@
     scopeWorkshopsButton.classList.toggle("active", state.cardScope === "workshops");
     scopeScrappyButton.classList.toggle("active", state.cardScope === "scrappy");
     scopeExpeditionButton.classList.toggle("active", state.cardScope === "expedition");
+    if (scopeProjectsButton) {
+      scopeProjectsButton.classList.toggle("active", state.cardScope === "projects");
+    }
     getCardOrder();
     renderShoppingList(needEntries);
     scheduleSaveState();
@@ -456,6 +614,9 @@
       shoppingList.appendChild(done);
       return;
     }
+
+    const boardColumns = getShoppingBoardColumnCount();
+    shoppingList.style.setProperty("--shopping-board-columns", String(boardColumns));
 
     const grouped = state.shoppingMode === "found"
       ? groupNeedsByFoundIn(needEntries)
@@ -478,9 +639,11 @@
         const groupId = groupEntry[0];
         const group = groupEntry[1];
         const groupCard = document.createElement("section");
+        const groupLayout = getShoppingGroupLayout(group, boardColumns);
         groupCard.className = "shopping-group";
         groupCard.classList.toggle("is-reorderable", state.shoppingMode === "card");
         groupCard.draggable = state.shoppingMode === "card";
+        groupCard.style.setProperty("--shopping-group-span", String(groupLayout.span));
 
         if (state.shoppingMode === "card") {
           groupCard.addEventListener("dragstart", function (event) {
@@ -548,10 +711,13 @@
         if (group.sections && group.sections.length) {
           const sectionWrap = document.createElement("div");
           sectionWrap.className = "shopping-section-list";
+          const sectionColumns = getShoppingSectionColumnCount(group, groupLayout, boardColumns);
+          sectionWrap.style.setProperty("--shopping-section-columns", String(sectionColumns));
 
           group.sections.forEach(function (section) {
             const sectionCard = document.createElement("section");
             sectionCard.className = "shopping-section";
+            sectionCard.classList.toggle("is-grid-tile", sectionColumns > 1);
 
             const sectionTitle = document.createElement("h4");
             sectionTitle.className = "shopping-section-title";
@@ -560,6 +726,11 @@
 
             const sectionList = document.createElement("div");
             sectionList.className = "shopping-group-list";
+            applyShoppingListLayout(sectionList, section.items.length, groupLayout, boardColumns, {
+              effectiveSpan: sectionColumns > 1
+                ? Math.max(1, Math.floor(Number(groupLayout.span || 1) / sectionColumns))
+                : Number(groupLayout.span || 1),
+            });
             renderShoppingItems(sectionList, section.items);
             sectionCard.appendChild(sectionList);
             sectionWrap.appendChild(sectionCard);
@@ -569,6 +740,7 @@
         } else {
           const groupList = document.createElement("div");
           groupList.className = "shopping-group-list";
+          applyShoppingListLayout(groupList, group.items.length, groupLayout, boardColumns);
           renderShoppingItems(groupList, group.items);
           groupCard.appendChild(groupList);
         }
@@ -587,8 +759,13 @@
 
         const head = document.createElement("div");
         head.className = "shopping-item-head";
+        const subtitleNode = renderShoppingSecondaryContent(itemEntry);
+        const extraSourceNode = itemEntry.alsoFoundIn && itemEntry.alsoFoundIn.length
+          ? renderExtraFoundIn(itemEntry.alsoFoundIn)
+          : null;
         const itemInline = createItemInline(itemEntry.item, {
-          extraText: itemEntry.secondaryLabel,
+          extraNode: subtitleNode,
+          extraContent: extraSourceNode,
         });
 
         const total = document.createElement("span");
@@ -600,11 +777,240 @@
       });
   }
 
+  function renderExtraFoundIn(entries) {
+    const footer = document.createElement("span");
+    footer.className = "shopping-extra-sources";
+
+    const label = document.createElement("span");
+    label.className = "shopping-extra-sources-label";
+    label.textContent = "Can also be found in ";
+    footer.appendChild(label);
+
+    entries.forEach(function (entry, index) {
+      if (index > 0) {
+        footer.appendChild(document.createTextNode(", "));
+      }
+
+      const source = document.createElement("span");
+      source.className = "shopping-extra-source";
+
+      const text = document.createElement("span");
+      text.textContent = entry.text;
+      source.appendChild(text);
+
+      if (entry.iconUrl) {
+        const icon = document.createElement("img");
+        icon.className = "shopping-extra-source-icon";
+        icon.src = entry.iconUrl;
+        icon.alt = entry.text;
+        icon.loading = "lazy";
+        source.appendChild(icon);
+      }
+
+      footer.appendChild(source);
+    });
+
+    return footer;
+  }
+
+  function renderShoppingSecondaryContent(itemEntry) {
+    if (state.shoppingMode === "card") {
+      return renderFoundInSubtitle(itemEntry.item);
+    }
+
+    if (!itemEntry.secondaryLabel) {
+      return null;
+    }
+
+    const subtitle = document.createElement("span");
+    subtitle.className = "item-need shopping-subtitle";
+    subtitle.textContent = itemEntry.secondaryLabel;
+    return subtitle;
+  }
+
+  function renderFoundInSubtitle(itemName) {
+    const primaryEntry = getPrimaryFoundInEntry(itemName);
+    const subtitle = document.createElement("span");
+    subtitle.className = "item-need shopping-subtitle";
+
+    const label = document.createElement("span");
+    label.className = "shopping-subtitle-label";
+    label.textContent = "Found in ";
+    subtitle.appendChild(label);
+
+    const entry = document.createElement("span");
+    entry.className = "shopping-subtitle-entry";
+
+    const text = document.createElement("span");
+    text.className = "shopping-subtitle-text";
+    text.textContent = primaryEntry.text;
+    entry.appendChild(text);
+
+    if (primaryEntry.iconUrl) {
+      const icon = document.createElement("img");
+      icon.className = "shopping-subtitle-icon";
+      icon.src = primaryEntry.iconUrl;
+      icon.alt = primaryEntry.text;
+      icon.loading = "lazy";
+      entry.appendChild(icon);
+    }
+
+    subtitle.appendChild(entry);
+    return subtitle;
+  }
+
+  function getPrimaryFoundInEntry(itemName) {
+    const item = itemData[itemName] || {};
+    const entries = Array.isArray(item.foundInEntries) && item.foundInEntries.length
+      ? item.foundInEntries
+      : (item.foundIn || []).map(function (sourceName) {
+          return {
+            text: sourceName,
+            iconUrl: uiIcons.foundIn[sourceName] || "",
+          };
+        });
+
+    if (!entries.length) {
+      return { text: "Unknown", iconUrl: "" };
+    }
+
+    return entries[0];
+  }
+
+  function getPrimaryFoundInSourceName(itemName) {
+    return getPrimaryFoundInEntry(itemName).text;
+  }
+
+  function getShoppingBoardColumnCount() {
+    const width = shoppingList.clientWidth || window.innerWidth || 1440;
+    if (width <= 560) {
+      return 1;
+    }
+    if (width <= 900) {
+      return 6;
+    }
+    return 12;
+  }
+
+  function getShoppingGroupMetrics(group) {
+    const listCounts = group.sections && group.sections.length
+      ? group.sections.map(function (section) {
+          return section.items.length;
+        })
+      : [group.items.length];
+
+    return {
+      totalItems: listCounts.reduce(function (sum, count) {
+        return sum + count;
+      }, 0),
+      maxListItems: listCounts.reduce(function (maxCount, count) {
+        return Math.max(maxCount, count);
+      }, 0),
+      sectionCount: listCounts.length,
+    };
+  }
+
+  function getShoppingGroupLayout(group, boardColumns) {
+    const metrics = getShoppingGroupMetrics(group);
+    const columns = Number(boardColumns || 12);
+    let span = columns === 1 ? 1 : 3;
+
+    if (metrics.maxListItems >= 4 || metrics.totalItems >= 6) {
+      span = columns >= 12 ? 4 : Math.min(columns, 4);
+    }
+
+    if (metrics.maxListItems >= 7 || metrics.totalItems >= 9) {
+      span = columns >= 12 ? 6 : columns;
+    }
+
+    if (metrics.maxListItems >= 14 || metrics.totalItems >= 18) {
+      span = columns >= 12 ? 8 : columns;
+    }
+
+    if (metrics.sectionCount >= 3 && columns >= 12) {
+      span = Math.max(span, 6);
+    }
+
+    span = Math.max(1, Math.min(span, columns));
+    return {
+      span: span,
+      maxListItems: metrics.maxListItems,
+    };
+  }
+
+  function getShoppingSectionColumnCount(group, groupLayout, boardColumns) {
+    if (!group.sections || group.sections.length <= 1) {
+      return 1;
+    }
+
+    const columns = Number(boardColumns || 12);
+    const groupSpan = Number((groupLayout && groupLayout.span) || 1);
+    const sectionCount = group.sections.length;
+    const largestSection = group.sections.reduce(function (maxCount, section) {
+      return Math.max(maxCount, Array.isArray(section.items) ? section.items.length : 0);
+    }, 0);
+
+    if (columns <= 6) {
+      if (groupSpan >= 6 && sectionCount >= 3 && largestSection <= 4) {
+        return 2;
+      }
+      return 1;
+    }
+
+    if (groupSpan >= 8 && sectionCount >= 4 && largestSection <= 4) {
+      return Math.min(3, sectionCount);
+    }
+
+    if (groupSpan >= 6 && sectionCount >= 2) {
+      return Math.min(2, sectionCount);
+    }
+
+    return 1;
+  }
+
+  function applyShoppingListLayout(container, itemCount, groupLayout, boardColumns, options) {
+    const settings = options || {};
+    const itemColumns = getShoppingItemColumnCount(itemCount, groupLayout, boardColumns, settings);
+    container.style.setProperty("--shopping-item-columns", String(itemColumns));
+  }
+
+  function getShoppingItemColumnCount(itemCount, groupLayout, boardColumns, options) {
+    const settings = options || {};
+    const columns = Number(boardColumns || 12);
+    const groupSpan = Number(settings.effectiveSpan || (groupLayout && groupLayout.span) || 1);
+    const count = Number(itemCount || 0);
+
+    if (columns <= 1) {
+      return 1;
+    }
+
+    if (columns >= 12 && groupSpan >= 8 && count >= 18) {
+      return 4;
+    }
+
+    if (columns >= 12 && groupSpan >= 6 && count >= 10) {
+      return 3;
+    }
+
+    if (groupSpan >= 4 && count >= 6) {
+      return 2;
+    }
+
+    return 1;
+  }
+
   function buildNeedLabel(needEntry) {
+    if (needEntry.cardScope === "projects") {
+      const suffixMatch = String(needEntry.milestoneLabel || "").match(/\(\d+\/\d+\)/);
+      if (suffixMatch) {
+        return needEntry.cardTitle + " " + suffixMatch[0];
+      }
+    }
+
     return needEntry.cardLabel + " " + needEntry.milestoneLabel;
   }
 
-  function buildShoppingItems(needEntries, secondaryLabelBuilder) {
+  function buildShoppingItems(needEntries, secondaryLabelBuilder, extraEntryBuilder) {
     const aggregated = new Map();
 
     needEntries.forEach(function (needEntry) {
@@ -613,6 +1019,7 @@
           item: needEntry.item,
           total: 0,
           secondaryLabels: [],
+          extraEntries: new Map(),
         });
       }
 
@@ -622,6 +1029,14 @@
       if (secondaryLabel && !aggregateEntry.secondaryLabels.includes(secondaryLabel)) {
         aggregateEntry.secondaryLabels.push(secondaryLabel);
       }
+
+      const extraEntries = extraEntryBuilder ? extraEntryBuilder(needEntry) : [];
+      extraEntries.forEach(function (entry) {
+        if (!entry || !entry.text) {
+          return;
+        }
+        aggregateEntry.extraEntries.set(entry.text, entry);
+      });
     });
 
     return Array.from(aggregated.values()).map(function (aggregateEntry) {
@@ -631,6 +1046,9 @@
         secondaryLabel: aggregateEntry.secondaryLabels.sort(function (a, b) {
           return a.localeCompare(b);
         }).join(", "),
+        alsoFoundIn: Array.from(aggregateEntry.extraEntries.values()).sort(function (a, b) {
+          return a.text.localeCompare(b.text);
+        }),
       };
     });
   }
@@ -671,14 +1089,14 @@
           .map(function (section) {
             return {
               title: section.title,
-              items: buildShoppingItems(section.entries, function (needEntry) {
-                return needEntry.category;
+              items: buildShoppingItems(section.entries, null, function (needEntry) {
+                return getSecondaryFoundInEntries(needEntry.item, getPrimaryFoundInSourceName(needEntry.item));
               }),
             };
           });
       } else {
-        group.items = buildShoppingItems(group.entries, function (needEntry) {
-          return needEntry.category;
+        group.items = buildShoppingItems(group.entries, null, function (needEntry) {
+          return getSecondaryFoundInEntries(needEntry.item, getPrimaryFoundInSourceName(needEntry.item));
         });
       }
       delete group.entries;
@@ -693,32 +1111,53 @@
 
     needEntries.forEach(function (needEntry) {
       const foundInValues = needEntry.foundIn && needEntry.foundIn.length ? needEntry.foundIn : ["Unknown"];
+      const primarySource = foundInValues[0];
 
-      foundInValues.forEach(function (sourceName) {
-        if (!grouped.has(sourceName)) {
-          grouped.set(sourceName, {
-            title: sourceName,
-            entries: [],
-          });
-        }
+      if (!grouped.has(primarySource)) {
+        grouped.set(primarySource, {
+          title: primarySource,
+          entries: [],
+        });
+      }
 
-        grouped.get(sourceName).entries.push(needEntry);
-      });
+      grouped.get(primarySource).entries.push(needEntry);
     });
 
     Array.from(grouped.values()).forEach(function (group) {
-      group.items = buildShoppingItems(group.entries, buildNeedLabel);
+      group.items = buildShoppingItems(group.entries, buildNeedLabel, function (needEntry) {
+        return getSecondaryFoundInEntries(needEntry.item, group.title);
+      });
       delete group.entries;
     });
 
     return grouped;
   }
 
+  function getSecondaryFoundInEntries(itemName, primarySource) {
+    const item = itemData[itemName] || {};
+    const entries = Array.isArray(item.foundInEntries) && item.foundInEntries.length
+      ? item.foundInEntries
+      : (item.foundIn || []).map(function (sourceName) {
+          return {
+            text: sourceName,
+            iconUrl: uiIcons.foundIn[sourceName] || "",
+          };
+        });
+
+    return entries.filter(function (entry) {
+      return entry && entry.text && entry.text !== primarySource;
+    });
+  }
+
   function renderTrackerCard(context, currentLevel, nextLevel) {
     const card = document.createElement("article");
     card.className = "tracker-card";
+    card.dataset.cardKey = context.levelStateKey;
+    const cardAnchorSelector = '[data-card-key="' + escapeAttributeValue(context.levelStateKey) + '"]';
     const isWorkshopCard = context.baseCard.scope === "workshops";
     const isScrappyCard = context.baseCard.id === "scrappy";
+    const isProjectCard = context.baseCard.scope === "projects";
+    const hasVariants = Array.isArray(context.baseCard.variants) && context.baseCard.variants.length;
 
     const top = document.createElement("div");
     top.className = "card-header";
@@ -753,8 +1192,12 @@
 
     titleWrap.appendChild(titleCopy);
 
-    if (isWorkshopCard || isScrappyCard) {
+    if (isWorkshopCard) {
+      top.append(titleWrap, renderProgressDots(context, currentLevel, { displayMode: "target-milestone" }));
+    } else if (isScrappyCard) {
       top.append(titleWrap, renderProgressDots(context, currentLevel));
+    } else if (isProjectCard) {
+      top.append(titleWrap, renderProgressDots(context, currentLevel, { displayMode: "target-milestone" }));
     } else {
       const status = document.createElement("div");
       status.className = "status-pill" + (currentLevel >= context.activeCard.maxLevel ? " maxed" : "");
@@ -766,11 +1209,11 @@
 
     card.appendChild(top);
 
-    if (!isWorkshopCard && !isScrappyCard) {
+    if (!isWorkshopCard && !isScrappyCard && hasVariants) {
       const levelRow = document.createElement("div");
       levelRow.className = "level-row";
 
-      if (Array.isArray(context.baseCard.variants) && context.baseCard.variants.length) {
+      if (hasVariants) {
         const variantGroup = document.createElement("div");
         variantGroup.className = "control-group";
         const variantLabel = document.createElement("label");
@@ -787,8 +1230,10 @@
         });
 
         variantSelect.addEventListener("change", function (event) {
-          state.variants[context.baseCard.id] = event.target.value;
-          render();
+          preserveViewportAnchor(cardAnchorSelector, function () {
+            state.variants[context.baseCard.id] = event.target.value;
+            render();
+          });
         });
 
         variantGroup.append(variantLabel, variantSelect);
@@ -813,8 +1258,10 @@
       }
 
       progressSelect.addEventListener("change", function (event) {
-        state.levels[context.levelStateKey] = Number(event.target.value);
-        render();
+        preserveViewportAnchor(cardAnchorSelector, function () {
+          state.levels[context.levelStateKey] = Number(event.target.value);
+          render();
+        });
       });
 
       progressGroup.append(progressLabel, progressSelect);
@@ -832,6 +1279,7 @@
       empty.className = "empty-upgrade";
       empty.textContent = getEmptyMessage(context);
       nextUpgradePanel.appendChild(empty);
+      appendCompletionPageSections(nextUpgradePanel, context);
       card.appendChild(nextUpgradePanel);
       return card;
     }
@@ -839,6 +1287,10 @@
     pendingLevels.forEach(function (levelInfo, index) {
       nextUpgradePanel.appendChild(renderUpgradeSection(context, levelInfo, index > 0));
     });
+
+    if (context.activeCard.completionRewards && context.activeCard.completionRewards.length) {
+      nextUpgradePanel.appendChild(renderChipSection("Completion Rewards", context.activeCard.completionRewards, "reward", true));
+    }
 
     card.appendChild(nextUpgradePanel);
     return card;
@@ -865,6 +1317,7 @@
 
     levelInfo.requirements.forEach(function (requirement) {
       const key = progressKey(context, levelInfo.level, requirement.item);
+      const rowAnchorSelector = '[data-progress-key="' + escapeAttributeValue(key) + '"]';
       const have = Number(state.progress[key] || 0);
       const clampedHave = Math.max(0, Math.min(have, requirement.quantity));
 
@@ -874,6 +1327,7 @@
 
       const row = document.createElement("div");
       row.className = "requirement";
+      row.dataset.progressKey = key;
       row.classList.toggle("is-complete", clampedHave >= requirement.quantity);
 
       const main = document.createElement("div");
@@ -900,7 +1354,13 @@
         state.progress[key] = safeValue;
         input.value = String(safeValue);
         row.classList.toggle("is-complete", safeValue >= requirement.quantity);
-        renderSummary();
+        preserveViewportAnchor(rowAnchorSelector, function () {
+          if (syncAutoAdvancedLevel(context).changed) {
+            render();
+            return;
+          }
+          renderSummary();
+        });
       });
 
       const count = document.createElement("span");
@@ -915,33 +1375,132 @@
     section.appendChild(requirementList);
 
     if (levelInfo.crafts && levelInfo.crafts.length > 0) {
-      const unlocks = document.createElement("div");
-      unlocks.className = "unlocks";
-      const unlockTitle = document.createElement("h4");
-      unlockTitle.textContent = "Unlocks at " + getMilestoneLabel(context.activeCard, levelInfo);
-      unlocks.appendChild(unlockTitle);
+      section.appendChild(
+        renderChipSection("Unlocks at " + getMilestoneLabel(context.activeCard, levelInfo), levelInfo.crafts, "unlock")
+      );
+    }
 
-      const unlockList = document.createElement("div");
-      unlockList.className = "unlock-list";
-      levelInfo.crafts.forEach(function (craft) {
-        const catalogEntry = resolveCatalogEntry(craft);
-        const rarityClass = getCatalogEntryRarityClass(catalogEntry);
-        const chip = document.createElement("span");
-        chip.className = "unlock-chip" + (rarityClass ? " " + rarityClass : "");
-        chip.appendChild(createItemInline(craft, { iconOnly: true }));
-        unlockList.appendChild(chip);
-      });
-
-      unlocks.appendChild(unlockList);
-      section.appendChild(unlocks);
+    if (levelInfo.rewards && levelInfo.rewards.length > 0) {
+      section.appendChild(
+        renderChipSection(getRewardSectionTitle(context, levelInfo), levelInfo.rewards, "reward")
+      );
     }
 
     return section;
   }
 
-  function renderProgressDots(context, currentLevel) {
+  function renderChipSection(titleText, entries, variant, addDivider) {
+    const section = document.createElement("div");
+    section.className = "unlocks" + (variant === "reward" ? " rewards" : "");
+    if (addDivider) {
+      section.classList.add("is-separated");
+    }
+
+    const title = document.createElement("h4");
+    title.textContent = titleText;
+    section.appendChild(title);
+
+    const list = document.createElement("div");
+    list.className = "unlock-list";
+
+    entries.forEach(function (entry) {
+      const normalizedEntry = typeof entry === "string"
+        ? { item: entry, quantity: 1 }
+        : entry;
+      const catalogEntry = resolveCatalogEntry(normalizedEntry.item);
+      const rarityClass = getCatalogEntryRarityClass(catalogEntry);
+      const chip = document.createElement("span");
+      chip.className = (variant === "reward" ? "reward-chip" : "unlock-chip") + (rarityClass ? " " + rarityClass : "");
+      chip.appendChild(createItemInline(normalizedEntry.item, {
+        iconOnly: true,
+        label: variant === "reward" && Number(normalizedEntry.quantity || 1) > 1
+          ? formatRequirementValue(normalizedEntry.quantity) + "x " + normalizedEntry.item
+          : normalizedEntry.item,
+      }));
+
+      if (variant === "reward" && Number(normalizedEntry.quantity || 1) > 1) {
+        const quantityBadge = document.createElement("span");
+        quantityBadge.className = "reward-qty";
+        quantityBadge.textContent = "x" + formatRequirementValue(normalizedEntry.quantity);
+        chip.appendChild(quantityBadge);
+      }
+
+      list.appendChild(chip);
+    });
+
+    section.appendChild(list);
+    return section;
+  }
+
+  function appendCompletionPageSections(container, context) {
+    if (context.baseCard.scope === "workshops") {
+      appendLevelChipSections(container, context, {
+        titleBuilder: function (levelInfo) {
+          return "Crafts Unlocked at " + getMilestoneLabel(context.activeCard, levelInfo);
+        },
+        entryKey: "crafts",
+        variant: "unlock",
+      });
+      return;
+    }
+
+    if (context.baseCard.scope === "projects") {
+      const appendedStageRewards = appendLevelChipSections(container, context, {
+        titleBuilder: function (levelInfo) {
+          return getRewardSectionTitle(context, levelInfo);
+        },
+        entryKey: "rewards",
+        variant: "reward",
+      });
+
+      if (context.activeCard.completionRewards && context.activeCard.completionRewards.length) {
+        container.appendChild(
+          renderChipSection("Completion Rewards", context.activeCard.completionRewards, "reward", appendedStageRewards)
+        );
+      }
+    }
+  }
+
+  function appendLevelChipSections(container, context, options) {
+    const settings = options || {};
+    let appendedCount = 0;
+
+    context.activeCard.levels.forEach(function (levelInfo) {
+      const entries = Array.isArray(levelInfo[settings.entryKey]) ? levelInfo[settings.entryKey] : [];
+      if (!entries.length) {
+        return;
+      }
+
+      container.appendChild(
+        renderChipSection(
+          settings.titleBuilder
+            ? settings.titleBuilder(levelInfo)
+            : getMilestoneLabel(context.activeCard, levelInfo),
+          entries,
+          settings.variant,
+          appendedCount > 0
+        )
+      );
+      appendedCount += 1;
+    });
+
+    return appendedCount > 0;
+  }
+
+  function getRewardSectionTitle(context, levelInfo) {
+    const milestoneLabel = getMilestoneLabel(context.activeCard, levelInfo);
+    if (context.baseCard.scope === "projects") {
+      return "Rewards for " + milestoneLabel;
+    }
+    return "Rewards at " + milestoneLabel;
+  }
+
+  function renderProgressDots(context, currentLevel, options) {
+    const settings = options || {};
+    const isTargetMilestoneMode = settings.displayMode === "target-milestone";
+    const cardAnchorSelector = '[data-card-key="' + escapeAttributeValue(context.levelStateKey) + '"]';
     const dots = document.createElement("div");
-    dots.className = "progress-dots";
+    dots.className = "progress-dots" + (isTargetMilestoneMode ? " project-stage-dots" : "");
     dots.setAttribute("role", "radiogroup");
     dots.setAttribute("aria-label", context.baseCard.title + " progress");
 
@@ -950,14 +1509,24 @@
 
     for (let level = minimumLevel; level <= maximumLevel; level += 1) {
       const dot = document.createElement("button");
+      const isCompleteOption = isTargetMilestoneMode && level === maximumLevel;
       dot.type = "button";
-      dot.className = "level-dot" + (level === currentLevel ? " active" : "");
-      dot.textContent = String(level);
-      dot.title = level === 0 ? "Unbuilt" : "Level " + level;
+      dot.className = "level-dot"
+        + (level === currentLevel ? " active" : "")
+        + (isCompleteOption ? " is-complete-option" : "");
+      dot.textContent = isTargetMilestoneMode
+        ? (isCompleteOption ? "\u2713" : String(level + 1))
+        : String(level);
+      dot.title = isTargetMilestoneMode
+        ? getTargetMilestoneLabel(context, level)
+        : (level === 0 ? "Unbuilt" : "Level " + level);
+      dot.setAttribute("aria-label", dot.title);
       dot.setAttribute("aria-pressed", level === currentLevel ? "true" : "false");
       dot.addEventListener("click", function () {
-        state.levels[context.levelStateKey] = level;
-        render();
+        preserveViewportAnchor(cardAnchorSelector, function () {
+          state.levels[context.levelStateKey] = level;
+          render();
+        });
       });
       dots.appendChild(dot);
     }
@@ -971,6 +1540,9 @@
     }
     if (weaponData[entryName]) {
       return { kind: "weapon", data: weaponData[entryName] };
+    }
+    if (rewardData[entryName]) {
+      return { kind: "reward", data: rewardData[entryName] };
     }
     return null;
   }
@@ -1020,24 +1592,32 @@
         copy.appendChild(extra);
       }
 
+      if (settings.extraNode) {
+        copy.appendChild(settings.extraNode);
+      }
+
+      if (settings.extraContent) {
+        copy.appendChild(settings.extraContent);
+      }
+
       wrapper.appendChild(copy);
     }
 
     if (catalogEntry) {
       if (hideCopy) {
-        wrapper.setAttribute("aria-label", itemName);
-        wrapper.title = itemName;
+        wrapper.setAttribute("aria-label", settings.label || itemName);
+        wrapper.title = settings.label || itemName;
       }
       wrapper.tabIndex = 0;
       wrapper.addEventListener("mouseenter", function () {
-        tooltipManager.showTooltip(itemName, catalogEntry, wrapper);
+        tooltipManager.showTooltip(settings.label || itemName, catalogEntry, wrapper);
       });
       wrapper.addEventListener("mousemove", function () {
         tooltipManager.positionTooltip(wrapper);
       });
       wrapper.addEventListener("mouseleave", tooltipManager.hideTooltip);
       wrapper.addEventListener("focus", function () {
-        tooltipManager.showTooltip(itemName, catalogEntry, wrapper);
+        tooltipManager.showTooltip(settings.label || itemName, catalogEntry, wrapper);
       });
       wrapper.addEventListener("blur", tooltipManager.hideTooltip);
     }
@@ -1054,7 +1634,7 @@
 
   function getProgressOptionLabel(card, level) {
     if (level === 0) {
-      return card.zeroLabel || "Not built yet";
+      return card.zeroLabel || "Not started";
     }
 
     const levelInfo = card.levels.find(function (entry) {
@@ -1068,16 +1648,51 @@
     return levelInfo.progressLabel || levelInfo.label || ("Level " + level);
   }
 
+  function getTargetMilestoneLabel(context, completedLevel) {
+    const maximumLevel = Number(context.activeCard.maxLevel || 0);
+    if (completedLevel >= maximumLevel) {
+      return getCompletionMessage(context);
+    }
+
+    const nextLevelInfo = context.activeCard.levels.find(function (entry) {
+      return entry.level === completedLevel + 1;
+    });
+
+    if (!nextLevelInfo) {
+      return context.baseCard.scope === "workshops"
+        ? "Level " + (completedLevel + 1)
+        : "Stage " + (completedLevel + 1);
+    }
+
+    return nextLevelInfo.label || ("Stage " + (completedLevel + 1));
+  }
+
   function getEmptyMessage(context) {
     if (context.baseCard.id === "expedition") {
       return "These tracked expedition stages are complete. Move the expedition selector when you start the next expedition.";
     }
 
     if (context.baseCard.scope === "workshops") {
-      return "No materials needed here. Set this back down if you want to re-plan a fresh wipe path.";
+      return getCompletionMessage(context);
+    }
+
+    if (context.baseCard.scope === "projects") {
+      return getCompletionMessage(context);
     }
 
     return "No materials needed here right now.";
+  }
+
+  function getCompletionMessage(context) {
+    if (context.baseCard.scope === "workshops") {
+      return "Max station level reached.";
+    }
+
+    if (context.baseCard.scope === "projects") {
+      return "Project completed.";
+    }
+
+    return context.activeCard.completeLabel || "Complete";
   }
 
   function formatRequirementValue(value) {

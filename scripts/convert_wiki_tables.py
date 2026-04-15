@@ -35,6 +35,8 @@ FOUND_IN_JSON = MANUAL_DATA / "found_in.json"
 UI_ICONS_JSON = MANUAL_DATA / "ui_icons.json"
 MANUAL_CARDS_DIR = MANUAL_DATA / "cards"
 WEAPON_METADATA_JSON = MANUAL_DATA / "weapons.json"
+REWARDS_JSON = MANUAL_DATA / "rewards.json"
+SUPPLEMENTAL_ITEMS_JSON = MANUAL_DATA / "items.json"
 
 SECTION_RE = re.compile(r"^#\s+(.*?)\s*$", re.MULTILINE)
 TABLE_RE = re.compile(r"<table\b.*?</table>", re.IGNORECASE | re.DOTALL)
@@ -203,6 +205,33 @@ def load_weapon_metadata() -> dict[str, dict[str, str]]:
     }
 
 
+def load_manual_rewards() -> dict[str, dict[str, object]]:
+    raw = load_json(REWARDS_JSON)
+    return {
+        str(name): value
+        for name, value in raw.items()
+    }
+
+
+def load_supplemental_items() -> dict[str, dict[str, object]]:
+    raw = load_json(SUPPLEMENTAL_ITEMS_JSON)
+    return {
+        str(name): value
+        for name, value in raw.items()
+    }
+
+
+def normalize_reward_entries(entries: list[dict[str, object]]) -> list[dict[str, object]]:
+    normalized_entries: list[dict[str, object]] = []
+    for entry in entries:
+        normalized_entry = {
+            "item": str(entry["item"]),
+            "quantity": int(entry.get("quantity", 1)),
+        }
+        normalized_entries.append(normalized_entry)
+    return normalized_entries
+
+
 def normalize_level_entries(levels: list[dict[str, object]]) -> list[dict[str, object]]:
     normalized_levels: list[dict[str, object]] = []
     for level in sorted(levels, key=lambda entry: int(entry["level"])):
@@ -217,6 +246,8 @@ def normalize_level_entries(levels: list[dict[str, object]]) -> list[dict[str, o
             ],
             "crafts": [str(item) for item in level.get("crafts", [])],
         }
+        if "rewards" in level:
+            normalized_level["rewards"] = normalize_reward_entries(level.get("rewards", []))
         for optional_key in ("label", "progressLabel", "description"):
             if optional_key in level:
                 normalized_level[optional_key] = str(level[optional_key])
@@ -231,13 +262,25 @@ def enrich_manual_card(card_definition: dict[str, object], ui_icons: dict[str, d
         "kindLabel": str(card_definition.get("kindLabel", "Progress")),
         "scope": str(card_definition["scope"]),
         "sortOrder": int(card_definition.get("sortOrder", 9999)),
-        "iconUrl": icon_url_from_filename(
-            ui_icons["cards"].get(str(card_definition.get("iconKey", card_definition["title"])), "")
-        ),
+        "iconUrl": "",
+        "resetOnWipe": bool(card_definition.get("resetOnWipe", True)),
     }
+
+    if card_definition.get("iconUrl"):
+        card["iconUrl"] = str(card_definition["iconUrl"])
+    elif card_definition.get("iconFilename"):
+        card["iconUrl"] = icon_url_from_filename(str(card_definition["iconFilename"]))
+    else:
+        card["iconUrl"] = icon_url_from_filename(
+            ui_icons["cards"].get(str(card_definition.get("iconKey", card_definition["title"])), "")
+        )
 
     if "levels" in card_definition:
         card["minLevel"] = int(card_definition.get("minLevel", 0))
+        if "zeroLabel" in card_definition:
+            card["zeroLabel"] = str(card_definition["zeroLabel"])
+        if "completeLabel" in card_definition:
+            card["completeLabel"] = str(card_definition["completeLabel"])
         card["levels"] = normalize_level_entries(card_definition.get("levels", []))
         card["maxLevel"] = max(level["level"] for level in card["levels"])
     if "variants" in card_definition:
@@ -253,6 +296,8 @@ def enrich_manual_card(card_definition: dict[str, object], ui_icons: dict[str, d
             }
             normalized_variant["maxLevel"] = max(level["level"] for level in normalized_variant["levels"])
             card["variants"].append(normalized_variant)
+    if "completionRewards" in card_definition:
+        card["completionRewards"] = normalize_reward_entries(card_definition.get("completionRewards", []))
     return card
 
 
@@ -313,6 +358,79 @@ def build_workshop_cards(
     return cards
 
 
+def build_item_lookup(item_records: list[dict[str, str]]) -> dict[str, dict[str, str]]:
+    return {record["item"]: record for record in item_records}
+
+
+def build_weapon_lookup(
+    weapon_records: list[dict[str, str]],
+    weapon_metadata: dict[str, dict[str, str]],
+) -> dict[str, dict[str, str]]:
+    return {
+        record["name"]: {
+            **record,
+            "rarity": weapon_metadata["rarities"].get(record["name"], ""),
+        }
+        for record in weapon_records
+    }
+
+
+def build_reward_catalog(
+    manual_rewards: dict[str, dict[str, object]],
+    item_records: list[dict[str, str]],
+    weapon_records: list[dict[str, str]],
+    weapon_metadata: dict[str, dict[str, str]],
+    ui_icons: dict[str, dict[str, str]],
+) -> dict[str, dict[str, object]]:
+    item_lookup = build_item_lookup(item_records)
+    weapon_lookup = build_weapon_lookup(weapon_records, weapon_metadata)
+    catalog: dict[str, dict[str, object]] = {}
+
+    for reward_name, definition in manual_rewards.items():
+        reward: dict[str, object] = {
+            "kindLabel": str(definition.get("kindLabel", "Reward")),
+        }
+        if definition.get("description"):
+            reward["description"] = str(definition["description"])
+        if definition.get("rarity"):
+            reward["rarity"] = str(definition["rarity"])
+        if definition.get("pageTitle"):
+            reward["pageUrl"] = wiki_page_url(str(definition["pageTitle"]))
+
+        image_url = ""
+        icon_item_ref = str(definition.get("iconItemRef", "")).strip()
+        icon_weapon_ref = str(definition.get("iconWeaponRef", "")).strip()
+        icon_filename = str(definition.get("iconFilename", "")).strip()
+        icon_url = str(definition.get("iconUrl", "")).strip()
+
+        if icon_item_ref:
+            image_url = absolute_wiki_url(item_lookup[icon_item_ref]["image_src"])
+        elif icon_weapon_ref:
+            image_url = weapon_lookup[icon_weapon_ref]["image_url"]
+        elif icon_filename:
+            image_url = icon_url_from_filename(icon_filename)
+        elif icon_url:
+            image_url = icon_url
+
+        if image_url:
+            reward["imageUrl"] = image_url
+
+        details: list[dict[str, str]] = []
+        for detail in definition.get("details", []):
+            details.append(
+                {
+                    "label": str(detail["label"]),
+                    "value": str(detail["value"]),
+                }
+            )
+        if details:
+            reward["details"] = details
+
+        catalog[reward_name] = reward
+
+    return catalog
+
+
 def validate_level_sequence(levels: list[dict[str, object]], owner: str) -> None:
     level_numbers = [int(level["level"]) for level in levels]
     if not level_numbers:
@@ -331,8 +449,11 @@ def validate_tracker_data(
     cards: list[dict[str, object]],
     found_in_by_item: dict[str, list[str]],
     ui_icons: dict[str, dict[str, str]],
+    reward_catalog: dict[str, dict[str, object]],
+    weapon_records: list[dict[str, str]],
 ) -> None:
     item_names = {record["item"] for record in item_records}
+    weapon_names = {record["name"] for record in weapon_records}
     item_categories = {record["category"] for record in item_records if record.get("category")}
     card_ids = [str(card["id"]) for card in cards]
 
@@ -348,6 +469,8 @@ def validate_tracker_data(
         for categories in found_in_by_item.values()
         for category in categories
     }
+    for record in item_records:
+        used_found_in_categories.update(split_pipe_list(record.get("found_in", "")))
     missing_found_in_icons = sorted(category for category in used_found_in_categories if category not in ui_icons["foundIn"])
     if missing_found_in_icons:
         raise ValueError(f"Missing found-in icons for categories: {missing_found_in_icons}")
@@ -372,17 +495,28 @@ def validate_tracker_data(
                 for level in card["levels"]
                 for requirement in level["requirements"]
             ]
+            reward_items = [
+                reward["item"]
+                for level in card["levels"]
+                for reward in level.get("rewards", [])
+            ]
         elif card.get("variants"):
             variant_ids = [str(variant["id"]) for variant in card.get("variants", [])]
             if len(set(variant_ids)) != len(variant_ids):
                 raise ValueError(f"Card {card['title']} has duplicate variant ids: {variant_ids}")
             required_items = []
+            reward_items = []
             for variant in card.get("variants", []):
                 validate_level_sequence(variant["levels"], f"Variant {variant['title']}")
                 required_items.extend(
                     requirement["item"]
                     for level in variant["levels"]
                     for requirement in level["requirements"]
+                )
+                reward_items.extend(
+                    reward["item"]
+                    for level in variant["levels"]
+                    for reward in level.get("rewards", [])
                 )
         else:
             raise ValueError(f"Card {card['title']} must define either levels or variants.")
@@ -391,17 +525,32 @@ def validate_tracker_data(
         if unknown_items:
             raise ValueError(f"Card {card['title']} references unknown items: {unknown_items}")
 
+        if card.get("completionRewards"):
+            reward_items.extend(reward["item"] for reward in card.get("completionRewards", []))
+
+        unknown_rewards = sorted(
+            reward_item
+            for reward_item in set(reward_items)
+            if reward_item not in item_names and reward_item not in weapon_names and reward_item not in reward_catalog
+        )
+        if unknown_rewards:
+            raise ValueError(f"Card {card['title']} references unknown rewards: {unknown_rewards}")
+
 
 def build_requirement_tracker_payload(
     requirement_records: list[dict[str, str]],
     craft_records: list[dict[str, str]],
     item_records: list[dict[str, str]],
+    weapon_records: list[dict[str, str]],
+    weapon_metadata: dict[str, dict[str, str]],
     manual_cards: list[dict[str, object]],
+    manual_rewards: dict[str, dict[str, object]],
     found_in_by_item: dict[str, list[str]],
     ui_icons: dict[str, dict[str, str]],
 ) -> dict[str, object]:
     workshop_cards = build_workshop_cards(requirement_records, craft_records, ui_icons)
     curated_cards = [enrich_manual_card(card_definition, ui_icons) for card_definition in manual_cards]
+    reward_catalog = build_reward_catalog(manual_rewards, item_records, weapon_records, weapon_metadata, ui_icons)
     cards = sorted(
         workshop_cards + curated_cards,
         key=lambda card: (
@@ -409,7 +558,7 @@ def build_requirement_tracker_payload(
             str(card.get("title", "")),
         ),
     )
-    validate_tracker_data(item_records, cards, found_in_by_item, ui_icons)
+    validate_tracker_data(item_records, cards, found_in_by_item, ui_icons, reward_catalog, weapon_records)
 
     payload_without_meta = {
         "uiIcons": {
@@ -422,11 +571,12 @@ def build_requirement_tracker_payload(
                 for name, filename in ui_icons["foundIn"].items()
             },
         },
+        "rewardCatalog": reward_catalog,
         "cards": cards,
     }
     build_id = hashlib.sha1(json.dumps(payload_without_meta, sort_keys=True).encode("utf-8")).hexdigest()[:8]
     return {
-        "schemaVersion": 2,
+        "schemaVersion": 3,
         "generatedAt": datetime.now(timezone.utc).isoformat(),
         "buildId": build_id,
         **payload_without_meta,
@@ -538,7 +688,10 @@ def build_use_entries(raw_text: str) -> list[dict[str, str]]:
     return entries
 
 
-def parse_item_records(found_in_by_item: dict[str, list[str]]) -> list[dict[str, str]]:
+def parse_item_records(
+    found_in_by_item: dict[str, list[str]],
+    supplemental_items: dict[str, dict[str, object]],
+) -> list[dict[str, str]]:
     header_map = {
         "Image": "image_src",
         "Item": "item",
@@ -566,14 +719,31 @@ def parse_item_records(found_in_by_item: dict[str, list[str]]) -> list[dict[str,
         record["found_in"] = " | ".join(found_in_by_item.get(record["item"], []))
         records.append(record)
 
+    for item_name, item_definition in supplemental_items.items():
+        records.append(
+            {
+                "image_src": icon_url_from_filename(str(item_definition.get("imageFilename", ""))),
+                "item": item_name,
+                "rarity": str(item_definition.get("rarity", "")),
+                "recycles_to": str(item_definition.get("recycles_to", "")),
+                "sell_price": normalize_number(str(item_definition.get("sell_price", ""))),
+                "stack_size": normalize_number(str(item_definition.get("stack_size", ""))),
+                "category": str(item_definition.get("category", "")),
+                "uses": str(item_definition.get("uses", "")),
+                "found_in": " | ".join(str(value) for value in item_definition.get("found_in", [])),
+            }
+        )
+
+    records.sort(key=lambda record: record["item"])
     return records
 
 
 def build_items_csv(
     found_in_by_item: dict[str, list[str]],
     ui_icons: dict[str, dict[str, str]],
+    supplemental_items: dict[str, dict[str, object]],
 ) -> tuple[int, list[dict[str, str]]]:
-    records = parse_item_records(found_in_by_item)
+    records = parse_item_records(found_in_by_item, supplemental_items)
     write_csv(
         ITEMS_CSV,
         ["image_src", "item", "rarity", "recycles_to", "sell_price", "stack_size", "category", "uses", "found_in"],
@@ -603,7 +773,7 @@ def write_item_data(
     for record in records:
         item_name = record["item"]
         image_src = record["image_src"]
-        found_in = found_in_by_item.get(item_name, [])
+        found_in = found_in_by_item.get(item_name, split_pipe_list(record.get("found_in", "")))
         item_payload: dict[str, object] = {
             "imageUrl": f"{WIKI_BASE_URL}{image_src}" if image_src.startswith("/") else image_src,
             "rarity": record["rarity"],
@@ -671,25 +841,12 @@ def parse_workshop_records() -> tuple[list[dict[str, str]], list[dict[str, str]]
     return requirement_records, craft_records
 
 
-def build_workshop_datasets(
-    item_records: list[dict[str, str]],
-    manual_cards: list[dict[str, object]],
-    found_in_by_item: dict[str, list[str]],
-    ui_icons: dict[str, dict[str, str]],
-) -> int:
+def build_workshop_datasets() -> tuple[int, list[dict[str, str]], list[dict[str, str]]]:
     requirement_records, craft_records = parse_workshop_records()
     write_csv(WORKSHOP_REQUIREMENTS_CSV, ["workshop", "level", "item", "quantity"], requirement_records)
     write_csv(WORKSHOP_CRAFTS_CSV, ["workshop", "level", "item"], craft_records)
-    write_requirement_tracker_data(
-        requirement_records,
-        craft_records,
-        item_records,
-        manual_cards,
-        found_in_by_item,
-        ui_icons,
-    )
     workshop_levels = {(record["workshop"], record["level"]) for record in requirement_records}
-    return len(workshop_levels)
+    return len(workshop_levels), requirement_records, craft_records
 
 
 def split_pipe_list(text: str) -> list[str]:
@@ -707,7 +864,10 @@ def write_requirement_tracker_data(
     requirement_records: list[dict[str, str]],
     craft_records: list[dict[str, str]],
     item_records: list[dict[str, str]],
+    weapon_records: list[dict[str, str]],
+    weapon_metadata: dict[str, dict[str, str]],
     manual_cards: list[dict[str, object]],
+    manual_rewards: dict[str, dict[str, object]],
     found_in_by_item: dict[str, list[str]],
     ui_icons: dict[str, dict[str, str]],
 ) -> None:
@@ -715,7 +875,10 @@ def write_requirement_tracker_data(
         requirement_records,
         craft_records,
         item_records,
+        weapon_records,
+        weapon_metadata,
         manual_cards,
+        manual_rewards,
         found_in_by_item,
         ui_icons,
     )
@@ -851,7 +1014,7 @@ def write_weapon_data(
     write_text(WEAPON_DATA_JS, content)
 
 
-def build_weapons_csv(weapon_metadata: dict[str, dict[str, str]], ui_icons: dict[str, dict[str, str]]) -> int:
+def build_weapons_csv(weapon_metadata: dict[str, dict[str, str]], ui_icons: dict[str, dict[str, str]]) -> tuple[int, list[dict[str, str]]]:
     records = parse_weapon_records()
     validate_weapon_metadata(records, weapon_metadata, ui_icons)
     write_csv(
@@ -879,20 +1042,28 @@ def build_weapons_csv(weapon_metadata: dict[str, dict[str, str]], ui_icons: dict
         ],
     )
     write_weapon_data(records, weapon_metadata, ui_icons)
-    return len(records)
+    return len(records), records
 
 
-def load_manual_tracker_config() -> tuple[dict[str, list[str]], dict[str, dict[str, str]], list[dict[str, object]]]:
+def load_manual_tracker_config() -> tuple[
+    dict[str, list[str]],
+    dict[str, dict[str, str]],
+    list[dict[str, object]],
+    dict[str, dict[str, object]],
+    dict[str, dict[str, object]],
+]:
     found_in_by_item = load_found_in_by_item()
     ui_icons = load_ui_icon_filenames()
     manual_cards = load_manual_cards()
-    return found_in_by_item, ui_icons, manual_cards
+    manual_rewards = load_manual_rewards()
+    supplemental_items = load_supplemental_items()
+    return found_in_by_item, ui_icons, manual_cards, manual_rewards, supplemental_items
 
 
 def validate_source_data() -> dict[str, int]:
-    found_in_by_item, ui_icons, manual_cards = load_manual_tracker_config()
+    found_in_by_item, ui_icons, manual_cards, manual_rewards, supplemental_items = load_manual_tracker_config()
     weapon_metadata = load_weapon_metadata()
-    item_records = parse_item_records(found_in_by_item)
+    item_records = parse_item_records(found_in_by_item, supplemental_items)
     requirement_records, craft_records = parse_workshop_records()
     weapon_records = parse_weapon_records()
     validate_weapon_metadata(weapon_records, weapon_metadata, ui_icons)
@@ -900,7 +1071,10 @@ def validate_source_data() -> dict[str, int]:
         requirement_records,
         craft_records,
         item_records,
+        weapon_records,
+        weapon_metadata,
         manual_cards,
+        manual_rewards,
         found_in_by_item,
         ui_icons,
     )
@@ -913,11 +1087,22 @@ def validate_source_data() -> dict[str, int]:
 
 
 def main() -> None:
-    found_in_by_item, ui_icons, manual_cards = load_manual_tracker_config()
+    found_in_by_item, ui_icons, manual_cards, manual_rewards, supplemental_items = load_manual_tracker_config()
     weapon_metadata = load_weapon_metadata()
-    items_count, item_records = build_items_csv(found_in_by_item, ui_icons)
-    workshop_levels_count = build_workshop_datasets(item_records, manual_cards, found_in_by_item, ui_icons)
-    weapons_count = build_weapons_csv(weapon_metadata, ui_icons)
+    items_count, item_records = build_items_csv(found_in_by_item, ui_icons, supplemental_items)
+    workshop_levels_count, requirement_records, craft_records = build_workshop_datasets()
+    weapons_count, weapon_records = build_weapons_csv(weapon_metadata, ui_icons)
+    write_requirement_tracker_data(
+        requirement_records,
+        craft_records,
+        item_records,
+        weapon_records,
+        weapon_metadata,
+        manual_cards,
+        manual_rewards,
+        found_in_by_item,
+        ui_icons,
+    )
 
     print(f"Wrote {items_count} rows to {ITEMS_CSV.name}")
     print(f"Wrote tracker item data to {ITEM_DATA_JS.relative_to(ROOT)}")

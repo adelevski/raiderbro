@@ -1,0 +1,94 @@
+{
+  "Raider Tokens": {
+    "kindLabel": "Currency Reward",
+    "iconFilename": "Icon Raider Token.png",
+    "description": "A premium progression currency used for Raider Deck rewards.",
+    "details": [
+      { "label": "Type", "value": "Currency Reward" }
+    ]
+  },
+  "Coins": {
+    "kindLabel": "Currency Reward",
+    "iconFilename": "Icon Coins.png",
+    "pageTitle": "Coins",
+    "description": "An in-game currency used to purchase trader items and contribute expedition value.",
+    "details": [
+      { "label": "Type", "value": "Currency Reward" }
+    ]
+  },
+  "Howl Emote": {
+    "kindLabel": "Cosmetic Reward",
+    "iconFilename": "Icon Misc.png",
+    "description": "A cosmetic emote granted from the full completion of Trophy Display.",
+    "details": [
+      { "label": "Type", "value": "Cosmetic Reward" }
+    ]
+  },
+  "Light Gun Parts Blueprint": {
+    "kindLabel": "Blueprint Reward",
+    "iconItemRef": "Light Gun Parts",
+    "description": "Unlocks the crafting recipe for Light Gun Parts.",
+    "details": [
+      { "label": "Type", "value": "Blueprint Reward" },
+      { "label": "Unlocks", "value": "Light Gun Parts" }
+    ]
+  },
+  "Vita Shot Blueprint": {
+    "kindLabel": "Blueprint Reward",
+    "iconItemRef": "Vita Shot",
+    "description": "Unlocks the crafting recipe for Vita Shot.",
+    "details": [
+      { "label": "Type", "value": "Blueprint Reward" },
+      { "label": "Unlocks", "value": "Vita Shot" }
+    ]
+  },
+  "Shotgun Silencer Blueprint": {
+    "kindLabel": "Blueprint Reward",
+    "iconItemRef": "Shotgun Silencer",
+    "description": "Unlocks the crafting recipe for Shotgun Silencer.",
+    "details": [
+      { "label": "Type", "value": "Blueprint Reward" },
+      { "label": "Unlocks", "value": "Shotgun Silencer" }
+    ]
+  },
+  "Bobcat Blueprint": {
+    "kindLabel": "Blueprint Reward",
+    "iconWeaponRef": "Bobcat",
+    "description": "Unlocks the crafting recipe for Bobcat.",
+    "details": [
+      { "label": "Type", "value": "Blueprint Reward" },
+      { "label": "Unlocks", "value": "Bobcat" }
+    ]
+  },
+  "Snap Hook Blueprint": {
+    "kindLabel": "Blueprint Reward",
+    "iconItemRef": "Snap Hook",
+    "description": "Unlocks the crafting recipe for Snap Hook.",
+    "details": [
+      { "label": "Type", "value": "Blueprint Reward" },
+      { "label": "Unlocks", "value": "Snap Hook" }
+    ]
+  },
+  "Bobcat IV": {
+    "kindLabel": "Weapon Reward",
+    "iconWeaponRef": "Bobcat",
+    "rarity": "Epic",
+    "description": "A level IV Bobcat weapon reward.",
+    "details": [
+      { "label": "Type", "value": "Weapon Reward" },
+      { "label": "Base Weapon", "value": "Bobcat" },
+      { "label": "Weapon Level", "value": "IV" }
+    ]
+  },
+  "Torrente II": {
+    "kindLabel": "Weapon Reward",
+    "iconWeaponRef": "Torrente",
+    "rarity": "Rare",
+    "description": "A level II Torrente weapon reward.",
+    "details": [
+      { "label": "Type", "value": "Weapon Reward" },
+      { "label": "Base Weapon", "value": "Torrente" },
+      { "label": "Weapon Level", "value": "II" }
+    ]
+  }
+}
