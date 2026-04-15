@@ -99,27 +99,42 @@
   });
 
   scopeAllButton.addEventListener("click", function () {
+    if (state.cardScope === "all") {
+      return;
+    }
     state.cardScope = "all";
     render();
   });
 
   scopeWorkshopsButton.addEventListener("click", function () {
+    if (state.cardScope === "workshops") {
+      return;
+    }
     state.cardScope = "workshops";
     render();
   });
 
   scopeScrappyButton.addEventListener("click", function () {
+    if (state.cardScope === "scrappy") {
+      return;
+    }
     state.cardScope = "scrappy";
     render();
   });
 
   scopeExpeditionButton.addEventListener("click", function () {
+    if (state.cardScope === "expedition") {
+      return;
+    }
     state.cardScope = "expedition";
     render();
   });
 
   if (scopeProjectsButton) {
     scopeProjectsButton.addEventListener("click", function () {
+      if (state.cardScope === "projects") {
+        return;
+      }
       state.cardScope = "projects";
       render();
     });
@@ -470,6 +485,19 @@
   }
 
   function render() {
+    const previousScrollY = window.scrollY;
+    const previousGridHeight = cardsGrid.getBoundingClientRect().height;
+    const previousShoppingListHeight = shoppingList.getBoundingClientRect().height;
+    if (previousGridHeight > 0) {
+      cardsGrid.style.minHeight = Math.ceil(previousGridHeight) + "px";
+    } else {
+      cardsGrid.style.minHeight = "";
+    }
+    if (previousShoppingListHeight > 0) {
+      shoppingList.style.minHeight = Math.ceil(previousShoppingListHeight) + "px";
+    } else {
+      shoppingList.style.minHeight = "";
+    }
     cardsGrid.innerHTML = "";
 
     getVisibleCards().forEach(function (card) {
@@ -480,61 +508,8 @@
     });
 
     renderSummary();
-  }
-
-  function preserveViewportAnchor(anchorTarget, callback) {
-    const resolveAnchor = createAnchorResolver(anchorTarget);
-    const beforeElement = resolveAnchor();
-    const beforeTop = beforeElement && beforeElement.isConnected
-      ? beforeElement.getBoundingClientRect().top
-      : null;
-
-    callback();
-
-    if (beforeTop === null) {
-      return;
-    }
-
-    const adjustScroll = function () {
-      const afterElement = resolveAnchor();
-      if (!afterElement || !afterElement.isConnected) {
-        return;
-      }
-
-      const afterTop = afterElement.getBoundingClientRect().top;
-      const delta = beforeTop - afterTop;
-      if (Math.abs(delta) > 0.5) {
-        window.scrollBy(0, delta);
-      }
-    };
-
-    adjustScroll();
-    window.requestAnimationFrame(function () {
-      adjustScroll();
-      window.requestAnimationFrame(adjustScroll);
-    });
-  }
-
-  function createAnchorResolver(anchorTarget) {
-    if (typeof anchorTarget === "function") {
-      return anchorTarget;
-    }
-
-    if (typeof anchorTarget === "string") {
-      return function () {
-        return document.querySelector(anchorTarget);
-      };
-    }
-
-    return function () {
-      return anchorTarget;
-    };
-  }
-
-  function escapeAttributeValue(value) {
-    return String(value)
-      .replace(/\\/g, "\\\\")
-      .replace(/"/g, "\\\"");
+    shoppingList.style.minHeight = "";
+    preserveCardsGridHeight(previousScrollY);
   }
 
   function renderSummary() {
@@ -604,6 +579,35 @@
     scheduleSaveState();
   }
 
+  function preserveCardsGridHeight(previousScrollY) {
+    const naturalMetrics = measureCardsGridNaturalMetrics();
+    const naturalMaxScrollY = Math.max(naturalMetrics.documentHeight - window.innerHeight, 0);
+
+    if (previousScrollY <= naturalMaxScrollY + 1) {
+      cardsGrid.style.minHeight = "";
+      return;
+    }
+
+    const neededExtraHeight = previousScrollY - naturalMaxScrollY;
+    cardsGrid.style.minHeight = Math.ceil(naturalMetrics.gridHeight + neededExtraHeight) + "px";
+
+    const stabilizedMaxScrollY = Math.max(document.documentElement.scrollHeight - window.innerHeight, 0);
+    if (stabilizedMaxScrollY + 1 >= previousScrollY) {
+      window.scrollTo(0, previousScrollY);
+    }
+  }
+
+  function measureCardsGridNaturalMetrics() {
+    const previousMinHeight = cardsGrid.style.minHeight;
+    cardsGrid.style.minHeight = "0px";
+    const metrics = {
+      gridHeight: cardsGrid.getBoundingClientRect().height,
+      documentHeight: document.documentElement.scrollHeight,
+    };
+    cardsGrid.style.minHeight = previousMinHeight;
+    return metrics;
+  }
+
   function renderShoppingList(needEntries) {
     shoppingList.innerHTML = "";
 
@@ -641,6 +645,7 @@
         const groupCard = document.createElement("section");
         const groupLayout = getShoppingGroupLayout(group, boardColumns);
         groupCard.className = "shopping-group";
+        groupCard.dataset.shoppingGroupId = groupId;
         groupCard.classList.toggle("is-reorderable", state.shoppingMode === "card");
         groupCard.draggable = state.shoppingMode === "card";
         groupCard.style.setProperty("--shopping-group-span", String(groupLayout.span));
@@ -1153,7 +1158,7 @@
     const card = document.createElement("article");
     card.className = "tracker-card";
     card.dataset.cardKey = context.levelStateKey;
-    const cardAnchorSelector = '[data-card-key="' + escapeAttributeValue(context.levelStateKey) + '"]';
+    card.dataset.baseCardId = context.baseCard.id;
     const isWorkshopCard = context.baseCard.scope === "workshops";
     const isScrappyCard = context.baseCard.id === "scrappy";
     const isProjectCard = context.baseCard.scope === "projects";
@@ -1230,10 +1235,8 @@
         });
 
         variantSelect.addEventListener("change", function (event) {
-          preserveViewportAnchor(cardAnchorSelector, function () {
-            state.variants[context.baseCard.id] = event.target.value;
-            render();
-          });
+          state.variants[context.baseCard.id] = event.target.value;
+          render();
         });
 
         variantGroup.append(variantLabel, variantSelect);
@@ -1258,10 +1261,8 @@
       }
 
       progressSelect.addEventListener("change", function (event) {
-        preserveViewportAnchor(cardAnchorSelector, function () {
-          state.levels[context.levelStateKey] = Number(event.target.value);
-          render();
-        });
+        state.levels[context.levelStateKey] = Number(event.target.value);
+        render();
       });
 
       progressGroup.append(progressLabel, progressSelect);
@@ -1317,7 +1318,6 @@
 
     levelInfo.requirements.forEach(function (requirement) {
       const key = progressKey(context, levelInfo.level, requirement.item);
-      const rowAnchorSelector = '[data-progress-key="' + escapeAttributeValue(key) + '"]';
       const have = Number(state.progress[key] || 0);
       const clampedHave = Math.max(0, Math.min(have, requirement.quantity));
 
@@ -1354,13 +1354,11 @@
         state.progress[key] = safeValue;
         input.value = String(safeValue);
         row.classList.toggle("is-complete", safeValue >= requirement.quantity);
-        preserveViewportAnchor(rowAnchorSelector, function () {
-          if (syncAutoAdvancedLevel(context).changed) {
-            render();
-            return;
-          }
-          renderSummary();
-        });
+        if (syncAutoAdvancedLevel(context).changed) {
+          render();
+          return;
+        }
+        renderSummary();
       });
 
       const count = document.createElement("span");
@@ -1498,7 +1496,6 @@
   function renderProgressDots(context, currentLevel, options) {
     const settings = options || {};
     const isTargetMilestoneMode = settings.displayMode === "target-milestone";
-    const cardAnchorSelector = '[data-card-key="' + escapeAttributeValue(context.levelStateKey) + '"]';
     const dots = document.createElement("div");
     dots.className = "progress-dots" + (isTargetMilestoneMode ? " project-stage-dots" : "");
     dots.setAttribute("role", "radiogroup");
@@ -1523,10 +1520,8 @@
       dot.setAttribute("aria-label", dot.title);
       dot.setAttribute("aria-pressed", level === currentLevel ? "true" : "false");
       dot.addEventListener("click", function () {
-        preserveViewportAnchor(cardAnchorSelector, function () {
-          state.levels[context.levelStateKey] = level;
-          render();
-        });
+        state.levels[context.levelStateKey] = level;
+        render();
       });
       dots.appendChild(dot);
     }

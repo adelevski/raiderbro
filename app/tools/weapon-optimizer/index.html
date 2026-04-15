@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Raiderbro Weapon Optimizer</title>
+  <link rel="stylesheet" href="src/styles.css">
+</head>
+<body>
+  <div class="optimizer-shell">
+    <header class="optimizer-hero">
+      <span class="tool-mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="6.5"></circle>
+          <path d="M12 2.5v4"></path>
+          <path d="M12 17.5v4"></path>
+          <path d="M2.5 12h4"></path>
+          <path d="M17.5 12h4"></path>
+          <circle cx="12" cy="12" r="1.8"></circle>
+        </svg>
+      </span>
+      <h1>Weapon Optimizer</h1>
+    </header>
+
+    <section class="toolbar-panel">
+      <div class="control-group">
+        <label class="control-label" for="weapon-type-select">Weapon Type</label>
+        <select id="weapon-type-select"></select>
+      </div>
+      <div class="control-group control-group-wide">
+        <label class="control-label" for="weapon-select">Weapon</label>
+        <select id="weapon-select"></select>
+      </div>
+      <div class="control-group control-group-levels">
+        <span class="control-label">Item Level</span>
+        <div id="weapon-levels" class="level-pills" aria-label="Weapon item level"></div>
+      </div>
+    </section>
+
+    <div class="optimizer-grid">
+      <section class="panel weapon-overview">
+        <div id="weapon-overview"></div>
+      </section>
+
+      <section class="panel stats-panel">
+        <div class="panel-head">
+          <p class="panel-kicker">Live Build</p>
+          <h2>Current Weapon Readout</h2>
+        </div>
+        <div id="weapon-stats" class="stats-grid"></div>
+      </section>
+
+      <section class="panel effects-panel">
+        <div class="panel-head">
+          <p class="panel-kicker">Combined Impact</p>
+          <h2>Level + Attachment Effects</h2>
+        </div>
+        <div id="build-effects" class="effects-grid"></div>
+      </section>
+
+      <section class="panel slot-panel">
+        <div class="panel-head">
+          <p class="panel-kicker">Attachment Space</p>
+          <h2>Attachment Slots</h2>
+        </div>
+        <div id="mod-slot-grid" class="slot-grid"></div>
+      </section>
+    </div>
+  </div>
+
+  <script src="../../generated/weapon_data.js"></script>
+  <script src="../../generated/weapon_mod_data.js"></script>
+  <script src="src/app.js"></script>
+</body>
+</html>

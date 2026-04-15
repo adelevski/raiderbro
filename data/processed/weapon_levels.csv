@@ -1,0 +1,76 @@
+weapon,level,sell_price,durability,magazine_size,effects
+Kettle,1,840,50,20,
+Kettle,2,2000,55,20,25% Increased Bullet Velocity | 13% Reduced Reload Time | +10 Durability
+Kettle,3,3000,60,20,50% Increased Bullet Velocity | 26% Reduced Reload Time | +20 Durability
+Kettle,4,5000,65,20,75% Increased Bullet Velocity | 40% Reduced Reload Time | +30 Durability
+Rattler,1,1750,50,12,
+Rattler,2,3000,55,16,+4 Magazine Size | +10 Durability
+Rattler,3,5000,60,20,+8 Magazine Size | +20 Durability
+Rattler,4,7000,65,24,+12 Magazine Size | +30 Durability
+Arpeggio,1,5500,50,24,
+Arpeggio,2,8000,55,24,20% Increased Fire Rate | 12.5% Reduced Reload Time | +10 Durability
+Arpeggio,3,11500,60,24,40% Increased Fire Rate | 25% Reduced Reload Time | +20 Durability
+Arpeggio,4,15000,65,24,60% Increased Fire Rate | 50% Reduced Reload Time | +30 Durability
+Tempest,1,13000,,25,
+Tempest,2,17000,,25,16.6% Reduced Horizontal Recoil | 13% Reduced Reload Time | +10 Durability
+Tempest,3,22000,,25,33.3% Reduced Horizontal Recoil | 26% Reduced Reload Time | +20 Durability
+Tempest,4,27000,,25,50% Reduced Horizontal Recoil | 40% Reduced Reload Time | +30 Durability
+Bettina,1,8000,50,22,
+Bettina,2,11000,55,22,5% Increased Fire Rate | 11.1% Reduced Reload Time | +10 Durability
+Bettina,3,14000,60,22,10% Increased Fire Rate | 22.2% Reduced Reload Time | +20 Durability
+Bettina,4,18000,65,22,15% Increased Fire Rate | 33.3% Reduced Reload Time | +30 Durability
+Renegade,1,7000,50,8,
+Renegade,2,10000,55,8,16.6% Reduced Dispersion Recovery Time | 25% Increased Fire Rate | +10 Durability
+Renegade,3,13000,60,8,33.3% Reduced Dispersion Recovery Time | 50% Increased Fire Rate | +20 Durability
+Renegade,4,17000,65,8,50% Reduced Dispersion Recovery Time | 75% Increased Fire Rate | +30 Durability
+Ferro,1,475,50,1,
+Ferro,2,1000,55,1,13% Reduced Reload Time | +10 Durability
+Ferro,3,2000,60,1,26% Reduced Reload Time | +20 Durability
+Ferro,4,2900,65,1,39% Reduced Reload Time | +30 Durability
+Aphelion,1,27500,,10,
+Stitcher,1,800,,20,
+Stitcher,2,2000,,20,16.6% Reduced Horizontal Recoil | 13% Reduced Reload Time | +10 Durability
+Stitcher,3,3000,,20,33.3% Reduced Horizontal Recoil | 26% Reduced Reload Time | +20 Durability
+Stitcher,4,5000,,20,50% Reduced Horizontal Recoil | 40% Reduced Reload Time | +30 Durability
+Bobcat,1,13000,50,20,
+Bobcat,2,17000,55,20,15% Reduced Max Shot Dispersion | 15% Reduced Horizontal Recoil | 13% Reduced Reload Time | +10 Durability
+Bobcat,3,22000,60,20,30% Reduced Max Shot Dispersion | 30% Reduced Horizontal Recoil | 26% Reduced Reload Time | +20 Durability
+Bobcat,4,27000,65,20,50% Reduced Max Shot Dispersion | 45% Reduced Horizontal Recoil | 40% Reduced Reload Time | +30 Durability
+Il Toro,1,5000,50,5,
+Il Toro,2,7000,55,6,17.5% Increased Fire Rate | +1 Magazine Size | +10 Durability
+Il Toro,3,10000,60,7,35% Increased Fire Rate | +2 Magazine Size | +20 Durability
+Il Toro,4,13000,65,8,50% Increased Fire Rate | +3 Magazine Size | +30 Durability
+Vulcano,1,10000,,6,
+Vulcano,2,13000,,6,10% Increased Fire Rate | 13% Reduced Reload Time | +10 Durability
+Vulcano,3,17000,,6,20% Increased Fire Rate | 26% Reduced Reload Time | +20 Durability
+Vulcano,4,22000,,6,30% Increased Fire Rate | 40% Reduced Reload Time | +30 Durability
+Hairpin,1,450,50,8,
+Hairpin,2,1000,55,8,10% Increased Fire Rate | 13% Reduced Reload Time | +10 Durability
+Hairpin,3,2000,60,8,20% Increased Fire Rate | 26% Reduced Reload Time | +20 Durability
+Hairpin,4,2900,65,8,30% Increased Fire Rate | 40% Reduced Reload Time | +30 Durability
+Burletta,1,2900,50,12,
+Burletta,2,5000,55,12,16.6% Reduced Reload Time | +10 Durability
+Burletta,3,7000,60,12,33.3% Reduced Reload Time | +20 Durability
+Burletta,4,10000,65,12,50% Reduced Reload Time | +30 Durability
+Venator,1,7000,50,10,
+Venator,2,10000,55,10,13% Increased Fire Rate | 16% Reduced Reload Time | +10 Durability
+Venator,3,13000,60,10,26% Increased Fire Rate | 33% Reduced Reload Time | +20 Durability
+Venator,4,17000,65,10,40% Increased Fire Rate | 50% Reduced Reload Time | +30 Durability
+Anvil,1,5000,50,6,
+Anvil,2,7000,55,6,6.5% Reduced Dispersion Recovery Time | 25% Increased Fire Rate | +10 Durability
+Anvil,3,10000,60,6,12.5% Reduced Dispersion Recovery Time | 50% Increased Fire Rate | +20 Durability
+Anvil,4,13000,65,6,18.75% Reduced Dispersion Recovery Time | 75% Increased Fire Rate | +30 Durability
+Torrente,1,7000,50,60,
+Torrente,2,10000,55,70,+10 Magazine Size | 15% Reduced Reload Time | +10 Durability
+Torrente,3,13000,60,80,+20 Magazine Size | 30% Reduced Reload Time | +20 Durability
+Torrente,4,17000,65,90,+30 Magazine Size | 45% Reduced Reload Time | +30 Durability
+Osprey,1,7000,50,8,
+Osprey,2,10000,55,8,20% Reduced Bolt Action Time | 12.5% Reduced Reload Time | +10 Durability
+Osprey,3,13000,60,8,40% Reduced Bolt Action Time | 25% Reduced Reload Time | +20 Durability
+Osprey,4,17000,65,8,60% Reduced Bolt Action Time | 37.5% Reduced Reload Time | +30 Durability
+Jupiter,1,27500,,5,
+Hullcracker,1,10000,50,5,
+Hullcracker,2,13000,55,5,18% Increased Fire Rate | +10 Durability
+Hullcracker,3,17000,60,5,35% Increased Fire Rate | +20 Durability
+Hullcracker,4,22000,65,5,53% Increased Fire Rate | +30 Durability
+Equalizer,1,27500,,50,

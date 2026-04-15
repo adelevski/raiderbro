@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Convert pasted Arc Raiders wiki HTML tables into requirement-tracker datasets."""
+"""Convert pasted Arc Raiders wiki HTML tables into Raiderbro app datasets."""
 
 from __future__ import annotations
 
@@ -17,8 +17,8 @@ ROOT = Path(__file__).resolve().parents[1]
 RAW_DATA = ROOT / "data" / "raw"
 PROCESSED_DATA = ROOT / "data" / "processed"
 MANUAL_DATA = ROOT / "data" / "manual"
-REQUIREMENT_TRACKER_DIR = ROOT / "tools" / "requirement-tracker"
-REQUIREMENT_TRACKER_GENERATED_DIR = REQUIREMENT_TRACKER_DIR / "generated"
+APP_DIR = ROOT / "app"
+APP_GENERATED_DIR = APP_DIR / "generated"
 
 ITEMS_TXT = RAW_DATA / "items.txt"
 WORKSHOPS_TXT = RAW_DATA / "workshops.txt"
@@ -26,15 +26,19 @@ WEAPONS_TXT = RAW_DATA / "weapons.txt"
 ITEMS_CSV = PROCESSED_DATA / "items.csv"
 WORKSHOP_REQUIREMENTS_CSV = PROCESSED_DATA / "workshop_requirements.csv"
 WORKSHOP_CRAFTS_CSV = PROCESSED_DATA / "workshop_crafts.csv"
-REQUIREMENT_TRACKER_DATA_JS = REQUIREMENT_TRACKER_GENERATED_DIR / "requirement_tracker_data.js"
-ITEM_DATA_JS = REQUIREMENT_TRACKER_GENERATED_DIR / "item_data.js"
-WEAPON_DATA_JS = REQUIREMENT_TRACKER_GENERATED_DIR / "weapon_data.js"
+REQUIREMENT_TRACKER_DATA_JS = APP_GENERATED_DIR / "requirement_tracker_data.js"
+ITEM_DATA_JS = APP_GENERATED_DIR / "item_data.js"
+WEAPON_DATA_JS = APP_GENERATED_DIR / "weapon_data.js"
+WEAPON_MOD_DATA_JS = APP_GENERATED_DIR / "weapon_mod_data.js"
 WEAPONS_CSV = PROCESSED_DATA / "weapons.csv"
+WEAPON_LEVELS_CSV = PROCESSED_DATA / "weapon_levels.csv"
+WEAPON_MODS_CSV = PROCESSED_DATA / "weapon_mods.csv"
 WIKI_BASE_URL = "https://arcraiders.wiki"
 FOUND_IN_JSON = MANUAL_DATA / "found_in.json"
 UI_ICONS_JSON = MANUAL_DATA / "ui_icons.json"
 MANUAL_CARDS_DIR = MANUAL_DATA / "cards"
 WEAPON_METADATA_JSON = MANUAL_DATA / "weapons.json"
+WEAPON_OPTIMIZER_JSON = MANUAL_DATA / "weapon_optimizer.json"
 REWARDS_JSON = MANUAL_DATA / "rewards.json"
 SUPPLEMENTAL_ITEMS_JSON = MANUAL_DATA / "items.json"
 
@@ -48,6 +52,13 @@ USE_CATEGORY_LABELS = {
     "workshop": "Workshop",
     "projects": "Project",
     "quests": "Quest",
+}
+RARITY_ORDER = {
+    "Common": 0,
+    "Uncommon": 1,
+    "Rare": 2,
+    "Epic": 3,
+    "Legendary": 4,
 }
 
 
@@ -203,6 +214,15 @@ def load_weapon_metadata() -> dict[str, dict[str, str]]:
             for name, filename in raw.get("modSlotIcons", {}).items()
         },
     }
+
+
+def load_weapon_optimizer_data() -> dict[str, object]:
+    if not WEAPON_OPTIMIZER_JSON.exists():
+        raise FileNotFoundError(
+            f"Missing {WEAPON_OPTIMIZER_JSON.relative_to(ROOT)}. "
+            "Run python scripts/fetch_weapon_wiki.py first."
+        )
+    return dict(load_json(WEAPON_OPTIMIZER_JSON))
 
 
 def load_manual_rewards() -> dict[str, dict[str, object]]:
@@ -930,6 +950,8 @@ def parse_weapon_records() -> list[dict[str, str]]:
 def build_weapon_mod_slot_entries(
     raw_text: str,
     mod_slot_icons: dict[str, str],
+    optimizer_mods: dict[str, dict[str, object]] | None = None,
+    item_lookup: dict[str, dict[str, str]] | None = None,
 ) -> list[dict[str, str]]:
     entries: list[dict[str, str]] = []
     for mod_slot_name in split_pipe_list(raw_text):
@@ -939,6 +961,22 @@ def build_weapon_mod_slot_entries(
         icon_filename = mod_slot_icons.get(mod_slot_name, "")
         if icon_filename:
             entry["iconUrl"] = icon_url_from_filename(icon_filename)
+        if optimizer_mods is not None:
+            compatible_mod_names = [
+                mod_name
+                for mod_name, mod_definition in optimizer_mods.items()
+                if mod_definition.get("slot") == mod_slot_name
+            ]
+            if item_lookup is not None:
+                compatible_mod_names.sort(
+                    key=lambda mod_name: (
+                        RARITY_ORDER.get(item_lookup.get(mod_name, {}).get("rarity", ""), 99),
+                        mod_name,
+                    )
+                )
+            else:
+                compatible_mod_names.sort()
+            entry["options"] = compatible_mod_names
         entries.append(entry)
     return entries
 
@@ -947,6 +985,8 @@ def validate_weapon_metadata(
     weapon_records: list[dict[str, str]],
     weapon_metadata: dict[str, dict[str, str]],
     ui_icons: dict[str, dict[str, str]],
+    weapon_optimizer_data: dict[str, object],
+    item_records: list[dict[str, str]],
 ) -> None:
     weapon_names = {record["name"] for record in weapon_records}
     rarity_names = set(weapon_metadata["rarities"])
@@ -981,14 +1021,152 @@ def validate_weapon_metadata(
     if missing_ammo_icons:
         raise ValueError(f"Missing ammo type icons for: {missing_ammo_icons}")
 
+    optimizer_weapons = {
+        str(name): value
+        for name, value in dict(weapon_optimizer_data.get("weapons", {})).items()
+    }
+    missing_optimizer_weapons = sorted(weapon_names - set(optimizer_weapons))
+    if missing_optimizer_weapons:
+        raise ValueError(
+            f"Missing weapon optimizer source data for: {missing_optimizer_weapons}. "
+            "Run python scripts/fetch_weapon_wiki.py."
+        )
+
+    item_names = {record["item"] for record in item_records}
+    optimizer_mods = {
+        str(name): value
+        for name, value in dict(weapon_optimizer_data.get("mods", {})).items()
+    }
+    missing_mod_items = sorted(name for name in optimizer_mods if name not in item_names)
+    if missing_mod_items:
+        raise ValueError(f"Weapon mod dataset references unknown item rows: {missing_mod_items}")
+
+    optimizer_slots = {
+        str(mod_definition.get("slot", ""))
+        for mod_definition in optimizer_mods.values()
+        if mod_definition.get("slot")
+    }
+    missing_optimizer_slot_icons = sorted(
+        slot_name for slot_name in optimizer_slots if slot_name not in weapon_metadata["modSlotIcons"]
+    )
+    if missing_optimizer_slot_icons:
+        raise ValueError(f"Missing mod slot icons for optimizer slots: {missing_optimizer_slot_icons}")
+
+
+def get_series_value(series: dict[str, object], level: int, fallback: object = "") -> object:
+    if level in series:
+        return series[level]
+    if str(level) in series:
+        return series[str(level)]
+    return fallback
+
+
+def build_weapon_level_rows(
+    weapon_records: list[dict[str, str]],
+    optimizer_weapons: dict[str, dict[str, object]],
+) -> list[dict[str, str]]:
+    rows: list[dict[str, str]] = []
+    for record in weapon_records:
+        optimizer_weapon = dict(optimizer_weapons.get(record["name"], {}))
+        weapon_stats = dict(optimizer_weapon.get("stats", {}))
+        magazine_size_by_level = dict(weapon_stats.get("magazineSizeByLevel", {}))
+
+        for level_data in optimizer_weapon.get("levels", []):
+            level = int(level_data["level"])
+            rows.append(
+                {
+                    "weapon": record["name"],
+                    "level": str(level),
+                    "sell_price": str(level_data.get("sellPrice", "")),
+                    "durability": "" if level_data.get("durability") is None else str(level_data.get("durability")),
+                    "magazine_size": str(
+                        get_series_value(
+                            magazine_size_by_level,
+                            level,
+                            weapon_stats.get("magazineSize", ""),
+                        )
+                    ),
+                    "effects": " | ".join(str(effect["text"]) for effect in level_data.get("effects", [])),
+                }
+            )
+    return rows
+
+
+def build_weapon_mod_rows(
+    optimizer_mods: dict[str, dict[str, object]],
+    item_lookup: dict[str, dict[str, str]],
+) -> list[dict[str, str]]:
+    rows: list[dict[str, str]] = []
+    for mod_name in sorted(optimizer_mods):
+        mod_definition = dict(optimizer_mods[mod_name])
+        item_record = item_lookup[mod_name]
+        image_url = str(mod_definition.get("imageUrl") or absolute_wiki_url(item_record.get("image_src", "")))
+        rows.append(
+            {
+                "name": mod_name,
+                "image_url": image_url,
+                "page_url": str(mod_definition.get("pageUrl", wiki_page_url(mod_name))),
+                "rarity": item_record.get("rarity", ""),
+                "sell_price": item_record.get("sell_price", ""),
+                "slot": str(mod_definition.get("slot", "")),
+                "required_station": str(mod_definition.get("requiredStation", "")),
+                "crafting_materials": " | ".join(str(value) for value in mod_definition.get("craftingMaterials", [])),
+                "effects": " | ".join(str(effect["text"]) for effect in mod_definition.get("effects", [])),
+            }
+        )
+    return rows
+
+
+def write_weapon_mod_data(
+    optimizer_mods: dict[str, dict[str, object]],
+    item_lookup: dict[str, dict[str, str]],
+    weapon_metadata: dict[str, dict[str, str]],
+) -> None:
+    payload: dict[str, dict[str, object]] = {}
+    for mod_name in sorted(optimizer_mods):
+        mod_definition = dict(optimizer_mods[mod_name])
+        item_record = item_lookup[mod_name]
+        payload[mod_name] = {
+            "imageUrl": str(mod_definition.get("imageUrl") or absolute_wiki_url(item_record.get("image_src", ""))),
+            "pageUrl": str(mod_definition.get("pageUrl", wiki_page_url(mod_name))),
+            "slot": str(mod_definition.get("slot", "")),
+            "slotIconUrl": icon_url_from_filename(
+                weapon_metadata["modSlotIcons"].get(str(mod_definition.get("slot", "")), "")
+            ),
+            "rarity": item_record.get("rarity", ""),
+            "sellPrice": item_record.get("sell_price", ""),
+            "requiredStation": str(mod_definition.get("requiredStation", "")),
+            "craftingMaterials": [str(value) for value in mod_definition.get("craftingMaterials", [])],
+            "effects": list(mod_definition.get("effects", [])),
+        }
+
+    content = (
+        "// Generated by scripts/convert_wiki_tables.py\n"
+        f"window.WEAPON_MOD_DATA = {json.dumps(payload, indent=2)};\n"
+    )
+    write_text(WEAPON_MOD_DATA_JS, content)
+
 
 def write_weapon_data(
     records: list[dict[str, str]],
     weapon_metadata: dict[str, dict[str, str]],
     ui_icons: dict[str, dict[str, str]],
+    weapon_optimizer_data: dict[str, object],
+    item_records: list[dict[str, str]],
 ) -> None:
+    item_lookup = build_item_lookup(item_records)
+    optimizer_weapons = {
+        str(name): dict(value)
+        for name, value in dict(weapon_optimizer_data.get("weapons", {})).items()
+    }
+    optimizer_mods = {
+        str(name): dict(value)
+        for name, value in dict(weapon_optimizer_data.get("mods", {})).items()
+    }
     payload: dict[str, dict[str, object]] = {}
     for record in records:
+        optimizer_weapon = optimizer_weapons.get(record["name"], {})
+        optimizer_stats = dict(optimizer_weapon.get("stats", {}))
         payload[record["name"]] = {
             "imageUrl": record["image_url"],
             "pageUrl": record["page_url"],
@@ -1001,9 +1179,32 @@ def write_weapon_data(
             "fireRate": record["fire_rate"],
             "relativeDps": record["relative_dps"],
             "range": record["range"],
+            "description": str(optimizer_weapon.get("description", "")),
+            "sellPrice": str(
+                next(
+                    (
+                        level_data.get("sellPrice", "")
+                        for level_data in optimizer_weapon.get("levels", [])
+                        if int(level_data["level"]) == 1
+                    ),
+                    "",
+                )
+            ),
+            "magazineSize": str(optimizer_stats.get("magazineSize", "")),
+            "magazineSizeByLevel": dict(optimizer_stats.get("magazineSizeByLevel", {})),
+            "arcArmorPenetration": str(optimizer_stats.get("arcArmorPenetration", "")),
+            "headshotMultiplier": str(optimizer_stats.get("headshotMultiplier", "")),
+            "stability": str(optimizer_stats.get("stability", "")),
+            "agility": str(optimizer_stats.get("agility", "")),
+            "stealth": str(optimizer_stats.get("stealth", "")),
+            "weight": str(optimizer_stats.get("weight", "")),
+            "fireRateRpm": optimizer_stats.get("fireRateRpm"),
+            "levels": list(optimizer_weapon.get("levels", [])),
             "modSlots": build_weapon_mod_slot_entries(
                 record["mod_slots"],
                 weapon_metadata["modSlotIcons"],
+                optimizer_mods,
+                item_lookup,
             ),
         }
 
@@ -1012,11 +1213,22 @@ def write_weapon_data(
         f"window.WEAPON_DATA = {json.dumps(payload, indent=2)};\n"
     )
     write_text(WEAPON_DATA_JS, content)
+    write_weapon_mod_data(optimizer_mods, item_lookup, weapon_metadata)
 
 
-def build_weapons_csv(weapon_metadata: dict[str, dict[str, str]], ui_icons: dict[str, dict[str, str]]) -> tuple[int, list[dict[str, str]]]:
+def build_weapons_csv(
+    item_records: list[dict[str, str]],
+    weapon_metadata: dict[str, dict[str, str]],
+    ui_icons: dict[str, dict[str, str]],
+    weapon_optimizer_data: dict[str, object],
+) -> tuple[int, list[dict[str, str]]]:
     records = parse_weapon_records()
-    validate_weapon_metadata(records, weapon_metadata, ui_icons)
+    validate_weapon_metadata(records, weapon_metadata, ui_icons, weapon_optimizer_data, item_records)
+    optimizer_weapons = {
+        str(name): dict(value)
+        for name, value in dict(weapon_optimizer_data.get("weapons", {})).items()
+    }
+    item_lookup = build_item_lookup(item_records)
     write_csv(
         WEAPONS_CSV,
         [
@@ -1030,6 +1242,15 @@ def build_weapons_csv(weapon_metadata: dict[str, dict[str, str]], ui_icons: dict
             "fire_rate",
             "relative_dps",
             "range",
+            "sell_price",
+            "magazine_size",
+            "arc_armor_penetration",
+            "headshot_multiplier",
+            "stability",
+            "agility",
+            "stealth",
+            "weight",
+            "description",
             "mod_slots",
             "type",
         ],
@@ -1037,11 +1258,55 @@ def build_weapons_csv(weapon_metadata: dict[str, dict[str, str]], ui_icons: dict
             {
                 **record,
                 "rarity": weapon_metadata["rarities"][record["name"]],
+                "sell_price": str(
+                    next(
+                        (
+                            level_data.get("sellPrice", "")
+                            for level_data in optimizer_weapons.get(record["name"], {}).get("levels", [])
+                            if int(level_data["level"]) == 1
+                        ),
+                        "",
+                    )
+                ),
+                "magazine_size": str(optimizer_weapons.get(record["name"], {}).get("stats", {}).get("magazineSize", "")),
+                "arc_armor_penetration": str(optimizer_weapons.get(record["name"], {}).get("stats", {}).get("arcArmorPenetration", "")),
+                "headshot_multiplier": str(optimizer_weapons.get(record["name"], {}).get("stats", {}).get("headshotMultiplier", "")),
+                "stability": str(optimizer_weapons.get(record["name"], {}).get("stats", {}).get("stability", "")),
+                "agility": str(optimizer_weapons.get(record["name"], {}).get("stats", {}).get("agility", "")),
+                "stealth": str(optimizer_weapons.get(record["name"], {}).get("stats", {}).get("stealth", "")),
+                "weight": str(optimizer_weapons.get(record["name"], {}).get("stats", {}).get("weight", "")),
+                "description": str(optimizer_weapons.get(record["name"], {}).get("description", "")),
             }
             for record in records
         ],
     )
-    write_weapon_data(records, weapon_metadata, ui_icons)
+    write_csv(
+        WEAPON_LEVELS_CSV,
+        ["weapon", "level", "sell_price", "durability", "magazine_size", "effects"],
+        build_weapon_level_rows(records, optimizer_weapons),
+    )
+    write_csv(
+        WEAPON_MODS_CSV,
+        [
+            "name",
+            "image_url",
+            "page_url",
+            "rarity",
+            "sell_price",
+            "slot",
+            "required_station",
+            "crafting_materials",
+            "effects",
+        ],
+        build_weapon_mod_rows(
+            {
+                str(name): dict(value)
+                for name, value in dict(weapon_optimizer_data.get("mods", {})).items()
+            },
+            item_lookup,
+        ),
+    )
+    write_weapon_data(records, weapon_metadata, ui_icons, weapon_optimizer_data, item_records)
     return len(records), records
 
 
@@ -1063,10 +1328,11 @@ def load_manual_tracker_config() -> tuple[
 def validate_source_data() -> dict[str, int]:
     found_in_by_item, ui_icons, manual_cards, manual_rewards, supplemental_items = load_manual_tracker_config()
     weapon_metadata = load_weapon_metadata()
+    weapon_optimizer_data = load_weapon_optimizer_data()
     item_records = parse_item_records(found_in_by_item, supplemental_items)
     requirement_records, craft_records = parse_workshop_records()
     weapon_records = parse_weapon_records()
-    validate_weapon_metadata(weapon_records, weapon_metadata, ui_icons)
+    validate_weapon_metadata(weapon_records, weapon_metadata, ui_icons, weapon_optimizer_data, item_records)
     payload = build_requirement_tracker_payload(
         requirement_records,
         craft_records,
@@ -1082,6 +1348,7 @@ def validate_source_data() -> dict[str, int]:
         "items": len(item_records),
         "cards": len(payload["cards"]),
         "weapons": len(weapon_records),
+        "weaponMods": len(dict(weapon_optimizer_data.get("mods", {}))),
         "workshopLevels": len({(record["workshop"], record["level"]) for record in requirement_records}),
     }
 
@@ -1089,9 +1356,10 @@ def validate_source_data() -> dict[str, int]:
 def main() -> None:
     found_in_by_item, ui_icons, manual_cards, manual_rewards, supplemental_items = load_manual_tracker_config()
     weapon_metadata = load_weapon_metadata()
+    weapon_optimizer_data = load_weapon_optimizer_data()
     items_count, item_records = build_items_csv(found_in_by_item, ui_icons, supplemental_items)
     workshop_levels_count, requirement_records, craft_records = build_workshop_datasets()
-    weapons_count, weapon_records = build_weapons_csv(weapon_metadata, ui_icons)
+    weapons_count, weapon_records = build_weapons_csv(item_records, weapon_metadata, ui_icons, weapon_optimizer_data)
     write_requirement_tracker_data(
         requirement_records,
         craft_records,
@@ -1111,7 +1379,10 @@ def main() -> None:
     print(f"Wrote normalized workshop crafts to {WORKSHOP_CRAFTS_CSV.relative_to(ROOT)}")
     print(f"Wrote requirement tracker data to {REQUIREMENT_TRACKER_DATA_JS.relative_to(ROOT)}")
     print(f"Wrote weapon data to {WEAPON_DATA_JS.relative_to(ROOT)}")
+    print(f"Wrote weapon mod data to {WEAPON_MOD_DATA_JS.relative_to(ROOT)}")
     print(f"Wrote {weapons_count} rows to {WEAPONS_CSV.name}")
+    print(f"Wrote weapon levels to {WEAPON_LEVELS_CSV.relative_to(ROOT)}")
+    print(f"Wrote weapon mods to {WEAPON_MODS_CSV.relative_to(ROOT)}")
 
 
 if __name__ == "__main__":

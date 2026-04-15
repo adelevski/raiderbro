@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Raiderbro</title>
+  <link rel="stylesheet" href="src/app-shell.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="shell-sidebar">
+      <div class="shell-brand">
+        <div class="arc-logo" aria-hidden="true">
+          <img
+            class="arc-logo-stripes"
+            src="https://storage.googleapis.com/web-arc-raiders-cms-assets/temp/stripes/stripes.png"
+            alt=""
+          >
+        </div>
+        <div class="brand-copy">
+          <h1 class="brand-title">raiderbro</h1>
+        </div>
+      </div>
+
+      <nav id="tool-nav" class="tool-nav" aria-label="Raiderbro tools"></nav>
+    </aside>
+
+    <main class="shell-workspace">
+      <section class="workspace-stage">
+        <iframe
+          id="tool-frame"
+          class="tool-frame"
+          title="Raiderbro tool"
+          loading="eager"
+          referrerpolicy="no-referrer"
+        ></iframe>
+      </section>
+    </main>
+  </div>
+
+  <script src="src/app-shell.js"></script>
+</body>
+</html>

@@ -10,16 +10,17 @@
   <div class="shell">
     <header class="hero">
       <div class="hero-brand">
-        <div class="arc-logo" aria-label="ARC Raiders">
-          <img
-            class="arc-logo-stripes"
-            src="https://storage.googleapis.com/web-arc-raiders-cms-assets/temp/stripes/stripes.png"
-            alt=""
-          >
-        </div>
-        <div class="hero-copy">
-          <h1>Requirement Tracker</h1>
-        </div>
+        <span class="tool-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24">
+            <path d="M9 6h11"></path>
+            <path d="M9 12h11"></path>
+            <path d="M9 18h11"></path>
+            <path d="M4 6.5l1.8 1.8L8.8 5"></path>
+            <path d="M4 12.5l1.8 1.8 3-3.3"></path>
+            <path d="M4 18.5l1.8 1.8 3-3.3"></path>
+          </svg>
+        </span>
+        <h1>Requirement Tracker</h1>
       </div>
       <div class="hero-actions">
         <button id="include-future-needs" class="future-toggle-button" type="button" aria-pressed="false">Include Future</button>
@@ -74,9 +75,9 @@
     </footer>
   </div>
 
-  <script src="generated/item_data.js"></script>
-  <script src="generated/weapon_data.js"></script>
-  <script src="generated/requirement_tracker_data.js"></script>
+  <script src="../../generated/item_data.js"></script>
+  <script src="../../generated/weapon_data.js"></script>
+  <script src="../../generated/requirement_tracker_data.js"></script>
   <script src="src/tracker-state.js"></script>
   <script src="src/tracker-tooltip.js"></script>
   <script src="src/app.js"></script>

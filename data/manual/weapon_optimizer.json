@@ -1,0 +1,3220 @@
+{
+  "generatedAt": "2026-04-15T15:09:56.119372Z",
+  "weapons": {
+    "Kettle": {
+      "description": "Quick and accurate, but has low bullet velocity and takes a long time reload.",
+      "compatibleModTokens": [
+        "Muzzle",
+        "Underbarrel",
+        "Light-Mag",
+        "Stock"
+      ],
+      "stats": {
+        "magazineSize": 20,
+        "magazineSizeByLevel": {
+          "1": 20
+        },
+        "arcArmorPenetration": "Very Weak",
+        "fireRateRpm": 450.0,
+        "headshotMultiplier": "2.5x",
+        "stability": "69.8",
+        "agility": "58.5",
+        "stealth": "26",
+        "weight": "7.0"
+      },
+      "levels": [
+        {
+          "level": 1,
+          "sellPrice": 840,
+          "durability": 50,
+          "effects": [],
+          "perkTexts": []
+        },
+        {
+          "level": 2,
+          "sellPrice": 2000,
+          "durability": 55,
+          "effects": [
+            {
+              "text": "25% Increased Bullet Velocity",
+              "kind": "percent",
+              "stat": "Bullet Velocity",
+              "statKey": "bulletVelocity",
+              "delta": 25.0
+            },
+            {
+              "text": "13% Reduced Reload Time",
+              "kind": "percent",
+              "stat": "Reload Time",
+              "statKey": "reloadTime",
+              "delta": -13.0
+            },
+            {
+              "text": "+10 Durability",
+              "kind": "flat",
+              "stat": "Durability",
+              "statKey": "durability",
+              "delta": 10
+            }
+          ],
+          "perkTexts": [
+            "25% Increased Bullet Velocity",
+            "13% Reduced Reload Time",
+            "+10 Durability"
+          ]
+        },
+        {
+          "level": 3,
+          "sellPrice": 3000,
+          "durability": 60,
+          "effects": [
+            {
+              "text": "50% Increased Bullet Velocity",
+              "kind": "percent",
+              "stat": "Bullet Velocity",
+              "statKey": "bulletVelocity",
+              "delta": 50.0
+            },
+            {
+              "text": "26% Reduced Reload Time",
+              "kind": "percent",
+              "stat": "Reload Time",
+              "statKey": "reloadTime",
+              "delta": -26.0
+            },
+            {
+              "text": "+20 Durability",
+              "kind": "flat",
+              "stat": "Durability",
+              "statKey": "durability",
+              "delta": 20
+            }
+          ],
+          "perkTexts": [
+            "50% Increased Bullet Velocity",
+            "26% Reduced Reload Time",
+            "+20 Durability"
+          ]
+        },
+        {
+          "level": 4,
+          "sellPrice": 5000,
+          "durability": 65,
+          "effects": [
+            {
+              "text": "75% Increased Bullet Velocity",
+              "kind": "percent",
+              "stat": "Bullet Velocity",
+              "statKey": "bulletVelocity",
+              "delta": 75.0
+            },
+            {
+              "text": "40% Reduced Reload Time",
+              "kind": "percent",
+              "stat": "Reload Time",
+              "statKey": "reloadTime",
+              "delta": -40.0
+            },
+            {
+              "text": "+30 Durability",
+              "kind": "flat",
+              "stat": "Durability",
+              "statKey": "durability",
+              "delta": 30
+            }
+          ],
+          "perkTexts": [
+            "75% Increased Bullet Velocity",
+            "40% Reduced Reload Time",
+            "+30 Durability"
+          ]
+        }
+      ]
+    },
+    "Rattler": {
+      "description": "A cheap offensive option, but has to be reloaded 2 bullets at a time.",
+      "compatibleModTokens": [
+        "Muzzle",
+        "Underbarrel",
+        "Stock"
+      ],
+      "stats": {
+        "magazineSize": 12,
+        "magazineSizeByLevel": {
+          "1": 12,
+          "2": 16,
+          "3": 20,
+          "4": 24
+        },
+        "arcArmorPenetration": "Moderate",
+        "fireRateRpm": 500.0,
+        "headshotMultiplier": "2.0x",
+        "stability": "72.2",
+        "agility": "54.8",
+        "stealth": "14",
+        "weight": "6.0"
+      },
+      "levels": [
+        {
+          "level": 1,
+          "sellPrice": 1750,
+          "durability": 50,
+          "effects": [],
+          "perkTexts": []
+        },
+        {
+          "level": 2,
+          "sellPrice": 3000,
+          "durability": 55,
+          "effects": [
+            {
+              "text": "+4 Magazine Size",
+              "kind": "flat",
+              "stat": "Magazine Size",
+              "statKey": "magazineSize",
+              "delta": 4
+            },
+            {
+              "text": "+10 Durability",
+              "kind": "flat",
+              "stat": "Durability",
+              "statKey": "durability",
+              "delta": 10
+            }
+          ],
+          "perkTexts": [
+            "+4 Magazine Size",
+            "+10 Durability"
+          ]
+        },
+        {
+          "level": 3,
+          "sellPrice": 5000,
+          "durability": 60,
+          "effects": [
+            {
+              "text": "+8 Magazine Size",
+              "kind": "flat",
+              "stat": "Magazine Size",
+              "statKey": "magazineSize",
+              "delta": 8
+            },
+            {
+              "text": "+20 Durability",
+              "kind": "flat",
+              "stat": "Durability",
+              "statKey": "durability",
+              "delta": 20
+            }
+          ],
+          "perkTexts": [
+            "+8 Magazine Size",
+            "+20 Durability"
+          ]
+        },
+        {
+          "level": 4,
+          "sellPrice": 7000,
+          "durability": 65,
+          "effects": [
+            {
+              "text": "+12 Magazine Size",
+              "kind": "flat",
+              "stat": "Magazine Size",
+              "statKey": "magazineSize",
+              "delta": 12
+            },
+            {
+              "text": "+30 Durability",
+              "kind": "flat",
+              "stat": "Durability",
+              "statKey": "durability",
+              "delta": 30
+            }
+          ],
+          "perkTexts": [
+            "+12 Magazine Size",
+            "+30 Durability"
+          ]
+        }
+      ]
+    },
+    "Arpeggio": {
+      "description": "Has decent damage output and accuracy.",
+      "compatibleModTokens": [
+        "Muzzle",
+        "Underbarrel",
+        "Medium-Mag",
+        "Stock"
+      ],
+      "stats": {
+        "magazineSize": 24,
+        "magazineSizeByLevel": {
+          "1": 24
+        },
+        "arcArmorPenetration": "Moderate",
+        "fireRateRpm": null,
+        "headshotMultiplier": "2.0x",
+        "stability": "84",
+        "agility": "57.3",
+        "stealth": "14",
+        "weight": "7.0"
+      },
+      "levels": [
+        {
+          "level": 1,
+          "sellPrice": 5500,
+          "durability": 50,
+          "effects": [],
+          "perkTexts": []
+        },
+        {
+          "level": 2,
+          "sellPrice": 8000,
+          "durability": 55,
+          "effects": [
+            {
+              "text": "20% Increased Fire Rate",
+              "kind": "percent",
+              "stat": "Fire Rate",
+              "statKey": "fireRate",
+              "delta": 20.0
+            },
+            {
+              "text": "12.5% Reduced Reload Time",
+              "kind": "percent",
+              "stat": "Reload Time",
+              "statKey": "reloadTime",
+              "delta": -12.5
+            },
+            {
+              "text": "+10 Durability",
+              "kind": "flat",
+              "stat": "Durability",
+              "statKey": "durability",
+              "delta": 10
+            }
+          ],
+          "perkTexts": [
+            "20% Increased Fire Rate",
+            "12.5% Reduced Reload Time",
+            "+10 Durability"
+          ]
+        },
+        {
+          "level": 3,
+          "sellPrice": 11500,
+          "durability": 60,
+          "effects": [
+            {
+              "text": "40% Increased Fire Rate",
+              "kind": "percent",
+              "stat": "Fire Rate",
+              "statKey": "fireRate",
+              "delta": 40.0
+            },
+            {
+              "text": "25% Reduced Reload Time",
+              "kind": "percent",
+              "stat": "Reload Time",
+              "statKey": "reloadTime",
+              "delta": -25.0
+            },
+            {
+              "text": "+20 Durability",
+              "kind": "flat",
+              "stat": "Durability",
+              "statKey": "durability",
+              "delta": 20
+            }
+          ],
+          "perkTexts": [
+            "40% Increased Fire Rate",
+            "25% Reduced Reload Time",
+            "+20 Durability"
+          ]
+        },
+        {
+          "level": 4,
+          "sellPrice": 15000,
+          "durability": 65,
+          "effects": [
+            {
+              "text": "60% Increased Fire Rate",
+              "kind": "percent",
+              "stat": "Fire Rate",
+              "statKey": "fireRate",
+              "delta": 60.0
+            },
+            {
+              "text": "50% Reduced Reload Time",
+              "kind": "percent",
+              "stat": "Reload Time",
+              "statKey": "reloadTime",
+              "delta": -50.0
+            },
+            {
+              "text": "+30 Durability",
+              "kind": "flat",
+              "stat": "Durability",
+              "statKey": "durability",
+              "delta": 30
+            }
+          ],
+          "perkTexts": [
+            "60% Increased Fire Rate",
+            "50% Reduced Reload Time",
+            "+30 Durability"
+          ]
+        }
+      ]
+    },
+    "Tempest": {
+      "description": "Has moderate fire rate and accuracy.",
+      "compatibleModTokens": [
+        "Muzzle",
+        "Underbarrel",
+        "Medium-Mag"
+      ],
+      "stats": {
+        "magazineSize": 25,
+        "magazineSizeByLevel": {
+          "1": 25
+        },
+        "arcArmorPenetration": "Moderate",
+        "fireRateRpm": null,
+        "headshotMultiplier": "1.5x",
+        "stability": "78.9",
+        "agility": "46",
+        "stealth": "14",
+        "weight": "11.0"
+      },
+      "levels": [
+        {
+          "level": 1,
+          "sellPrice": 13000,
+          "durability": null,
+          "effects": [],
+          "perkTexts": []
+        },
+        {
+          "level": 2,
+          "sellPrice": 17000,
+          "durability": null,
+          "effects": [
+            {
+              "text": "16.6% Reduced Horizontal Recoil",
+              "kind": "percent",
+              "stat": "Horizontal Recoil",
+              "statKey": "horizontalRecoil",
+              "delta": -16.6
+            },
+            {
+              "text": "13% Reduced Reload Time",
+              "kind": "percent",
+              "stat": "Reload Time",
+              "statKey": "reloadTime",
+              "delta": -13.0
+            },
+            {
+              "text": "+10 Durability",
+              "kind": "flat",
+              "stat": "Durability",
+              "statKey": "durability",
+              "delta": 10
+            }
+          ],
+          "perkTexts": [
+            "16.6% Reduced Horizontal Recoil",
+            "13% Reduced Reload Time",
+            "+10 Durability"
+          ]
+        },
+        {
+          "level": 3,
+          "sellPrice": 22000,
+          "durability": null,
+          "effects": [
+            {
+              "text": "33.3% Reduced Horizontal Recoil",
+              "kind": "percent",
+              "stat": "Horizontal Recoil",
+              "statKey": "horizontalRecoil",
+              "delta": -33.3
+            },
+            {
+              "text": "26% Reduced Reload Time",
+              "kind": "percent",
+              "stat": "Reload Time",
+              "statKey": "reloadTime",
+              "delta": -26.0
+            },
+            {
+              "text": "+20 Durability",
+              "kind": "flat",
+              "stat": "Durability",
+              "statKey": "durability",
+              "delta": 20
+            }
+          ],
+          "perkTexts": [
+            "33.3% Reduced Horizontal Recoil",
+            "26% Reduced Reload Time",
+            "+20 Durability"
+          ]
+        },
+        {
+          "level": 4,
+          "sellPrice": 27000,
+          "durability": null,
+          "effects": [
+            {
+              "text": "50% Reduced Horizontal Recoil",
+              "kind": "percent",
+              "stat": "Horizontal Recoil",
+              "statKey": "horizontalRecoil",
+              "delta": -50.0
+            },
+            {
+              "text": "40% Reduced Reload Time",
+              "kind": "percent",
+              "stat": "Reload Time",
+              "statKey": "reloadTime",
+              "delta": -40.0
+            },
+            {
+              "text": "+30 Durability",
+              "kind": "flat",
+              "stat": "Durability",
+              "statKey": "durability",
+              "delta": 30
+            }
+          ],
+          "perkTexts": [
+            "50% Reduced Horizontal Recoil",
+            "40% Reduced Reload Time",
+            "+30 Durability"
+          ]
+        }
+      ]
+    },
+    "Bettina": {
+      "description": "Has slow fire rate and high damage output.",
+      "compatibleModTokens": [
+        "Muzzle",
+        "Underbarrel",
+        "Stock"
+      ],
+      "stats": {
+        "magazineSize": 22,
+        "magazineSizeByLevel": {
+          "1": 22
+        },
+        "arcArmorPenetration": "Strong",
+        "fireRateRpm": null,
+        "headshotMultiplier": "1.5x",
+        "stability": "76.4",
+        "agility": "48.2",
+        "stealth": "14",
+        "weight": "11.0"
+      },
+      "levels": [
+        {
+          "level": 1,
+          "sellPrice": 8000,
+          "durability": 50,
+          "effects": [],
+          "perkTexts": []
+        },
+        {
+          "level": 2,
+          "sellPrice": 11000,
+          "durability": 55,
+          "effects": [
+            {
+              "text": "5% Increased Fire Rate",
+              "kind": "percent",
+              "stat": "Fire Rate",
+              "statKey": "fireRate",
+              "delta": 5.0
+            },
+            {
+              "text": "11.1% Reduced Reload Time",
+              "kind": "percent",
+              "stat": "Reload Time",
+              "statKey": "reloadTime",
+              "delta": -11.1
+            },
+            {
+              "text": "+10 Durability",
+              "kind": "flat",
+              "stat": "Durability",
+              "statKey": "durability",
+              "delta": 10
+            }
+          ],
+          "perkTexts": [
+            "5% Increased Fire Rate",
+            "11.1% Reduced Reload Time",
+            "+10 Durability"
+          ]
+        },
+        {
+          "level": 3,
+          "sellPrice": 14000,
+          "durability": 60,
+          "effects": [
+            {
+              "text": "10% Increased Fire Rate",
+              "kind": "percent",
+              "stat": "Fire Rate",
+              "statKey": "fireRate",
+              "delta": 10.0
+            },
+            {
+              "text": "22.2% Reduced Reload Time",
+              "kind": "percent",
+              "stat": "Reload Time",
+              "statKey": "reloadTime",
+              "delta": -22.2
+            },
+            {
+              "text": "+20 Durability",
+              "kind": "flat",
+              "stat": "Durability",
+              "statKey": "durability",
+              "delta": 20
+            }
+          ],
+          "perkTexts": [
+            "10% Increased Fire Rate",
+            "22.2% Reduced Reload Time",
+            "+20 Durability"
+          ]
+        },
+        {
+          "level": 4,
+          "sellPrice": 18000,
+          "durability": 65,
+          "effects": [
+            {
+              "text": "15% Increased Fire Rate",
+              "kind": "percent",
+              "stat": "Fire Rate",
+              "statKey": "fireRate",
+              "delta": 15.0
+            },
+            {
+              "text": "33.3% Reduced Reload Time",
+              "kind": "percent",
+              "stat": "Reload Time",
+              "statKey": "reloadTime",
+              "delta": -33.3
+            },
+            {
+              "text": "+30 Durability",
+              "kind": "flat",
+              "stat": "Durability",
+              "statKey": "durability",
+              "delta": 30
+            }
+          ],
+          "perkTexts": [
+            "15% Increased Fire Rate",
+            "33.3% Reduced Reload Time",
+            "+30 Durability"
+          ]
+        }
+      ]
+    },
+    "Renegade": {
+      "description": "Has high damage output, accuracy, and headshot damage.",
+      "compatibleModTokens": [
+        "Muzzle",
+        "Medium-Mag",
+        "Stock"
+      ],
+      "stats": {
+        "magazineSize": 8,
+        "magazineSizeByLevel": {
+          "1": 8
+        },
+        "arcArmorPenetration": "Moderate",
+        "fireRateRpm": null,
+        "headshotMultiplier": "2.25x",
+        "stability": "85.7",
+        "agility": "55.8",
+        "stealth": "16",
+        "weight": "10.0"
+      },
+      "levels": [
+        {
+          "level": 1,
+          "sellPrice": 7000,
+          "durability": 50,
+          "effects": [],
+          "perkTexts": []
+        },
+        {
+          "level": 2,
+          "sellPrice": 10000,
+          "durability": 55,
+          "effects": [
+            {
+              "text": "16.6% Reduced Dispersion Recovery Time",
+              "kind": "percent",
+              "stat": "Dispersion Recovery Time",
+              "statKey": "dispersionRecoveryTime",
+              "delta": -16.6
+            },
+            {
+              "text": "25% Increased Fire Rate",
+              "kind": "percent",
+              "stat": "Fire Rate",
+              "statKey": "fireRate",
+              "delta": 25.0
+            },
+            {
+              "text": "+10 Durability",
+              "kind": "flat",
+              "stat": "Durability",
+              "statKey": "durability",
+              "delta": 10
+            }
+          ],
+          "perkTexts": [
+            "16.6% Reduced Dispersion Recovery Time",
+            "25% Increased Fire Rate",
+            "+10 Durability"
+          ]
+        },
+        {
+          "level": 3,
+          "sellPrice": 13000,
+          "durability": 60,
+          "effects": [
+            {
+              "text": "33.3% Reduced Dispersion Recovery Time",
+              "kind": "percent",
+              "stat": "Dispersion Recovery Time",
+              "statKey": "dispersionRecoveryTime",
+              "delta": -33.3
+            },
+            {
+              "text": "50% Increased Fire Rate",
+              "kind": "percent",
+              "stat": "Fire Rate",
+              "statKey": "fireRate",
+              "delta": 50.0
+            },
+            {
+              "text": "+20 Durability",
+              "kind": "flat",
+              "stat": "Durability",
+              "statKey": "durability",
+              "delta": 20
+            }
+          ],
+          "perkTexts": [
+            "33.3% Reduced Dispersion Recovery Time",
+            "50% Increased Fire Rate",
+            "+20 Durability"
+          ]
+        },
+        {
+          "level": 4,
+          "sellPrice": 17000,
+          "durability": 65,
+          "effects": [
+            {
+              "text": "50% Reduced Dispersion Recovery Time",
+              "kind": "percent",
+              "stat": "Dispersion Recovery Time",
+              "statKey": "dispersionRecoveryTime",
+              "delta": -50.0
+            },
+            {
+              "text": "75% Increased Fire Rate",
+              "kind": "percent",
+              "stat": "Fire Rate",
+              "statKey": "fireRate",
+              "delta": 75.0
+            },
+            {
+              "text": "+30 Durability",
+              "kind": "flat",
+              "stat": "Durability",
+              "statKey": "durability",
+              "delta": 30
+            }
+          ],
+          "perkTexts": [
+            "50% Reduced Dispersion Recovery Time",
+            "75% Increased Fire Rate",
+            "+30 Durability"
+          ]
+        }
+      ]
+    },
+    "Ferro": {
+      "description": "Packs a punch, but must be reloaded between every shot.",
+      "compatibleModTokens": [
+        "Muzzle",
+        "Underbarrel",
+        "Stock"
+      ],
+      "stats": {
+        "magazineSize": 1,
+        "magazineSizeByLevel": {
+          "1": 1
+        },
+        "arcArmorPenetration": "Strong",
+        "fireRateRpm": null,
+        "headshotMultiplier": "2.5x",
+        "stability": "78.1",
+        "agility": "32.1",
+        "stealth": "8",
+        "weight": "8.0"
+      },
+      "levels": [
+        {
+          "level": 1,
+          "sellPrice": 475,
+          "durability": 50,
+          "effects": [],
+          "perkTexts": []
+        },
+        {
+          "level": 2,
+          "sellPrice": 1000,
+          "durability": 55,
+          "effects": [
+            {
+              "text": "13% Reduced Reload Time",
+              "kind": "percent",
+              "stat": "Reload Time",
+              "statKey": "reloadTime",
+              "delta": -13.0
+            },
+            {
+              "text": "+10 Durability",
+              "kind": "flat",
+              "stat": "Durability",
+              "statKey": "durability",
+              "delta": 10
+            }
+          ],
+          "perkTexts": [
+            "13% Reduced Reload Time",
+            "+10 Durability"
+          ]
+        },
+        {
+          "level": 3,
+          "sellPrice": 2000,
+          "durability": 60,
+          "effects": [
+            {
+              "text": "26% Reduced Reload Time",
+              "kind": "percent",
+              "stat": "Reload Time",
+              "statKey": "reloadTime",
+              "delta": -26.0
+            },
+            {
+              "text": "+20 Durability",
+              "kind": "flat",
+              "stat": "Durability",
+              "statKey": "durability",
+              "delta": 20
+            }
+          ],
+          "perkTexts": [
+            "26% Reduced Reload Time",
+            "+20 Durability"
+          ]
+        },
+        {
+          "level": 4,
+          "sellPrice": 2900,
+          "durability": 65,
+          "effects": [
+            {
+              "text": "39% Reduced Reload Time",
+              "kind": "percent",
+              "stat": "Reload Time",
+              "statKey": "reloadTime",
+              "delta": -39.0
+            },
+            {
+              "text": "+30 Durability",
+              "kind": "flat",
+              "stat": "Durability",
+              "statKey": "durability",
+              "delta": 30
+            }
+          ],
+          "perkTexts": [
+            "39% Reduced Reload Time",
+            "+30 Durability"
+          ]
+        }
+      ]
+    },
+    "Aphelion": {
+      "description": "Fires high velocity energy rounds.",
+      "compatibleModTokens": [
+        "Underbarrel",
+        "Stock"
+      ],
+      "stats": {
+        "magazineSize": 10,
+        "magazineSizeByLevel": {
+          "1": 10
+        },
+        "arcArmorPenetration": "Strong",
+        "fireRateRpm": null,
+        "headshotMultiplier": "2.0x",
+        "stability": "88",
+        "agility": "39",
+        "stealth": "16",
+        "weight": "10"
+      },
+      "levels": [
+        {
+          "level": 1,
+          "sellPrice": 27500,
+          "durability": null,
+          "effects": [],
+          "perkTexts": []
+        }
+      ]
+    },
+    "Stitcher": {
+      "description": "Deals good damage, but has quite a low fire-rate and can be hard to control.",
+      "compatibleModTokens": [
+        "Muzzle",
+        "Underbarrel",
+        "Light-Mag",
+        "Stock"
+      ],
+      "stats": {
+        "magazineSize": 20,
+        "magazineSizeByLevel": {
+          "1": 20
+        },
+        "arcArmorPenetration": "Very Weak",
+        "fireRateRpm": 680.0,
+        "headshotMultiplier": "1.75x",
+        "stability": "45.3",
+        "agility": "73.8",
+        "stealth": "19",
+        "weight": "5.0"
+      },
+      "levels": [
+        {
+          "level": 1,
+          "sellPrice": 800,
+          "durability": null,
+          "effects": [],
+          "perkTexts": []
+        },
+        {
+          "level": 2,
+          "sellPrice": 2000,
+          "durability": null,
+          "effects": [
+            {
+              "text": "16.6% Reduced Horizontal Recoil",
+              "kind": "percent",
+              "stat": "Horizontal Recoil",
+              "statKey": "horizontalRecoil",
+              "delta": -16.6
+            },
+            {
+              "text": "13% Reduced Reload Time",
+              "kind": "percent",
+              "stat": "Reload Time",
+              "statKey": "reloadTime",
+              "delta": -13.0
+            },
+            {
+              "text": "+10 Durability",
+              "kind": "flat",
+              "stat": "Durability",
+              "statKey": "durability",
+              "delta": 10
+            }
+          ],
+          "perkTexts": [
+            "16.6% Reduced Horizontal Recoil",
+            "13% Reduced Reload Time",
+            "+10 Durability"
+          ]
+        },
+        {
+          "level": 3,
+          "sellPrice": 3000,
+          "durability": null,
+          "effects": [
+            {
+              "text": "33.3% Reduced Horizontal Recoil",
+              "kind": "percent",
+              "stat": "Horizontal Recoil",
+              "statKey": "horizontalRecoil",
+              "delta": -33.3
+            },
+            {
+              "text": "26% Reduced Reload Time",
+              "kind": "percent",
+              "stat": "Reload Time",
+              "statKey": "reloadTime",
+              "delta": -26.0
+            },
+            {
+              "text": "+20 Durability",
+              "kind": "flat",
+              "stat": "Durability",
+              "statKey": "durability",
+              "delta": 20
+            }
+          ],
+          "perkTexts": [
+            "33.3% Reduced Horizontal Recoil",
+            "26% Reduced Reload Time",
+            "+20 Durability"
+          ]
+        },
+        {
+          "level": 4,
+          "sellPrice": 5000,
+          "durability": null,
+          "effects": [
+            {
+              "text": "50% Reduced Horizontal Recoil",
+              "kind": "percent",
+              "stat": "Horizontal Recoil",
+              "statKey": "horizontalRecoil",
+              "delta": -50.0
+            },
+            {
+              "text": "40% Reduced Reload Time",
+              "kind": "percent",
+              "stat": "Reload Time",
+              "statKey": "reloadTime",
+              "delta": -40.0
+            },
+            {
+              "text": "+30 Durability",
+              "kind": "flat",
+              "stat": "Durability",
+              "statKey": "durability",
+              "delta": 30
+            }
+          ],
+          "perkTexts": [
+            "50% Reduced Horizontal Recoil",
+            "40% Reduced Reload Time",
+            "+30 Durability"
+          ]
+        }
+      ]
+    },
+    "Bobcat": {
+      "description": "Has a high fire rate but low accuracy.",
+      "compatibleModTokens": [
+        "Muzzle",
+        "Underbarrel",
+        "Light-Mag",
+        "Stock"
+      ],
+      "stats": {
+        "magazineSize": 20,
+        "magazineSizeByLevel": {
+          "1": 20
+        },
+        "arcArmorPenetration": "Very Weak",
+        "fireRateRpm": null,
+        "headshotMultiplier": "2.0x",
+        "stability": "45.9",
+        "agility": "73.1",
+        "stealth": "21",
+        "weight": "7.0"
+      },
+      "levels": [
+        {
+          "level": 1,
+          "sellPrice": 13000,
+          "durability": 50,
+          "effects": [],
+          "perkTexts": []
+        },
+        {
+          "level": 2,
+          "sellPrice": 17000,
+          "durability": 55,
+          "effects": [
+            {
+              "text": "15% Reduced Max Shot Dispersion",
+              "kind": "percent",
+              "stat": "Max Shot Dispersion",
+              "statKey": "maxShotDispersion",
+              "delta": -15.0
+            },
+            {
+              "text": "15% Reduced Horizontal Recoil",
+              "kind": "percent",
+              "stat": "Horizontal Recoil",
+              "statKey": "horizontalRecoil",
+              "delta": -15.0
+            },
+            {
+              "text": "13% Reduced Reload Time",
+              "kind": "percent",
+              "stat": "Reload Time",
+              "statKey": "reloadTime",
+              "delta": -13.0
+            },
+            {
+              "text": "+10 Durability",
+              "kind": "flat",
+              "stat": "Durability",
+              "statKey": "durability",
+              "delta": 10
+            }
+          ],
+          "perkTexts": [
+            "15% Reduced Max Shot Dispersion",
+            "15% Reduced Horizontal Recoil",
+            "13% Reduced Reload Time",
+            "+10 Durability"
+          ]
+        },
+        {
+          "level": 3,
+          "sellPrice": 22000,
+          "durability": 60,
+          "effects": [
+            {
+              "text": "30% Reduced Max Shot Dispersion",
+              "kind": "percent",
+              "stat": "Max Shot Dispersion",
+              "statKey": "maxShotDispersion",
+              "delta": -30.0
+            },
+            {
+              "text": "30% Reduced Horizontal Recoil",
+              "kind": "percent",
+              "stat": "Horizontal Recoil",
+              "statKey": "horizontalRecoil",
+              "delta": -30.0
+            },
+            {
+              "text": "26% Reduced Reload Time",
+              "kind": "percent",
+              "stat": "Reload Time",
+              "statKey": "reloadTime",
+              "delta": -26.0
+            },
+            {
+              "text": "+20 Durability",
+              "kind": "flat",
+              "stat": "Durability",
+              "statKey": "durability",
+              "delta": 20
+            }
+          ],
+          "perkTexts": [
+            "30% Reduced Max Shot Dispersion",
+            "30% Reduced Horizontal Recoil",
+            "26% Reduced Reload Time",
+            "+20 Durability"
+          ]
+        },
+        {
+          "level": 4,
+          "sellPrice": 27000,
+          "durability": 65,
+          "effects": [
+            {
+              "text": "50% Reduced Max Shot Dispersion",
+              "kind": "percent",
+              "stat": "Max Shot Dispersion",
+              "statKey": "maxShotDispersion",
+              "delta": -50.0
+            },
+            {
+              "text": "45% Reduced Horizontal Recoil",
+              "kind": "percent",
+              "stat": "Horizontal Recoil",
+              "statKey": "horizontalRecoil",
+              "delta": -45.0
+            },
+            {
+              "text": "40% Reduced Reload Time",
+              "kind": "percent",
+              "stat": "Reload Time",
+              "statKey": "reloadTime",
+              "delta": -40.0
+            },
+            {
+              "text": "+30 Durability",
+              "kind": "flat",
+              "stat": "Durability",
+              "statKey": "durability",
+              "delta": 30
+            }
+          ],
+          "perkTexts": [
+            "50% Reduced Max Shot Dispersion",
+            "45% Reduced Horizontal Recoil",
+            "40% Reduced Reload Time",
+            "+30 Durability"
+          ]
+        }
+      ]
+    },
+    "Il Toro": {
+      "description": "Has a large bullet spread, sharp falloff, and high damage output.",
+      "compatibleModTokens": [
+        "Shotgun-Muzzle",
+        "Underbarrel",
+        "Shotgun-Mag",
+        "Stock"
+      ],
+      "stats": {
+        "magazineSize": 5,
+        "magazineSizeByLevel": {
+          "1": 5,
+          "2": 6,
+          "3": 7,
+          "4": 8
+        },
+        "arcArmorPenetration": "Weak",
+        "fireRateRpm": 38.0,
+        "headshotMultiplier": "",
+        "stability": "80.6",
+        "agility": "61.1",
+        "stealth": "18",
+        "weight": "8.0"
+      },
+      "levels": [
+        {
+          "level": 1,
+          "sellPrice": 5000,
+          "durability": 50,
+          "effects": [],
+          "perkTexts": []
+        },
+        {
+          "level": 2,
+          "sellPrice": 7000,
+          "durability": 55,
+          "effects": [
+            {
+              "text": "17.5% Increased Fire Rate",
+              "kind": "percent",
+              "stat": "Fire Rate",
+              "statKey": "fireRate",
+              "delta": 17.5
+            },
+            {
+              "text": "+1 Magazine Size",
+              "kind": "flat",
+              "stat": "Magazine Size",
+              "statKey": "magazineSize",
+              "delta": 1
+            },
+            {
+              "text": "+10 Durability",
+              "kind": "flat",
+              "stat": "Durability",
+              "statKey": "durability",
+              "delta": 10
+            }
+          ],
+          "perkTexts": [
+            "17.5% Increased Fire Rate",
+            "+1 Magazine Size",
+            "+10 Durability"
+          ]
+        },
+        {
+          "level": 3,
+          "sellPrice": 10000,
+          "durability": 60,
+          "effects": [
+            {
+              "text": "35% Increased Fire Rate",
+              "kind": "percent",
+              "stat": "Fire Rate",
+              "statKey": "fireRate",
+              "delta": 35.0
+            },
+            {
+              "text": "+2 Magazine Size",
+              "kind": "flat",
+              "stat": "Magazine Size",
+              "statKey": "magazineSize",
+              "delta": 2
+            },
+            {
+              "text": "+20 Durability",
+              "kind": "flat",
+              "stat": "Durability",
+              "statKey": "durability",
+              "delta": 20
+            }
+          ],
+          "perkTexts": [
+            "35% Increased Fire Rate",
+            "+2 Magazine Size",
+            "+20 Durability"
+          ]
+        },
+        {
+          "level": 4,
+          "sellPrice": 13000,
+          "durability": 65,
+          "effects": [
+            {
+              "text": "50% Increased Fire Rate",
+              "kind": "percent",
+              "stat": "Fire Rate",
+              "statKey": "fireRate",
+              "delta": 50.0
+            },
+            {
+              "text": "+3 Magazine Size",
+              "kind": "flat",
+              "stat": "Magazine Size",
+              "statKey": "magazineSize",
+              "delta": 3
+            },
+            {
+              "text": "+30 Durability",
+              "kind": "flat",
+              "stat": "Durability",
+              "statKey": "durability",
+              "delta": 30
+            }
+          ],
+          "perkTexts": [
+            "50% Increased Fire Rate",
+            "+3 Magazine Size",
+            "+30 Durability"
+          ]
+        }
+      ]
+    },
+    "Vulcano": {
+      "description": "Has good bullet spread but sharp falloff.",
+      "compatibleModTokens": [
+        "Shotgun-Muzzle",
+        "Underbarrel",
+        "Shotgun-Mag",
+        "Stock"
+      ],
+      "stats": {
+        "magazineSize": 6,
+        "magazineSizeByLevel": {
+          "1": 6
+        },
+        "arcArmorPenetration": "Weak",
+        "fireRateRpm": null,
+        "headshotMultiplier": "",
+        "stability": "68.6",
+        "agility": "70.3",
+        "stealth": "15",
+        "weight": "8.0"
+      },
+      "levels": [
+        {
+          "level": 1,
+          "sellPrice": 10000,
+          "durability": null,
+          "effects": [],
+          "perkTexts": []
+        },
+        {
+          "level": 2,
+          "sellPrice": 13000,
+          "durability": null,
+          "effects": [
+            {
+              "text": "10% Increased Fire Rate",
+              "kind": "percent",
+              "stat": "Fire Rate",
+              "statKey": "fireRate",
+              "delta": 10.0
+            },
+            {
+              "text": "13% Reduced Reload Time",
+              "kind": "percent",
+              "stat": "Reload Time",
+              "statKey": "reloadTime",
+              "delta": -13.0
+            },
+            {
+              "text": "+10 Durability",
+              "kind": "flat",
+              "stat": "Durability",
+              "statKey": "durability",
+              "delta": 10
+            }
+          ],
+          "perkTexts": [
+            "10% Increased Fire Rate",
+            "13% Reduced Reload Time",
+            "+10 Durability"
+          ]
+        },
+        {
+          "level": 3,
+          "sellPrice": 17000,
+          "durability": null,
+          "effects": [
+            {
+              "text": "20% Increased Fire Rate",
+              "kind": "percent",
+              "stat": "Fire Rate",
+              "statKey": "fireRate",
+              "delta": 20.0
+            },
+            {
+              "text": "26% Reduced Reload Time",
+              "kind": "percent",
+              "stat": "Reload Time",
+              "statKey": "reloadTime",
+              "delta": -26.0
+            },
+            {
+              "text": "+20 Durability",
+              "kind": "flat",
+              "stat": "Durability",
+              "statKey": "durability",
+              "delta": 20
+            }
+          ],
+          "perkTexts": [
+            "20% Increased Fire Rate",
+            "26% Reduced Reload Time",
+            "+20 Durability"
+          ]
+        },
+        {
+          "level": 4,
+          "sellPrice": 22000,
+          "durability": null,
+          "effects": [
+            {
+              "text": "30% Increased Fire Rate",
+              "kind": "percent",
+              "stat": "Fire Rate",
+              "statKey": "fireRate",
+              "delta": 30.0
+            },
+            {
+              "text": "40% Reduced Reload Time",
+              "kind": "percent",
+              "stat": "Reload Time",
+              "statKey": "reloadTime",
+              "delta": -40.0
+            },
+            {
+              "text": "+30 Durability",
+              "kind": "flat",
+              "stat": "Durability",
+              "statKey": "durability",
+              "delta": 30
+            }
+          ],
+          "perkTexts": [
+            "30% Increased Fire Rate",
+            "40% Reduced Reload Time",
+            "+30 Durability"
+          ]
+        }
+      ]
+    },
+    "Hairpin": {
+      "description": "Has a built-in silencer. Great for stealth, but tricky in combat.",
+      "compatibleModTokens": [
+        "Light-Mag"
+      ],
+      "stats": {
+        "magazineSize": 8,
+        "magazineSizeByLevel": {
+          "1": 8
+        },
+        "arcArmorPenetration": "Very Weak",
+        "fireRateRpm": null,
+        "headshotMultiplier": "2.5x",
+        "stability": "90.9",
+        "agility": "78.3",
+        "stealth": "70",
+        "weight": "3.0"
+      },
+      "levels": [
+        {
+          "level": 1,
+          "sellPrice": 450,
+          "durability": 50,
+          "effects": [],
+          "perkTexts": []
+        },
+        {
+          "level": 2,
+          "sellPrice": 1000,
+          "durability": 55,
+          "effects": [
+            {
+              "text": "10% Increased Fire Rate",
+              "kind": "percent",
+              "stat": "Fire Rate",
+              "statKey": "fireRate",
+              "delta": 10.0
+            },
+            {
+              "text": "13% Reduced Reload Time",
+              "kind": "percent",
+              "stat": "Reload Time",
+              "statKey": "reloadTime",
+              "delta": -13.0
+            },
+            {
+              "text": "+10 Durability",
+              "kind": "flat",
+              "stat": "Durability",
+              "statKey": "durability",
+              "delta": 10
+            }
+          ],
+          "perkTexts": [
+            "10% Increased Fire Rate",
+            "13% Reduced Reload Time",
+            "+10 Durability"
+          ]
+        },
+        {
+          "level": 3,
+          "sellPrice": 2000,
+          "durability": 60,
+          "effects": [
+            {
+              "text": "20% Increased Fire Rate",
+              "kind": "percent",
+              "stat": "Fire Rate",
+              "statKey": "fireRate",
+              "delta": 20.0
+            },
+            {
+              "text": "26% Reduced Reload Time",
+              "kind": "percent",
+              "stat": "Reload Time",
+              "statKey": "reloadTime",
+              "delta": -26.0
+            },
+            {
+              "text": "+20 Durability",
+              "kind": "flat",
+              "stat": "Durability",
+              "statKey": "durability",
+              "delta": 20
+            }
+          ],
+          "perkTexts": [
+            "20% Increased Fire Rate",
+            "26% Reduced Reload Time",
+            "+20 Durability"
+          ]
+        },
+        {
+          "level": 4,
+          "sellPrice": 2900,
+          "durability": 65,
+          "effects": [
+            {
+              "text": "30% Increased Fire Rate",
+              "kind": "percent",
+              "stat": "Fire Rate",
+              "statKey": "fireRate",
+              "delta": 30.0
+            },
+            {
+              "text": "40% Reduced Reload Time",
+              "kind": "percent",
+              "stat": "Reload Time",
+              "statKey": "reloadTime",
+              "delta": -40.0
+            },
+            {
+              "text": "+30 Durability",
+              "kind": "flat",
+              "stat": "Durability",
+              "statKey": "durability",
+              "delta": 30
+            }
+          ],
+          "perkTexts": [
+            "30% Increased Fire Rate",
+            "40% Reduced Reload Time",
+            "+30 Durability"
+          ]
+        }
+      ]
+    },
+    "Burletta": {
+      "description": "Has decent damage output and accuracy.",
+      "compatibleModTokens": [
+        "Muzzle",
+        "Light-Mag"
+      ],
+      "stats": {
+        "magazineSize": 12,
+        "magazineSizeByLevel": {
+          "1": 12
+        },
+        "arcArmorPenetration": "Very Weak",
+        "fireRateRpm": null,
+        "headshotMultiplier": "2.5x",
+        "stability": "74.5",
+        "agility": "84.4",
+        "stealth": "24",
+        "weight": "4.0"
+      },
+      "levels": [
+        {
+          "level": 1,
+          "sellPrice": 2900,
+          "durability": 50,
+          "effects": [],
+          "perkTexts": []
+        },
+        {
+          "level": 2,
+          "sellPrice": 5000,
+          "durability": 55,
+          "effects": [
+            {
+              "text": "16.6% Reduced Reload Time",
+              "kind": "percent",
+              "stat": "Reload Time",
+              "statKey": "reloadTime",
+              "delta": -16.6
+            },
+            {
+              "text": "+10 Durability",
+              "kind": "flat",
+              "stat": "Durability",
+              "statKey": "durability",
+              "delta": 10
+            }
+          ],
+          "perkTexts": [
+            "16.6% Reduced Reload Time",
+            "+10 Durability"
+          ]
+        },
+        {
+          "level": 3,
+          "sellPrice": 7000,
+          "durability": 60,
+          "effects": [
+            {
+              "text": "33.3% Reduced Reload Time",
+              "kind": "percent",
+              "stat": "Reload Time",
+              "statKey": "reloadTime",
+              "delta": -33.3
+            },
+            {
+              "text": "+20 Durability",
+              "kind": "flat",
+              "stat": "Durability",
+              "statKey": "durability",
+              "delta": 20
+            }
+          ],
+          "perkTexts": [
+            "33.3% Reduced Reload Time",
+            "+20 Durability"
+          ]
+        },
+        {
+          "level": 4,
+          "sellPrice": 10000,
+          "durability": 65,
+          "effects": [
+            {
+              "text": "50% Reduced Reload Time",
+              "kind": "percent",
+              "stat": "Reload Time",
+              "statKey": "reloadTime",
+              "delta": -50.0
+            },
+            {
+              "text": "+30 Durability",
+              "kind": "flat",
+              "stat": "Durability",
+              "statKey": "durability",
+              "delta": 30
+            }
+          ],
+          "perkTexts": [
+            "50% Reduced Reload Time",
+            "+30 Durability"
+          ]
+        }
+      ]
+    },
+    "Venator": {
+      "description": "Semi-automatic pistol. Fires two shots at a time.",
+      "compatibleModTokens": [
+        "Underbarrel",
+        "Medium-Mag"
+      ],
+      "stats": {
+        "magazineSize": 10,
+        "magazineSizeByLevel": {
+          "1": 10
+        },
+        "arcArmorPenetration": "Moderate",
+        "fireRateRpm": null,
+        "headshotMultiplier": "2x",
+        "stability": "61.3",
+        "agility": "76.4",
+        "stealth": "12",
+        "weight": "5.0"
+      },
+      "levels": [
+        {
+          "level": 1,
+          "sellPrice": 7000,
+          "durability": 50,
+          "effects": [],
+          "perkTexts": []
+        },
+        {
+          "level": 2,
+          "sellPrice": 10000,
+          "durability": 55,
+          "effects": [
+            {
+              "text": "13% Increased Fire Rate",
+              "kind": "percent",
+              "stat": "Fire Rate",
+              "statKey": "fireRate",
+              "delta": 13.0
+            },
+            {
+              "text": "16% Reduced Reload Time",
+              "kind": "percent",
+              "stat": "Reload Time",
+              "statKey": "reloadTime",
+              "delta": -16.0
+            },
+            {
+              "text": "+10 Durability",
+              "kind": "flat",
+              "stat": "Durability",
+              "statKey": "durability",
+              "delta": 10
+            }
+          ],
+          "perkTexts": [
+            "13% Increased Fire Rate",
+            "16% Reduced Reload Time",
+            "+10 Durability"
+          ]
+        },
+        {
+          "level": 3,
+          "sellPrice": 13000,
+          "durability": 60,
+          "effects": [
+            {
+              "text": "26% Increased Fire Rate",
+              "kind": "percent",
+              "stat": "Fire Rate",
+              "statKey": "fireRate",
+              "delta": 26.0
+            },
+            {
+              "text": "33% Reduced Reload Time",
+              "kind": "percent",
+              "stat": "Reload Time",
+              "statKey": "reloadTime",
+              "delta": -33.0
+            },
+            {
+              "text": "+20 Durability",
+              "kind": "flat",
+              "stat": "Durability",
+              "statKey": "durability",
+              "delta": 20
+            }
+          ],
+          "perkTexts": [
+            "26% Increased Fire Rate",
+            "33% Reduced Reload Time",
+            "+20 Durability"
+          ]
+        },
+        {
+          "level": 4,
+          "sellPrice": 17000,
+          "durability": 65,
+          "effects": [
+            {
+              "text": "40% Increased Fire Rate",
+              "kind": "percent",
+              "stat": "Fire Rate",
+              "statKey": "fireRate",
+              "delta": 40.0
+            },
+            {
+              "text": "50% Reduced Reload Time",
+              "kind": "percent",
+              "stat": "Reload Time",
+              "statKey": "reloadTime",
+              "delta": -50.0
+            },
+            {
+              "text": "+30 Durability",
+              "kind": "flat",
+              "stat": "Durability",
+              "statKey": "durability",
+              "delta": 30
+            }
+          ],
+          "perkTexts": [
+            "40% Increased Fire Rate",
+            "50% Reduced Reload Time",
+            "+30 Durability"
+          ]
+        }
+      ]
+    },
+    "Anvil": {
+      "description": "Has high damage output and headshot damage, but slow handling.",
+      "compatibleModTokens": [
+        "Muzzle",
+        "Tech-Mod"
+      ],
+      "stats": {
+        "magazineSize": 6,
+        "magazineSizeByLevel": {
+          "1": 6
+        },
+        "arcArmorPenetration": "Strong",
+        "fireRateRpm": null,
+        "headshotMultiplier": "2.5x",
+        "stability": "75.2",
+        "agility": "69.1",
+        "stealth": "10",
+        "weight": "5.0"
+      },
+      "levels": [
+        {
+          "level": 1,
+          "sellPrice": 5000,
+          "durability": 50,
+          "effects": [],
+          "perkTexts": []
+        },
+        {
+          "level": 2,
+          "sellPrice": 7000,
+          "durability": 55,
+          "effects": [
+            {
+              "text": "6.5% Reduced Dispersion Recovery Time",
+              "kind": "percent",
+              "stat": "Dispersion Recovery Time",
+              "statKey": "dispersionRecoveryTime",
+              "delta": -6.5
+            },
+            {
+              "text": "25% Increased Fire Rate",
+              "kind": "percent",
+              "stat": "Fire Rate",
+              "statKey": "fireRate",
+              "delta": 25.0
+            },
+            {
+              "text": "+10 Durability",
+              "kind": "flat",
+              "stat": "Durability",
+              "statKey": "durability",
+              "delta": 10
+            }
+          ],
+          "perkTexts": [
+            "6.5% Reduced Dispersion Recovery Time",
+            "25% Increased Fire Rate",
+            "+10 Durability"
+          ]
+        },
+        {
+          "level": 3,
+          "sellPrice": 10000,
+          "durability": 60,
+          "effects": [
+            {
+              "text": "12.5% Reduced Dispersion Recovery Time",
+              "kind": "percent",
+              "stat": "Dispersion Recovery Time",
+              "statKey": "dispersionRecoveryTime",
+              "delta": -12.5
+            },
+            {
+              "text": "50% Increased Fire Rate",
+              "kind": "percent",
+              "stat": "Fire Rate",
+              "statKey": "fireRate",
+              "delta": 50.0
+            },
+            {
+              "text": "+20 Durability",
+              "kind": "flat",
+              "stat": "Durability",
+              "statKey": "durability",
+              "delta": 20
+            }
+          ],
+          "perkTexts": [
+            "12.5% Reduced Dispersion Recovery Time",
+            "50% Increased Fire Rate",
+            "+20 Durability"
+          ]
+        },
+        {
+          "level": 4,
+          "sellPrice": 13000,
+          "durability": 65,
+          "effects": [
+            {
+              "text": "18.75% Reduced Dispersion Recovery Time",
+              "kind": "percent",
+              "stat": "Dispersion Recovery Time",
+              "statKey": "dispersionRecoveryTime",
+              "delta": -18.75
+            },
+            {
+              "text": "75% Increased Fire Rate",
+              "kind": "percent",
+              "stat": "Fire Rate",
+              "statKey": "fireRate",
+              "delta": 75.0
+            },
+            {
+              "text": "+30 Durability",
+              "kind": "flat",
+              "stat": "Durability",
+              "statKey": "durability",
+              "delta": 30
+            }
+          ],
+          "perkTexts": [
+            "18.75% Reduced Dispersion Recovery Time",
+            "75% Increased Fire Rate",
+            "+30 Durability"
+          ]
+        }
+      ]
+    },
+    "Torrente": {
+      "description": "Has a large ammo capacity, but is only accurate while crouched.",
+      "compatibleModTokens": [
+        "Muzzle",
+        "Medium-Mag",
+        "Stock"
+      ],
+      "stats": {
+        "magazineSize": 60,
+        "magazineSizeByLevel": {
+          "1": 60,
+          "2": 70,
+          "3": 80,
+          "4": 90
+        },
+        "arcArmorPenetration": "Moderate",
+        "fireRateRpm": null,
+        "headshotMultiplier": "2.0x",
+        "stability": "74.2",
+        "agility": "37.7",
+        "stealth": "1",
+        "weight": "12.0"
+      },
+      "levels": [
+        {
+          "level": 1,
+          "sellPrice": 7000,
+          "durability": 50,
+          "effects": [],
+          "perkTexts": []
+        },
+        {
+          "level": 2,
+          "sellPrice": 10000,
+          "durability": 55,
+          "effects": [
+            {
+              "text": "+10 Magazine Size",
+              "kind": "flat",
+              "stat": "Magazine Size",
+              "statKey": "magazineSize",
+              "delta": 10
+            },
+            {
+              "text": "15% Reduced Reload Time",
+              "kind": "percent",
+              "stat": "Reload Time",
+              "statKey": "reloadTime",
+              "delta": -15.0
+            },
+            {
+              "text": "+10 Durability",
+              "kind": "flat",
+              "stat": "Durability",
+              "statKey": "durability",
+              "delta": 10
+            }
+          ],
+          "perkTexts": [
+            "+10 Magazine Size",
+            "15% Reduced Reload Time",
+            "+10 Durability"
+          ]
+        },
+        {
+          "level": 3,
+          "sellPrice": 13000,
+          "durability": 60,
+          "effects": [
+            {
+              "text": "+20 Magazine Size",
+              "kind": "flat",
+              "stat": "Magazine Size",
+              "statKey": "magazineSize",
+              "delta": 20
+            },
+            {
+              "text": "30% Reduced Reload Time",
+              "kind": "percent",
+              "stat": "Reload Time",
+              "statKey": "reloadTime",
+              "delta": -30.0
+            },
+            {
+              "text": "+20 Durability",
+              "kind": "flat",
+              "stat": "Durability",
+              "statKey": "durability",
+              "delta": 20
+            }
+          ],
+          "perkTexts": [
+            "+20 Magazine Size",
+            "30% Reduced Reload Time",
+            "+20 Durability"
+          ]
+        },
+        {
+          "level": 4,
+          "sellPrice": 17000,
+          "durability": 65,
+          "effects": [
+            {
+              "text": "+30 Magazine Size",
+              "kind": "flat",
+              "stat": "Magazine Size",
+              "statKey": "magazineSize",
+              "delta": 30
+            },
+            {
+              "text": "45% Reduced Reload Time",
+              "kind": "percent",
+              "stat": "Reload Time",
+              "statKey": "reloadTime",
+              "delta": -45.0
+            },
+            {
+              "text": "+30 Durability",
+              "kind": "flat",
+              "stat": "Durability",
+              "statKey": "durability",
+              "delta": 30
+            }
+          ],
+          "perkTexts": [
+            "+30 Magazine Size",
+            "45% Reduced Reload Time",
+            "+30 Durability"
+          ]
+        }
+      ]
+    },
+    "Osprey": {
+      "description": "Has reliable damage output and accuracy.",
+      "compatibleModTokens": [
+        "Muzzle",
+        "Underbarrel",
+        "Medium-Mag",
+        "Stock"
+      ],
+      "stats": {
+        "magazineSize": 8,
+        "magazineSizeByLevel": {
+          "1": 8
+        },
+        "arcArmorPenetration": "Moderate",
+        "fireRateRpm": null,
+        "headshotMultiplier": "2.0x",
+        "stability": "89.4",
+        "agility": "45.9",
+        "stealth": "12",
+        "weight": "7.0"
+      },
+      "levels": [
+        {
+          "level": 1,
+          "sellPrice": 7000,
+          "durability": 50,
+          "effects": [],
+          "perkTexts": []
+        },
+        {
+          "level": 2,
+          "sellPrice": 10000,
+          "durability": 55,
+          "effects": [
+            {
+              "text": "20% Reduced Bolt Action Time",
+              "kind": "percent",
+              "stat": "Bolt Action Time",
+              "statKey": "boltActionTime",
+              "delta": -20.0
+            },
+            {
+              "text": "12.5% Reduced Reload Time",
+              "kind": "percent",
+              "stat": "Reload Time",
+              "statKey": "reloadTime",
+              "delta": -12.5
+            },
+            {
+              "text": "+10 Durability",
+              "kind": "flat",
+              "stat": "Durability",
+              "statKey": "durability",
+              "delta": 10
+            }
+          ],
+          "perkTexts": [
+            "20% Reduced Bolt Action Time",
+            "12.5% Reduced Reload Time",
+            "+10 Durability"
+          ]
+        },
+        {
+          "level": 3,
+          "sellPrice": 13000,
+          "durability": 60,
+          "effects": [
+            {
+              "text": "40% Reduced Bolt Action Time",
+              "kind": "percent",
+              "stat": "Bolt Action Time",
+              "statKey": "boltActionTime",
+              "delta": -40.0
+            },
+            {
+              "text": "25% Reduced Reload Time",
+              "kind": "percent",
+              "stat": "Reload Time",
+              "statKey": "reloadTime",
+              "delta": -25.0
+            },
+            {
+              "text": "+20 Durability",
+              "kind": "flat",
+              "stat": "Durability",
+              "statKey": "durability",
+              "delta": 20
+            }
+          ],
+          "perkTexts": [
+            "40% Reduced Bolt Action Time",
+            "25% Reduced Reload Time",
+            "+20 Durability"
+          ]
+        },
+        {
+          "level": 4,
+          "sellPrice": 17000,
+          "durability": 65,
+          "effects": [
+            {
+              "text": "60% Reduced Bolt Action Time",
+              "kind": "percent",
+              "stat": "Bolt Action Time",
+              "statKey": "boltActionTime",
+              "delta": -60.0
+            },
+            {
+              "text": "37.5% Reduced Reload Time",
+              "kind": "percent",
+              "stat": "Reload Time",
+              "statKey": "reloadTime",
+              "delta": -37.5
+            },
+            {
+              "text": "+30 Durability",
+              "kind": "flat",
+              "stat": "Durability",
+              "statKey": "durability",
+              "delta": 30
+            }
+          ],
+          "perkTexts": [
+            "60% Reduced Bolt Action Time",
+            "37.5% Reduced Reload Time",
+            "+30 Durability"
+          ]
+        }
+      ]
+    },
+    "Jupiter": {
+      "description": "A bolt-action sniper rifle with exceptional damage output and accuracy, but slow handling.",
+      "compatibleModTokens": [],
+      "stats": {
+        "magazineSize": 5,
+        "magazineSizeByLevel": {
+          "1": 5
+        },
+        "arcArmorPenetration": "Very Strong",
+        "fireRateRpm": null,
+        "headshotMultiplier": "2.0x",
+        "stability": "73.5",
+        "agility": "39.2",
+        "stealth": "5",
+        "weight": "9.0"
+      },
+      "levels": [
+        {
+          "level": 1,
+          "sellPrice": 27500,
+          "durability": null,
+          "effects": [],
+          "perkTexts": []
+        }
+      ]
+    },
+    "Hullcracker": {
+      "description": "Fires explosive projectiles that only detonate when hitting ARC.",
+      "compatibleModTokens": [
+        "Underbarrel",
+        "Stock"
+      ],
+      "stats": {
+        "magazineSize": 5,
+        "magazineSizeByLevel": {
+          "1": 5
+        },
+        "arcArmorPenetration": "Very Strong",
+        "fireRateRpm": null,
+        "headshotMultiplier": "",
+        "stability": "97.2",
+        "agility": "67.9",
+        "stealth": "1",
+        "weight": "7.0"
+      },
+      "levels": [
+        {
+          "level": 1,
+          "sellPrice": 10000,
+          "durability": 50,
+          "effects": [],
+          "perkTexts": []
+        },
+        {
+          "level": 2,
+          "sellPrice": 13000,
+          "durability": 55,
+          "effects": [
+            {
+              "text": "18% Increased Fire Rate",
+              "kind": "percent",
+              "stat": "Fire Rate",
+              "statKey": "fireRate",
+              "delta": 18.0
+            },
+            {
+              "text": "+10 Durability",
+              "kind": "flat",
+              "stat": "Durability",
+              "statKey": "durability",
+              "delta": 10
+            }
+          ],
+          "perkTexts": [
+            "18% Increased Fire Rate",
+            "+10 Durability"
+          ]
+        },
+        {
+          "level": 3,
+          "sellPrice": 17000,
+          "durability": 60,
+          "effects": [
+            {
+              "text": "35% Increased Fire Rate",
+              "kind": "percent",
+              "stat": "Fire Rate",
+              "statKey": "fireRate",
+              "delta": 35.0
+            },
+            {
+              "text": "+20 Durability",
+              "kind": "flat",
+              "stat": "Durability",
+              "statKey": "durability",
+              "delta": 20
+            }
+          ],
+          "perkTexts": [
+            "35% Increased Fire Rate",
+            "+20 Durability"
+          ]
+        },
+        {
+          "level": 4,
+          "sellPrice": 22000,
+          "durability": 65,
+          "effects": [
+            {
+              "text": "53% Increased Fire Rate",
+              "kind": "percent",
+              "stat": "Fire Rate",
+              "statKey": "fireRate",
+              "delta": 53.0
+            },
+            {
+              "text": "+30 Durability",
+              "kind": "flat",
+              "stat": "Durability",
+              "statKey": "durability",
+              "delta": 30
+            }
+          ],
+          "perkTexts": [
+            "53% Increased Fire Rate",
+            "+30 Durability"
+          ]
+        }
+      ]
+    },
+    "Equalizer": {
+      "description": "A high capacity experimental beam rifle.",
+      "compatibleModTokens": [],
+      "stats": {
+        "magazineSize": 50,
+        "magazineSizeByLevel": {
+          "1": 50
+        },
+        "arcArmorPenetration": "Very Strong",
+        "fireRateRpm": null,
+        "headshotMultiplier": "2.0x",
+        "stability": "84.6",
+        "agility": "44.6",
+        "stealth": "",
+        "weight": "14.0"
+      },
+      "levels": [
+        {
+          "level": 1,
+          "sellPrice": 27500,
+          "durability": null,
+          "effects": [],
+          "perkTexts": []
+        }
+      ]
+    }
+  },
+  "mods": {
+    "Angled Grip I": {
+      "pageUrl": "https://arcraiders.wiki/wiki/Angled_Grip_I",
+      "imageUrl": "https://arcraiders.wiki/w/images/thumb/b/b5/Angled_Grip_I.png/50px-Angled_Grip_I.png.webp",
+      "slot": "Underbarrel",
+      "requiredStation": "Gunsmith 1",
+      "craftingMaterials": [
+        "Plastic Parts x6",
+        "Duct Tape x1"
+      ],
+      "effects": [
+        {
+          "text": "20% Reduced Horizontal Recoil",
+          "kind": "percent",
+          "stat": "Horizontal Recoil",
+          "statKey": "horizontalRecoil",
+          "delta": -20.0
+        }
+      ]
+    },
+    "Angled Grip II": {
+      "pageUrl": "https://arcraiders.wiki/wiki/Angled_Grip_II",
+      "imageUrl": "https://arcraiders.wiki/w/images/thumb/2/2b/Angled_Grip_II.png/50px-Angled_Grip_II.png.webp",
+      "slot": "Underbarrel",
+      "requiredStation": "Gunsmith 2",
+      "craftingMaterials": [
+        "Mechanical Components x2",
+        "Duct Tape x3"
+      ],
+      "effects": [
+        {
+          "text": "30% Reduced Horizontal Recoil",
+          "kind": "percent",
+          "stat": "Horizontal Recoil",
+          "statKey": "horizontalRecoil",
+          "delta": -30.0
+        }
+      ]
+    },
+    "Angled Grip III": {
+      "pageUrl": "https://arcraiders.wiki/wiki/Angled_Grip_III",
+      "imageUrl": "https://arcraiders.wiki/w/images/thumb/0/0f/Angled_Grip_III.png/50px-Angled_Grip_III.png.webp",
+      "slot": "Underbarrel",
+      "requiredStation": "Gunsmith 3",
+      "craftingMaterials": [
+        "Mod Components x2",
+        "Duct Tape x5"
+      ],
+      "effects": [
+        {
+          "text": "40% Reduced Horizontal Recoil",
+          "kind": "percent",
+          "stat": "Horizontal Recoil",
+          "statKey": "horizontalRecoil",
+          "delta": -40.0
+        },
+        {
+          "text": "30% Reduced ADS Speed",
+          "kind": "percent",
+          "stat": "ADS Speed",
+          "statKey": "adsSpeed",
+          "delta": -30.0
+        }
+      ]
+    },
+    "Anvil Splitter": {
+      "pageUrl": "https://arcraiders.wiki/wiki/Anvil_Splitter",
+      "imageUrl": "https://arcraiders.wiki/w/images/thumb/e/ef/Anvil_Splitter.png/50px-Anvil_Splitter.png.webp",
+      "slot": "Tech Mod",
+      "requiredStation": "",
+      "craftingMaterials": [],
+      "effects": [
+        {
+          "text": "+3 Projectiles Per Shot",
+          "kind": "flat",
+          "stat": "Projectiles Per Shot",
+          "statKey": "projectilesPerShot",
+          "delta": 3
+        },
+        {
+          "text": "70% Reduced Projectile Damage",
+          "kind": "percent",
+          "stat": "Projectile Damage",
+          "statKey": "projectileDamage",
+          "delta": -70.0
+        }
+      ]
+    },
+    "Compensator I": {
+      "pageUrl": "https://arcraiders.wiki/wiki/Compensator_I",
+      "imageUrl": "https://arcraiders.wiki/w/images/thumb/5/5f/Compensator_I.png/50px-Compensator_I.png.webp",
+      "slot": "Muzzle",
+      "requiredStation": "Gunsmith 1",
+      "craftingMaterials": [
+        "Metal Parts x6",
+        "Wires x1"
+      ],
+      "effects": [
+        {
+          "text": "20% Reduced Per-Shot Dispersion",
+          "kind": "percent",
+          "stat": "Per-Shot Dispersion",
+          "statKey": "perShotDispersion",
+          "delta": -20.0
+        },
+        {
+          "text": "10% Reduced Max Shot Dispersion",
+          "kind": "percent",
+          "stat": "Max Shot Dispersion",
+          "statKey": "maxShotDispersion",
+          "delta": -10.0
+        }
+      ]
+    },
+    "Compensator II": {
+      "pageUrl": "https://arcraiders.wiki/wiki/Compensator_II",
+      "imageUrl": "https://arcraiders.wiki/w/images/thumb/0/0a/Compensator_II.png/50px-Compensator_II.png.webp",
+      "slot": "Muzzle",
+      "requiredStation": "Gunsmith 2",
+      "craftingMaterials": [
+        "Mechanical Components x2",
+        "Wires x4"
+      ],
+      "effects": [
+        {
+          "text": "40% Reduced Per-Shot Dispersion",
+          "kind": "percent",
+          "stat": "Per-Shot Dispersion",
+          "statKey": "perShotDispersion",
+          "delta": -40.0
+        },
+        {
+          "text": "20% Reduced Max Shot Dispersion",
+          "kind": "percent",
+          "stat": "Max Shot Dispersion",
+          "statKey": "maxShotDispersion",
+          "delta": -20.0
+        }
+      ]
+    },
+    "Compensator III": {
+      "pageUrl": "https://arcraiders.wiki/wiki/Compensator_III",
+      "imageUrl": "https://arcraiders.wiki/w/images/thumb/a/af/Compensator_III.png/50px-Compensator_III.png.webp",
+      "slot": "Muzzle",
+      "requiredStation": "Gunsmith 3",
+      "craftingMaterials": [
+        "Mod Components x2",
+        "Wires x8"
+      ],
+      "effects": [
+        {
+          "text": "60% Reduced Per-Shot Dispersion",
+          "kind": "percent",
+          "stat": "Per-Shot Dispersion",
+          "statKey": "perShotDispersion",
+          "delta": -60.0
+        },
+        {
+          "text": "30% Reduced Max Shot Dispersion",
+          "kind": "percent",
+          "stat": "Max Shot Dispersion",
+          "statKey": "maxShotDispersion",
+          "delta": -30.0
+        },
+        {
+          "text": "20% Increased Durability Burn Rate",
+          "kind": "percent",
+          "stat": "Durability Burn Rate",
+          "statKey": "durabilityBurnRate",
+          "delta": 20.0
+        }
+      ]
+    },
+    "Extended Barrel": {
+      "pageUrl": "https://arcraiders.wiki/wiki/Extended_Barrel",
+      "imageUrl": "https://arcraiders.wiki/w/images/thumb/2/2f/Extended_Barrel.png/50px-Extended_Barrel.png.webp",
+      "slot": "Muzzle",
+      "requiredStation": "Gunsmith 3",
+      "craftingMaterials": [
+        "Mod Components x2",
+        "Wires x8"
+      ],
+      "effects": [
+        {
+          "text": "25% Increased Bullet Velocity",
+          "kind": "percent",
+          "stat": "Bullet Velocity",
+          "statKey": "bulletVelocity",
+          "delta": 25.0
+        },
+        {
+          "text": "15% Increased Vertical Recoil",
+          "kind": "percent",
+          "stat": "Vertical Recoil",
+          "statKey": "verticalRecoil",
+          "delta": 15.0
+        }
+      ]
+    },
+    "Extended Light Mag I": {
+      "pageUrl": "https://arcraiders.wiki/wiki/Extended_Light_Mag_I",
+      "imageUrl": "https://arcraiders.wiki/w/images/thumb/2/23/Extended_Light_Mag_I.png/50px-Extended_Light_Mag_I.png.webp",
+      "slot": "Light Magazine",
+      "requiredStation": "Gunsmith 1",
+      "craftingMaterials": [
+        "Plastic Parts x6",
+        "Steel Spring x1"
+      ],
+      "effects": [
+        {
+          "text": "+5 Magazine Size",
+          "kind": "flat",
+          "stat": "Magazine Size",
+          "statKey": "magazineSize",
+          "delta": 5
+        }
+      ]
+    },
+    "Extended Light Mag II": {
+      "pageUrl": "https://arcraiders.wiki/wiki/Extended_Light_Mag_II",
+      "imageUrl": "https://arcraiders.wiki/w/images/thumb/c/cf/Extended_Light_Mag_II.png/50px-Extended_Light_Mag_II.png.webp",
+      "slot": "Light Magazine",
+      "requiredStation": "Gunsmith 2",
+      "craftingMaterials": [
+        "Mechanical Components x2",
+        "Steel Spring x3"
+      ],
+      "effects": [
+        {
+          "text": "+10 Magazine Size",
+          "kind": "flat",
+          "stat": "Magazine Size",
+          "statKey": "magazineSize",
+          "delta": 10
+        }
+      ]
+    },
+    "Extended Light Mag III": {
+      "pageUrl": "https://arcraiders.wiki/wiki/Extended_Light_Mag_III",
+      "imageUrl": "https://arcraiders.wiki/w/images/thumb/4/40/Extended_Light_Mag_III.png/50px-Extended_Light_Mag_III.png.webp",
+      "slot": "Light Magazine",
+      "requiredStation": "Gunsmith 3",
+      "craftingMaterials": [
+        "Mod Components x2",
+        "Steel Spring x5"
+      ],
+      "effects": [
+        {
+          "text": "+15 Magazine Size",
+          "kind": "flat",
+          "stat": "Magazine Size",
+          "statKey": "magazineSize",
+          "delta": 15
+        }
+      ]
+    },
+    "Extended Medium Mag I": {
+      "pageUrl": "https://arcraiders.wiki/wiki/Extended_Medium_Mag_I",
+      "imageUrl": "https://arcraiders.wiki/w/images/thumb/4/44/Extended_Medium_Mag_I.png/50px-Extended_Medium_Mag_I.png.webp",
+      "slot": "Medium Magazine",
+      "requiredStation": "Gunsmith 1",
+      "craftingMaterials": [
+        "Plastic Parts x6",
+        "Steel Spring x1"
+      ],
+      "effects": [
+        {
+          "text": "+4 Magazine Size",
+          "kind": "flat",
+          "stat": "Magazine Size",
+          "statKey": "magazineSize",
+          "delta": 4
+        }
+      ]
+    },
+    "Extended Medium Mag II": {
+      "pageUrl": "https://arcraiders.wiki/wiki/Extended_Medium_Mag_II",
+      "imageUrl": "https://arcraiders.wiki/w/images/thumb/5/50/Extended_Medium_Mag_II.png/50px-Extended_Medium_Mag_II.png.webp",
+      "slot": "Medium Magazine",
+      "requiredStation": "Gunsmith 2",
+      "craftingMaterials": [
+        "Mechanical Components x2",
+        "Steel Spring x3"
+      ],
+      "effects": [
+        {
+          "text": "+8 Magazine Size",
+          "kind": "flat",
+          "stat": "Magazine Size",
+          "statKey": "magazineSize",
+          "delta": 8
+        }
+      ]
+    },
+    "Extended Medium Mag III": {
+      "pageUrl": "https://arcraiders.wiki/wiki/Extended_Medium_Mag_III",
+      "imageUrl": "https://arcraiders.wiki/w/images/thumb/a/a1/Extended_Medium_Mag_III.png/50px-Extended_Medium_Mag_III.png.webp",
+      "slot": "Medium Magazine",
+      "requiredStation": "Gunsmith 3",
+      "craftingMaterials": [
+        "Mod Components x2",
+        "Steel Spring x5"
+      ],
+      "effects": [
+        {
+          "text": "+12 Magazine Size",
+          "kind": "flat",
+          "stat": "Magazine Size",
+          "statKey": "magazineSize",
+          "delta": 12
+        }
+      ]
+    },
+    "Extended Shotgun Mag I": {
+      "pageUrl": "https://arcraiders.wiki/wiki/Extended_Shotgun_Mag_I",
+      "imageUrl": "https://arcraiders.wiki/w/images/thumb/9/9b/Extended_Shotgun_Mag_I.png/50px-Extended_Shotgun_Mag_I.png.webp",
+      "slot": "Shotgun Magazine",
+      "requiredStation": "Gunsmith 1",
+      "craftingMaterials": [
+        "Plastic Parts x6",
+        "Steel Spring x1"
+      ],
+      "effects": [
+        {
+          "text": "+2 Magazine Size",
+          "kind": "flat",
+          "stat": "Magazine Size",
+          "statKey": "magazineSize",
+          "delta": 2
+        }
+      ]
+    },
+    "Extended Shotgun Mag II": {
+      "pageUrl": "https://arcraiders.wiki/wiki/Extended_Shotgun_Mag_II",
+      "imageUrl": "https://arcraiders.wiki/w/images/thumb/4/4f/Extended_Shotgun_Mag_II.png/50px-Extended_Shotgun_Mag_II.png.webp",
+      "slot": "Shotgun Magazine",
+      "requiredStation": "Gunsmith 2",
+      "craftingMaterials": [
+        "Mechanical Components x2",
+        "Steel Spring x3"
+      ],
+      "effects": [
+        {
+          "text": "+4 Magazine Size",
+          "kind": "flat",
+          "stat": "Magazine Size",
+          "statKey": "magazineSize",
+          "delta": 4
+        }
+      ]
+    },
+    "Extended Shotgun Mag III": {
+      "pageUrl": "https://arcraiders.wiki/wiki/Extended_Shotgun_Mag_III",
+      "imageUrl": "https://arcraiders.wiki/w/images/thumb/7/77/Extended_Shotgun_Mag_III.png/50px-Extended_Shotgun_Mag_III.png.webp",
+      "slot": "Shotgun Magazine",
+      "requiredStation": "Gunsmith 3",
+      "craftingMaterials": [
+        "Mod Components x2",
+        "Steel Spring x5"
+      ],
+      "effects": [
+        {
+          "text": "+6 Magazine Size",
+          "kind": "flat",
+          "stat": "Magazine Size",
+          "statKey": "magazineSize",
+          "delta": 6
+        }
+      ]
+    },
+    "Horizontal Grip": {
+      "pageUrl": "https://arcraiders.wiki/wiki/Horizontal_Grip",
+      "imageUrl": "https://arcraiders.wiki/w/images/thumb/8/89/Horizontal_Grip.png/50px-Horizontal_Grip.png.webp",
+      "slot": "Underbarrel",
+      "requiredStation": "",
+      "craftingMaterials": [],
+      "effects": [
+        {
+          "text": "30% Reduced Horizontal Recoil",
+          "kind": "percent",
+          "stat": "Horizontal Recoil",
+          "statKey": "horizontalRecoil",
+          "delta": -30.0
+        },
+        {
+          "text": "30% Reduced Vertical Recoil",
+          "kind": "percent",
+          "stat": "Vertical Recoil",
+          "statKey": "verticalRecoil",
+          "delta": -30.0
+        },
+        {
+          "text": "30% Reduced ADS Speed",
+          "kind": "percent",
+          "stat": "ADS Speed",
+          "statKey": "adsSpeed",
+          "delta": -30.0
+        }
+      ]
+    },
+    "Kinetic Converter": {
+      "pageUrl": "https://arcraiders.wiki/wiki/Kinetic_Converter",
+      "imageUrl": "https://arcraiders.wiki/w/images/thumb/7/71/Kinetic_Converter.png/50px-Kinetic_Converter.png.webp",
+      "slot": "Stock",
+      "requiredStation": "",
+      "craftingMaterials": [],
+      "effects": [
+        {
+          "text": "15% Increased Fire Rate",
+          "kind": "percent",
+          "stat": "Fire Rate",
+          "statKey": "fireRate",
+          "delta": 15.0
+        },
+        {
+          "text": "20% Increased Horizontal Recoil",
+          "kind": "percent",
+          "stat": "Horizontal Recoil",
+          "statKey": "horizontalRecoil",
+          "delta": 20.0
+        },
+        {
+          "text": "20% Increased Vertical Recoil",
+          "kind": "percent",
+          "stat": "Vertical Recoil",
+          "statKey": "verticalRecoil",
+          "delta": 20.0
+        }
+      ]
+    },
+    "Lightweight Stock": {
+      "pageUrl": "https://arcraiders.wiki/wiki/Lightweight_Stock",
+      "imageUrl": "https://arcraiders.wiki/w/images/thumb/c/cb/Lightweight_Stock.png/50px-Lightweight_Stock.png.webp",
+      "slot": "Stock",
+      "requiredStation": "Gunsmith 3",
+      "craftingMaterials": [
+        "Mod Components x2",
+        "Duct Tape x5"
+      ],
+      "effects": [
+        {
+          "text": "200% Increased ADS Speed",
+          "kind": "percent",
+          "stat": "ADS Speed",
+          "statKey": "adsSpeed",
+          "delta": 200.0
+        },
+        {
+          "text": "30% Reduced Equip Time",
+          "kind": "percent",
+          "stat": "Equip Time",
+          "statKey": "equipTime",
+          "delta": -30.0
+        },
+        {
+          "text": "30% Reduced Unequip Time",
+          "kind": "percent",
+          "stat": "Unequip Time",
+          "statKey": "unequipTime",
+          "delta": -30.0
+        },
+        {
+          "text": "50% Increased Vertical Recoil",
+          "kind": "percent",
+          "stat": "Vertical Recoil",
+          "statKey": "verticalRecoil",
+          "delta": 50.0
+        },
+        {
+          "text": "50% Increased Recoil Recovery Time",
+          "kind": "percent",
+          "stat": "Recoil Recovery Time",
+          "statKey": "recoilRecoveryTime",
+          "delta": 50.0
+        }
+      ]
+    },
+    "Muzzle Brake I": {
+      "pageUrl": "https://arcraiders.wiki/wiki/Muzzle_Brake_I",
+      "imageUrl": "https://arcraiders.wiki/w/images/thumb/4/4f/Muzzle_Brake_I.png/50px-Muzzle_Brake_I.png.webp",
+      "slot": "Muzzle",
+      "requiredStation": "Gunsmith 1",
+      "craftingMaterials": [
+        "Metal Parts x6",
+        "Wires x1"
+      ],
+      "effects": [
+        {
+          "text": "15% Reduced Horizontal Recoil",
+          "kind": "percent",
+          "stat": "Horizontal Recoil",
+          "statKey": "horizontalRecoil",
+          "delta": -15.0
+        },
+        {
+          "text": "15% Reduced Vertical Recoil",
+          "kind": "percent",
+          "stat": "Vertical Recoil",
+          "statKey": "verticalRecoil",
+          "delta": -15.0
+        }
+      ]
+    },
+    "Muzzle Brake II": {
+      "pageUrl": "https://arcraiders.wiki/wiki/Muzzle_Brake_II",
+      "imageUrl": "https://arcraiders.wiki/w/images/thumb/2/23/Muzzle_Brake_II.png/50px-Muzzle_Brake_II.png.webp",
+      "slot": "Muzzle",
+      "requiredStation": "Gunsmith 2",
+      "craftingMaterials": [
+        "Mechanical Components x2",
+        "Wires x4"
+      ],
+      "effects": [
+        {
+          "text": "20% Reduced Horizontal Recoil",
+          "kind": "percent",
+          "stat": "Horizontal Recoil",
+          "statKey": "horizontalRecoil",
+          "delta": -20.0
+        },
+        {
+          "text": "20% Reduced Vertical Recoil",
+          "kind": "percent",
+          "stat": "Vertical Recoil",
+          "statKey": "verticalRecoil",
+          "delta": -20.0
+        }
+      ]
+    },
+    "Muzzle Brake III": {
+      "pageUrl": "https://arcraiders.wiki/wiki/Muzzle_Brake_III",
+      "imageUrl": "https://arcraiders.wiki/w/images/thumb/a/a2/Muzzle_Brake_III.png/50px-Muzzle_Brake_III.png.webp",
+      "slot": "Muzzle",
+      "requiredStation": "Gunsmith 3",
+      "craftingMaterials": [
+        "Mod Components x2",
+        "Wires x8"
+      ],
+      "effects": [
+        {
+          "text": "25% Reduced Horizontal Recoil Control",
+          "kind": "percent",
+          "stat": "Horizontal Recoil Control",
+          "statKey": "horizontalRecoilControl",
+          "delta": -25.0
+        },
+        {
+          "text": "25% Reduced Vertical Recoil Control",
+          "kind": "percent",
+          "stat": "Vertical Recoil Control",
+          "statKey": "verticalRecoilControl",
+          "delta": -25.0
+        },
+        {
+          "text": "20% Increased Durability Burn Rate",
+          "kind": "percent",
+          "stat": "Durability Burn Rate",
+          "statKey": "durabilityBurnRate",
+          "delta": 20.0
+        }
+      ]
+    },
+    "Padded Stock": {
+      "pageUrl": "https://arcraiders.wiki/wiki/Padded_Stock",
+      "imageUrl": "https://arcraiders.wiki/w/images/thumb/4/4b/Padded_Stock.png/50px-Padded_Stock.png.webp",
+      "slot": "Stock",
+      "requiredStation": "Gunsmith 3",
+      "craftingMaterials": [
+        "Mod Components x2",
+        "Duct Tape x5"
+      ],
+      "effects": []
+    },
+    "Shotgun Choke I": {
+      "pageUrl": "https://arcraiders.wiki/wiki/Shotgun_Choke_I",
+      "imageUrl": "https://arcraiders.wiki/w/images/thumb/0/07/Shotgun_Choke_I.png/50px-Shotgun_Choke_I.png.webp",
+      "slot": "Shotgun Muzzle",
+      "requiredStation": "Gunsmith 1",
+      "craftingMaterials": [
+        "Metal Parts x6",
+        "Wires x1"
+      ],
+      "effects": [
+        {
+          "text": "10% Reduced Base Dispersion",
+          "kind": "percent",
+          "stat": "Base Dispersion",
+          "statKey": "baseDispersion",
+          "delta": -10.0
+        }
+      ]
+    },
+    "Shotgun Choke II": {
+      "pageUrl": "https://arcraiders.wiki/wiki/Shotgun_Choke_II",
+      "imageUrl": "https://arcraiders.wiki/w/images/thumb/6/63/Shotgun_Choke_II.png/50px-Shotgun_Choke_II.png.webp",
+      "slot": "Shotgun Muzzle",
+      "requiredStation": "Gunsmith 2",
+      "craftingMaterials": [
+        "Mechanical Components x2",
+        "Wires x4"
+      ],
+      "effects": [
+        {
+          "text": "20% Reduced Base Dispersion",
+          "kind": "percent",
+          "stat": "Base Dispersion",
+          "statKey": "baseDispersion",
+          "delta": -20.0
+        }
+      ]
+    },
+    "Shotgun Choke III": {
+      "pageUrl": "https://arcraiders.wiki/wiki/Shotgun_Choke_III",
+      "imageUrl": "https://arcraiders.wiki/w/images/thumb/3/36/Shotgun_Choke_III.png/50px-Shotgun_Choke_III.png.webp",
+      "slot": "Shotgun Muzzle",
+      "requiredStation": "Gunsmith 3",
+      "craftingMaterials": [
+        "Mod Components x2",
+        "Wires x8"
+      ],
+      "effects": [
+        {
+          "text": "30% Reduced Base Dispersion",
+          "kind": "percent",
+          "stat": "Base Dispersion",
+          "statKey": "baseDispersion",
+          "delta": -30.0
+        },
+        {
+          "text": "20% Increased Durability Burn Rate",
+          "kind": "percent",
+          "stat": "Durability Burn Rate",
+          "statKey": "durabilityBurnRate",
+          "delta": 20.0
+        }
+      ]
+    },
+    "Shotgun Silencer": {
+      "pageUrl": "https://arcraiders.wiki/wiki/Shotgun_Silencer",
+      "imageUrl": "https://arcraiders.wiki/w/images/thumb/4/4d/Shotgun_Silencer.png/50px-Shotgun_Silencer.png.webp",
+      "slot": "Shotgun Muzzle",
+      "requiredStation": "Gunsmith 3",
+      "craftingMaterials": [
+        "Mod Components x2",
+        "Wires x8"
+      ],
+      "effects": [
+        {
+          "text": "50% Reduced Noise",
+          "kind": "percent",
+          "stat": "Noise",
+          "statKey": "noise",
+          "delta": -50.0
+        }
+      ]
+    },
+    "Silencer I": {
+      "pageUrl": "https://arcraiders.wiki/wiki/Silencer_I",
+      "imageUrl": "https://arcraiders.wiki/w/images/thumb/f/f7/Silencer_I.png/50px-Silencer_I.png.webp",
+      "slot": "Muzzle",
+      "requiredStation": "Gunsmith 2",
+      "craftingMaterials": [
+        "Mechanical Components x2",
+        "Wires x4"
+      ],
+      "effects": [
+        {
+          "text": "20% Reduced Noise",
+          "kind": "percent",
+          "stat": "Noise",
+          "statKey": "noise",
+          "delta": -20.0
+        }
+      ]
+    },
+    "Silencer II": {
+      "pageUrl": "https://arcraiders.wiki/wiki/Silencer_II",
+      "imageUrl": "https://arcraiders.wiki/w/images/thumb/c/c0/Silencer_II.png/50px-Silencer_II.png.webp",
+      "slot": "Muzzle",
+      "requiredStation": "Gunsmith 3",
+      "craftingMaterials": [
+        "Mod Components x2",
+        "Wires x8"
+      ],
+      "effects": [
+        {
+          "text": "40% Reduced Noise",
+          "kind": "percent",
+          "stat": "Noise",
+          "statKey": "noise",
+          "delta": -40.0
+        }
+      ]
+    },
+    "Silencer III": {
+      "pageUrl": "https://arcraiders.wiki/wiki/Silencer_III",
+      "imageUrl": "https://arcraiders.wiki/w/images/thumb/3/3e/Silencer_III.png/50px-Silencer_III.png.webp",
+      "slot": "Muzzle",
+      "requiredStation": "",
+      "craftingMaterials": [],
+      "effects": [
+        {
+          "text": "60% Reduced Noise",
+          "kind": "percent",
+          "stat": "Noise",
+          "statKey": "noise",
+          "delta": -60.0
+        },
+        {
+          "text": "20% Increased Durability Burn Rate",
+          "kind": "percent",
+          "stat": "Durability Burn Rate",
+          "statKey": "durabilityBurnRate",
+          "delta": 20.0
+        }
+      ]
+    },
+    "Stable Stock I": {
+      "pageUrl": "https://arcraiders.wiki/wiki/Stable_Stock_I",
+      "imageUrl": "https://arcraiders.wiki/w/images/thumb/8/8d/Stable_Stock_I.png/50px-Stable_Stock_I.png.webp",
+      "slot": "Stock",
+      "requiredStation": "Gunsmith 1",
+      "craftingMaterials": [
+        "Rubber Parts x6",
+        "Duct Tape x1"
+      ],
+      "effects": [
+        {
+          "text": "20% Reduced Recoil Recovery Duration",
+          "kind": "percent",
+          "stat": "Recoil Recovery Duration",
+          "statKey": "recoilRecoveryDuration",
+          "delta": -20.0
+        },
+        {
+          "text": "20% Reduced Dispersion Recovery Time",
+          "kind": "percent",
+          "stat": "Dispersion Recovery Time",
+          "statKey": "dispersionRecoveryTime",
+          "delta": -20.0
+        }
+      ]
+    },
+    "Stable Stock II": {
+      "pageUrl": "https://arcraiders.wiki/wiki/Stable_Stock_II",
+      "imageUrl": "https://arcraiders.wiki/w/images/thumb/b/b4/Stable_Stock_II.png/50px-Stable_Stock_II.png.webp",
+      "slot": "Stock",
+      "requiredStation": "Gunsmith 2",
+      "craftingMaterials": [
+        "Mechanical Components x2",
+        "Duct Tape x3"
+      ],
+      "effects": [
+        {
+          "text": "35% Reduced Recoil Recovery Duration",
+          "kind": "percent",
+          "stat": "Recoil Recovery Duration",
+          "statKey": "recoilRecoveryDuration",
+          "delta": -35.0
+        },
+        {
+          "text": "35% Reduced Dispersion Recovery Time",
+          "kind": "percent",
+          "stat": "Dispersion Recovery Time",
+          "statKey": "dispersionRecoveryTime",
+          "delta": -35.0
+        }
+      ]
+    },
+    "Stable Stock III": {
+      "pageUrl": "https://arcraiders.wiki/wiki/Stable_Stock_III",
+      "imageUrl": "https://arcraiders.wiki/w/images/thumb/e/eb/Stable_Stock_III.png/50px-Stable_Stock_III.png.webp",
+      "slot": "Stock",
+      "requiredStation": "Gunsmith 3",
+      "craftingMaterials": [
+        "Mod Components x2",
+        "Duct Tape x5"
+      ],
+      "effects": [
+        {
+          "text": "50% Reduced Recoil Recovery Duration",
+          "kind": "percent",
+          "stat": "Recoil Recovery Duration",
+          "statKey": "recoilRecoveryDuration",
+          "delta": -50.0
+        },
+        {
+          "text": "50% Reduced Dispersion Recovery Time",
+          "kind": "percent",
+          "stat": "Dispersion Recovery Time",
+          "statKey": "dispersionRecoveryTime",
+          "delta": -50.0
+        },
+        {
+          "text": "20% Increased Equip Time",
+          "kind": "percent",
+          "stat": "Equip Time",
+          "statKey": "equipTime",
+          "delta": 20.0
+        },
+        {
+          "text": "20% Increased Unequip Time",
+          "kind": "percent",
+          "stat": "Unequip Time",
+          "statKey": "unequipTime",
+          "delta": 20.0
+        }
+      ]
+    },
+    "Vertical Grip I": {
+      "pageUrl": "https://arcraiders.wiki/wiki/Vertical_Grip_I",
+      "imageUrl": "https://arcraiders.wiki/w/images/thumb/4/4d/Vertical_Grip_I.png/50px-Vertical_Grip_I.png.webp",
+      "slot": "Underbarrel",
+      "requiredStation": "Gunsmith 1",
+      "craftingMaterials": [
+        "Plastic Parts x6",
+        "Duct Tape x1"
+      ],
+      "effects": [
+        {
+          "text": "20% Reduced Vertical Recoil Control",
+          "kind": "percent",
+          "stat": "Vertical Recoil Control",
+          "statKey": "verticalRecoilControl",
+          "delta": -20.0
+        }
+      ]
+    },
+    "Vertical Grip II": {
+      "pageUrl": "https://arcraiders.wiki/wiki/Vertical_Grip_II",
+      "imageUrl": "https://arcraiders.wiki/w/images/thumb/3/3c/Vertical_Grip_II.png/50px-Vertical_Grip_II.png.webp",
+      "slot": "Underbarrel",
+      "requiredStation": "Gunsmith 2",
+      "craftingMaterials": [
+        "Mechanical Components x2",
+        "Duct Tape x3"
+      ],
+      "effects": [
+        {
+          "text": "30% Reduced Vertical Recoil",
+          "kind": "percent",
+          "stat": "Vertical Recoil",
+          "statKey": "verticalRecoil",
+          "delta": -30.0
+        }
+      ]
+    },
+    "Vertical Grip III": {
+      "pageUrl": "https://arcraiders.wiki/wiki/Vertical_Grip_III",
+      "imageUrl": "https://arcraiders.wiki/w/images/thumb/2/20/Vertical_Grip_III.png/50px-Vertical_Grip_III.png.webp",
+      "slot": "Underbarrel",
+      "requiredStation": "Gunsmith 3",
+      "craftingMaterials": [
+        "Mod Components x2",
+        "Duct Tape x5"
+      ],
+      "effects": [
+        {
+          "text": "40% Reduced Vertical Recoil",
+          "kind": "percent",
+          "stat": "Vertical Recoil",
+          "statKey": "verticalRecoil",
+          "delta": -40.0
+        },
+        {
+          "text": "30% Reduced ADS Speed",
+          "kind": "percent",
+          "stat": "ADS Speed",
+          "statKey": "adsSpeed",
+          "delta": -30.0
+        }
+      ]
+    }
+  }
+}

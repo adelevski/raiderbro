@@ -13,7 +13,8 @@ def main() -> None:
         f"{summary['items']} items, "
         f"{summary['workshopLevels']} workshop levels, "
         f"{summary['cards']} tracker cards, and "
-        f"{summary['weapons']} weapons."
+        f"{summary['weapons']} weapons, "
+        f"and {summary['weaponMods']} weapon mods."
     )
 
 
