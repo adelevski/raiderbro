@@ -54,7 +54,7 @@ window.ITEM_DATA = {
         "category": "Project"
       },
       {
-        "text": "Weather Monitor System (5x)",
+        "text": "High-Gain Antenna (50x)",
         "category": "Project"
       }
     ]
@@ -113,6 +113,12 @@ window.ITEM_DATA = {
         "quantity": 16,
         "text": "16x Chemicals"
       }
+    ],
+    "usesEntries": [
+      {
+        "text": "High-Gain Antenna (15x)",
+        "category": "Project"
+      }
     ]
   },
   "ARC Flex Rubber": {
@@ -137,6 +143,12 @@ window.ITEM_DATA = {
         "item": "Rubber Parts",
         "quantity": 16,
         "text": "16x Rubber Parts"
+      }
+    ],
+    "usesEntries": [
+      {
+        "text": "High-Gain Antenna (10x)",
+        "category": "Project"
       }
     ]
   },
@@ -197,6 +209,10 @@ window.ITEM_DATA = {
     ],
     "usesEntries": [
       {
+        "text": "High-Gain Antenna (10x)",
+        "category": "Project"
+      },
+      {
         "text": "Trophy Display (10x)",
         "category": "Project"
       }
@@ -224,10 +240,6 @@ window.ITEM_DATA = {
       {
         "text": "Refiner 1 (5x)",
         "category": "Workshop"
-      },
-      {
-        "text": "Weather Monitor System (5x)",
-        "category": "Project"
       }
     ]
   },
@@ -257,6 +269,10 @@ window.ITEM_DATA = {
     ],
     "usesEntries": [
       {
+        "text": "High-Gain Antenna (20x)",
+        "category": "Project"
+      },
+      {
         "text": "Trophy Display (10x)",
         "category": "Project"
       }
@@ -284,6 +300,12 @@ window.ITEM_DATA = {
         "item": "Fabric",
         "quantity": 16,
         "text": "16x Fabric"
+      }
+    ],
+    "usesEntries": [
+      {
+        "text": "High-Gain Antenna (15x)",
+        "category": "Project"
       }
     ]
   },
@@ -352,6 +374,12 @@ window.ITEM_DATA = {
         "quantity": 2,
         "text": "2x ARC Powercell"
       }
+    ],
+    "usesEntries": [
+      {
+        "text": "High-Gain Antenna (15x)",
+        "category": "Project"
+      }
     ]
   },
   "Advanced Electrical Components": {
@@ -394,6 +422,10 @@ window.ITEM_DATA = {
       },
       {
         "text": "Expedition 1 (5x)",
+        "category": "Project"
+      },
+      {
+        "text": "Expedition 2 (5x)",
         "category": "Project"
       },
       {
@@ -781,6 +813,10 @@ window.ITEM_DATA = {
         "category": "Workshop"
       },
       {
+        "text": "Settled in Full (1x)",
+        "category": "Quest"
+      },
+      {
         "text": "Trophy Display (5x)",
         "category": "Project"
       }
@@ -804,6 +840,10 @@ window.ITEM_DATA = {
     "usesEntries": [
       {
         "text": "After Rain Comes (2x)",
+        "category": "Quest"
+      },
+      {
+        "text": "Clamoring for Attention (1x)",
         "category": "Quest"
       },
       {
@@ -1194,12 +1234,6 @@ window.ITEM_DATA = {
         "quantity": 8,
         "text": "8x Plastic Parts"
       }
-    ],
-    "usesEntries": [
-      {
-        "text": "Weather Monitor System (3x)",
-        "category": "Project"
-      }
     ]
   },
   "Candle Holder": {
@@ -1247,12 +1281,6 @@ window.ITEM_DATA = {
         "item": "Plastic Parts",
         "quantity": 3,
         "text": "3x Plastic Parts"
-      }
-    ],
-    "usesEntries": [
-      {
-        "text": "Weather Monitor System (5x)",
-        "category": "Project"
       }
     ]
   },
@@ -1412,18 +1440,7 @@ window.ITEM_DATA = {
     "category": "Augment",
     "categoryIconUrl": "https://arcraiders.wiki/w/images/6/6b/Icon_Augment.png",
     "sellPriceIconUrl": "https://arcraiders.wiki/w/images/7/7b/Icon_Coins.png",
-    "recycleEntries": [
-      {
-        "item": "Advanced Electrical Components",
-        "quantity": 1,
-        "text": "1x Advanced Electrical Components"
-      },
-      {
-        "item": "Processor",
-        "quantity": 1,
-        "text": "1x Processor"
-      }
-    ]
+    "recycleStatus": "Cannot be recycled"
   },
   "Comet Igniter": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/c/c8/Comet_Igniter.png/75px-Comet_Igniter.png.webp",
@@ -1443,12 +1460,6 @@ window.ITEM_DATA = {
         "item": "Crude Explosives",
         "quantity": 2,
         "text": "2x Crude Explosives"
-      }
-    ],
-    "usesEntries": [
-      {
-        "text": "Weather Monitor System (1x)",
-        "category": "Project"
       }
     ]
   },
@@ -1830,10 +1841,6 @@ window.ITEM_DATA = {
       {
         "text": "Utility Station 2 (2x)",
         "category": "Workshop"
-      },
-      {
-        "text": "Weather Monitor System (1x)",
-        "category": "Project"
       }
     ]
   },
@@ -2130,12 +2137,6 @@ window.ITEM_DATA = {
         "quantity": 3,
         "text": "3x Fabric"
       }
-    ],
-    "usesEntries": [
-      {
-        "text": "Weather Monitor System (10x)",
-        "category": "Project"
-      }
     ]
   },
   "Durable Cloth": {
@@ -2227,6 +2228,10 @@ window.ITEM_DATA = {
       {
         "text": "Utility Station 2 (5x)",
         "category": "Workshop"
+      },
+      {
+        "text": "Fragmented Logs (1x)",
+        "category": "Quest"
       },
       {
         "text": "Expedition 1 (30x)",
@@ -2701,13 +2706,7 @@ window.ITEM_DATA = {
     "category": "Trinket",
     "categoryIconUrl": "https://arcraiders.wiki/w/images/b/be/Icon_Trinket.png",
     "sellPriceIconUrl": "https://arcraiders.wiki/w/images/7/7b/Icon_Coins.png",
-    "recycleStatus": "Cannot be recycled",
-    "usesEntries": [
-      {
-        "text": "Weather Monitor System (1x)",
-        "category": "Project"
-      }
-    ]
+    "recycleStatus": "Cannot be recycled"
   },
   "Fireball Burner": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/8/8b/Fireball_Burner.png/75px-Fireball_Burner.png.webp",
@@ -2742,6 +2741,10 @@ window.ITEM_DATA = {
       {
         "text": "Refiner 2 (8x)",
         "category": "Workshop"
+      },
+      {
+        "text": "Test Case (1x)",
+        "category": "Quest"
       }
     ]
   },
@@ -2792,11 +2795,11 @@ window.ITEM_DATA = {
     ],
     "usesEntries": [
       {
-        "text": "Expedition 3 (5x)",
-        "category": "Project"
+        "text": "Test Case (1x)",
+        "category": "Quest"
       },
       {
-        "text": "Weather Monitor System (1x)",
+        "text": "Expedition 3 (5x)",
         "category": "Project"
       }
     ]
@@ -2899,7 +2902,18 @@ window.ITEM_DATA = {
     "category": "Augment",
     "categoryIconUrl": "https://arcraiders.wiki/w/images/6/6b/Icon_Augment.png",
     "sellPriceIconUrl": "https://arcraiders.wiki/w/images/7/7b/Icon_Coins.png",
-    "recycleStatus": "Cannot be recycled"
+    "recycleEntries": [
+      {
+        "item": "Plastic Parts",
+        "quantity": 6,
+        "text": "6x Plastic Parts"
+      },
+      {
+        "item": "Rubber Parts",
+        "quantity": 6,
+        "text": "6x Rubber Parts"
+      }
+    ]
   },
   "Frequency Modulation Box": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/3/36/Frequency_Modulation_Box.png/75px-Frequency_Modulation_Box.png.webp",
@@ -2923,7 +2937,7 @@ window.ITEM_DATA = {
     ],
     "usesEntries": [
       {
-        "text": "Expedition 1 (5x)",
+        "text": "Expedition 2 (5x)",
         "category": "Project"
       }
     ]
@@ -3308,6 +3322,10 @@ window.ITEM_DATA = {
         "category": "Workshop"
       },
       {
+        "text": "Test Case (1x)",
+        "category": "Quest"
+      },
+      {
         "text": "The Trifecta (2x)",
         "category": "Quest"
       },
@@ -3550,7 +3568,7 @@ window.ITEM_DATA = {
         "category": "Quest"
       },
       {
-        "text": "Expedition 1 (3x)",
+        "text": "Expedition 2 (3x)",
         "category": "Project"
       }
     ]
@@ -3693,6 +3711,10 @@ window.ITEM_DATA = {
       },
       {
         "text": "Expedition 1 (3x)",
+        "category": "Project"
+      },
+      {
+        "text": "Expedition 2 (3x)",
         "category": "Project"
       },
       {
@@ -4254,10 +4276,6 @@ window.ITEM_DATA = {
       {
         "text": "Expedition 3 (150x)",
         "category": "Project"
-      },
-      {
-        "text": "Weather Monitor System (15x)",
-        "category": "Project"
       }
     ]
   },
@@ -4525,12 +4543,6 @@ window.ITEM_DATA = {
         "quantity": 3,
         "text": "3x Chemicals"
       }
-    ],
-    "usesEntries": [
-      {
-        "text": "Weather Monitor System (3x)",
-        "category": "Project"
-      }
     ]
   },
   "Olives": {
@@ -4675,10 +4687,6 @@ window.ITEM_DATA = {
       },
       {
         "text": "Expedition 2 (200x)",
-        "category": "Project"
-      },
-      {
-        "text": "Weather Monitor System (25x)",
         "category": "Project"
       }
     ]
@@ -5258,7 +5266,7 @@ window.ITEM_DATA = {
         "category": "Workshop"
       },
       {
-        "text": "Out Of The Shadows (1x)",
+        "text": "Out of the Shadows (1x)",
         "category": "Quest"
       },
       {
@@ -5557,10 +5565,6 @@ window.ITEM_DATA = {
       {
         "text": "Trophy Display (3x)",
         "category": "Project"
-      },
-      {
-        "text": "Weather Monitor System (3x)",
-        "category": "Project"
       }
     ]
   },
@@ -5753,10 +5757,6 @@ window.ITEM_DATA = {
     "usesEntries": [
       {
         "text": "Expedition 1 (20x)",
-        "category": "Project"
-      },
-      {
-        "text": "Weather Monitor System (3x)",
         "category": "Project"
       }
     ]
@@ -6220,10 +6220,6 @@ window.ITEM_DATA = {
       {
         "text": "The Trifecta (2x)",
         "category": "Quest"
-      },
-      {
-        "text": "Weather Monitor System (1x)",
-        "category": "Project"
       }
     ]
   },
@@ -6501,10 +6497,6 @@ window.ITEM_DATA = {
       {
         "text": "Expedition 3 (15x)",
         "category": "Project"
-      },
-      {
-        "text": "Weather Monitor System (5x)",
-        "category": "Project"
       }
     ]
   },
@@ -6569,6 +6561,27 @@ window.ITEM_DATA = {
       }
     ]
   },
+  "Surge Coil": {
+    "imageUrl": "https://arcraiders.wiki/w/images/thumb/5/5b/Surge_Coil.png/75px-Surge_Coil.png.webp",
+    "rarity": "Rare",
+    "sellPrice": "2100",
+    "stackSize": "3",
+    "category": "Quick Use",
+    "categoryIconUrl": "https://arcraiders.wiki/w/images/7/7e/Icon_Utility.png",
+    "sellPriceIconUrl": "https://arcraiders.wiki/w/images/7/7b/Icon_Coins.png",
+    "recycleEntries": [
+      {
+        "item": "Electrical Components",
+        "quantity": 1,
+        "text": "1x Electrical Components"
+      },
+      {
+        "item": "Sensors",
+        "quantity": 1,
+        "text": "1x Sensors"
+      }
+    ]
+  },
   "Surge Shield Recharger": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/c/c9/Surge_Shield_Recharger.png/75px-Surge_Shield_Recharger.png.webp",
     "rarity": "Rare",
@@ -6622,6 +6635,10 @@ window.ITEM_DATA = {
       {
         "text": "Mixed Signals (1x)",
         "category": "Quest"
+      },
+      {
+        "text": "High-Gain Antenna (10x)",
+        "category": "Project"
       },
       {
         "text": "Trophy Display (5x)",
@@ -7011,7 +7028,7 @@ window.ITEM_DATA = {
     ]
   },
   "Trigger 'Nade": {
-    "imageUrl": "https://arcraiders.wiki/w/images/thumb/0/09/Trigger_Nade.png/75px-Trigger_Nade.png.webp",
+    "imageUrl": "https://arcraiders.wiki/w/images/thumb/c/cc/Trigger_%27Nade.png/75px-Trigger_%27Nade.png.webp",
     "rarity": "Rare",
     "sellPrice": "1000",
     "stackSize": "3",
@@ -7296,12 +7313,6 @@ window.ITEM_DATA = {
         "quantity": 1,
         "text": "1x Wires"
       }
-    ],
-    "usesEntries": [
-      {
-        "text": "Weather Monitor System (3x)",
-        "category": "Project"
-      }
     ]
   },
   "Wasp Driver": {
@@ -7344,10 +7355,6 @@ window.ITEM_DATA = {
       },
       {
         "text": "Trophy Display (20x)",
-        "category": "Project"
-      },
-      {
-        "text": "Weather Monitor System (3x)",
         "category": "Project"
       }
     ]
@@ -7392,12 +7399,6 @@ window.ITEM_DATA = {
         "quantity": 4,
         "text": "4x Metal Parts"
       }
-    ],
-    "usesEntries": [
-      {
-        "text": "Weather Monitor System (1x)",
-        "category": "Project"
-      }
     ]
   },
   "Wires": {
@@ -7421,6 +7422,10 @@ window.ITEM_DATA = {
         "category": "Quest"
       },
       {
+        "text": "Clamoring for Attention (3x)",
+        "category": "Quest"
+      },
+      {
         "text": "Eyes On The Prize (3x)",
         "category": "Quest"
       },
@@ -7438,10 +7443,6 @@ window.ITEM_DATA = {
       },
       {
         "text": "Expedition 3 (25x)",
-        "category": "Project"
-      },
-      {
-        "text": "Weather Monitor System (3x)",
         "category": "Project"
       }
     ]

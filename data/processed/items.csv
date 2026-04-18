@@ -1,17 +1,17 @@
 image_src,item,rarity,recycles_to,sell_price,stack_size,category,uses,found_in
-/w/images/thumb/a/a6/ARC_Alloy.png/75px-ARC_Alloy.png.webp,ARC Alloy,Uncommon,2x Metal Parts,200,15,Topside Material,Workshop | Explosives Station 1 (6x) | Medical Lab 1 (6x) | Utility Station 1 (6x) | Quests | Clearer Skies (3x) | Projects | Expedition 1 (80x) | Expedition 2 (80x) | Expedition 3 (80x) | Weather Monitor System (5x),ARC
+/w/images/thumb/a/a6/ARC_Alloy.png/75px-ARC_Alloy.png.webp,ARC Alloy,Uncommon,2x Metal Parts,200,15,Topside Material,Workshop | Explosives Station 1 (6x) | Medical Lab 1 (6x) | Utility Station 1 (6x) | Quests | Clearer Skies (3x) | Projects | Expedition 1 (80x) | Expedition 2 (80x) | Expedition 3 (80x) | High-Gain Antenna (50x),ARC
 /w/images/thumb/d/dc/ARC_Circuitry.png/75px-ARC_Circuitry.png.webp,ARC Circuitry,Rare,2x ARC Alloy,1000,5,Topside Material,Workshop | Refiner 3 (10x),ARC
-/w/images/thumb/e/e9/ARC_Coolant.png/75px-ARC_Coolant.png.webp,ARC Coolant,Rare,16x Chemicals,1000,3,Recyclable,,ARC
-/w/images/thumb/2/29/ARC_Flex_Rubber.png/75px-ARC_Flex_Rubber.png.webp,ARC Flex Rubber,Rare,16x Rubber Parts,1000,3,Recyclable,,ARC
+/w/images/thumb/e/e9/ARC_Coolant.png/75px-ARC_Coolant.png.webp,ARC Coolant,Rare,16x Chemicals,1000,3,Recyclable,Projects | High-Gain Antenna (15x),ARC
+/w/images/thumb/2/29/ARC_Flex_Rubber.png/75px-ARC_Flex_Rubber.png.webp,ARC Flex Rubber,Rare,16x Rubber Parts,1000,3,Recyclable,Projects | High-Gain Antenna (10x),ARC
 /w/images/thumb/a/ad/ARC_Motion_Core.png/75px-ARC_Motion_Core.png.webp,ARC Motion Core,Rare,2x ARC Alloy,1000,5,Topside Material,Workshop | Refiner 2 (5x),ARC
-/w/images/thumb/0/02/ARC_Performance_Steel.png/75px-ARC_Performance_Steel.png.webp,ARC Performance Steel,Rare,12x Metal Parts,1000,3,Recyclable,Projects | Trophy Display (10x),ARC
-/w/images/thumb/d/df/ARC_Powercell.png/75px-ARC_Powercell.png.webp,ARC Powercell,Common,Cannot be recycled,270,5,Topside Material,Workshop | Refiner 1 (5x) | Projects | Weather Monitor System (5x),ARC
-/w/images/thumb/7/72/ARC_Synthetic_Resin.png/75px-ARC_Synthetic_Resin.png.webp,ARC Synthetic Resin,Rare,14x Plastic Parts,1000,3,Recyclable,Projects | Trophy Display (10x),ARC
-/w/images/thumb/0/0f/ARC_Thermo_Lining.png/75px-ARC_Thermo_Lining.png.webp,ARC Thermo Lining,Rare,16x Fabric,1000,3,Recyclable,,ARC
+/w/images/thumb/0/02/ARC_Performance_Steel.png/75px-ARC_Performance_Steel.png.webp,ARC Performance Steel,Rare,12x Metal Parts,1000,3,Recyclable,Projects | High-Gain Antenna (10x) | Trophy Display (10x),ARC
+/w/images/thumb/d/df/ARC_Powercell.png/75px-ARC_Powercell.png.webp,ARC Powercell,Common,Cannot be recycled,270,5,Topside Material,Workshop | Refiner 1 (5x),ARC
+/w/images/thumb/7/72/ARC_Synthetic_Resin.png/75px-ARC_Synthetic_Resin.png.webp,ARC Synthetic Resin,Rare,14x Plastic Parts,1000,3,Recyclable,Projects | High-Gain Antenna (20x) | Trophy Display (10x),ARC
+/w/images/thumb/0/0f/ARC_Thermo_Lining.png/75px-ARC_Thermo_Lining.png.webp,ARC Thermo Lining,Rare,16x Fabric,1000,3,Recyclable,Projects | High-Gain Antenna (15x),ARC
 /w/images/thumb/5/50/Acoustic_Guitar.png/75px-Acoustic_Guitar.png.webp,Acoustic Guitar,Legendary,4x Metal Parts | 6x Wires,7000,1,Quick Use,,
 /w/images/thumb/1/1b/Adrenaline_Shot.png/75px-Adrenaline_Shot.png.webp,Adrenaline Shot,Common,1x Chemicals | 1x Plastic Parts,300,5,Quick Use,,
-/w/images/thumb/3/31/Advanced_ARC_Powercell.png/75px-Advanced_ARC_Powercell.png.webp,Advanced ARC Powercell,Rare,2x ARC Powercell,640,5,Topside Material,,ARC
-/w/images/thumb/9/9b/Advanced_Electrical_Components.png/75px-Advanced_Electrical_Components.png.webp,Advanced Electrical Components,Rare,1x Electrical Components | 1x Wires,1750,5,Refined Material,Workshop | Gear Bench 3 (5x) | Utility Station 3 (5x) | Projects | Expedition 1 (5x) | Expedition 3 (5x),Electrical
+/w/images/thumb/3/31/Advanced_ARC_Powercell.png/75px-Advanced_ARC_Powercell.png.webp,Advanced ARC Powercell,Rare,2x ARC Powercell,640,5,Topside Material,Projects | High-Gain Antenna (15x),ARC
+/w/images/thumb/9/9b/Advanced_Electrical_Components.png/75px-Advanced_Electrical_Components.png.webp,Advanced Electrical Components,Rare,1x Electrical Components | 1x Wires,1750,5,Refined Material,Workshop | Gear Bench 3 (5x) | Utility Station 3 (5x) | Projects | Expedition 1 (5x) | Expedition 2 (5x) | Expedition 3 (5x),Electrical
 /w/images/thumb/2/25/Advanced_Mechanical_Components.png/75px-Advanced_Mechanical_Components.png.webp,Advanced Mechanical Components,Rare,1x Mechanical Components | 1x Steel Spring,1750,5,Refined Material,Workshop | Gunsmith 3 (5x),Mechanical
 /w/images/thumb/4/47/Agave.png/75px-Agave.png.webp,Agave,Uncommon,3x Assorted Seeds,1000,10,Nature,,
 /w/images/thumb/a/a8/Agave_Juice.png/75px-Agave_Juice.png.webp,Agave Juice,Common,Cannot be recycled,1800,5,Quick Use,,
@@ -25,12 +25,13 @@ image_src,item,rarity,recycles_to,sell_price,stack_size,category,uses,found_in
 /w/images/thumb/f/f5/Antiseptic.png/75px-Antiseptic.png.webp,Antiseptic,Rare,10x Chemicals,1000,5,Refined Material,Workshop | Medical Lab 3 (8x) | Quests | Doctor's Orders (2x),Medical
 /w/images/thumb/e/ef/Anvil_Splitter.png/75px-Anvil_Splitter.png.webp,Anvil Splitter,Legendary,1x Mod Components | 1x Processor,7000,1,Mods,,
 /w/images/thumb/f/fc/Apricot.png/75px-Apricot.png.webp,Apricot,Uncommon,3x Assorted Seeds,640,10,Nature,Workshop | Scrappy 3 (3x) | Scrappy 5 (12x),Nature
+/w/images/thumb/1/18/Assessor_Matrix.png/75px-Assessor_Matrix.png.webp,Assessor Matrix,Epic,1x Advanced Mechanical Components | 3x Advanced ARC Powercell,5000,1,Recyclable,Projects | High-Gain Antenna (18x) | High-Gain Antenna (6x),
 https://arcraiders.wiki/w/images/1/18/Assessor_Matrix.png,Assessor Matrix,Epic,1x Advanced Mechanical Components | 3x Advanced ARC Powercell,5000,1,Recyclable,projects | High-Gain Antenna Data Logger (6x) | projects | High-Gain Antenna Parabolic Dish (18x),ARC
 /w/images/thumb/5/51/Assorted_Seeds.png/75px-Assorted_Seeds.png.webp,Assorted Seeds,Common,Cannot be recycled,100,100,Nature,,
 /w/images/thumb/0/0c/Bandage.png/75px-Bandage.png.webp,Bandage,Common,2x Fabric,250,5,Quick Use,,
 /w/images/thumb/c/cb/Barricade_Kit.png/75px-Barricade_Kit.png.webp,Barricade Kit,Uncommon,4x Metal Parts,640,3,Quick Use,,
-/w/images/thumb/0/06/Bastion_Cell.png/75px-Bastion_Cell.png.webp,Bastion Cell,Epic,1x Advanced Mechanical Components | 3x ARC Alloy,3000,3,Recyclable,Workshop | Gear Bench 3 (6x) | Projects | Trophy Display (5x),ARC
-/w/images/thumb/6/6d/Battery.png/75px-Battery.png.webp,Battery,Uncommon,2x Metal Parts,250,15,Topside Material,Quests | After Rain Comes (2x) | Trash Into Treasure (1x) | Projects | Expedition 1 (30x) | Expedition 2 (30x) | Expedition 3 (25x),
+/w/images/thumb/0/06/Bastion_Cell.png/75px-Bastion_Cell.png.webp,Bastion Cell,Epic,1x Advanced Mechanical Components | 3x ARC Alloy,3000,3,Recyclable,Workshop | Gear Bench 3 (6x) | Quests | Settled in Full (1x) | Projects | Trophy Display (5x),ARC
+/w/images/thumb/6/6d/Battery.png/75px-Battery.png.webp,Battery,Uncommon,2x Metal Parts,250,15,Topside Material,Quests | After Rain Comes (2x) | Clamoring for Attention (1x) | Trash Into Treasure (1x) | Projects | Expedition 1 (30x) | Expedition 2 (30x) | Expedition 3 (25x),
 /w/images/thumb/f/fa/Bicycle_Pump.png/75px-Bicycle_Pump.png.webp,Bicycle Pump,Rare,10x Metal Parts | 4x Canister,2000,3,Recyclable,Quests | The League (1x),
 /w/images/thumb/7/74/Binoculars.png/75px-Binoculars.png.webp,Binoculars,Common,2x Rubber Parts | 4x Plastic Parts,640,1,Quick Use,,
 /w/images/thumb/2/24/Blaze_Grenade.png/75px-Blaze_Grenade.png.webp,Blaze Grenade,Rare,2x Oil | 4x Metal Parts,1600,5,Quick Use,,
@@ -53,18 +54,18 @@ https://arcraiders.wiki/w/images/1/18/Assessor_Matrix.png,Assessor Matrix,Epic,1
 /w/images/thumb/1/11/Buried_City_Key.png/75px-Buried_City_Key.png.webp,Buried City Town Hall Key,Epic,Cannot be recycled,100,1,Key,,
 /w/images/thumb/3/35/Burned_ARC_Circuitry.png/75px-Burned_ARC_Circuitry.png.webp,Burned ARC Circuitry,Uncommon,2x ARC Alloy,640,5,Recyclable,,
 /w/images/thumb/0/0a/Burnt-Out_Candles.png/75px-Burnt-Out_Candles.png.webp,Burnt-Out Candles,Common,Cannot be recycled,640,15,Trinket,,
-/w/images/thumb/a/a6/Camera_Lens.png/75px-Camera_Lens.png.webp,Camera Lens,Uncommon,8x Plastic Parts,640,5,Recyclable,Projects | Weather Monitor System (3x),
+/w/images/thumb/a/a6/Camera_Lens.png/75px-Camera_Lens.png.webp,Camera Lens,Uncommon,8x Plastic Parts,640,5,Recyclable,,
 /w/images/thumb/5/58/Candle_Holder.png/75px-Candle_Holder.png.webp,Candle Holder,Uncommon,8x Metal Parts,640,3,Recyclable,,
 /w/images/thumb/9/9e/Candleberries.png/75px-Candleberries.png.webp,Candleberries,Rare,2x Assorted Seeds,460,10,Nature,,
-/w/images/thumb/5/5f/Canister.png/75px-Canister.png.webp,Canister,Uncommon,3x Plastic Parts,300,15,Topside Material,Projects | Weather Monitor System (5x),
+/w/images/thumb/5/5f/Canister.png/75px-Canister.png.webp,Canister,Uncommon,3x Plastic Parts,300,15,Topside Material,,
 /w/images/thumb/8/82/Cat_Bed.png/75px-Cat_Bed.png.webp,Cat Bed,Uncommon,Cannot be recycled,1000,3,Trinket,Workshop | Scrappy 4 (1x),Commercial | Residential
 /w/images/thumb/9/92/Chemicals.png/75px-Chemicals.png.webp,Chemicals,Common,Cannot be recycled,50,50,Basic Material,Workshop | Explosives Station 1 (50x) | Projects | Expedition 3 (100x),Mechanical | Medical | Residential
 /w/images/thumb/3/33/Coffee_Pot.png/75px-Coffee_Pot.png.webp,Coffee Pot,Common,Cannot be recycled,1000,3,Trinket,Projects | Expedition 3 (1x),
 /w/images/thumb/1/14/Combat_Mk._1.png/75px-Combat_Mk._1.png.webp,Combat Mk. 1,Uncommon,3x Plastic Parts | 3x Rubber Parts,640,1,Augment,,
 /w/images/thumb/5/54/Combat_Mk._2.png/75px-Combat_Mk._2.png.webp,Combat Mk. 2,Rare,1x Electrical Components | 1x Magnet,2000,1,Augment,,
 /w/images/thumb/a/a4/Combat_Mk._3_%28Aggressive%29.png/75px-Combat_Mk._3_%28Aggressive%29.png.webp,Combat Mk. 3 (Aggressive),Epic,1x Advanced Electrical Components | 1x Processor,5000,1,Augment,,
-/w/images/thumb/7/73/Combat_Mk._3_%28Flanking%29.png/75px-Combat_Mk._3_%28Flanking%29.png.webp,Combat Mk. 3 (Flanking),Epic,1x Advanced Electrical Components | 1x Processor,5000,1,Augment,,
-/w/images/thumb/c/c8/Comet_Igniter.png/75px-Comet_Igniter.png.webp,Comet Igniter,Rare,2x ARC Alloy | 2x Crude Explosives,1000,3,Recyclable,Projects | Weather Monitor System (1x),
+/w/images/thumb/7/73/Combat_Mk._3_%28Flanking%29.png/75px-Combat_Mk._3_%28Flanking%29.png.webp,Combat Mk. 3 (Flanking),Epic,Cannot be recycled,5000,1,Augment,,
+/w/images/thumb/c/c8/Comet_Igniter.png/75px-Comet_Igniter.png.webp,Comet Igniter,Rare,2x ARC Alloy | 2x Crude Explosives,1000,3,Recyclable,,
 /w/images/thumb/5/5f/Compensator_I.png/75px-Compensator_I.png.webp,Compensator I,Common,5x Metal Parts,640,1,Mods,,
 /w/images/thumb/0/0a/Compensator_II.png/75px-Compensator_II.png.webp,Compensator II,Uncommon,1x Mechanical Components | 1x Wires,2000,1,Mods,,
 /w/images/thumb/a/af/Compensator_III.png/75px-Compensator_III.png.webp,Compensator III,Rare,1x Mod Components | 2x Wires,5000,1,Mods,,
@@ -84,7 +85,7 @@ https://arcraiders.wiki/w/images/1/18/Assessor_Matrix.png,Assessor Matrix,Epic,1
 /w/images/thumb/9/9e/Damaged_ARC_Motion_Core.png/75px-Damaged_ARC_Motion_Core.png.webp,Damaged ARC Motion Core,Uncommon,2x ARC Alloy,640,5,Recyclable,,
 /w/images/thumb/5/58/Damaged_ARC_Powercell.png/75px-Damaged_ARC_Powercell.png.webp,Damaged ARC Powercell,Common,1x ARC Alloy,293,5,Recyclable,,
 /w/images/thumb/d/d8/Damaged_Fireball_Burner.png/75px-Damaged_Fireball_Burner.png.webp,Damaged Fireball Burner,Common,1x ARC Alloy,270,3,Recyclable,,
-/w/images/thumb/1/1f/Damaged_Heat_Sink.png/75px-Damaged_Heat_Sink.png.webp,Damaged Heat Sink,Rare,2x Wires | 6x Metal Parts,1000,3,Recyclable,Workshop | Utility Station 2 (2x) | Projects | Weather Monitor System (1x),Technological
+/w/images/thumb/1/1f/Damaged_Heat_Sink.png/75px-Damaged_Heat_Sink.png.webp,Damaged Heat Sink,Rare,2x Wires | 6x Metal Parts,1000,3,Recyclable,Workshop | Utility Station 2 (2x),Technological
 /w/images/thumb/9/96/Damaged_Hornet_Driver.png/75px-Damaged_Hornet_Driver.png.webp,Damaged Hornet Driver,Common,2x ARC Alloy,640,3,Recyclable,,
 /w/images/thumb/0/0a/Damaged_Leaper_Pulse_Unit.png/75px-Damaged_Leaper_Pulse_Unit.png.webp,Damaged Leaper Pulse Unit,Common,3x ARC Alloy,1000,3,Recyclable,,
 /w/images/thumb/3/3a/Damaged_Rocketeer_Driver.png/75px-Damaged_Rocketeer_Driver.png.webp,Damaged Rocketeer Driver,Common,3x ARC Alloy,1000,3,Recyclable,,
@@ -101,9 +102,9 @@ https://arcraiders.wiki/w/images/1/18/Assessor_Matrix.png,Assessor Matrix,Epic,1
 /w/images/thumb/9/91/Doodly_Duck.png/75px-Doodly_Duck.png.webp,Doodly Duck,Rare,Cannot be recycled,3000,15,Trinket,,
 /w/images/thumb/6/68/Door_Blocker.png/75px-Door_Blocker.png.webp,Door Blocker,Common,2x Metal Parts,270,3,Quick Use,,
 /w/images/thumb/0/0b/Dried-Out_ARC_Resin.png/75px-Dried-Out_ARC_Resin.png.webp,Dried-Out ARC Resin,Uncommon,9x Plastic Parts,640,3,Recyclable,,
-/w/images/thumb/4/4e/Duct_Tape.png/75px-Duct_Tape.png.webp,Duct Tape,Uncommon,3x Fabric,300,15,Topside Material,Projects | Weather Monitor System (10x),
+/w/images/thumb/4/4e/Duct_Tape.png/75px-Duct_Tape.png.webp,Duct Tape,Uncommon,3x Fabric,300,15,Topside Material,,
 /w/images/thumb/2/25/Durable_Cloth.png/75px-Durable_Cloth.png.webp,Durable Cloth,Uncommon,6x Fabric,640,10,Refined Material,Workshop | Medical Lab 2 (5x) | Quests | Doctor's Orders (1x) | Projects | Expedition 1 (35x) | Expedition 2 (35x) | Expedition 3 (30x),Commercial | Medical
-/w/images/thumb/0/06/Electrical_Components.png/75px-Electrical_Components.png.webp,Electrical Components,Uncommon,3x Plastic Parts | 3x Rubber Parts,640,10,Refined Material,Workshop | Gear Bench 2 (5x) | Utility Station 2 (5x) | Projects | Expedition 1 (30x) | Expedition 2 (20x) | Expedition 3 (20x),Electrical
+/w/images/thumb/0/06/Electrical_Components.png/75px-Electrical_Components.png.webp,Electrical Components,Uncommon,3x Plastic Parts | 3x Rubber Parts,640,10,Refined Material,Workshop | Gear Bench 2 (5x) | Utility Station 2 (5x) | Quests | Fragmented Logs (1x) | Projects | Expedition 1 (30x) | Expedition 2 (20x) | Expedition 3 (20x),Electrical
 /w/images/thumb/e/e1/Empty_Wine_Bottle.png/75px-Empty_Wine_Bottle.png.webp,Empty Wine Bottle,Common,Cannot be recycled,1000,5,Trinket,,
 /w/images/thumb/0/08/Energy_Clip.png/75px-Energy_Clip.png.webp,Energy Clip,Rare,Cannot be recycled,200,5,Ammunition,,
 /w/images/thumb/1/1b/Exodus_Modules.png/75px-Exodus_Modules.png.webp,Exodus Modules,Epic,2x Magnet | 2x Processor,2750,3,Topside Material,Projects | Expedition 1 (1x) | Expedition 2 (1x) | Expedition 3 (1x) | Trophy Display (5x),Exodus
@@ -126,17 +127,17 @@ https://arcraiders.wiki/w/images/1/18/Assessor_Matrix.png,Assessor Matrix,Epic,1
 /w/images/thumb/4/4f/Familiar_Duck.png/75px-Familiar_Duck.png.webp,Familiar Duck,Epic,Cannot be recycled,7000,15,Trinket,,
 /w/images/thumb/2/25/Fertilizer.png/75px-Fertilizer.png.webp,Fertilizer,Uncommon,2x Assorted Seeds,1000,5,Nature,,
 /w/images/thumb/4/44/Film_Reel.png/75px-Film_Reel.png.webp,Film Reel,Rare,Cannot be recycled,2000,3,Trinket,,
-/w/images/thumb/9/94/Fine_Wristwatch.png/75px-Fine_Wristwatch.png.webp,Fine Wristwatch,Rare,Cannot be recycled,3000,3,Trinket,Projects | Weather Monitor System (1x),
-/w/images/thumb/8/8b/Fireball_Burner.png/75px-Fireball_Burner.png.webp,Fireball Burner,Uncommon,1x ARC Alloy | 1x Crude Explosives,640,3,Recyclable,Workshop | Refiner 2 (8x),ARC
+/w/images/thumb/9/94/Fine_Wristwatch.png/75px-Fine_Wristwatch.png.webp,Fine Wristwatch,Rare,Cannot be recycled,3000,3,Trinket,,
+/w/images/thumb/8/8b/Fireball_Burner.png/75px-Fireball_Burner.png.webp,Fireball Burner,Uncommon,1x ARC Alloy | 1x Crude Explosives,640,3,Recyclable,Workshop | Refiner 2 (8x) | Quests | Test Case (1x),ARC
 /w/images/thumb/8/86/Firecracker.png/75px-Firecracker.png.webp,Firecracker,Common,3x Plastic Parts,270,5,Quick Use,,
-/w/images/thumb/0/04/Firefly_Burner.png/75px-Firefly_Burner.png.webp,Firefly Burner,Rare,2x ARC Alloy | 2x Crude Explosives,1000,3,Recyclable,Projects | Expedition 3 (5x) | Weather Monitor System (1x),ARC
+/w/images/thumb/0/04/Firefly_Burner.png/75px-Firefly_Burner.png.webp,Firefly Burner,Rare,2x ARC Alloy | 2x Crude Explosives,1000,3,Recyclable,Quests | Test Case (1x) | Projects | Expedition 3 (5x),ARC
 /w/images/thumb/0/0f/Fireworks_Box.png/75px-Fireworks_Box.png.webp,Fireworks Box,Rare,1x Explosive Compound,2000,1,Quick Use,,
 /w/images/thumb/7/73/Flame_Spray.png/75px-Flame_Spray.png.webp,Flame Spray,Uncommon,1x Canister | 1x Fireball Burner,2000,1,Quick Use,,
 /w/images/thumb/f/f1/Flashy_Duck.png/75px-Flashy_Duck.png.webp,Flashy Duck,Rare,Cannot be recycled,3000,15,Trinket,,
 /w/images/thumb/b/b6/Flow_Controller.png/75px-Flow_Controller.png.webp,Flow Controller,Rare,1x Advanced Mechanical Components | 1x Sensors,3000,3,Recyclable,Quests | Snap And Salvage (1x),
 /w/images/thumb/8/81/Fossilized_Lightning.png/75px-Fossilized_Lightning.png.webp,Fossilized Lightning,Epic,3x Explosive Compound,4000,1,Nature,,
-/w/images/thumb/c/cf/Free_Loadout_Augment.png/75px-Free_Loadout_Augment.png.webp,Free Loadout Augment,Common,Cannot be recycled,100,1,Augment,,
-/w/images/thumb/3/36/Frequency_Modulation_Box.png/75px-Frequency_Modulation_Box.png.webp,Frequency Modulation Box,Rare,1x Advanced Electrical Components | 1x Speaker Component,3000,3,Recyclable,Projects | Expedition 1 (5x),
+/w/images/thumb/c/cf/Free_Loadout_Augment.png/75px-Free_Loadout_Augment.png.webp,Free Loadout Augment,Common,6x Plastic Parts | 6x Rubber Parts,100,1,Augment,,
+/w/images/thumb/3/36/Frequency_Modulation_Box.png/75px-Frequency_Modulation_Box.png.webp,Frequency Modulation Box,Rare,1x Advanced Electrical Components | 1x Speaker Component,3000,3,Recyclable,Projects | Expedition 2 (5x),
 /w/images/thumb/2/29/Fried_Motherboard.png/75px-Fried_Motherboard.png.webp,Fried Motherboard,Rare,2x Electrical Components | 5x Plastic Parts,2000,3,Recyclable,Workshop | Utility Station 3 (3x),Technological
 /w/images/thumb/5/5a/Fruit_Mix.png/75px-Fruit_Mix.png.webp,Fruit Mix,Uncommon,Cannot be recycled,1800,5,Quick Use,,
 /w/images/thumb/7/74/Frying_Pan.png/75px-Frying_Pan.png.webp,Frying Pan,Rare,8x Metal Parts,640,3,Recyclable,,
@@ -155,7 +156,7 @@ https://arcraiders.wiki/w/images/1/18/Assessor_Matrix.png,Assessor Matrix,Epic,1
 /w/images/thumb/f/f9/Heavy_Shield.png/75px-Heavy_Shield.png.webp,Heavy Shield,Epic,1x Voltage Converter | 2x ARC Circuitry,5500,1,Shield,,
 /w/images/thumb/c/c5/Herbal_Bandage.png/75px-Herbal_Bandage.png.webp,Herbal Bandage,Uncommon,2x Assorted Seeds | 5x Fabric,900,5,Quick Use,,
 /w/images/thumb/8/89/Horizontal_Grip.png/75px-Horizontal_Grip.png.webp,Horizontal Grip,Epic,1x Mod Components | 2x Duct Tape,7000,1,Mods,,
-/w/images/thumb/b/bb/Hornet_Driver.png/75px-Hornet_Driver.png.webp,Hornet Driver,Rare,1x ARC Alloy | 1x Electrical Components,1000,3,Recyclable,Workshop | Gear Bench 2 (5x) | Quests | The Trifecta (2x) | Projects | Trophy Display (15x),ARC
+/w/images/thumb/b/bb/Hornet_Driver.png/75px-Hornet_Driver.png.webp,Hornet Driver,Rare,1x ARC Alloy | 1x Electrical Components,1000,3,Recyclable,Workshop | Gear Bench 2 (5x) | Quests | Test Case (1x) | The Trifecta (2x) | Projects | Trophy Display (15x),ARC
 /w/images/thumb/3/36/Household_Cleaner.png/75px-Household_Cleaner.png.webp,Household Cleaner,Uncommon,11x Chemicals,640,3,Recyclable,,
 /w/images/thumb/4/4b/Humidifier.png/75px-Humidifier.png.webp,Humidifier,Rare,2x Canister | 2x Wires,1000,3,Recyclable,Projects | Expedition 1 (5x),Residential
 /w/images/thumb/c/c9/Ice_Cream_Scooper.png/75px-Ice_Cream_Scooper.png.webp,Ice Cream Scooper,Uncommon,7x Metal Parts,640,3,Recyclable,,
@@ -166,13 +167,13 @@ https://arcraiders.wiki/w/images/1/18/Assessor_Matrix.png,Assessor Matrix,Epic,1
 /w/images/thumb/7/74/Binoculars.png/75px-Binoculars.png.webp,Integrated Binoculars,Common,Cannot be recycled,0,,Quick Use,,
 /w/images/thumb/5/5f/Defibrillator.png/75px-Defibrillator.png.webp,Integrated Defibrillator,Rare,Cannot be recycled,0,1,Quick Use,,
 /w/images/thumb/a/a7/Integrated_Shield_Recharger.png/75px-Integrated_Shield_Recharger.png.webp,Integrated Shield Recharger,Common,Cannot be recycled,0,,Quick Use,,
-/w/images/thumb/e/e7/Ion_Sputter.png/75px-Ion_Sputter.png.webp,Ion Sputter,Epic,1x Exodus Modules | 4x Voltage Converter,6000,3,Recyclable,Quests | With A View (1x) | Projects | Expedition 1 (3x),
+/w/images/thumb/e/e7/Ion_Sputter.png/75px-Ion_Sputter.png.webp,Ion Sputter,Epic,1x Exodus Modules | 4x Voltage Converter,6000,3,Recyclable,Quests | With A View (1x) | Projects | Expedition 2 (3x),
 /w/images/thumb/5/5a/Jolt_Mine.png/75px-Jolt_Mine.png.webp,Jolt Mine,Rare,1x Battery | 2x Plastic Parts,850,3,Quick Use,,
 /w/images/thumb/7/71/Kinetic_Converter.png/75px-Kinetic_Converter.png.webp,Kinetic Converter,Legendary,1x Mod Components | 2x Duct Tape,7000,1,Mods,,
 /w/images/thumb/e/e5/Laboratory_Reagents.png/75px-Laboratory_Reagents.png.webp,Laboratory Reagents,Rare,16x Chemicals | 3x Crude Explosives,2000,3,Recyclable,Workshop | Explosives Station 3 (3x),Medical
 /w/images/thumb/1/15/Lance%27s_Mixtape_%285th_Edition%29.png/75px-Lance%27s_Mixtape_%285th_Edition%29.png.webp,Lance's Mixtape (5th Edition),Epic,Cannot be recycled,10000,3,Trinket,,
 /w/images/thumb/9/99/Launcher_Ammo.png/75px-Launcher_Ammo.png.webp,Launcher Ammo,Rare,Cannot be recycled,250,24,Ammunition,,
-/w/images/thumb/a/a0/Leaper_Pulse_Unit.png/75px-Leaper_Pulse_Unit.png.webp,Leaper Pulse Unit,Epic,1x Advanced Mechanical Components | 3x ARC Alloy,3000,3,Recyclable,Workshop | Utility Station 3 (4x) | Quests | Into The Fray (1x) | Projects | Expedition 1 (3x) | Trophy Display (10x),ARC
+/w/images/thumb/a/a0/Leaper_Pulse_Unit.png/75px-Leaper_Pulse_Unit.png.webp,Leaper Pulse Unit,Epic,1x Advanced Mechanical Components | 3x ARC Alloy,3000,3,Recyclable,Workshop | Utility Station 3 (4x) | Quests | Into The Fray (1x) | Projects | Expedition 1 (3x) | Expedition 2 (3x) | Trophy Display (10x),ARC
 /w/images/thumb/3/35/Lemon.png/75px-Lemon.png.webp,Lemon,Uncommon,3x Assorted Seeds,640,10,Nature,Workshop | Scrappy 3 (3x),Nature
 /w/images/thumb/0/0d/Li%27l_Smoke_Grenade.png/75px-Li%27l_Smoke_Grenade.png.webp,Li'l Smoke Grenade,Common,1x Chemicals | 1x Plastic Parts,300,5,Quick Use,,
 /w/images/thumb/2/22/Light_Ammo.png/75px-Light_Ammo.png.webp,Light Ammo,Common,Cannot be recycled,4,100,Ammunition,,
@@ -197,7 +198,7 @@ https://arcraiders.wiki/w/images/1/18/Assessor_Matrix.png,Assessor Matrix,Epic,1
 /w/images/thumb/9/9a/Medium_Gun_Parts.png/75px-Medium_Gun_Parts.png.webp,Medium Gun Parts,Rare,2x Simple Gun Parts,700,5,Topside Material,,
 /w/images/thumb/4/41/Medium_Shield.png/75px-Medium_Shield.png.webp,Medium Shield,Rare,1x ARC Circuitry,2000,1,Shield,,
 /w/images/thumb/6/62/Metal_Brackets.png/75px-Metal_Brackets.png.webp,Metal Brackets,Uncommon,8x Metal Parts,640,3,Recyclable,,
-/w/images/thumb/8/89/Metal_Parts.png/75px-Metal_Parts.png.webp,Metal Parts,Common,Cannot be recycled,75,50,Basic Material,Workshop | Gunsmith 1 (20x) | Refiner 1 (60x) | Projects | Expedition 1 (150x) | Expedition 2 (150x) | Expedition 3 (150x) | Weather Monitor System (15x),Electrical | Industrial | Mechanical | Technological
+/w/images/thumb/8/89/Metal_Parts.png/75px-Metal_Parts.png.webp,Metal Parts,Common,Cannot be recycled,75,50,Basic Material,Workshop | Gunsmith 1 (20x) | Refiner 1 (60x) | Projects | Expedition 1 (150x) | Expedition 2 (150x) | Expedition 3 (150x),Electrical | Industrial | Mechanical | Technological
 /w/images/thumb/2/2c/Microscope.png/75px-Microscope.png.webp,Microscope,Rare,1x Advanced Mechanical Components | 3x Magnet,3000,3,Recyclable,,
 /w/images/thumb/9/9f/Mini_Centrifuge.png/75px-Mini_Centrifuge.png.webp,Mini Centrifuge,Rare,1x Advanced Mechanical Components | 2x Canister,3000,3,Recyclable,,
 /w/images/thumb/0/0f/Mod_Components.png/75px-Mod_Components.png.webp,Mod Components,Rare,1x Mechanical Components | 1x Steel Spring,1750,5,Refined Material,,
@@ -211,14 +212,14 @@ https://arcraiders.wiki/w/images/1/18/Assessor_Matrix.png,Assessor Matrix,Epic,1
 /w/images/thumb/a/a2/Muzzle_Brake_III.png/75px-Muzzle_Brake_III.png.webp,Muzzle Brake III,Rare,1x Mod Components | 2x Wires,5000,1,Mods,,
 /w/images/thumb/5/5c/Noisemaker.png/75px-Noisemaker.png.webp,Noisemaker,Common,1x Speaker Component,640,3,Quick Use,,
 /w/images/thumb/5/51/Number_Plate.png/75px-Number_Plate.png.webp,Number Plate,Uncommon,3x Metal Parts,270,3,Recyclable,,
-/w/images/thumb/0/06/Oil.png/75px-Oil.png.webp,Oil,Uncommon,3x Chemicals,300,15,Topside Material,Projects | Weather Monitor System (3x),
+/w/images/thumb/0/06/Oil.png/75px-Oil.png.webp,Oil,Uncommon,3x Chemicals,300,15,Topside Material,,
 /w/images/thumb/f/f3/Olives.png/75px-Olives.png.webp,Olives,Uncommon,2x Assorted Seeds,640,10,Nature,Workshop | Scrappy 4 (6x),Nature
 /w/images/thumb/4/4b/Padded_Stock.png/75px-Padded_Stock.png.webp,Padded Stock,Epic,1x Duct Tape | 1x Mod Components,5000,1,Mods,,
 /w/images/thumb/5/53/Painted_Box.png/75px-Painted_Box.png.webp,Painted Box,Uncommon,Cannot be recycled,2000,3,Trinket,,
 /w/images/thumb/b/b0/Patrol_Car_Key.png/75px-Patrol_Car_Key.png.webp,Patrol Car Key,Uncommon,Cannot be recycled,100,1,Key,,
 /w/images/thumb/0/06/Photoelectric_Cloak.png/75px-Photoelectric_Cloak.png.webp,Photoelectric Cloak,Epic,1x Advanced Electrical Components | 1x Speaker Component,5000,1,Quick Use,,
 /w/images/thumb/1/1d/Security_Code.png/75px-Security_Code.png.webp,Pilgrim's Peak Security Code,Common,Cannot be recycled,0,1,Key,,
-/w/images/thumb/c/c9/Plastic_Parts.png/75px-Plastic_Parts.png.webp,Plastic Parts,Common,Cannot be recycled,60,50,Basic Material,Workshop | Gear Bench 1 (25x) | Utility Station 1 (50x) | Projects | Expedition 2 (200x) | Weather Monitor System (25x),Commercial | Residential | Technological
+/w/images/thumb/c/c9/Plastic_Parts.png/75px-Plastic_Parts.png.webp,Plastic Parts,Common,Cannot be recycled,60,50,Basic Material,Workshop | Gear Bench 1 (25x) | Utility Station 1 (50x) | Projects | Expedition 2 (200x),Commercial | Residential | Technological
 /w/images/thumb/e/e2/Playing_Cards.png/75px-Playing_Cards.png.webp,Playing Cards,Rare,Cannot be recycled,5000,3,Trinket,,
 /w/images/thumb/6/6e/Polluted_Air_Filter.png/75px-Polluted_Air_Filter.png.webp,Polluted Air Filter,Rare,2x Oil | 6x Fabric,1000,3,Recyclable,,
 /w/images/thumb/c/c6/Pop_Trigger.png/75px-Pop_Trigger.png.webp,Pop Trigger,Uncommon,1x ARC Alloy | 1x Crude Explosives,640,3,Recyclable,Workshop | Explosives Station 2 (5x) | Projects | Trophy Display (15x),ARC
@@ -246,7 +247,7 @@ https://arcraiders.wiki/w/images/1/18/Assessor_Matrix.png,Assessor Matrix,Epic,1
 /w/images/thumb/2/2c/Resin.png/75px-Resin.png.webp,Resin,Common,Cannot be recycled,1000,10,Nature,,
 /w/images/thumb/a/a8/Ripped_Safety_Vest.png/75px-Ripped_Safety_Vest.png.webp,Ripped Safety Vest,Uncommon,1x Durable Cloth | 1x Magnet,1000,3,Recyclable,,
 /w/images/thumb/8/8a/Rocket_Thruster.png/75px-Rocket_Thruster.png.webp,Rocket Thruster,Rare,2x Synthesized Fuel | 6x Metal Parts,2000,3,Recyclable,,
-/w/images/thumb/e/ef/Rocketeer_Driver.png/75px-Rocketeer_Driver.png.webp,Rocketeer Driver,Epic,2x Advanced Electrical Components | 3x ARC Alloy,3000,3,Recyclable,Workshop | Explosives Station 3 (3x) | Quests | Out Of The Shadows (1x) | Projects | Trophy Display (8x),ARC
+/w/images/thumb/e/ef/Rocketeer_Driver.png/75px-Rocketeer_Driver.png.webp,Rocketeer Driver,Epic,2x Advanced Electrical Components | 3x ARC Alloy,3000,3,Recyclable,Workshop | Explosives Station 3 (3x) | Quests | Out of the Shadows (1x) | Projects | Trophy Display (8x),ARC
 /w/images/thumb/5/57/Roots.png/75px-Roots.png.webp,Roots,Uncommon,1x Assorted Seeds,640,10,Nature,,
 /w/images/thumb/b/b4/Rope.png/75px-Rope.png.webp,Rope,Rare,5x Fabric,500,5,Topside Material,,
 /w/images/thumb/7/77/Rosary.png/75px-Rosary.png.webp,Rosary,Rare,Cannot be recycled,2000,3,Trinket,,
@@ -261,14 +262,14 @@ https://arcraiders.wiki/w/images/1/18/Assessor_Matrix.png,Assessor Matrix,Epic,1
 /w/images/thumb/5/5c/Ruined_Parachute.png/75px-Ruined_Parachute.png.webp,Ruined Parachute,Uncommon,10x Fabric,640,3,Recyclable,,
 /w/images/thumb/c/cb/Ruined_Riot_Shield.png/75px-Ruined_Riot_Shield.png.webp,Ruined Riot Shield,Rare,10x Plastic Parts | 6x Rubber Parts,1000,3,Recyclable,,
 /w/images/thumb/c/c2/Ruined_Tactical_Vest.png/75px-Ruined_Tactical_Vest.png.webp,Ruined Tactical Vest,Uncommon,1x Magnet | 5x Fabric,640,3,Recyclable,,
-/w/images/thumb/b/bf/Rusted_Bolts.png/75px-Rusted_Bolts.png.webp,Rusted Bolts,Uncommon,8x Metal Parts,640,3,Recyclable,Projects | Trophy Display (3x) | Weather Monitor System (3x),
+/w/images/thumb/b/bf/Rusted_Bolts.png/75px-Rusted_Bolts.png.webp,Rusted Bolts,Uncommon,8x Metal Parts,640,3,Recyclable,Projects | Trophy Display (3x),
 /w/images/thumb/c/cf/Rusted_Gear.png/75px-Rusted_Gear.png.webp,Rusted Gear,Rare,2x Mechanical Components | 4x Metal Parts,2000,3,Recyclable,Workshop | Gunsmith 3 (3x),Industrial
 /w/images/thumb/1/1a/Rusted_Shut_Medical_Kit.png/75px-Rusted_Shut_Medical_Kit.png.webp,Rusted Shut Medical Kit,Rare,1x Antiseptic | 2x Syringe,2000,3,Recyclable,Workshop | Medical Lab 3 (3x),Medical
 /w/images/thumb/3/30/Rusted_Tools.png/75px-Rusted_Tools.png.webp,Rusted Tools,Rare,1x Steel Spring | 8x Metal Parts,1000,3,Recyclable,Workshop | Gunsmith 2 (3x),Industrial | Mechanical
 /w/images/thumb/3/33/Rusty_ARC_Steel.png/75px-Rusty_ARC_Steel.png.webp,Rusty ARC Steel,Uncommon,8x Metal Parts,640,3,Recyclable,,
 /w/images/thumb/d/d8/Sample_Cleaner.png/75px-Sample_Cleaner.png.webp,Sample Cleaner,Rare,14x Assorted Seeds | 2x Electrical Components,3000,3,Recyclable,,
 /w/images/thumb/3/35/Seeker_Grenade.png/75px-Seeker_Grenade.png.webp,Seeker Grenade,Uncommon,1x Crude Explosives,640,5,Quick Use,,
-/w/images/thumb/9/9c/Sensors.png/75px-Sensors.png.webp,Sensors,Rare,1x Metal Parts | 1x Wires,500,5,Topside Material,Projects | Expedition 1 (20x) | Weather Monitor System (3x),
+/w/images/thumb/9/9c/Sensors.png/75px-Sensors.png.webp,Sensors,Rare,1x Metal Parts | 1x Wires,500,5,Topside Material,Projects | Expedition 1 (20x),
 /w/images/thumb/9/91/Sentinel_Firing_Core.png/75px-Sentinel_Firing_Core.png.webp,Sentinel Firing Core,Rare,2x ARC Alloy | 2x Mechanical Components,2000,3,Recyclable,Workshop | Gunsmith 3 (4x),ARC
 /w/images/thumb/2/22/Shaker.png/75px-Shaker.png.webp,Shaker,Uncommon,10x Plastic Parts,1000,1,Quick Use,,
 /w/images/thumb/4/44/Shield_Recharger.png/75px-Shield_Recharger.png.webp,Shield Recharger,Uncommon,4x Rubber Parts,520,5,Quick Use,,
@@ -290,7 +291,7 @@ https://arcraiders.wiki/w/images/1/18/Assessor_Matrix.png,Assessor Matrix,Epic,1
 /w/images/thumb/a/ac/Smoke_Grenade_Trap.png/75px-Smoke_Grenade_Trap.png.webp,Smoke Grenade Trap,Rare,Cannot be recycled,640,3,Quick Use,,
 /w/images/thumb/7/77/Snap_Blast_Grenade.png/75px-Snap_Blast_Grenade.png.webp,Snap Blast Grenade,Uncommon,1x Chemicals | 1x Magnet,800,3,Quick Use,,
 /w/images/thumb/5/56/Snap_Hook.png/75px-Snap_Hook.png.webp,Snap Hook,Legendary,1x Power Rod | 3x Rope,14000,1,Quick Use,,
-/w/images/thumb/e/e5/Snitch_Scanner.png/75px-Snitch_Scanner.png.webp,Snitch Scanner,Uncommon,1x ARC Alloy | 1x Electrical Components,1000,3,Recyclable,Workshop | Utility Station 2 (6x) | Quests | The Trifecta (2x) | Projects | Weather Monitor System (1x),ARC
+/w/images/thumb/e/e5/Snitch_Scanner.png/75px-Snitch_Scanner.png.webp,Snitch Scanner,Uncommon,1x ARC Alloy | 1x Electrical Components,1000,3,Recyclable,Workshop | Utility Station 2 (6x) | Quests | The Trifecta (2x),ARC
 /w/images/thumb/0/04/Snowball.png/75px-Snowball.png.webp,Snowball,Common,Cannot be recycled,10,5,Nature,,
 /w/images/thumb/9/98/Spaceport_Key.png/75px-Spaceport_Key.png.webp,Spaceport Container Storage Key,Rare,Cannot be recycled,100,1,Key,,
 /w/images/thumb/9/98/Spaceport_Key.png/75px-Spaceport_Key.png.webp,Spaceport Control Tower Key,Rare,Cannot be recycled,100,1,Key,,
@@ -305,14 +306,15 @@ https://arcraiders.wiki/w/images/1/18/Assessor_Matrix.png,Assessor Matrix,Epic,1
 /w/images/thumb/b/b4/Stable_Stock_II.png/75px-Stable_Stock_II.png.webp,Stable Stock II,Uncommon,1x Duct Tape | 1x Mechanical Components,2000,1,Mods,,
 /w/images/thumb/e/eb/Stable_Stock_III.png/75px-Stable_Stock_III.png.webp,Stable Stock III,Rare,1x Mod Components | 2x Duct Tape,5000,1,Mods,,
 /w/images/thumb/8/8a/Statuette.png/75px-Statuette.png.webp,Statuette,Rare,Cannot be recycled,3000,3,Trinket,,
-/w/images/thumb/d/db/Steel_Spring.png/75px-Steel_Spring.png.webp,Steel Spring,Uncommon,2x Metal Parts,300,15,Topside Material,Projects | Expedition 1 (15x) | Expedition 2 (15x) | Expedition 3 (15x) | Weather Monitor System (5x),Industrial
+/w/images/thumb/d/db/Steel_Spring.png/75px-Steel_Spring.png.webp,Steel Spring,Uncommon,2x Metal Parts,300,15,Topside Material,Projects | Expedition 1 (15x) | Expedition 2 (15x) | Expedition 3 (15x),Industrial
 /w/images/thumb/1/19/Stella_Montis_Key.png/75px-Stella_Montis_Key.png.webp,Stella Montis Archives Key,Epic,Cannot be recycled,100,1,Key,,
 /w/images/thumb/1/19/Stella_Montis_Key.png/75px-Stella_Montis_Key.png.webp,Stella Montis Assembly Admin Key,Uncommon,Cannot be recycled,250,1,Key,,
 /w/images/thumb/1/19/Stella_Montis_Key.png/75px-Stella_Montis_Key.png.webp,Stella Montis Medical Storage Key,Uncommon,Cannot be recycled,100,1,Key,,
 /w/images/thumb/1/19/Stella_Montis_Key.png/75px-Stella_Montis_Key.png.webp,Stella Montis Security Checkpoint Key,Rare,Cannot be recycled,100,1,Key,,
 /w/images/thumb/9/99/Sterilized_Bandage.png/75px-Sterilized_Bandage.png.webp,Sterilized Bandage,Rare,1x Antiseptic | 1x Fabric,2000,3,Quick Use,,
+/w/images/thumb/5/5b/Surge_Coil.png/75px-Surge_Coil.png.webp,Surge Coil,Rare,1x Electrical Components | 1x Sensors,2100,3,Quick Use,,
 /w/images/thumb/c/c9/Surge_Shield_Recharger.png/75px-Surge_Shield_Recharger.png.webp,Surge Shield Recharger,Rare,1x Electrical Components,1200,5,Quick Use,,
-/w/images/thumb/a/a9/Surveyor_Vault.png/75px-Surveyor_Vault.png.webp,Surveyor Vault,Rare,1x ARC Alloy | 1x Mechanical Components,1000,3,Recyclable,Workshop | Medical Lab 3 (5x) | Quests | Mixed Signals (1x) | Projects | Trophy Display (5x),ARC
+/w/images/thumb/a/a9/Surveyor_Vault.png/75px-Surveyor_Vault.png.webp,Surveyor Vault,Rare,1x ARC Alloy | 1x Mechanical Components,1000,3,Recyclable,Workshop | Medical Lab 3 (5x) | Quests | Mixed Signals (1x) | Projects | High-Gain Antenna (10x) | Trophy Display (5x),ARC
 /w/images/thumb/8/8e/Synthesized_Fuel.png/75px-Synthesized_Fuel.png.webp,Synthesized Fuel,Rare,1x Oil | 1x Plastic Parts,700,5,Topside Material,Workshop | Explosives Station 2 (3x),Exodus
 /w/images/thumb/1/17/Syringe.png/75px-Syringe.png.webp,Syringe,Rare,2x Chemicals | 3x Plastic Parts,500,5,Topside Material,Quests | Doctor's Orders (1x),
 /w/images/thumb/1/18/Tactical_Mk._1.png/75px-Tactical_Mk._1.png.webp,Tactical Mk. 1,Uncommon,3x Plastic Parts | 3x Rubber Parts,640,1,Augment,,
@@ -330,10 +332,11 @@ https://arcraiders.wiki/w/images/1/18/Assessor_Matrix.png,Assessor Matrix,Epic,1
 /w/images/thumb/a/af/Torn_Blanket.png/75px-Torn_Blanket.png.webp,Torn Blanket,Rare,12x Fabric,640,3,Recyclable,,
 /w/images/thumb/c/cc/Torn_Book.png/75px-Torn_Book.png.webp,Torn Book,Common,Cannot be recycled,1000,5,Trinket,,
 /w/images/thumb/8/89/Trailblazer.png/75px-Trailblazer.png.webp,Trailblazer,Rare,2x Crude Explosives,2200,3,Quick Use,,
-/w/images/thumb/0/09/Trigger_Nade.png/75px-Trigger_Nade.png.webp,Trigger 'Nade,Rare,1x Chemicals | 1x Processor,1000,3,Quick Use,,
+/w/images/thumb/c/cc/Trigger_%27Nade.png/75px-Trigger_%27Nade.png.webp,Trigger 'Nade,Rare,1x Chemicals | 1x Processor,1000,3,Quick Use,,
 /w/images/thumb/c/cc/Tropical_Duck.png/75px-Tropical_Duck.png.webp,Tropical Duck,Uncommon,Cannot be recycled,1000,15,Trinket,,
 /w/images/thumb/f/f1/Turbo_Pump.png/75px-Turbo_Pump.png.webp,Turbo Pump,Rare,1x Mechanical Components | 3x Oil,2000,3,Recyclable,,
 /w/images/thumb/3/37/Unusable_Weapon.png/75px-Unusable_Weapon.png.webp,Unusable Weapon,Rare,4x Metal Parts | 5x Simple Gun Parts,2000,3,Recyclable,,
+/w/images/thumb/b/b8/Vaporizer_Regulator.png/75px-Vaporizer_Regulator.png.webp,Vaporizer Regulator,Epic,1x Advanced Electrical Components | 2x ARC Circuitry,6000,1,Recyclable,Projects | High-Gain Antenna (15x) | High-Gain Antenna (4x),
 https://arcraiders.wiki/w/images/b/b8/Vaporizer_Regulator.png,Vaporizer Regulator,Epic,1x Advanced Electrical Components | 2x ARC Circuitry,6000,1,Recyclable,projects | High-Gain Antenna Data Logger (4x) | projects | High-Gain Antenna Parabolic Dish (15x) | workshop | Gunsmith 3 (2x),ARC
 /w/images/thumb/6/6e/Vase.png/75px-Vase.png.webp,Vase,Rare,Cannot be recycled,3000,3,Trinket,,
 /w/images/thumb/4/4d/Vertical_Grip_I.png/75px-Vertical_Grip_I.png.webp,Vertical Grip I,Common,6x Plastic Parts,640,1,Mods,,
@@ -343,11 +346,11 @@ https://arcraiders.wiki/w/images/b/b8/Vaporizer_Regulator.png,Vaporizer Regulato
 /w/images/thumb/7/7d/Vita_Shot.png/75px-Vita_Shot.png.webp,Vita Shot,Rare,1x Syringe | 4x Chemicals,2200,3,Quick Use,,
 /w/images/thumb/1/1d/Vita_Spray.png/75px-Vita_Spray.png.webp,Vita Spray,Epic,1x Antiseptic | 1x Canister,3400,1,Quick Use,,
 /w/images/thumb/2/26/Volcanic_Rock.png/75px-Volcanic_Rock.png.webp,Volcanic Rock,Common,Cannot be recycled,270,5,Misc,,
-/w/images/thumb/c/c7/Voltage_Converter.png/75px-Voltage_Converter.png.webp,Voltage Converter,Rare,1x Rubber Parts | 1x Wires,500,5,Topside Material,Projects | Weather Monitor System (3x),
-/w/images/thumb/3/30/Wasp_Driver.png/75px-Wasp_Driver.png.webp,Wasp Driver,Rare,1x ARC Alloy | 1x Electrical Components,640,3,Recyclable,Workshop | Gunsmith 1 (8x) | Quests | The Trifecta (2x) | Projects | Trophy Display (20x) | Weather Monitor System (3x),ARC
+/w/images/thumb/c/c7/Voltage_Converter.png/75px-Voltage_Converter.png.webp,Voltage Converter,Rare,1x Rubber Parts | 1x Wires,500,5,Topside Material,,
+/w/images/thumb/3/30/Wasp_Driver.png/75px-Wasp_Driver.png.webp,Wasp Driver,Rare,1x ARC Alloy | 1x Electrical Components,640,3,Recyclable,Workshop | Gunsmith 1 (8x) | Quests | The Trifecta (2x) | Projects | Trophy Display (20x),ARC
 /w/images/thumb/4/48/Water_Filter.png/75px-Water_Filter.png.webp,Water Filter,Rare,2x Rubber Parts | 3x Canister,1000,3,Recyclable,,
-/w/images/thumb/2/28/Water_Pump.png/75px-Water_Pump.png.webp,Water Pump,Rare,2x Oil | 4x Metal Parts,1000,3,Recyclable,Projects | Weather Monitor System (1x),
-/w/images/thumb/3/39/Wires.png/75px-Wires.png.webp,Wires,Uncommon,2x Rubber Parts,200,15,Topside Material,Quests | After Rain Comes (5x) | Eyes On The Prize (3x) | Trash Into Treasure (6x) | Projects | Expedition 1 (30x) | Expedition 2 (25x) | Expedition 3 (25x) | Weather Monitor System (3x),
+/w/images/thumb/2/28/Water_Pump.png/75px-Water_Pump.png.webp,Water Pump,Rare,2x Oil | 4x Metal Parts,1000,3,Recyclable,,
+/w/images/thumb/3/39/Wires.png/75px-Wires.png.webp,Wires,Uncommon,2x Rubber Parts,200,15,Topside Material,Quests | After Rain Comes (5x) | Clamoring for Attention (3x) | Eyes On The Prize (3x) | Trash Into Treasure (6x) | Projects | Expedition 1 (30x) | Expedition 2 (25x) | Expedition 3 (25x),
 /w/images/thumb/2/24/Wolfpack.png/75px-Wolfpack.png.webp,Wolfpack,Epic,1x ARC Motion Core | 1x Explosive Compound,6000,1,Quick Use,,
 /w/images/thumb/1/1f/Yellow_Light_Stick.png/75px-Yellow_Light_Stick.png.webp,Yellow Light Stick,Common,1x Chemicals,150,5,Quick Use,,
 /w/images/thumb/f/f9/Zipline.png/75px-Zipline.png.webp,Zipline,Rare,1x Metal Parts | 1x Rope,1000,3,Quick Use,,

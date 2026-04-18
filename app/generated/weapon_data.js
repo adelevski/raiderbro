@@ -29,14 +29,44 @@ window.WEAPON_DATA = {
       {
         "level": 1,
         "sellPrice": 840,
-        "durability": 50,
+        "durability": 100,
         "effects": [],
-        "perkTexts": []
+        "perkTexts": [],
+        "craftingMaterialsDetailed": [
+          {
+            "item": "Metal Parts",
+            "quantity": 6
+          },
+          {
+            "item": "Rubber Parts",
+            "quantity": 8
+          }
+        ],
+        "craftingMaterials": [
+          "Metal Parts x6",
+          "Rubber Parts x8"
+        ],
+        "fromScratchMaterialsDetailed": [
+          {
+            "item": "Metal Parts",
+            "quantity": 6
+          },
+          {
+            "item": "Rubber Parts",
+            "quantity": 8
+          }
+        ],
+        "fromScratchMaterials": [
+          "Metal Parts x6",
+          "Rubber Parts x8"
+        ],
+        "craftValue": 850,
+        "fromScratchCraftValue": 850
       },
       {
         "level": 2,
         "sellPrice": 2000,
-        "durability": 55,
+        "durability": 110,
         "effects": [
           {
             "text": "25% Increased Bullet Velocity",
@@ -64,12 +94,47 @@ window.WEAPON_DATA = {
           "25% Increased Bullet Velocity",
           "13% Reduced Reload Time",
           "+10 Durability"
-        ]
+        ],
+        "craftingMaterialsDetailed": [
+          {
+            "item": "Metal Parts",
+            "quantity": 8
+          },
+          {
+            "item": "Plastic Parts",
+            "quantity": 10
+          }
+        ],
+        "craftingMaterials": [
+          "Metal Parts x8",
+          "Plastic Parts x10"
+        ],
+        "fromScratchMaterialsDetailed": [
+          {
+            "item": "Metal Parts",
+            "quantity": 14
+          },
+          {
+            "item": "Plastic Parts",
+            "quantity": 10
+          },
+          {
+            "item": "Rubber Parts",
+            "quantity": 8
+          }
+        ],
+        "fromScratchMaterials": [
+          "Metal Parts x14",
+          "Plastic Parts x10",
+          "Rubber Parts x8"
+        ],
+        "craftValue": 1200,
+        "fromScratchCraftValue": 2050
       },
       {
         "level": 3,
         "sellPrice": 3000,
-        "durability": 60,
+        "durability": 120,
         "effects": [
           {
             "text": "50% Increased Bullet Velocity",
@@ -97,12 +162,52 @@ window.WEAPON_DATA = {
           "50% Increased Bullet Velocity",
           "26% Reduced Reload Time",
           "+20 Durability"
-        ]
+        ],
+        "craftingMaterialsDetailed": [
+          {
+            "item": "Metal Parts",
+            "quantity": 10
+          },
+          {
+            "item": "Simple Gun Parts",
+            "quantity": 1
+          }
+        ],
+        "craftingMaterials": [
+          "Metal Parts x10",
+          "Simple Gun Parts x1"
+        ],
+        "fromScratchMaterialsDetailed": [
+          {
+            "item": "Metal Parts",
+            "quantity": 24
+          },
+          {
+            "item": "Plastic Parts",
+            "quantity": 10
+          },
+          {
+            "item": "Rubber Parts",
+            "quantity": 8
+          },
+          {
+            "item": "Simple Gun Parts",
+            "quantity": 1
+          }
+        ],
+        "fromScratchMaterials": [
+          "Metal Parts x24",
+          "Plastic Parts x10",
+          "Rubber Parts x8",
+          "Simple Gun Parts x1"
+        ],
+        "craftValue": 1080,
+        "fromScratchCraftValue": 3130
       },
       {
         "level": 4,
         "sellPrice": 5000,
-        "durability": 65,
+        "durability": 130,
         "effects": [
           {
             "text": "75% Increased Bullet Velocity",
@@ -130,7 +235,52 @@ window.WEAPON_DATA = {
           "75% Increased Bullet Velocity",
           "40% Reduced Reload Time",
           "+30 Durability"
-        ]
+        ],
+        "craftingMaterialsDetailed": [
+          {
+            "item": "Mechanical Components",
+            "quantity": 3
+          },
+          {
+            "item": "Simple Gun Parts",
+            "quantity": 1
+          }
+        ],
+        "craftingMaterials": [
+          "Mechanical Components x3",
+          "Simple Gun Parts x1"
+        ],
+        "fromScratchMaterialsDetailed": [
+          {
+            "item": "Mechanical Components",
+            "quantity": 3
+          },
+          {
+            "item": "Metal Parts",
+            "quantity": 24
+          },
+          {
+            "item": "Plastic Parts",
+            "quantity": 10
+          },
+          {
+            "item": "Rubber Parts",
+            "quantity": 8
+          },
+          {
+            "item": "Simple Gun Parts",
+            "quantity": 2
+          }
+        ],
+        "fromScratchMaterials": [
+          "Mechanical Components x3",
+          "Metal Parts x24",
+          "Plastic Parts x10",
+          "Rubber Parts x8",
+          "Simple Gun Parts x2"
+        ],
+        "craftValue": 2250,
+        "fromScratchCraftValue": 5380
       }
     ],
     "modSlots": [
@@ -218,14 +368,44 @@ window.WEAPON_DATA = {
       {
         "level": 1,
         "sellPrice": 1750,
-        "durability": 50,
+        "durability": 100,
         "effects": [],
-        "perkTexts": []
+        "perkTexts": [],
+        "craftingMaterialsDetailed": [
+          {
+            "item": "Metal Parts",
+            "quantity": 16
+          },
+          {
+            "item": "Rubber Parts",
+            "quantity": 12
+          }
+        ],
+        "craftingMaterials": [
+          "Metal Parts x16",
+          "Rubber Parts x12"
+        ],
+        "fromScratchMaterialsDetailed": [
+          {
+            "item": "Metal Parts",
+            "quantity": 16
+          },
+          {
+            "item": "Rubber Parts",
+            "quantity": 12
+          }
+        ],
+        "fromScratchMaterials": [
+          "Metal Parts x16",
+          "Rubber Parts x12"
+        ],
+        "craftValue": 1800,
+        "fromScratchCraftValue": 1800
       },
       {
         "level": 2,
         "sellPrice": 3000,
-        "durability": 55,
+        "durability": 110,
         "effects": [
           {
             "text": "+4 Magazine Size",
@@ -245,12 +425,42 @@ window.WEAPON_DATA = {
         "perkTexts": [
           "+4 Magazine Size",
           "+10 Durability"
-        ]
+        ],
+        "craftingMaterialsDetailed": [
+          {
+            "item": "Metal Parts",
+            "quantity": 10
+          },
+          {
+            "item": "Rubber Parts",
+            "quantity": 10
+          }
+        ],
+        "craftingMaterials": [
+          "Metal Parts x10",
+          "Rubber Parts x10"
+        ],
+        "fromScratchMaterialsDetailed": [
+          {
+            "item": "Metal Parts",
+            "quantity": 26
+          },
+          {
+            "item": "Rubber Parts",
+            "quantity": 22
+          }
+        ],
+        "fromScratchMaterials": [
+          "Metal Parts x26",
+          "Rubber Parts x22"
+        ],
+        "craftValue": 1250,
+        "fromScratchCraftValue": 3050
       },
       {
         "level": 3,
         "sellPrice": 5000,
-        "durability": 60,
+        "durability": 120,
         "effects": [
           {
             "text": "+8 Magazine Size",
@@ -270,12 +480,52 @@ window.WEAPON_DATA = {
         "perkTexts": [
           "+8 Magazine Size",
           "+20 Durability"
-        ]
+        ],
+        "craftingMaterialsDetailed": [
+          {
+            "item": "Mechanical Components",
+            "quantity": 3
+          },
+          {
+            "item": "Simple Gun Parts",
+            "quantity": 1
+          }
+        ],
+        "craftingMaterials": [
+          "Mechanical Components x3",
+          "Simple Gun Parts x1"
+        ],
+        "fromScratchMaterialsDetailed": [
+          {
+            "item": "Mechanical Components",
+            "quantity": 3
+          },
+          {
+            "item": "Metal Parts",
+            "quantity": 26
+          },
+          {
+            "item": "Rubber Parts",
+            "quantity": 22
+          },
+          {
+            "item": "Simple Gun Parts",
+            "quantity": 1
+          }
+        ],
+        "fromScratchMaterials": [
+          "Mechanical Components x3",
+          "Metal Parts x26",
+          "Rubber Parts x22",
+          "Simple Gun Parts x1"
+        ],
+        "craftValue": 2250,
+        "fromScratchCraftValue": 5300
       },
       {
         "level": 4,
         "sellPrice": 7000,
-        "durability": 65,
+        "durability": 130,
         "effects": [
           {
             "text": "+12 Magazine Size",
@@ -295,7 +545,47 @@ window.WEAPON_DATA = {
         "perkTexts": [
           "+12 Magazine Size",
           "+30 Durability"
-        ]
+        ],
+        "craftingMaterialsDetailed": [
+          {
+            "item": "Mechanical Components",
+            "quantity": 3
+          },
+          {
+            "item": "Simple Gun Parts",
+            "quantity": 1
+          }
+        ],
+        "craftingMaterials": [
+          "Mechanical Components x3",
+          "Simple Gun Parts x1"
+        ],
+        "fromScratchMaterialsDetailed": [
+          {
+            "item": "Mechanical Components",
+            "quantity": 6
+          },
+          {
+            "item": "Metal Parts",
+            "quantity": 26
+          },
+          {
+            "item": "Rubber Parts",
+            "quantity": 22
+          },
+          {
+            "item": "Simple Gun Parts",
+            "quantity": 2
+          }
+        ],
+        "fromScratchMaterials": [
+          "Mechanical Components x6",
+          "Metal Parts x26",
+          "Rubber Parts x22",
+          "Simple Gun Parts x2"
+        ],
+        "craftValue": 2250,
+        "fromScratchCraftValue": 7550
       }
     ],
     "modSlots": [
@@ -371,14 +661,44 @@ window.WEAPON_DATA = {
       {
         "level": 1,
         "sellPrice": 5500,
-        "durability": 50,
+        "durability": 100,
         "effects": [],
-        "perkTexts": []
+        "perkTexts": [],
+        "craftingMaterialsDetailed": [
+          {
+            "item": "Mechanical Components",
+            "quantity": 6
+          },
+          {
+            "item": "Simple Gun Parts",
+            "quantity": 6
+          }
+        ],
+        "craftingMaterials": [
+          "Mechanical Components x6",
+          "Simple Gun Parts x6"
+        ],
+        "fromScratchMaterialsDetailed": [
+          {
+            "item": "Mechanical Components",
+            "quantity": 6
+          },
+          {
+            "item": "Simple Gun Parts",
+            "quantity": 6
+          }
+        ],
+        "fromScratchMaterials": [
+          "Mechanical Components x6",
+          "Simple Gun Parts x6"
+        ],
+        "craftValue": 5820,
+        "fromScratchCraftValue": 5820
       },
       {
         "level": 2,
         "sellPrice": 8000,
-        "durability": 55,
+        "durability": 110,
         "effects": [
           {
             "text": "20% Increased Fire Rate",
@@ -406,12 +726,42 @@ window.WEAPON_DATA = {
           "20% Increased Fire Rate",
           "12.5% Reduced Reload Time",
           "+10 Durability"
-        ]
+        ],
+        "craftingMaterialsDetailed": [
+          {
+            "item": "Mechanical Components",
+            "quantity": 4
+          },
+          {
+            "item": "Simple Gun Parts",
+            "quantity": 1
+          }
+        ],
+        "craftingMaterials": [
+          "Mechanical Components x4",
+          "Simple Gun Parts x1"
+        ],
+        "fromScratchMaterialsDetailed": [
+          {
+            "item": "Mechanical Components",
+            "quantity": 10
+          },
+          {
+            "item": "Simple Gun Parts",
+            "quantity": 7
+          }
+        ],
+        "fromScratchMaterials": [
+          "Mechanical Components x10",
+          "Simple Gun Parts x7"
+        ],
+        "craftValue": 2890,
+        "fromScratchCraftValue": 8710
       },
       {
         "level": 3,
         "sellPrice": 11500,
-        "durability": 60,
+        "durability": 120,
         "effects": [
           {
             "text": "40% Increased Fire Rate",
@@ -439,12 +789,47 @@ window.WEAPON_DATA = {
           "40% Increased Fire Rate",
           "25% Reduced Reload Time",
           "+20 Durability"
-        ]
+        ],
+        "craftingMaterialsDetailed": [
+          {
+            "item": "Mechanical Components",
+            "quantity": 5
+          },
+          {
+            "item": "Medium Gun Parts",
+            "quantity": 1
+          }
+        ],
+        "craftingMaterials": [
+          "Mechanical Components x5",
+          "Medium Gun Parts x1"
+        ],
+        "fromScratchMaterialsDetailed": [
+          {
+            "item": "Mechanical Components",
+            "quantity": 15
+          },
+          {
+            "item": "Medium Gun Parts",
+            "quantity": 1
+          },
+          {
+            "item": "Simple Gun Parts",
+            "quantity": 7
+          }
+        ],
+        "fromScratchMaterials": [
+          "Mechanical Components x15",
+          "Medium Gun Parts x1",
+          "Simple Gun Parts x7"
+        ],
+        "craftValue": 3900,
+        "fromScratchCraftValue": 12610
       },
       {
         "level": 4,
         "sellPrice": 15000,
-        "durability": 65,
+        "durability": 130,
         "effects": [
           {
             "text": "60% Increased Fire Rate",
@@ -472,7 +857,42 @@ window.WEAPON_DATA = {
           "60% Increased Fire Rate",
           "50% Reduced Reload Time",
           "+30 Durability"
-        ]
+        ],
+        "craftingMaterialsDetailed": [
+          {
+            "item": "Mechanical Components",
+            "quantity": 5
+          },
+          {
+            "item": "Medium Gun Parts",
+            "quantity": 1
+          }
+        ],
+        "craftingMaterials": [
+          "Mechanical Components x5",
+          "Medium Gun Parts x1"
+        ],
+        "fromScratchMaterialsDetailed": [
+          {
+            "item": "Mechanical Components",
+            "quantity": 20
+          },
+          {
+            "item": "Medium Gun Parts",
+            "quantity": 2
+          },
+          {
+            "item": "Simple Gun Parts",
+            "quantity": 7
+          }
+        ],
+        "fromScratchMaterials": [
+          "Mechanical Components x20",
+          "Medium Gun Parts x2",
+          "Simple Gun Parts x7"
+        ],
+        "craftValue": 3900,
+        "fromScratchCraftValue": 16510
       }
     ],
     "modSlots": [
@@ -557,14 +977,54 @@ window.WEAPON_DATA = {
       {
         "level": 1,
         "sellPrice": 13000,
-        "durability": null,
+        "durability": 100,
         "effects": [],
-        "perkTexts": []
+        "perkTexts": [],
+        "craftingMaterialsDetailed": [
+          {
+            "item": "Magnetic Accelerator",
+            "quantity": 1
+          },
+          {
+            "item": "Medium Gun Parts",
+            "quantity": 3
+          },
+          {
+            "item": "Exodus Modules",
+            "quantity": 2
+          }
+        ],
+        "craftingMaterials": [
+          "Magnetic Accelerator x1",
+          "Medium Gun Parts x3",
+          "Exodus Modules x2"
+        ],
+        "fromScratchMaterialsDetailed": [
+          {
+            "item": "Exodus Modules",
+            "quantity": 2
+          },
+          {
+            "item": "Magnetic Accelerator",
+            "quantity": 1
+          },
+          {
+            "item": "Medium Gun Parts",
+            "quantity": 3
+          }
+        ],
+        "fromScratchMaterials": [
+          "Exodus Modules x2",
+          "Magnetic Accelerator x1",
+          "Medium Gun Parts x3"
+        ],
+        "craftValue": 13100,
+        "fromScratchCraftValue": 13100
       },
       {
         "level": 2,
         "sellPrice": 17000,
-        "durability": null,
+        "durability": 110,
         "effects": [
           {
             "text": "16.6% Reduced Horizontal Recoil",
@@ -592,12 +1052,52 @@ window.WEAPON_DATA = {
           "16.6% Reduced Horizontal Recoil",
           "13% Reduced Reload Time",
           "+10 Durability"
-        ]
+        ],
+        "craftingMaterialsDetailed": [
+          {
+            "item": "Advanced Mechanical Components",
+            "quantity": 2
+          },
+          {
+            "item": "Medium Gun Parts",
+            "quantity": 1
+          }
+        ],
+        "craftingMaterials": [
+          "Advanced Mechanical Components x2",
+          "Medium Gun Parts x1"
+        ],
+        "fromScratchMaterialsDetailed": [
+          {
+            "item": "Advanced Mechanical Components",
+            "quantity": 2
+          },
+          {
+            "item": "Exodus Modules",
+            "quantity": 2
+          },
+          {
+            "item": "Magnetic Accelerator",
+            "quantity": 1
+          },
+          {
+            "item": "Medium Gun Parts",
+            "quantity": 4
+          }
+        ],
+        "fromScratchMaterials": [
+          "Advanced Mechanical Components x2",
+          "Exodus Modules x2",
+          "Magnetic Accelerator x1",
+          "Medium Gun Parts x4"
+        ],
+        "craftValue": 4200,
+        "fromScratchCraftValue": 17300
       },
       {
         "level": 3,
         "sellPrice": 22000,
-        "durability": null,
+        "durability": 120,
         "effects": [
           {
             "text": "33.3% Reduced Horizontal Recoil",
@@ -625,12 +1125,52 @@ window.WEAPON_DATA = {
           "33.3% Reduced Horizontal Recoil",
           "26% Reduced Reload Time",
           "+20 Durability"
-        ]
+        ],
+        "craftingMaterialsDetailed": [
+          {
+            "item": "Advanced Mechanical Components",
+            "quantity": 2
+          },
+          {
+            "item": "Medium Gun Parts",
+            "quantity": 3
+          }
+        ],
+        "craftingMaterials": [
+          "Advanced Mechanical Components x2",
+          "Medium Gun Parts x3"
+        ],
+        "fromScratchMaterialsDetailed": [
+          {
+            "item": "Advanced Mechanical Components",
+            "quantity": 4
+          },
+          {
+            "item": "Exodus Modules",
+            "quantity": 2
+          },
+          {
+            "item": "Magnetic Accelerator",
+            "quantity": 1
+          },
+          {
+            "item": "Medium Gun Parts",
+            "quantity": 7
+          }
+        ],
+        "fromScratchMaterials": [
+          "Advanced Mechanical Components x4",
+          "Exodus Modules x2",
+          "Magnetic Accelerator x1",
+          "Medium Gun Parts x7"
+        ],
+        "craftValue": 5600,
+        "fromScratchCraftValue": 22900
       },
       {
         "level": 4,
         "sellPrice": 27000,
-        "durability": null,
+        "durability": 130,
         "effects": [
           {
             "text": "50% Reduced Horizontal Recoil",
@@ -658,7 +1198,47 @@ window.WEAPON_DATA = {
           "50% Reduced Horizontal Recoil",
           "40% Reduced Reload Time",
           "+30 Durability"
-        ]
+        ],
+        "craftingMaterialsDetailed": [
+          {
+            "item": "Advanced Mechanical Components",
+            "quantity": 2
+          },
+          {
+            "item": "Medium Gun Parts",
+            "quantity": 3
+          }
+        ],
+        "craftingMaterials": [
+          "Advanced Mechanical Components x2",
+          "Medium Gun Parts x3"
+        ],
+        "fromScratchMaterialsDetailed": [
+          {
+            "item": "Advanced Mechanical Components",
+            "quantity": 6
+          },
+          {
+            "item": "Exodus Modules",
+            "quantity": 2
+          },
+          {
+            "item": "Magnetic Accelerator",
+            "quantity": 1
+          },
+          {
+            "item": "Medium Gun Parts",
+            "quantity": 10
+          }
+        ],
+        "fromScratchMaterials": [
+          "Advanced Mechanical Components x6",
+          "Exodus Modules x2",
+          "Magnetic Accelerator x1",
+          "Medium Gun Parts x10"
+        ],
+        "craftValue": 5600,
+        "fromScratchCraftValue": 28500
       }
     ],
     "modSlots": [
@@ -731,14 +1311,54 @@ window.WEAPON_DATA = {
       {
         "level": 1,
         "sellPrice": 8000,
-        "durability": 50,
+        "durability": 100,
         "effects": [],
-        "perkTexts": []
+        "perkTexts": [],
+        "craftingMaterialsDetailed": [
+          {
+            "item": "Advanced Mechanical Components",
+            "quantity": 3
+          },
+          {
+            "item": "Heavy Gun Parts",
+            "quantity": 3
+          },
+          {
+            "item": "Canister",
+            "quantity": 3
+          }
+        ],
+        "craftingMaterials": [
+          "Advanced Mechanical Components x3",
+          "Heavy Gun Parts x3",
+          "Canister x3"
+        ],
+        "fromScratchMaterialsDetailed": [
+          {
+            "item": "Advanced Mechanical Components",
+            "quantity": 3
+          },
+          {
+            "item": "Canister",
+            "quantity": 3
+          },
+          {
+            "item": "Heavy Gun Parts",
+            "quantity": 3
+          }
+        ],
+        "fromScratchMaterials": [
+          "Advanced Mechanical Components x3",
+          "Canister x3",
+          "Heavy Gun Parts x3"
+        ],
+        "craftValue": 8250,
+        "fromScratchCraftValue": 8250
       },
       {
         "level": 2,
         "sellPrice": 11000,
-        "durability": 55,
+        "durability": 110,
         "effects": [
           {
             "text": "5% Increased Fire Rate",
@@ -766,12 +1386,47 @@ window.WEAPON_DATA = {
           "5% Increased Fire Rate",
           "11.1% Reduced Reload Time",
           "+10 Durability"
-        ]
+        ],
+        "craftingMaterialsDetailed": [
+          {
+            "item": "Advanced Mechanical Components",
+            "quantity": 1
+          },
+          {
+            "item": "Heavy Gun Parts",
+            "quantity": 2
+          }
+        ],
+        "craftingMaterials": [
+          "Advanced Mechanical Components x1",
+          "Heavy Gun Parts x2"
+        ],
+        "fromScratchMaterialsDetailed": [
+          {
+            "item": "Advanced Mechanical Components",
+            "quantity": 4
+          },
+          {
+            "item": "Canister",
+            "quantity": 3
+          },
+          {
+            "item": "Heavy Gun Parts",
+            "quantity": 5
+          }
+        ],
+        "fromScratchMaterials": [
+          "Advanced Mechanical Components x4",
+          "Canister x3",
+          "Heavy Gun Parts x5"
+        ],
+        "craftValue": 3150,
+        "fromScratchCraftValue": 11400
       },
       {
         "level": 3,
         "sellPrice": 14000,
-        "durability": 60,
+        "durability": 120,
         "effects": [
           {
             "text": "10% Increased Fire Rate",
@@ -799,12 +1454,47 @@ window.WEAPON_DATA = {
           "10% Increased Fire Rate",
           "22.2% Reduced Reload Time",
           "+20 Durability"
-        ]
+        ],
+        "craftingMaterialsDetailed": [
+          {
+            "item": "Advanced Mechanical Components",
+            "quantity": 1
+          },
+          {
+            "item": "Heavy Gun Parts",
+            "quantity": 2
+          }
+        ],
+        "craftingMaterials": [
+          "Advanced Mechanical Components x1",
+          "Heavy Gun Parts x2"
+        ],
+        "fromScratchMaterialsDetailed": [
+          {
+            "item": "Advanced Mechanical Components",
+            "quantity": 5
+          },
+          {
+            "item": "Canister",
+            "quantity": 3
+          },
+          {
+            "item": "Heavy Gun Parts",
+            "quantity": 7
+          }
+        ],
+        "fromScratchMaterials": [
+          "Advanced Mechanical Components x5",
+          "Canister x3",
+          "Heavy Gun Parts x7"
+        ],
+        "craftValue": 3150,
+        "fromScratchCraftValue": 14550
       },
       {
         "level": 4,
         "sellPrice": 18000,
-        "durability": 65,
+        "durability": 130,
         "effects": [
           {
             "text": "15% Increased Fire Rate",
@@ -832,7 +1522,325 @@ window.WEAPON_DATA = {
           "15% Increased Fire Rate",
           "33.3% Reduced Reload Time",
           "+30 Durability"
+        ],
+        "craftingMaterialsDetailed": [
+          {
+            "item": "Advanced Mechanical Components",
+            "quantity": 2
+          },
+          {
+            "item": "Heavy Gun Parts",
+            "quantity": 2
+          }
+        ],
+        "craftingMaterials": [
+          "Advanced Mechanical Components x2",
+          "Heavy Gun Parts x2"
+        ],
+        "fromScratchMaterialsDetailed": [
+          {
+            "item": "Advanced Mechanical Components",
+            "quantity": 7
+          },
+          {
+            "item": "Canister",
+            "quantity": 3
+          },
+          {
+            "item": "Heavy Gun Parts",
+            "quantity": 9
+          }
+        ],
+        "fromScratchMaterials": [
+          "Advanced Mechanical Components x7",
+          "Canister x3",
+          "Heavy Gun Parts x9"
+        ],
+        "craftValue": 4900,
+        "fromScratchCraftValue": 19450
+      }
+    ],
+    "modSlots": [
+      {
+        "name": "Muzzle",
+        "iconUrl": "https://arcraiders.wiki/w/images/4/4b/Mods_Muzzle.png",
+        "options": [
+          "Compensator I",
+          "Muzzle Brake I",
+          "Compensator II",
+          "Muzzle Brake II",
+          "Silencer I",
+          "Compensator III",
+          "Muzzle Brake III",
+          "Silencer II",
+          "Extended Barrel",
+          "Silencer III"
         ]
+      },
+      {
+        "name": "Underbarrel",
+        "iconUrl": "https://arcraiders.wiki/w/images/0/01/Mods_Underbarrel.png",
+        "options": [
+          "Angled Grip I",
+          "Vertical Grip I",
+          "Angled Grip II",
+          "Vertical Grip II",
+          "Angled Grip III",
+          "Vertical Grip III",
+          "Horizontal Grip"
+        ]
+      },
+      {
+        "name": "Stock",
+        "iconUrl": "https://arcraiders.wiki/w/images/f/f5/Mods_Stock.png",
+        "options": [
+          "Stable Stock I",
+          "Stable Stock II",
+          "Stable Stock III",
+          "Lightweight Stock",
+          "Padded Stock",
+          "Kinetic Converter"
+        ]
+      }
+    ]
+  },
+  "Ferro": {
+    "imageUrl": "https://arcraiders.wiki/w/images/thumb/b/b0/Ferro-Level1.png/160px-Ferro-Level1.png.webp",
+    "pageUrl": "https://arcraiders.wiki/wiki/Ferro",
+    "rarity": "Common",
+    "type": "Battle Rifles",
+    "ammoType": "Heavy Ammo",
+    "ammoTypeIconUrl": "https://arcraiders.wiki/w/images/e/e8/Ammo_Heavy.png",
+    "firingMode": "Break-Action",
+    "damage": "40",
+    "fireRate": "6.6",
+    "relativeDps": "264",
+    "range": "53.1",
+    "description": "Packs a punch, but must be reloaded between every shot.",
+    "sellPrice": "475",
+    "magazineSize": "1",
+    "magazineSizeByLevel": {
+      "1": 1
+    },
+    "arcArmorPenetration": "Strong",
+    "headshotMultiplier": "2.5x",
+    "stability": "78.1",
+    "agility": "32.1",
+    "stealth": "8",
+    "weight": "8.0",
+    "fireRateRpm": null,
+    "levels": [
+      {
+        "level": 1,
+        "sellPrice": 475,
+        "durability": 100,
+        "effects": [],
+        "perkTexts": [],
+        "craftingMaterialsDetailed": [
+          {
+            "item": "Metal Parts",
+            "quantity": 5
+          },
+          {
+            "item": "Rubber Parts",
+            "quantity": 2
+          }
+        ],
+        "craftingMaterials": [
+          "Metal Parts x5",
+          "Rubber Parts x2"
+        ],
+        "fromScratchMaterialsDetailed": [
+          {
+            "item": "Metal Parts",
+            "quantity": 5
+          },
+          {
+            "item": "Rubber Parts",
+            "quantity": 2
+          }
+        ],
+        "fromScratchMaterials": [
+          "Metal Parts x5",
+          "Rubber Parts x2"
+        ],
+        "craftValue": 475,
+        "fromScratchCraftValue": 475
+      },
+      {
+        "level": 2,
+        "sellPrice": 1000,
+        "durability": 110,
+        "effects": [
+          {
+            "text": "13% Reduced Reload Time",
+            "kind": "percent",
+            "stat": "Reload Time",
+            "statKey": "reloadTime",
+            "delta": -13.0
+          },
+          {
+            "text": "+10 Durability",
+            "kind": "flat",
+            "stat": "Durability",
+            "statKey": "durability",
+            "delta": 10
+          }
+        ],
+        "perkTexts": [
+          "13% Reduced Reload Time",
+          "+10 Durability"
+        ],
+        "craftingMaterialsDetailed": [
+          {
+            "item": "Metal Parts",
+            "quantity": 7
+          }
+        ],
+        "craftingMaterials": [
+          "Metal Parts x7"
+        ],
+        "fromScratchMaterialsDetailed": [
+          {
+            "item": "Metal Parts",
+            "quantity": 12
+          },
+          {
+            "item": "Rubber Parts",
+            "quantity": 2
+          }
+        ],
+        "fromScratchMaterials": [
+          "Metal Parts x12",
+          "Rubber Parts x2"
+        ],
+        "craftValue": 525,
+        "fromScratchCraftValue": 1000
+      },
+      {
+        "level": 3,
+        "sellPrice": 2000,
+        "durability": 120,
+        "effects": [
+          {
+            "text": "26% Reduced Reload Time",
+            "kind": "percent",
+            "stat": "Reload Time",
+            "statKey": "reloadTime",
+            "delta": -26.0
+          },
+          {
+            "text": "+20 Durability",
+            "kind": "flat",
+            "stat": "Durability",
+            "statKey": "durability",
+            "delta": 20
+          }
+        ],
+        "perkTexts": [
+          "26% Reduced Reload Time",
+          "+20 Durability"
+        ],
+        "craftingMaterialsDetailed": [
+          {
+            "item": "Metal Parts",
+            "quantity": 9
+          },
+          {
+            "item": "Simple Gun Parts",
+            "quantity": 1
+          }
+        ],
+        "craftingMaterials": [
+          "Metal Parts x9",
+          "Simple Gun Parts x1"
+        ],
+        "fromScratchMaterialsDetailed": [
+          {
+            "item": "Metal Parts",
+            "quantity": 21
+          },
+          {
+            "item": "Rubber Parts",
+            "quantity": 2
+          },
+          {
+            "item": "Simple Gun Parts",
+            "quantity": 1
+          }
+        ],
+        "fromScratchMaterials": [
+          "Metal Parts x21",
+          "Rubber Parts x2",
+          "Simple Gun Parts x1"
+        ],
+        "craftValue": 1005,
+        "fromScratchCraftValue": 2005
+      },
+      {
+        "level": 4,
+        "sellPrice": 2900,
+        "durability": 130,
+        "effects": [
+          {
+            "text": "39% Reduced Reload Time",
+            "kind": "percent",
+            "stat": "Reload Time",
+            "statKey": "reloadTime",
+            "delta": -39.0
+          },
+          {
+            "text": "+30 Durability",
+            "kind": "flat",
+            "stat": "Durability",
+            "statKey": "durability",
+            "delta": 30
+          }
+        ],
+        "perkTexts": [
+          "39% Reduced Reload Time",
+          "+30 Durability"
+        ],
+        "craftingMaterialsDetailed": [
+          {
+            "item": "Mechanical Components",
+            "quantity": 1
+          },
+          {
+            "item": "Simple Gun Parts",
+            "quantity": 1
+          }
+        ],
+        "craftingMaterials": [
+          "Mechanical Components x1",
+          "Simple Gun Parts x1"
+        ],
+        "fromScratchMaterialsDetailed": [
+          {
+            "item": "Mechanical Components",
+            "quantity": 1
+          },
+          {
+            "item": "Metal Parts",
+            "quantity": 21
+          },
+          {
+            "item": "Rubber Parts",
+            "quantity": 2
+          },
+          {
+            "item": "Simple Gun Parts",
+            "quantity": 2
+          }
+        ],
+        "fromScratchMaterials": [
+          "Mechanical Components x1",
+          "Metal Parts x21",
+          "Rubber Parts x2",
+          "Simple Gun Parts x2"
+        ],
+        "craftValue": 970,
+        "fromScratchCraftValue": 2975
       }
     ],
     "modSlots": [
@@ -908,14 +1916,54 @@ window.WEAPON_DATA = {
       {
         "level": 1,
         "sellPrice": 7000,
-        "durability": 50,
+        "durability": 100,
         "effects": [],
-        "perkTexts": []
+        "perkTexts": [],
+        "craftingMaterialsDetailed": [
+          {
+            "item": "Advanced Mechanical Components",
+            "quantity": 2
+          },
+          {
+            "item": "Medium Gun Parts",
+            "quantity": 3
+          },
+          {
+            "item": "Oil",
+            "quantity": 5
+          }
+        ],
+        "craftingMaterials": [
+          "Advanced Mechanical Components x2",
+          "Medium Gun Parts x3",
+          "Oil x5"
+        ],
+        "fromScratchMaterialsDetailed": [
+          {
+            "item": "Advanced Mechanical Components",
+            "quantity": 2
+          },
+          {
+            "item": "Medium Gun Parts",
+            "quantity": 3
+          },
+          {
+            "item": "Oil",
+            "quantity": 5
+          }
+        ],
+        "fromScratchMaterials": [
+          "Advanced Mechanical Components x2",
+          "Medium Gun Parts x3",
+          "Oil x5"
+        ],
+        "craftValue": 7100,
+        "fromScratchCraftValue": 7100
       },
       {
         "level": 2,
         "sellPrice": 10000,
-        "durability": 55,
+        "durability": 110,
         "effects": [
           {
             "text": "16.6% Reduced Dispersion Recovery Time",
@@ -943,12 +1991,47 @@ window.WEAPON_DATA = {
           "16.6% Reduced Dispersion Recovery Time",
           "25% Increased Fire Rate",
           "+10 Durability"
-        ]
+        ],
+        "craftingMaterialsDetailed": [
+          {
+            "item": "Advanced Mechanical Components",
+            "quantity": 1
+          },
+          {
+            "item": "Medium Gun Parts",
+            "quantity": 2
+          }
+        ],
+        "craftingMaterials": [
+          "Advanced Mechanical Components x1",
+          "Medium Gun Parts x2"
+        ],
+        "fromScratchMaterialsDetailed": [
+          {
+            "item": "Advanced Mechanical Components",
+            "quantity": 3
+          },
+          {
+            "item": "Medium Gun Parts",
+            "quantity": 5
+          },
+          {
+            "item": "Oil",
+            "quantity": 5
+          }
+        ],
+        "fromScratchMaterials": [
+          "Advanced Mechanical Components x3",
+          "Medium Gun Parts x5",
+          "Oil x5"
+        ],
+        "craftValue": 3150,
+        "fromScratchCraftValue": 10250
       },
       {
         "level": 3,
         "sellPrice": 13000,
-        "durability": 60,
+        "durability": 120,
         "effects": [
           {
             "text": "33.3% Reduced Dispersion Recovery Time",
@@ -976,12 +2059,47 @@ window.WEAPON_DATA = {
           "33.3% Reduced Dispersion Recovery Time",
           "50% Increased Fire Rate",
           "+20 Durability"
-        ]
+        ],
+        "craftingMaterialsDetailed": [
+          {
+            "item": "Advanced Mechanical Components",
+            "quantity": 1
+          },
+          {
+            "item": "Medium Gun Parts",
+            "quantity": 2
+          }
+        ],
+        "craftingMaterials": [
+          "Advanced Mechanical Components x1",
+          "Medium Gun Parts x2"
+        ],
+        "fromScratchMaterialsDetailed": [
+          {
+            "item": "Advanced Mechanical Components",
+            "quantity": 4
+          },
+          {
+            "item": "Medium Gun Parts",
+            "quantity": 7
+          },
+          {
+            "item": "Oil",
+            "quantity": 5
+          }
+        ],
+        "fromScratchMaterials": [
+          "Advanced Mechanical Components x4",
+          "Medium Gun Parts x7",
+          "Oil x5"
+        ],
+        "craftValue": 3150,
+        "fromScratchCraftValue": 13400
       },
       {
         "level": 4,
         "sellPrice": 17000,
-        "durability": 65,
+        "durability": 130,
         "effects": [
           {
             "text": "50% Reduced Dispersion Recovery Time",
@@ -1009,7 +2127,42 @@ window.WEAPON_DATA = {
           "50% Reduced Dispersion Recovery Time",
           "75% Increased Fire Rate",
           "+30 Durability"
-        ]
+        ],
+        "craftingMaterialsDetailed": [
+          {
+            "item": "Advanced Mechanical Components",
+            "quantity": 2
+          },
+          {
+            "item": "Medium Gun Parts",
+            "quantity": 2
+          }
+        ],
+        "craftingMaterials": [
+          "Advanced Mechanical Components x2",
+          "Medium Gun Parts x2"
+        ],
+        "fromScratchMaterialsDetailed": [
+          {
+            "item": "Advanced Mechanical Components",
+            "quantity": 6
+          },
+          {
+            "item": "Medium Gun Parts",
+            "quantity": 9
+          },
+          {
+            "item": "Oil",
+            "quantity": 5
+          }
+        ],
+        "fromScratchMaterials": [
+          "Advanced Mechanical Components x6",
+          "Medium Gun Parts x9",
+          "Oil x5"
+        ],
+        "craftValue": 4900,
+        "fromScratchCraftValue": 18300
       }
     ],
     "modSlots": [
@@ -1036,159 +2189,6 @@ window.WEAPON_DATA = {
           "Extended Medium Mag I",
           "Extended Medium Mag II",
           "Extended Medium Mag III"
-        ]
-      },
-      {
-        "name": "Stock",
-        "iconUrl": "https://arcraiders.wiki/w/images/f/f5/Mods_Stock.png",
-        "options": [
-          "Stable Stock I",
-          "Stable Stock II",
-          "Stable Stock III",
-          "Lightweight Stock",
-          "Padded Stock",
-          "Kinetic Converter"
-        ]
-      }
-    ]
-  },
-  "Ferro": {
-    "imageUrl": "https://arcraiders.wiki/w/images/thumb/b/b0/Ferro-Level1.png/160px-Ferro-Level1.png.webp",
-    "pageUrl": "https://arcraiders.wiki/wiki/Ferro",
-    "rarity": "Common",
-    "type": "Battle Rifles",
-    "ammoType": "Heavy Ammo",
-    "ammoTypeIconUrl": "https://arcraiders.wiki/w/images/e/e8/Ammo_Heavy.png",
-    "firingMode": "Break-Action",
-    "damage": "40",
-    "fireRate": "6.6",
-    "relativeDps": "264",
-    "range": "53.1",
-    "description": "Packs a punch, but must be reloaded between every shot.",
-    "sellPrice": "475",
-    "magazineSize": "1",
-    "magazineSizeByLevel": {
-      "1": 1
-    },
-    "arcArmorPenetration": "Strong",
-    "headshotMultiplier": "2.5x",
-    "stability": "78.1",
-    "agility": "32.1",
-    "stealth": "8",
-    "weight": "8.0",
-    "fireRateRpm": null,
-    "levels": [
-      {
-        "level": 1,
-        "sellPrice": 475,
-        "durability": 50,
-        "effects": [],
-        "perkTexts": []
-      },
-      {
-        "level": 2,
-        "sellPrice": 1000,
-        "durability": 55,
-        "effects": [
-          {
-            "text": "13% Reduced Reload Time",
-            "kind": "percent",
-            "stat": "Reload Time",
-            "statKey": "reloadTime",
-            "delta": -13.0
-          },
-          {
-            "text": "+10 Durability",
-            "kind": "flat",
-            "stat": "Durability",
-            "statKey": "durability",
-            "delta": 10
-          }
-        ],
-        "perkTexts": [
-          "13% Reduced Reload Time",
-          "+10 Durability"
-        ]
-      },
-      {
-        "level": 3,
-        "sellPrice": 2000,
-        "durability": 60,
-        "effects": [
-          {
-            "text": "26% Reduced Reload Time",
-            "kind": "percent",
-            "stat": "Reload Time",
-            "statKey": "reloadTime",
-            "delta": -26.0
-          },
-          {
-            "text": "+20 Durability",
-            "kind": "flat",
-            "stat": "Durability",
-            "statKey": "durability",
-            "delta": 20
-          }
-        ],
-        "perkTexts": [
-          "26% Reduced Reload Time",
-          "+20 Durability"
-        ]
-      },
-      {
-        "level": 4,
-        "sellPrice": 2900,
-        "durability": 65,
-        "effects": [
-          {
-            "text": "39% Reduced Reload Time",
-            "kind": "percent",
-            "stat": "Reload Time",
-            "statKey": "reloadTime",
-            "delta": -39.0
-          },
-          {
-            "text": "+30 Durability",
-            "kind": "flat",
-            "stat": "Durability",
-            "statKey": "durability",
-            "delta": 30
-          }
-        ],
-        "perkTexts": [
-          "39% Reduced Reload Time",
-          "+30 Durability"
-        ]
-      }
-    ],
-    "modSlots": [
-      {
-        "name": "Muzzle",
-        "iconUrl": "https://arcraiders.wiki/w/images/4/4b/Mods_Muzzle.png",
-        "options": [
-          "Compensator I",
-          "Muzzle Brake I",
-          "Compensator II",
-          "Muzzle Brake II",
-          "Silencer I",
-          "Compensator III",
-          "Muzzle Brake III",
-          "Silencer II",
-          "Extended Barrel",
-          "Silencer III"
-        ]
-      },
-      {
-        "name": "Underbarrel",
-        "iconUrl": "https://arcraiders.wiki/w/images/0/01/Mods_Underbarrel.png",
-        "options": [
-          "Angled Grip I",
-          "Vertical Grip I",
-          "Angled Grip II",
-          "Vertical Grip II",
-          "Angled Grip III",
-          "Vertical Grip III",
-          "Horizontal Grip"
         ]
       },
       {
@@ -1234,9 +2234,49 @@ window.WEAPON_DATA = {
       {
         "level": 1,
         "sellPrice": 27500,
-        "durability": null,
+        "durability": 100,
         "effects": [],
-        "perkTexts": []
+        "perkTexts": [],
+        "craftingMaterialsDetailed": [
+          {
+            "item": "Magnetic Accelerator",
+            "quantity": 3
+          },
+          {
+            "item": "Complex Gun Parts",
+            "quantity": 3
+          },
+          {
+            "item": "Matriarch Reactor",
+            "quantity": 1
+          }
+        ],
+        "craftingMaterials": [
+          "Magnetic Accelerator x3",
+          "Complex Gun Parts x3",
+          "Matriarch Reactor x1"
+        ],
+        "fromScratchMaterialsDetailed": [
+          {
+            "item": "Complex Gun Parts",
+            "quantity": 3
+          },
+          {
+            "item": "Magnetic Accelerator",
+            "quantity": 3
+          },
+          {
+            "item": "Matriarch Reactor",
+            "quantity": 1
+          }
+        ],
+        "fromScratchMaterials": [
+          "Complex Gun Parts x3",
+          "Magnetic Accelerator x3",
+          "Matriarch Reactor x1"
+        ],
+        "craftValue": 36500,
+        "fromScratchCraftValue": 36500
       }
     ],
     "modSlots": [
@@ -1296,14 +2336,44 @@ window.WEAPON_DATA = {
       {
         "level": 1,
         "sellPrice": 800,
-        "durability": null,
+        "durability": 100,
         "effects": [],
-        "perkTexts": []
+        "perkTexts": [],
+        "craftingMaterialsDetailed": [
+          {
+            "item": "Metal Parts",
+            "quantity": 8
+          },
+          {
+            "item": "Rubber Parts",
+            "quantity": 4
+          }
+        ],
+        "craftingMaterials": [
+          "Metal Parts x8",
+          "Rubber Parts x4"
+        ],
+        "fromScratchMaterialsDetailed": [
+          {
+            "item": "Metal Parts",
+            "quantity": 8
+          },
+          {
+            "item": "Rubber Parts",
+            "quantity": 4
+          }
+        ],
+        "fromScratchMaterials": [
+          "Metal Parts x8",
+          "Rubber Parts x4"
+        ],
+        "craftValue": 800,
+        "fromScratchCraftValue": 800
       },
       {
         "level": 2,
         "sellPrice": 2000,
-        "durability": null,
+        "durability": 110,
         "effects": [
           {
             "text": "16.6% Reduced Horizontal Recoil",
@@ -1331,12 +2401,42 @@ window.WEAPON_DATA = {
           "16.6% Reduced Horizontal Recoil",
           "13% Reduced Reload Time",
           "+10 Durability"
-        ]
+        ],
+        "craftingMaterialsDetailed": [
+          {
+            "item": "Metal Parts",
+            "quantity": 8
+          },
+          {
+            "item": "Rubber Parts",
+            "quantity": 12
+          }
+        ],
+        "craftingMaterials": [
+          "Metal Parts x8",
+          "Rubber Parts x12"
+        ],
+        "fromScratchMaterialsDetailed": [
+          {
+            "item": "Metal Parts",
+            "quantity": 16
+          },
+          {
+            "item": "Rubber Parts",
+            "quantity": 16
+          }
+        ],
+        "fromScratchMaterials": [
+          "Metal Parts x16",
+          "Rubber Parts x16"
+        ],
+        "craftValue": 1200,
+        "fromScratchCraftValue": 2000
       },
       {
         "level": 3,
         "sellPrice": 3000,
-        "durability": null,
+        "durability": 120,
         "effects": [
           {
             "text": "33.3% Reduced Horizontal Recoil",
@@ -1364,12 +2464,47 @@ window.WEAPON_DATA = {
           "33.3% Reduced Horizontal Recoil",
           "26% Reduced Reload Time",
           "+20 Durability"
-        ]
+        ],
+        "craftingMaterialsDetailed": [
+          {
+            "item": "Metal Parts",
+            "quantity": 10
+          },
+          {
+            "item": "Simple Gun Parts",
+            "quantity": 1
+          }
+        ],
+        "craftingMaterials": [
+          "Metal Parts x10",
+          "Simple Gun Parts x1"
+        ],
+        "fromScratchMaterialsDetailed": [
+          {
+            "item": "Metal Parts",
+            "quantity": 26
+          },
+          {
+            "item": "Rubber Parts",
+            "quantity": 16
+          },
+          {
+            "item": "Simple Gun Parts",
+            "quantity": 1
+          }
+        ],
+        "fromScratchMaterials": [
+          "Metal Parts x26",
+          "Rubber Parts x16",
+          "Simple Gun Parts x1"
+        ],
+        "craftValue": 1080,
+        "fromScratchCraftValue": 3080
       },
       {
         "level": 4,
         "sellPrice": 5000,
-        "durability": null,
+        "durability": 130,
         "effects": [
           {
             "text": "50% Reduced Horizontal Recoil",
@@ -1397,7 +2532,417 @@ window.WEAPON_DATA = {
           "50% Reduced Horizontal Recoil",
           "40% Reduced Reload Time",
           "+30 Durability"
+        ],
+        "craftingMaterialsDetailed": [
+          {
+            "item": "Mechanical Components",
+            "quantity": 3
+          },
+          {
+            "item": "Simple Gun Parts",
+            "quantity": 1
+          }
+        ],
+        "craftingMaterials": [
+          "Mechanical Components x3",
+          "Simple Gun Parts x1"
+        ],
+        "fromScratchMaterialsDetailed": [
+          {
+            "item": "Mechanical Components",
+            "quantity": 3
+          },
+          {
+            "item": "Metal Parts",
+            "quantity": 26
+          },
+          {
+            "item": "Rubber Parts",
+            "quantity": 16
+          },
+          {
+            "item": "Simple Gun Parts",
+            "quantity": 2
+          }
+        ],
+        "fromScratchMaterials": [
+          "Mechanical Components x3",
+          "Metal Parts x26",
+          "Rubber Parts x16",
+          "Simple Gun Parts x2"
+        ],
+        "craftValue": 2250,
+        "fromScratchCraftValue": 5330
+      }
+    ],
+    "modSlots": [
+      {
+        "name": "Muzzle",
+        "iconUrl": "https://arcraiders.wiki/w/images/4/4b/Mods_Muzzle.png",
+        "options": [
+          "Compensator I",
+          "Muzzle Brake I",
+          "Compensator II",
+          "Muzzle Brake II",
+          "Silencer I",
+          "Compensator III",
+          "Muzzle Brake III",
+          "Silencer II",
+          "Extended Barrel",
+          "Silencer III"
         ]
+      },
+      {
+        "name": "Underbarrel",
+        "iconUrl": "https://arcraiders.wiki/w/images/0/01/Mods_Underbarrel.png",
+        "options": [
+          "Angled Grip I",
+          "Vertical Grip I",
+          "Angled Grip II",
+          "Vertical Grip II",
+          "Angled Grip III",
+          "Vertical Grip III",
+          "Horizontal Grip"
+        ]
+      },
+      {
+        "name": "Light Magazine",
+        "iconUrl": "https://arcraiders.wiki/w/images/6/60/Mods_Light-Mag.png",
+        "options": [
+          "Extended Light Mag I",
+          "Extended Light Mag II",
+          "Extended Light Mag III"
+        ]
+      },
+      {
+        "name": "Stock",
+        "iconUrl": "https://arcraiders.wiki/w/images/f/f5/Mods_Stock.png",
+        "options": [
+          "Stable Stock I",
+          "Stable Stock II",
+          "Stable Stock III",
+          "Lightweight Stock",
+          "Padded Stock",
+          "Kinetic Converter"
+        ]
+      }
+    ]
+  },
+  "Canto": {
+    "imageUrl": "https://arcraiders.wiki/w/images/thumb/8/83/Canto-Level1.png/160px-Canto-Level1.png.webp",
+    "pageUrl": "https://arcraiders.wiki/wiki/Canto",
+    "rarity": "Rare",
+    "type": "SMGs",
+    "ammoType": "Medium Ammo",
+    "ammoTypeIconUrl": "https://arcraiders.wiki/w/images/b/b6/Ammo_Medium.png",
+    "firingMode": "Fully-Automatic",
+    "damage": "6.5",
+    "fireRate": "56.7",
+    "relativeDps": "",
+    "range": "51",
+    "description": "Fully automatic submachine gun with a larger caliber",
+    "sellPrice": "7000",
+    "magazineSize": "18",
+    "magazineSizeByLevel": {
+      "1": 18
+    },
+    "arcArmorPenetration": "Moderate",
+    "headshotMultiplier": "",
+    "stability": "39.4",
+    "agility": "78.3",
+    "stealth": "24",
+    "weight": "4.0",
+    "fireRateRpm": null,
+    "levels": [
+      {
+        "level": 1,
+        "sellPrice": 7000,
+        "durability": 100,
+        "effects": [],
+        "perkTexts": [],
+        "craftingMaterialsDetailed": [
+          {
+            "item": "Advanced Mechanical Components",
+            "quantity": 2
+          },
+          {
+            "item": "Magnet",
+            "quantity": 5
+          },
+          {
+            "item": "Medium Gun Parts",
+            "quantity": 3
+          }
+        ],
+        "craftingMaterials": [
+          "Advanced Mechanical Components x2",
+          "Magnet x5",
+          "Medium Gun Parts x3"
+        ],
+        "fromScratchMaterialsDetailed": [
+          {
+            "item": "Advanced Mechanical Components",
+            "quantity": 2
+          },
+          {
+            "item": "Magnet",
+            "quantity": 5
+          },
+          {
+            "item": "Medium Gun Parts",
+            "quantity": 3
+          }
+        ],
+        "fromScratchMaterials": [
+          "Advanced Mechanical Components x2",
+          "Magnet x5",
+          "Medium Gun Parts x3"
+        ],
+        "craftValue": 7100,
+        "fromScratchCraftValue": 7100
+      },
+      {
+        "level": 2,
+        "sellPrice": 7000,
+        "durability": 110,
+        "effects": [
+          {
+            "text": "15% Reduced Max Shot Dispersion",
+            "kind": "percent",
+            "stat": "Max Shot Dispersion",
+            "statKey": "maxShotDispersion",
+            "delta": -15.0
+          },
+          {
+            "text": "+2 Magazine Size",
+            "kind": "flat",
+            "stat": "Magazine Size",
+            "statKey": "magazineSize",
+            "delta": 2
+          },
+          {
+            "text": "14% Reduced Reload Time",
+            "kind": "percent",
+            "stat": "Reload Time",
+            "statKey": "reloadTime",
+            "delta": -14.0
+          },
+          {
+            "text": "+10 Durability",
+            "kind": "flat",
+            "stat": "Durability",
+            "statKey": "durability",
+            "delta": 10
+          }
+        ],
+        "perkTexts": [
+          "15% Reduced Max Shot Dispersion",
+          "+2 Magazine Size",
+          "14% Reduced Reload Time",
+          "+10 Durability"
+        ],
+        "craftingMaterialsDetailed": [
+          {
+            "item": "Mechanical Components",
+            "quantity": 1
+          },
+          {
+            "item": "Medium Gun Parts",
+            "quantity": 2
+          }
+        ],
+        "craftingMaterials": [
+          "Mechanical Components x1",
+          "Medium Gun Parts x2"
+        ],
+        "fromScratchMaterialsDetailed": [
+          {
+            "item": "Advanced Mechanical Components",
+            "quantity": 2
+          },
+          {
+            "item": "Magnet",
+            "quantity": 5
+          },
+          {
+            "item": "Mechanical Components",
+            "quantity": 1
+          },
+          {
+            "item": "Medium Gun Parts",
+            "quantity": 5
+          }
+        ],
+        "fromScratchMaterials": [
+          "Advanced Mechanical Components x2",
+          "Magnet x5",
+          "Mechanical Components x1",
+          "Medium Gun Parts x5"
+        ],
+        "craftValue": 2040,
+        "fromScratchCraftValue": 9140
+      },
+      {
+        "level": 3,
+        "sellPrice": 7000,
+        "durability": 120,
+        "effects": [
+          {
+            "text": "30% Reduced Max Shot Dispersion",
+            "kind": "percent",
+            "stat": "Max Shot Dispersion",
+            "statKey": "maxShotDispersion",
+            "delta": -30.0
+          },
+          {
+            "text": "+4 Magazine Size",
+            "kind": "flat",
+            "stat": "Magazine Size",
+            "statKey": "magazineSize",
+            "delta": 4
+          },
+          {
+            "text": "29% Reduced Reload Time",
+            "kind": "percent",
+            "stat": "Reload Time",
+            "statKey": "reloadTime",
+            "delta": -29.0
+          },
+          {
+            "text": "+20 Durability",
+            "kind": "flat",
+            "stat": "Durability",
+            "statKey": "durability",
+            "delta": 20
+          }
+        ],
+        "perkTexts": [
+          "30% Reduced Max Shot Dispersion",
+          "+4 Magazine Size",
+          "29% Reduced Reload Time",
+          "+20 Durability"
+        ],
+        "craftingMaterialsDetailed": [
+          {
+            "item": "Mechanical Components",
+            "quantity": 1
+          },
+          {
+            "item": "Medium Gun Parts",
+            "quantity": 2
+          }
+        ],
+        "craftingMaterials": [
+          "Mechanical Components x1",
+          "Medium Gun Parts x2"
+        ],
+        "fromScratchMaterialsDetailed": [
+          {
+            "item": "Advanced Mechanical Components",
+            "quantity": 2
+          },
+          {
+            "item": "Magnet",
+            "quantity": 5
+          },
+          {
+            "item": "Mechanical Components",
+            "quantity": 2
+          },
+          {
+            "item": "Medium Gun Parts",
+            "quantity": 7
+          }
+        ],
+        "fromScratchMaterials": [
+          "Advanced Mechanical Components x2",
+          "Magnet x5",
+          "Mechanical Components x2",
+          "Medium Gun Parts x7"
+        ],
+        "craftValue": 2040,
+        "fromScratchCraftValue": 11180
+      },
+      {
+        "level": 4,
+        "sellPrice": 7000,
+        "durability": 130,
+        "effects": [
+          {
+            "text": "45% Reduced Max Shot Dispersion",
+            "kind": "percent",
+            "stat": "Max Shot Dispersion",
+            "statKey": "maxShotDispersion",
+            "delta": -45.0
+          },
+          {
+            "text": "+6 Magazine Size",
+            "kind": "flat",
+            "stat": "Magazine Size",
+            "statKey": "magazineSize",
+            "delta": 6
+          },
+          {
+            "text": "43% Reduced Reload Time",
+            "kind": "percent",
+            "stat": "Reload Time",
+            "statKey": "reloadTime",
+            "delta": -43.0
+          },
+          {
+            "text": "+30 Durability",
+            "kind": "flat",
+            "stat": "Durability",
+            "statKey": "durability",
+            "delta": 30
+          }
+        ],
+        "perkTexts": [
+          "45% Reduced Max Shot Dispersion",
+          "+6 Magazine Size",
+          "43% Reduced Reload Time",
+          "+30 Durability"
+        ],
+        "craftingMaterialsDetailed": [
+          {
+            "item": "Mechanical Components",
+            "quantity": 2
+          },
+          {
+            "item": "Medium Gun Parts",
+            "quantity": 2
+          }
+        ],
+        "craftingMaterials": [
+          "Mechanical Components x2",
+          "Medium Gun Parts x2"
+        ],
+        "fromScratchMaterialsDetailed": [
+          {
+            "item": "Advanced Mechanical Components",
+            "quantity": 2
+          },
+          {
+            "item": "Magnet",
+            "quantity": 5
+          },
+          {
+            "item": "Mechanical Components",
+            "quantity": 4
+          },
+          {
+            "item": "Medium Gun Parts",
+            "quantity": 9
+          }
+        ],
+        "fromScratchMaterials": [
+          "Advanced Mechanical Components x2",
+          "Magnet x5",
+          "Mechanical Components x4",
+          "Medium Gun Parts x9"
+        ],
+        "craftValue": 2680,
+        "fromScratchCraftValue": 13860
       }
     ],
     "modSlots": [
@@ -1482,14 +3027,54 @@ window.WEAPON_DATA = {
       {
         "level": 1,
         "sellPrice": 13000,
-        "durability": 50,
+        "durability": 100,
         "effects": [],
-        "perkTexts": []
+        "perkTexts": [],
+        "craftingMaterialsDetailed": [
+          {
+            "item": "Magnetic Accelerator",
+            "quantity": 1
+          },
+          {
+            "item": "Light Gun Parts",
+            "quantity": 3
+          },
+          {
+            "item": "Exodus Modules",
+            "quantity": 2
+          }
+        ],
+        "craftingMaterials": [
+          "Magnetic Accelerator x1",
+          "Light Gun Parts x3",
+          "Exodus Modules x2"
+        ],
+        "fromScratchMaterialsDetailed": [
+          {
+            "item": "Exodus Modules",
+            "quantity": 2
+          },
+          {
+            "item": "Light Gun Parts",
+            "quantity": 3
+          },
+          {
+            "item": "Magnetic Accelerator",
+            "quantity": 1
+          }
+        ],
+        "fromScratchMaterials": [
+          "Exodus Modules x2",
+          "Light Gun Parts x3",
+          "Magnetic Accelerator x1"
+        ],
+        "craftValue": 13100,
+        "fromScratchCraftValue": 13100
       },
       {
         "level": 2,
         "sellPrice": 17000,
-        "durability": 55,
+        "durability": 110,
         "effects": [
           {
             "text": "15% Reduced Max Shot Dispersion",
@@ -1525,12 +3110,52 @@ window.WEAPON_DATA = {
           "15% Reduced Horizontal Recoil",
           "13% Reduced Reload Time",
           "+10 Durability"
-        ]
+        ],
+        "craftingMaterialsDetailed": [
+          {
+            "item": "Advanced Mechanical Components",
+            "quantity": 2
+          },
+          {
+            "item": "Light Gun Parts",
+            "quantity": 1
+          }
+        ],
+        "craftingMaterials": [
+          "Advanced Mechanical Components x2",
+          "Light Gun Parts x1"
+        ],
+        "fromScratchMaterialsDetailed": [
+          {
+            "item": "Advanced Mechanical Components",
+            "quantity": 2
+          },
+          {
+            "item": "Exodus Modules",
+            "quantity": 2
+          },
+          {
+            "item": "Light Gun Parts",
+            "quantity": 4
+          },
+          {
+            "item": "Magnetic Accelerator",
+            "quantity": 1
+          }
+        ],
+        "fromScratchMaterials": [
+          "Advanced Mechanical Components x2",
+          "Exodus Modules x2",
+          "Light Gun Parts x4",
+          "Magnetic Accelerator x1"
+        ],
+        "craftValue": 4200,
+        "fromScratchCraftValue": 17300
       },
       {
         "level": 3,
         "sellPrice": 22000,
-        "durability": 60,
+        "durability": 120,
         "effects": [
           {
             "text": "30% Reduced Max Shot Dispersion",
@@ -1566,12 +3191,52 @@ window.WEAPON_DATA = {
           "30% Reduced Horizontal Recoil",
           "26% Reduced Reload Time",
           "+20 Durability"
-        ]
+        ],
+        "craftingMaterialsDetailed": [
+          {
+            "item": "Advanced Mechanical Components",
+            "quantity": 2
+          },
+          {
+            "item": "Light Gun Parts",
+            "quantity": 3
+          }
+        ],
+        "craftingMaterials": [
+          "Advanced Mechanical Components x2",
+          "Light Gun Parts x3"
+        ],
+        "fromScratchMaterialsDetailed": [
+          {
+            "item": "Advanced Mechanical Components",
+            "quantity": 4
+          },
+          {
+            "item": "Exodus Modules",
+            "quantity": 2
+          },
+          {
+            "item": "Light Gun Parts",
+            "quantity": 7
+          },
+          {
+            "item": "Magnetic Accelerator",
+            "quantity": 1
+          }
+        ],
+        "fromScratchMaterials": [
+          "Advanced Mechanical Components x4",
+          "Exodus Modules x2",
+          "Light Gun Parts x7",
+          "Magnetic Accelerator x1"
+        ],
+        "craftValue": 5600,
+        "fromScratchCraftValue": 22900
       },
       {
         "level": 4,
         "sellPrice": 27000,
-        "durability": 65,
+        "durability": 130,
         "effects": [
           {
             "text": "50% Reduced Max Shot Dispersion",
@@ -1607,7 +3272,47 @@ window.WEAPON_DATA = {
           "45% Reduced Horizontal Recoil",
           "40% Reduced Reload Time",
           "+30 Durability"
-        ]
+        ],
+        "craftingMaterialsDetailed": [
+          {
+            "item": "Advanced Mechanical Components",
+            "quantity": 2
+          },
+          {
+            "item": "Light Gun Parts",
+            "quantity": 3
+          }
+        ],
+        "craftingMaterials": [
+          "Advanced Mechanical Components x2",
+          "Light Gun Parts x3"
+        ],
+        "fromScratchMaterialsDetailed": [
+          {
+            "item": "Advanced Mechanical Components",
+            "quantity": 6
+          },
+          {
+            "item": "Exodus Modules",
+            "quantity": 2
+          },
+          {
+            "item": "Light Gun Parts",
+            "quantity": 10
+          },
+          {
+            "item": "Magnetic Accelerator",
+            "quantity": 1
+          }
+        ],
+        "fromScratchMaterials": [
+          "Advanced Mechanical Components x6",
+          "Exodus Modules x2",
+          "Light Gun Parts x10",
+          "Magnetic Accelerator x1"
+        ],
+        "craftValue": 5600,
+        "fromScratchCraftValue": 28500
       }
     ],
     "modSlots": [
@@ -1695,14 +3400,44 @@ window.WEAPON_DATA = {
       {
         "level": 1,
         "sellPrice": 5000,
-        "durability": 50,
+        "durability": 100,
         "effects": [],
-        "perkTexts": []
+        "perkTexts": [],
+        "craftingMaterialsDetailed": [
+          {
+            "item": "Mechanical Components",
+            "quantity": 5
+          },
+          {
+            "item": "Simple Gun Parts",
+            "quantity": 6
+          }
+        ],
+        "craftingMaterials": [
+          "Mechanical Components x5",
+          "Simple Gun Parts x6"
+        ],
+        "fromScratchMaterialsDetailed": [
+          {
+            "item": "Mechanical Components",
+            "quantity": 5
+          },
+          {
+            "item": "Simple Gun Parts",
+            "quantity": 6
+          }
+        ],
+        "fromScratchMaterials": [
+          "Mechanical Components x5",
+          "Simple Gun Parts x6"
+        ],
+        "craftValue": 5180,
+        "fromScratchCraftValue": 5180
       },
       {
         "level": 2,
         "sellPrice": 7000,
-        "durability": 55,
+        "durability": 110,
         "effects": [
           {
             "text": "17.5% Increased Fire Rate",
@@ -1730,12 +3465,42 @@ window.WEAPON_DATA = {
           "17.5% Increased Fire Rate",
           "+1 Magazine Size",
           "+10 Durability"
-        ]
+        ],
+        "craftingMaterialsDetailed": [
+          {
+            "item": "Mechanical Components",
+            "quantity": 3
+          },
+          {
+            "item": "Simple Gun Parts",
+            "quantity": 1
+          }
+        ],
+        "craftingMaterials": [
+          "Mechanical Components x3",
+          "Simple Gun Parts x1"
+        ],
+        "fromScratchMaterialsDetailed": [
+          {
+            "item": "Mechanical Components",
+            "quantity": 8
+          },
+          {
+            "item": "Simple Gun Parts",
+            "quantity": 7
+          }
+        ],
+        "fromScratchMaterials": [
+          "Mechanical Components x8",
+          "Simple Gun Parts x7"
+        ],
+        "craftValue": 2250,
+        "fromScratchCraftValue": 7430
       },
       {
         "level": 3,
         "sellPrice": 10000,
-        "durability": 60,
+        "durability": 120,
         "effects": [
           {
             "text": "35% Increased Fire Rate",
@@ -1763,12 +3528,47 @@ window.WEAPON_DATA = {
           "35% Increased Fire Rate",
           "+2 Magazine Size",
           "+20 Durability"
-        ]
+        ],
+        "craftingMaterialsDetailed": [
+          {
+            "item": "Mechanical Components",
+            "quantity": 4
+          },
+          {
+            "item": "Heavy Gun Parts",
+            "quantity": 1
+          }
+        ],
+        "craftingMaterials": [
+          "Mechanical Components x4",
+          "Heavy Gun Parts x1"
+        ],
+        "fromScratchMaterialsDetailed": [
+          {
+            "item": "Heavy Gun Parts",
+            "quantity": 1
+          },
+          {
+            "item": "Mechanical Components",
+            "quantity": 12
+          },
+          {
+            "item": "Simple Gun Parts",
+            "quantity": 7
+          }
+        ],
+        "fromScratchMaterials": [
+          "Heavy Gun Parts x1",
+          "Mechanical Components x12",
+          "Simple Gun Parts x7"
+        ],
+        "craftValue": 3260,
+        "fromScratchCraftValue": 10690
       },
       {
         "level": 4,
         "sellPrice": 13000,
-        "durability": 65,
+        "durability": 130,
         "effects": [
           {
             "text": "50% Increased Fire Rate",
@@ -1796,7 +3596,42 @@ window.WEAPON_DATA = {
           "50% Increased Fire Rate",
           "+3 Magazine Size",
           "+30 Durability"
-        ]
+        ],
+        "craftingMaterialsDetailed": [
+          {
+            "item": "Mechanical Components",
+            "quantity": 4
+          },
+          {
+            "item": "Heavy Gun Parts",
+            "quantity": 1
+          }
+        ],
+        "craftingMaterials": [
+          "Mechanical Components x4",
+          "Heavy Gun Parts x1"
+        ],
+        "fromScratchMaterialsDetailed": [
+          {
+            "item": "Heavy Gun Parts",
+            "quantity": 2
+          },
+          {
+            "item": "Mechanical Components",
+            "quantity": 16
+          },
+          {
+            "item": "Simple Gun Parts",
+            "quantity": 7
+          }
+        ],
+        "fromScratchMaterials": [
+          "Heavy Gun Parts x2",
+          "Mechanical Components x16",
+          "Simple Gun Parts x7"
+        ],
+        "craftValue": 3260,
+        "fromScratchCraftValue": 13950
       }
     ],
     "modSlots": [
@@ -1875,14 +3710,54 @@ window.WEAPON_DATA = {
       {
         "level": 1,
         "sellPrice": 10000,
-        "durability": null,
+        "durability": 100,
         "effects": [],
-        "perkTexts": []
+        "perkTexts": [],
+        "craftingMaterialsDetailed": [
+          {
+            "item": "Magnetic Accelerator",
+            "quantity": 1
+          },
+          {
+            "item": "Heavy Gun Parts",
+            "quantity": 3
+          },
+          {
+            "item": "Exodus Modules",
+            "quantity": 1
+          }
+        ],
+        "craftingMaterials": [
+          "Magnetic Accelerator x1",
+          "Heavy Gun Parts x3",
+          "Exodus Modules x1"
+        ],
+        "fromScratchMaterialsDetailed": [
+          {
+            "item": "Exodus Modules",
+            "quantity": 1
+          },
+          {
+            "item": "Heavy Gun Parts",
+            "quantity": 3
+          },
+          {
+            "item": "Magnetic Accelerator",
+            "quantity": 1
+          }
+        ],
+        "fromScratchMaterials": [
+          "Exodus Modules x1",
+          "Heavy Gun Parts x3",
+          "Magnetic Accelerator x1"
+        ],
+        "craftValue": 10350,
+        "fromScratchCraftValue": 10350
       },
       {
         "level": 2,
         "sellPrice": 13000,
-        "durability": null,
+        "durability": 110,
         "effects": [
           {
             "text": "10% Increased Fire Rate",
@@ -1910,12 +3785,52 @@ window.WEAPON_DATA = {
           "10% Increased Fire Rate",
           "13% Reduced Reload Time",
           "+10 Durability"
-        ]
+        ],
+        "craftingMaterialsDetailed": [
+          {
+            "item": "Advanced Mechanical Components",
+            "quantity": 1
+          },
+          {
+            "item": "Heavy Gun Parts",
+            "quantity": 1
+          }
+        ],
+        "craftingMaterials": [
+          "Advanced Mechanical Components x1",
+          "Heavy Gun Parts x1"
+        ],
+        "fromScratchMaterialsDetailed": [
+          {
+            "item": "Advanced Mechanical Components",
+            "quantity": 1
+          },
+          {
+            "item": "Exodus Modules",
+            "quantity": 1
+          },
+          {
+            "item": "Heavy Gun Parts",
+            "quantity": 4
+          },
+          {
+            "item": "Magnetic Accelerator",
+            "quantity": 1
+          }
+        ],
+        "fromScratchMaterials": [
+          "Advanced Mechanical Components x1",
+          "Exodus Modules x1",
+          "Heavy Gun Parts x4",
+          "Magnetic Accelerator x1"
+        ],
+        "craftValue": 2450,
+        "fromScratchCraftValue": 12800
       },
       {
         "level": 3,
         "sellPrice": 17000,
-        "durability": null,
+        "durability": 120,
         "effects": [
           {
             "text": "20% Increased Fire Rate",
@@ -1943,12 +3858,52 @@ window.WEAPON_DATA = {
           "20% Increased Fire Rate",
           "26% Reduced Reload Time",
           "+20 Durability"
-        ]
+        ],
+        "craftingMaterialsDetailed": [
+          {
+            "item": "Advanced Mechanical Components",
+            "quantity": 2
+          },
+          {
+            "item": "Heavy Gun Parts",
+            "quantity": 1
+          }
+        ],
+        "craftingMaterials": [
+          "Advanced Mechanical Components x2",
+          "Heavy Gun Parts x1"
+        ],
+        "fromScratchMaterialsDetailed": [
+          {
+            "item": "Advanced Mechanical Components",
+            "quantity": 3
+          },
+          {
+            "item": "Exodus Modules",
+            "quantity": 1
+          },
+          {
+            "item": "Heavy Gun Parts",
+            "quantity": 5
+          },
+          {
+            "item": "Magnetic Accelerator",
+            "quantity": 1
+          }
+        ],
+        "fromScratchMaterials": [
+          "Advanced Mechanical Components x3",
+          "Exodus Modules x1",
+          "Heavy Gun Parts x5",
+          "Magnetic Accelerator x1"
+        ],
+        "craftValue": 4200,
+        "fromScratchCraftValue": 17000
       },
       {
         "level": 4,
         "sellPrice": 22000,
-        "durability": null,
+        "durability": 130,
         "effects": [
           {
             "text": "30% Increased Fire Rate",
@@ -1976,7 +3931,47 @@ window.WEAPON_DATA = {
           "30% Increased Fire Rate",
           "40% Reduced Reload Time",
           "+30 Durability"
-        ]
+        ],
+        "craftingMaterialsDetailed": [
+          {
+            "item": "Advanced Mechanical Components",
+            "quantity": 2
+          },
+          {
+            "item": "Heavy Gun Parts",
+            "quantity": 3
+          }
+        ],
+        "craftingMaterials": [
+          "Advanced Mechanical Components x2",
+          "Heavy Gun Parts x3"
+        ],
+        "fromScratchMaterialsDetailed": [
+          {
+            "item": "Advanced Mechanical Components",
+            "quantity": 5
+          },
+          {
+            "item": "Exodus Modules",
+            "quantity": 1
+          },
+          {
+            "item": "Heavy Gun Parts",
+            "quantity": 8
+          },
+          {
+            "item": "Magnetic Accelerator",
+            "quantity": 1
+          }
+        ],
+        "fromScratchMaterials": [
+          "Advanced Mechanical Components x5",
+          "Exodus Modules x1",
+          "Heavy Gun Parts x8",
+          "Magnetic Accelerator x1"
+        ],
+        "craftValue": 5600,
+        "fromScratchCraftValue": 22600
       }
     ],
     "modSlots": [
@@ -2026,6 +4021,82 @@ window.WEAPON_DATA = {
       }
     ]
   },
+  "Dolabra": {
+    "imageUrl": "https://arcraiders.wiki/w/images/thumb/0/07/Dolabra-Level1.png/160px-Dolabra-Level1.png.webp",
+    "pageUrl": "https://arcraiders.wiki/wiki/Dolabra",
+    "rarity": "Legendary",
+    "type": "Shotguns",
+    "ammoType": "Energy Clip",
+    "ammoTypeIconUrl": "https://arcraiders.wiki/w/images/9/95/Ammo_Energy.png",
+    "firingMode": "Semi-Automatic",
+    "damage": "?",
+    "fireRate": "?",
+    "relativeDps": "",
+    "range": "?",
+    "description": "An experimental weapon that can either fire a wide short range blast, or be focused to fire a tight medium range beam of heat.",
+    "sellPrice": "27500",
+    "magazineSize": "8",
+    "magazineSizeByLevel": {
+      "1": 8
+    },
+    "arcArmorPenetration": "Strong",
+    "headshotMultiplier": "",
+    "stability": "",
+    "agility": "",
+    "stealth": "",
+    "weight": "8.0",
+    "fireRateRpm": null,
+    "levels": [
+      {
+        "level": 1,
+        "sellPrice": 27500,
+        "durability": 100,
+        "effects": [],
+        "perkTexts": [],
+        "craftingMaterialsDetailed": [
+          {
+            "item": "Shredder Gyro",
+            "quantity": 3
+          },
+          {
+            "item": "Magnetic Accelerator",
+            "quantity": 3
+          },
+          {
+            "item": "Vaporizer Regulator",
+            "quantity": 2
+          }
+        ],
+        "craftingMaterials": [
+          "Shredder Gyro x3",
+          "Magnetic Accelerator x3",
+          "Vaporizer Regulator x2"
+        ],
+        "fromScratchMaterialsDetailed": [
+          {
+            "item": "Magnetic Accelerator",
+            "quantity": 3
+          },
+          {
+            "item": "Shredder Gyro",
+            "quantity": 3
+          },
+          {
+            "item": "Vaporizer Regulator",
+            "quantity": 2
+          }
+        ],
+        "fromScratchMaterials": [
+          "Magnetic Accelerator x3",
+          "Shredder Gyro x3",
+          "Vaporizer Regulator x2"
+        ],
+        "craftValue": 34500,
+        "fromScratchCraftValue": 34500
+      }
+    ],
+    "modSlots": []
+  },
   "Hairpin": {
     "imageUrl": "https://arcraiders.wiki/w/images/thumb/6/65/Hairpin-Level1.png/160px-Hairpin-Level1.png.webp",
     "pageUrl": "https://arcraiders.wiki/wiki/Hairpin",
@@ -2055,14 +4126,44 @@ window.WEAPON_DATA = {
       {
         "level": 1,
         "sellPrice": 450,
-        "durability": 50,
+        "durability": 100,
         "effects": [],
-        "perkTexts": []
+        "perkTexts": [],
+        "craftingMaterialsDetailed": [
+          {
+            "item": "Metal Parts",
+            "quantity": 2
+          },
+          {
+            "item": "Plastic Parts",
+            "quantity": 5
+          }
+        ],
+        "craftingMaterials": [
+          "Metal Parts x2",
+          "Plastic Parts x5"
+        ],
+        "fromScratchMaterialsDetailed": [
+          {
+            "item": "Metal Parts",
+            "quantity": 2
+          },
+          {
+            "item": "Plastic Parts",
+            "quantity": 5
+          }
+        ],
+        "fromScratchMaterials": [
+          "Metal Parts x2",
+          "Plastic Parts x5"
+        ],
+        "craftValue": 450,
+        "fromScratchCraftValue": 450
       },
       {
         "level": 2,
         "sellPrice": 1000,
-        "durability": 55,
+        "durability": 110,
         "effects": [
           {
             "text": "10% Increased Fire Rate",
@@ -2090,12 +4191,37 @@ window.WEAPON_DATA = {
           "10% Increased Fire Rate",
           "13% Reduced Reload Time",
           "+10 Durability"
-        ]
+        ],
+        "craftingMaterialsDetailed": [
+          {
+            "item": "Metal Parts",
+            "quantity": 8
+          }
+        ],
+        "craftingMaterials": [
+          "Metal Parts x8"
+        ],
+        "fromScratchMaterialsDetailed": [
+          {
+            "item": "Metal Parts",
+            "quantity": 10
+          },
+          {
+            "item": "Plastic Parts",
+            "quantity": 5
+          }
+        ],
+        "fromScratchMaterials": [
+          "Metal Parts x10",
+          "Plastic Parts x5"
+        ],
+        "craftValue": 600,
+        "fromScratchCraftValue": 1050
       },
       {
         "level": 3,
         "sellPrice": 2000,
-        "durability": 60,
+        "durability": 120,
         "effects": [
           {
             "text": "20% Increased Fire Rate",
@@ -2123,12 +4249,47 @@ window.WEAPON_DATA = {
           "20% Increased Fire Rate",
           "26% Reduced Reload Time",
           "+20 Durability"
-        ]
+        ],
+        "craftingMaterialsDetailed": [
+          {
+            "item": "Metal Parts",
+            "quantity": 9
+          },
+          {
+            "item": "Simple Gun Parts",
+            "quantity": 1
+          }
+        ],
+        "craftingMaterials": [
+          "Metal Parts x9",
+          "Simple Gun Parts x1"
+        ],
+        "fromScratchMaterialsDetailed": [
+          {
+            "item": "Metal Parts",
+            "quantity": 19
+          },
+          {
+            "item": "Plastic Parts",
+            "quantity": 5
+          },
+          {
+            "item": "Simple Gun Parts",
+            "quantity": 1
+          }
+        ],
+        "fromScratchMaterials": [
+          "Metal Parts x19",
+          "Plastic Parts x5",
+          "Simple Gun Parts x1"
+        ],
+        "craftValue": 1005,
+        "fromScratchCraftValue": 2055
       },
       {
         "level": 4,
         "sellPrice": 2900,
-        "durability": 65,
+        "durability": 130,
         "effects": [
           {
             "text": "30% Increased Fire Rate",
@@ -2156,7 +4317,47 @@ window.WEAPON_DATA = {
           "30% Increased Fire Rate",
           "40% Reduced Reload Time",
           "+30 Durability"
-        ]
+        ],
+        "craftingMaterialsDetailed": [
+          {
+            "item": "Mechanical Components",
+            "quantity": 1
+          },
+          {
+            "item": "Simple Gun Parts",
+            "quantity": 1
+          }
+        ],
+        "craftingMaterials": [
+          "Mechanical Components x1",
+          "Simple Gun Parts x1"
+        ],
+        "fromScratchMaterialsDetailed": [
+          {
+            "item": "Mechanical Components",
+            "quantity": 1
+          },
+          {
+            "item": "Metal Parts",
+            "quantity": 19
+          },
+          {
+            "item": "Plastic Parts",
+            "quantity": 5
+          },
+          {
+            "item": "Simple Gun Parts",
+            "quantity": 2
+          }
+        ],
+        "fromScratchMaterials": [
+          "Mechanical Components x1",
+          "Metal Parts x19",
+          "Plastic Parts x5",
+          "Simple Gun Parts x2"
+        ],
+        "craftValue": 970,
+        "fromScratchCraftValue": 3025
       }
     ],
     "modSlots": [
@@ -2190,7 +4391,7 @@ window.WEAPON_DATA = {
       "1": 12
     },
     "arcArmorPenetration": "Very Weak",
-    "headshotMultiplier": "2.5x",
+    "headshotMultiplier": "2.5\u00d7",
     "stability": "74.5",
     "agility": "84.4",
     "stealth": "24",
@@ -2200,14 +4401,44 @@ window.WEAPON_DATA = {
       {
         "level": 1,
         "sellPrice": 2900,
-        "durability": 50,
+        "durability": 100,
         "effects": [],
-        "perkTexts": []
+        "perkTexts": [],
+        "craftingMaterialsDetailed": [
+          {
+            "item": "Mechanical Components",
+            "quantity": 3
+          },
+          {
+            "item": "Simple Gun Parts",
+            "quantity": 3
+          }
+        ],
+        "craftingMaterials": [
+          "Mechanical Components x3",
+          "Simple Gun Parts x3"
+        ],
+        "fromScratchMaterialsDetailed": [
+          {
+            "item": "Mechanical Components",
+            "quantity": 3
+          },
+          {
+            "item": "Simple Gun Parts",
+            "quantity": 3
+          }
+        ],
+        "fromScratchMaterials": [
+          "Mechanical Components x3",
+          "Simple Gun Parts x3"
+        ],
+        "craftValue": 2910,
+        "fromScratchCraftValue": 2910
       },
       {
         "level": 2,
         "sellPrice": 5000,
-        "durability": 55,
+        "durability": 110,
         "effects": [
           {
             "text": "16.6% Reduced Reload Time",
@@ -2227,12 +4458,42 @@ window.WEAPON_DATA = {
         "perkTexts": [
           "16.6% Reduced Reload Time",
           "+10 Durability"
-        ]
+        ],
+        "craftingMaterialsDetailed": [
+          {
+            "item": "Mechanical Components",
+            "quantity": 3
+          },
+          {
+            "item": "Simple Gun Parts",
+            "quantity": 1
+          }
+        ],
+        "craftingMaterials": [
+          "Mechanical Components x3",
+          "Simple Gun Parts x1"
+        ],
+        "fromScratchMaterialsDetailed": [
+          {
+            "item": "Mechanical Components",
+            "quantity": 6
+          },
+          {
+            "item": "Simple Gun Parts",
+            "quantity": 4
+          }
+        ],
+        "fromScratchMaterials": [
+          "Mechanical Components x6",
+          "Simple Gun Parts x4"
+        ],
+        "craftValue": 2250,
+        "fromScratchCraftValue": 5160
       },
       {
         "level": 3,
         "sellPrice": 7000,
-        "durability": 60,
+        "durability": 120,
         "effects": [
           {
             "text": "33.3% Reduced Reload Time",
@@ -2252,12 +4513,42 @@ window.WEAPON_DATA = {
         "perkTexts": [
           "33.3% Reduced Reload Time",
           "+20 Durability"
-        ]
+        ],
+        "craftingMaterialsDetailed": [
+          {
+            "item": "Mechanical Components",
+            "quantity": 3
+          },
+          {
+            "item": "Simple Gun Parts",
+            "quantity": 1
+          }
+        ],
+        "craftingMaterials": [
+          "Mechanical Components x3",
+          "Simple Gun Parts x1"
+        ],
+        "fromScratchMaterialsDetailed": [
+          {
+            "item": "Mechanical Components",
+            "quantity": 9
+          },
+          {
+            "item": "Simple Gun Parts",
+            "quantity": 5
+          }
+        ],
+        "fromScratchMaterials": [
+          "Mechanical Components x9",
+          "Simple Gun Parts x5"
+        ],
+        "craftValue": 2250,
+        "fromScratchCraftValue": 7410
       },
       {
         "level": 4,
         "sellPrice": 10000,
-        "durability": 65,
+        "durability": 130,
         "effects": [
           {
             "text": "50% Reduced Reload Time",
@@ -2277,7 +4568,42 @@ window.WEAPON_DATA = {
         "perkTexts": [
           "50% Reduced Reload Time",
           "+30 Durability"
-        ]
+        ],
+        "craftingMaterialsDetailed": [
+          {
+            "item": "Mechanical Components",
+            "quantity": 4
+          },
+          {
+            "item": "Light Gun Parts",
+            "quantity": 1
+          }
+        ],
+        "craftingMaterials": [
+          "Mechanical Components x4",
+          "Light Gun Parts x1"
+        ],
+        "fromScratchMaterialsDetailed": [
+          {
+            "item": "Light Gun Parts",
+            "quantity": 1
+          },
+          {
+            "item": "Mechanical Components",
+            "quantity": 13
+          },
+          {
+            "item": "Simple Gun Parts",
+            "quantity": 5
+          }
+        ],
+        "fromScratchMaterials": [
+          "Light Gun Parts x1",
+          "Mechanical Components x13",
+          "Simple Gun Parts x5"
+        ],
+        "craftValue": 3260,
+        "fromScratchCraftValue": 10670
       }
     ],
     "modSlots": [
@@ -2337,14 +4663,54 @@ window.WEAPON_DATA = {
       {
         "level": 1,
         "sellPrice": 7000,
-        "durability": 50,
+        "durability": 100,
         "effects": [],
-        "perkTexts": []
+        "perkTexts": [],
+        "craftingMaterialsDetailed": [
+          {
+            "item": "Advanced Mechanical Components",
+            "quantity": 2
+          },
+          {
+            "item": "Medium Gun Parts",
+            "quantity": 3
+          },
+          {
+            "item": "Magnet",
+            "quantity": 5
+          }
+        ],
+        "craftingMaterials": [
+          "Advanced Mechanical Components x2",
+          "Medium Gun Parts x3",
+          "Magnet x5"
+        ],
+        "fromScratchMaterialsDetailed": [
+          {
+            "item": "Advanced Mechanical Components",
+            "quantity": 2
+          },
+          {
+            "item": "Magnet",
+            "quantity": 5
+          },
+          {
+            "item": "Medium Gun Parts",
+            "quantity": 3
+          }
+        ],
+        "fromScratchMaterials": [
+          "Advanced Mechanical Components x2",
+          "Magnet x5",
+          "Medium Gun Parts x3"
+        ],
+        "craftValue": 7100,
+        "fromScratchCraftValue": 7100
       },
       {
         "level": 2,
         "sellPrice": 10000,
-        "durability": 55,
+        "durability": 110,
         "effects": [
           {
             "text": "13% Increased Fire Rate",
@@ -2372,12 +4738,47 @@ window.WEAPON_DATA = {
           "13% Increased Fire Rate",
           "16% Reduced Reload Time",
           "+10 Durability"
-        ]
+        ],
+        "craftingMaterialsDetailed": [
+          {
+            "item": "Advanced Mechanical Components",
+            "quantity": 1
+          },
+          {
+            "item": "Medium Gun Parts",
+            "quantity": 2
+          }
+        ],
+        "craftingMaterials": [
+          "Advanced Mechanical Components x1",
+          "Medium Gun Parts x2"
+        ],
+        "fromScratchMaterialsDetailed": [
+          {
+            "item": "Advanced Mechanical Components",
+            "quantity": 3
+          },
+          {
+            "item": "Magnet",
+            "quantity": 5
+          },
+          {
+            "item": "Medium Gun Parts",
+            "quantity": 5
+          }
+        ],
+        "fromScratchMaterials": [
+          "Advanced Mechanical Components x3",
+          "Magnet x5",
+          "Medium Gun Parts x5"
+        ],
+        "craftValue": 3150,
+        "fromScratchCraftValue": 10250
       },
       {
         "level": 3,
         "sellPrice": 13000,
-        "durability": 60,
+        "durability": 120,
         "effects": [
           {
             "text": "26% Increased Fire Rate",
@@ -2405,12 +4806,47 @@ window.WEAPON_DATA = {
           "26% Increased Fire Rate",
           "33% Reduced Reload Time",
           "+20 Durability"
-        ]
+        ],
+        "craftingMaterialsDetailed": [
+          {
+            "item": "Advanced Mechanical Components",
+            "quantity": 1
+          },
+          {
+            "item": "Medium Gun Parts",
+            "quantity": 2
+          }
+        ],
+        "craftingMaterials": [
+          "Advanced Mechanical Components x1",
+          "Medium Gun Parts x2"
+        ],
+        "fromScratchMaterialsDetailed": [
+          {
+            "item": "Advanced Mechanical Components",
+            "quantity": 4
+          },
+          {
+            "item": "Magnet",
+            "quantity": 5
+          },
+          {
+            "item": "Medium Gun Parts",
+            "quantity": 7
+          }
+        ],
+        "fromScratchMaterials": [
+          "Advanced Mechanical Components x4",
+          "Magnet x5",
+          "Medium Gun Parts x7"
+        ],
+        "craftValue": 3150,
+        "fromScratchCraftValue": 13400
       },
       {
         "level": 4,
         "sellPrice": 17000,
-        "durability": 65,
+        "durability": 130,
         "effects": [
           {
             "text": "40% Increased Fire Rate",
@@ -2438,7 +4874,42 @@ window.WEAPON_DATA = {
           "40% Increased Fire Rate",
           "50% Reduced Reload Time",
           "+30 Durability"
-        ]
+        ],
+        "craftingMaterialsDetailed": [
+          {
+            "item": "Advanced Mechanical Components",
+            "quantity": 2
+          },
+          {
+            "item": "Medium Gun Parts",
+            "quantity": 2
+          }
+        ],
+        "craftingMaterials": [
+          "Advanced Mechanical Components x2",
+          "Medium Gun Parts x2"
+        ],
+        "fromScratchMaterialsDetailed": [
+          {
+            "item": "Advanced Mechanical Components",
+            "quantity": 6
+          },
+          {
+            "item": "Magnet",
+            "quantity": 5
+          },
+          {
+            "item": "Medium Gun Parts",
+            "quantity": 9
+          }
+        ],
+        "fromScratchMaterials": [
+          "Advanced Mechanical Components x6",
+          "Magnet x5",
+          "Medium Gun Parts x9"
+        ],
+        "craftValue": 4900,
+        "fromScratchCraftValue": 18300
       }
     ],
     "modSlots": [
@@ -2485,7 +4956,7 @@ window.WEAPON_DATA = {
       "1": 6
     },
     "arcArmorPenetration": "Strong",
-    "headshotMultiplier": "2.5x",
+    "headshotMultiplier": "2.5\u00d7",
     "stability": "75.2",
     "agility": "69.1",
     "stealth": "10",
@@ -2495,14 +4966,44 @@ window.WEAPON_DATA = {
       {
         "level": 1,
         "sellPrice": 5000,
-        "durability": 50,
+        "durability": 100,
         "effects": [],
-        "perkTexts": []
+        "perkTexts": [],
+        "craftingMaterialsDetailed": [
+          {
+            "item": "Mechanical Components",
+            "quantity": 5
+          },
+          {
+            "item": "Simple Gun Parts",
+            "quantity": 6
+          }
+        ],
+        "craftingMaterials": [
+          "Mechanical Components x5",
+          "Simple Gun Parts x6"
+        ],
+        "fromScratchMaterialsDetailed": [
+          {
+            "item": "Mechanical Components",
+            "quantity": 5
+          },
+          {
+            "item": "Simple Gun Parts",
+            "quantity": 6
+          }
+        ],
+        "fromScratchMaterials": [
+          "Mechanical Components x5",
+          "Simple Gun Parts x6"
+        ],
+        "craftValue": 5180,
+        "fromScratchCraftValue": 5180
       },
       {
         "level": 2,
         "sellPrice": 7000,
-        "durability": 55,
+        "durability": 110,
         "effects": [
           {
             "text": "6.5% Reduced Dispersion Recovery Time",
@@ -2530,12 +5031,42 @@ window.WEAPON_DATA = {
           "6.5% Reduced Dispersion Recovery Time",
           "25% Increased Fire Rate",
           "+10 Durability"
-        ]
+        ],
+        "craftingMaterialsDetailed": [
+          {
+            "item": "Mechanical Components",
+            "quantity": 3
+          },
+          {
+            "item": "Simple Gun Parts",
+            "quantity": 1
+          }
+        ],
+        "craftingMaterials": [
+          "Mechanical Components x3",
+          "Simple Gun Parts x1"
+        ],
+        "fromScratchMaterialsDetailed": [
+          {
+            "item": "Mechanical Components",
+            "quantity": 8
+          },
+          {
+            "item": "Simple Gun Parts",
+            "quantity": 7
+          }
+        ],
+        "fromScratchMaterials": [
+          "Mechanical Components x8",
+          "Simple Gun Parts x7"
+        ],
+        "craftValue": 2250,
+        "fromScratchCraftValue": 7430
       },
       {
         "level": 3,
         "sellPrice": 10000,
-        "durability": 60,
+        "durability": 120,
         "effects": [
           {
             "text": "12.5% Reduced Dispersion Recovery Time",
@@ -2563,12 +5094,47 @@ window.WEAPON_DATA = {
           "12.5% Reduced Dispersion Recovery Time",
           "50% Increased Fire Rate",
           "+20 Durability"
-        ]
+        ],
+        "craftingMaterialsDetailed": [
+          {
+            "item": "Mechanical Components",
+            "quantity": 4
+          },
+          {
+            "item": "Heavy Gun Parts",
+            "quantity": 1
+          }
+        ],
+        "craftingMaterials": [
+          "Mechanical Components x4",
+          "Heavy Gun Parts x1"
+        ],
+        "fromScratchMaterialsDetailed": [
+          {
+            "item": "Heavy Gun Parts",
+            "quantity": 1
+          },
+          {
+            "item": "Mechanical Components",
+            "quantity": 12
+          },
+          {
+            "item": "Simple Gun Parts",
+            "quantity": 7
+          }
+        ],
+        "fromScratchMaterials": [
+          "Heavy Gun Parts x1",
+          "Mechanical Components x12",
+          "Simple Gun Parts x7"
+        ],
+        "craftValue": 3260,
+        "fromScratchCraftValue": 10690
       },
       {
         "level": 4,
         "sellPrice": 13000,
-        "durability": 65,
+        "durability": 130,
         "effects": [
           {
             "text": "18.75% Reduced Dispersion Recovery Time",
@@ -2596,7 +5162,42 @@ window.WEAPON_DATA = {
           "18.75% Reduced Dispersion Recovery Time",
           "75% Increased Fire Rate",
           "+30 Durability"
-        ]
+        ],
+        "craftingMaterialsDetailed": [
+          {
+            "item": "Mechanical Components",
+            "quantity": 4
+          },
+          {
+            "item": "Heavy Gun Parts",
+            "quantity": 1
+          }
+        ],
+        "craftingMaterials": [
+          "Mechanical Components x4",
+          "Heavy Gun Parts x1"
+        ],
+        "fromScratchMaterialsDetailed": [
+          {
+            "item": "Heavy Gun Parts",
+            "quantity": 2
+          },
+          {
+            "item": "Mechanical Components",
+            "quantity": 16
+          },
+          {
+            "item": "Simple Gun Parts",
+            "quantity": 7
+          }
+        ],
+        "fromScratchMaterials": [
+          "Heavy Gun Parts x2",
+          "Mechanical Components x16",
+          "Simple Gun Parts x7"
+        ],
+        "craftValue": 3260,
+        "fromScratchCraftValue": 13950
       }
     ],
     "modSlots": [
@@ -2657,14 +5258,54 @@ window.WEAPON_DATA = {
       {
         "level": 1,
         "sellPrice": 7000,
-        "durability": 50,
+        "durability": 100,
         "effects": [],
-        "perkTexts": []
+        "perkTexts": [],
+        "craftingMaterialsDetailed": [
+          {
+            "item": "Advanced Mechanical Components",
+            "quantity": 2
+          },
+          {
+            "item": "Medium Gun Parts",
+            "quantity": 3
+          },
+          {
+            "item": "Steel Spring",
+            "quantity": 6
+          }
+        ],
+        "craftingMaterials": [
+          "Advanced Mechanical Components x2",
+          "Medium Gun Parts x3",
+          "Steel Spring x6"
+        ],
+        "fromScratchMaterialsDetailed": [
+          {
+            "item": "Advanced Mechanical Components",
+            "quantity": 2
+          },
+          {
+            "item": "Medium Gun Parts",
+            "quantity": 3
+          },
+          {
+            "item": "Steel Spring",
+            "quantity": 6
+          }
+        ],
+        "fromScratchMaterials": [
+          "Advanced Mechanical Components x2",
+          "Medium Gun Parts x3",
+          "Steel Spring x6"
+        ],
+        "craftValue": 7400,
+        "fromScratchCraftValue": 7400
       },
       {
         "level": 2,
         "sellPrice": 10000,
-        "durability": 55,
+        "durability": 110,
         "effects": [
           {
             "text": "+10 Magazine Size",
@@ -2692,12 +5333,47 @@ window.WEAPON_DATA = {
           "+10 Magazine Size",
           "15% Reduced Reload Time",
           "+10 Durability"
-        ]
+        ],
+        "craftingMaterialsDetailed": [
+          {
+            "item": "Advanced Mechanical Components",
+            "quantity": 1
+          },
+          {
+            "item": "Medium Gun Parts",
+            "quantity": 2
+          }
+        ],
+        "craftingMaterials": [
+          "Advanced Mechanical Components x1",
+          "Medium Gun Parts x2"
+        ],
+        "fromScratchMaterialsDetailed": [
+          {
+            "item": "Advanced Mechanical Components",
+            "quantity": 3
+          },
+          {
+            "item": "Medium Gun Parts",
+            "quantity": 5
+          },
+          {
+            "item": "Steel Spring",
+            "quantity": 6
+          }
+        ],
+        "fromScratchMaterials": [
+          "Advanced Mechanical Components x3",
+          "Medium Gun Parts x5",
+          "Steel Spring x6"
+        ],
+        "craftValue": 3150,
+        "fromScratchCraftValue": 10550
       },
       {
         "level": 3,
         "sellPrice": 13000,
-        "durability": 60,
+        "durability": 120,
         "effects": [
           {
             "text": "+20 Magazine Size",
@@ -2725,12 +5401,47 @@ window.WEAPON_DATA = {
           "+20 Magazine Size",
           "30% Reduced Reload Time",
           "+20 Durability"
-        ]
+        ],
+        "craftingMaterialsDetailed": [
+          {
+            "item": "Advanced Mechanical Components",
+            "quantity": 1
+          },
+          {
+            "item": "Medium Gun Parts",
+            "quantity": 2
+          }
+        ],
+        "craftingMaterials": [
+          "Advanced Mechanical Components x1",
+          "Medium Gun Parts x2"
+        ],
+        "fromScratchMaterialsDetailed": [
+          {
+            "item": "Advanced Mechanical Components",
+            "quantity": 4
+          },
+          {
+            "item": "Medium Gun Parts",
+            "quantity": 7
+          },
+          {
+            "item": "Steel Spring",
+            "quantity": 6
+          }
+        ],
+        "fromScratchMaterials": [
+          "Advanced Mechanical Components x4",
+          "Medium Gun Parts x7",
+          "Steel Spring x6"
+        ],
+        "craftValue": 3150,
+        "fromScratchCraftValue": 13700
       },
       {
         "level": 4,
         "sellPrice": 17000,
-        "durability": 65,
+        "durability": 130,
         "effects": [
           {
             "text": "+30 Magazine Size",
@@ -2758,7 +5469,42 @@ window.WEAPON_DATA = {
           "+30 Magazine Size",
           "45% Reduced Reload Time",
           "+30 Durability"
-        ]
+        ],
+        "craftingMaterialsDetailed": [
+          {
+            "item": "Advanced Mechanical Components",
+            "quantity": 2
+          },
+          {
+            "item": "Medium Gun Parts",
+            "quantity": 2
+          }
+        ],
+        "craftingMaterials": [
+          "Advanced Mechanical Components x2",
+          "Medium Gun Parts x2"
+        ],
+        "fromScratchMaterialsDetailed": [
+          {
+            "item": "Advanced Mechanical Components",
+            "quantity": 6
+          },
+          {
+            "item": "Medium Gun Parts",
+            "quantity": 9
+          },
+          {
+            "item": "Steel Spring",
+            "quantity": 6
+          }
+        ],
+        "fromScratchMaterials": [
+          "Advanced Mechanical Components x6",
+          "Medium Gun Parts x9",
+          "Steel Spring x6"
+        ],
+        "craftValue": 4900,
+        "fromScratchCraftValue": 18600
       }
     ],
     "modSlots": [
@@ -2830,14 +5576,54 @@ window.WEAPON_DATA = {
       {
         "level": 1,
         "sellPrice": 7000,
-        "durability": 50,
+        "durability": 100,
         "effects": [],
-        "perkTexts": []
+        "perkTexts": [],
+        "craftingMaterialsDetailed": [
+          {
+            "item": "Advanced Mechanical Components",
+            "quantity": 2
+          },
+          {
+            "item": "Medium Gun Parts",
+            "quantity": 3
+          },
+          {
+            "item": "Wires",
+            "quantity": 7
+          }
+        ],
+        "craftingMaterials": [
+          "Advanced Mechanical Components x2",
+          "Medium Gun Parts x3",
+          "Wires x7"
+        ],
+        "fromScratchMaterialsDetailed": [
+          {
+            "item": "Advanced Mechanical Components",
+            "quantity": 2
+          },
+          {
+            "item": "Medium Gun Parts",
+            "quantity": 3
+          },
+          {
+            "item": "Wires",
+            "quantity": 7
+          }
+        ],
+        "fromScratchMaterials": [
+          "Advanced Mechanical Components x2",
+          "Medium Gun Parts x3",
+          "Wires x7"
+        ],
+        "craftValue": 7000,
+        "fromScratchCraftValue": 7000
       },
       {
         "level": 2,
         "sellPrice": 10000,
-        "durability": 55,
+        "durability": 110,
         "effects": [
           {
             "text": "20% Reduced Bolt Action Time",
@@ -2865,12 +5651,47 @@ window.WEAPON_DATA = {
           "20% Reduced Bolt Action Time",
           "12.5% Reduced Reload Time",
           "+10 Durability"
-        ]
+        ],
+        "craftingMaterialsDetailed": [
+          {
+            "item": "Advanced Mechanical Components",
+            "quantity": 1
+          },
+          {
+            "item": "Medium Gun Parts",
+            "quantity": 2
+          }
+        ],
+        "craftingMaterials": [
+          "Advanced Mechanical Components x1",
+          "Medium Gun Parts x2"
+        ],
+        "fromScratchMaterialsDetailed": [
+          {
+            "item": "Advanced Mechanical Components",
+            "quantity": 3
+          },
+          {
+            "item": "Medium Gun Parts",
+            "quantity": 5
+          },
+          {
+            "item": "Wires",
+            "quantity": 7
+          }
+        ],
+        "fromScratchMaterials": [
+          "Advanced Mechanical Components x3",
+          "Medium Gun Parts x5",
+          "Wires x7"
+        ],
+        "craftValue": 3150,
+        "fromScratchCraftValue": 10150
       },
       {
         "level": 3,
         "sellPrice": 13000,
-        "durability": 60,
+        "durability": 120,
         "effects": [
           {
             "text": "40% Reduced Bolt Action Time",
@@ -2898,12 +5719,47 @@ window.WEAPON_DATA = {
           "40% Reduced Bolt Action Time",
           "25% Reduced Reload Time",
           "+20 Durability"
-        ]
+        ],
+        "craftingMaterialsDetailed": [
+          {
+            "item": "Advanced Mechanical Components",
+            "quantity": 1
+          },
+          {
+            "item": "Medium Gun Parts",
+            "quantity": 2
+          }
+        ],
+        "craftingMaterials": [
+          "Advanced Mechanical Components x1",
+          "Medium Gun Parts x2"
+        ],
+        "fromScratchMaterialsDetailed": [
+          {
+            "item": "Advanced Mechanical Components",
+            "quantity": 4
+          },
+          {
+            "item": "Medium Gun Parts",
+            "quantity": 7
+          },
+          {
+            "item": "Wires",
+            "quantity": 7
+          }
+        ],
+        "fromScratchMaterials": [
+          "Advanced Mechanical Components x4",
+          "Medium Gun Parts x7",
+          "Wires x7"
+        ],
+        "craftValue": 3150,
+        "fromScratchCraftValue": 13300
       },
       {
         "level": 4,
         "sellPrice": 17000,
-        "durability": 65,
+        "durability": 130,
         "effects": [
           {
             "text": "60% Reduced Bolt Action Time",
@@ -2931,7 +5787,42 @@ window.WEAPON_DATA = {
           "60% Reduced Bolt Action Time",
           "37.5% Reduced Reload Time",
           "+30 Durability"
-        ]
+        ],
+        "craftingMaterialsDetailed": [
+          {
+            "item": "Advanced Mechanical Components",
+            "quantity": 2
+          },
+          {
+            "item": "Medium Gun Parts",
+            "quantity": 2
+          }
+        ],
+        "craftingMaterials": [
+          "Advanced Mechanical Components x2",
+          "Medium Gun Parts x2"
+        ],
+        "fromScratchMaterialsDetailed": [
+          {
+            "item": "Advanced Mechanical Components",
+            "quantity": 6
+          },
+          {
+            "item": "Medium Gun Parts",
+            "quantity": 9
+          },
+          {
+            "item": "Wires",
+            "quantity": 7
+          }
+        ],
+        "fromScratchMaterials": [
+          "Advanced Mechanical Components x6",
+          "Medium Gun Parts x9",
+          "Wires x7"
+        ],
+        "craftValue": 4900,
+        "fromScratchCraftValue": 18200
       }
     ],
     "modSlots": [
@@ -3016,9 +5907,49 @@ window.WEAPON_DATA = {
       {
         "level": 1,
         "sellPrice": 27500,
-        "durability": null,
+        "durability": 100,
         "effects": [],
-        "perkTexts": []
+        "perkTexts": [],
+        "craftingMaterialsDetailed": [
+          {
+            "item": "Magnetic Accelerator",
+            "quantity": 3
+          },
+          {
+            "item": "Complex Gun Parts",
+            "quantity": 3
+          },
+          {
+            "item": "Queen Reactor",
+            "quantity": 1
+          }
+        ],
+        "craftingMaterials": [
+          "Magnetic Accelerator x3",
+          "Complex Gun Parts x3",
+          "Queen Reactor x1"
+        ],
+        "fromScratchMaterialsDetailed": [
+          {
+            "item": "Complex Gun Parts",
+            "quantity": 3
+          },
+          {
+            "item": "Magnetic Accelerator",
+            "quantity": 3
+          },
+          {
+            "item": "Queen Reactor",
+            "quantity": 1
+          }
+        ],
+        "fromScratchMaterials": [
+          "Complex Gun Parts x3",
+          "Magnetic Accelerator x3",
+          "Queen Reactor x1"
+        ],
+        "craftValue": 36500,
+        "fromScratchCraftValue": 36500
       }
     ],
     "modSlots": []
@@ -3052,14 +5983,54 @@ window.WEAPON_DATA = {
       {
         "level": 1,
         "sellPrice": 10000,
-        "durability": 50,
+        "durability": 100,
         "effects": [],
-        "perkTexts": []
+        "perkTexts": [],
+        "craftingMaterialsDetailed": [
+          {
+            "item": "Magnetic Accelerator",
+            "quantity": 1
+          },
+          {
+            "item": "Heavy Gun Parts",
+            "quantity": 3
+          },
+          {
+            "item": "Exodus Modules",
+            "quantity": 1
+          }
+        ],
+        "craftingMaterials": [
+          "Magnetic Accelerator x1",
+          "Heavy Gun Parts x3",
+          "Exodus Modules x1"
+        ],
+        "fromScratchMaterialsDetailed": [
+          {
+            "item": "Exodus Modules",
+            "quantity": 1
+          },
+          {
+            "item": "Heavy Gun Parts",
+            "quantity": 3
+          },
+          {
+            "item": "Magnetic Accelerator",
+            "quantity": 1
+          }
+        ],
+        "fromScratchMaterials": [
+          "Exodus Modules x1",
+          "Heavy Gun Parts x3",
+          "Magnetic Accelerator x1"
+        ],
+        "craftValue": 10350,
+        "fromScratchCraftValue": 10350
       },
       {
         "level": 2,
         "sellPrice": 13000,
-        "durability": 55,
+        "durability": 110,
         "effects": [
           {
             "text": "18% Increased Fire Rate",
@@ -3079,12 +6050,52 @@ window.WEAPON_DATA = {
         "perkTexts": [
           "18% Increased Fire Rate",
           "+10 Durability"
-        ]
+        ],
+        "craftingMaterialsDetailed": [
+          {
+            "item": "Advanced Mechanical Components",
+            "quantity": 1
+          },
+          {
+            "item": "Heavy Gun Parts",
+            "quantity": 2
+          }
+        ],
+        "craftingMaterials": [
+          "Advanced Mechanical Components x1",
+          "Heavy Gun Parts x2"
+        ],
+        "fromScratchMaterialsDetailed": [
+          {
+            "item": "Advanced Mechanical Components",
+            "quantity": 1
+          },
+          {
+            "item": "Exodus Modules",
+            "quantity": 1
+          },
+          {
+            "item": "Heavy Gun Parts",
+            "quantity": 5
+          },
+          {
+            "item": "Magnetic Accelerator",
+            "quantity": 1
+          }
+        ],
+        "fromScratchMaterials": [
+          "Advanced Mechanical Components x1",
+          "Exodus Modules x1",
+          "Heavy Gun Parts x5",
+          "Magnetic Accelerator x1"
+        ],
+        "craftValue": 3150,
+        "fromScratchCraftValue": 13500
       },
       {
         "level": 3,
         "sellPrice": 17000,
-        "durability": 60,
+        "durability": 120,
         "effects": [
           {
             "text": "35% Increased Fire Rate",
@@ -3104,12 +6115,52 @@ window.WEAPON_DATA = {
         "perkTexts": [
           "35% Increased Fire Rate",
           "+20 Durability"
-        ]
+        ],
+        "craftingMaterialsDetailed": [
+          {
+            "item": "Advanced Mechanical Components",
+            "quantity": 2
+          },
+          {
+            "item": "Heavy Gun Parts",
+            "quantity": 1
+          }
+        ],
+        "craftingMaterials": [
+          "Advanced Mechanical Components x2",
+          "Heavy Gun Parts x1"
+        ],
+        "fromScratchMaterialsDetailed": [
+          {
+            "item": "Advanced Mechanical Components",
+            "quantity": 3
+          },
+          {
+            "item": "Exodus Modules",
+            "quantity": 1
+          },
+          {
+            "item": "Heavy Gun Parts",
+            "quantity": 6
+          },
+          {
+            "item": "Magnetic Accelerator",
+            "quantity": 1
+          }
+        ],
+        "fromScratchMaterials": [
+          "Advanced Mechanical Components x3",
+          "Exodus Modules x1",
+          "Heavy Gun Parts x6",
+          "Magnetic Accelerator x1"
+        ],
+        "craftValue": 4200,
+        "fromScratchCraftValue": 17700
       },
       {
         "level": 4,
         "sellPrice": 22000,
-        "durability": 65,
+        "durability": 130,
         "effects": [
           {
             "text": "53% Increased Fire Rate",
@@ -3129,7 +6180,47 @@ window.WEAPON_DATA = {
         "perkTexts": [
           "53% Increased Fire Rate",
           "+30 Durability"
-        ]
+        ],
+        "craftingMaterialsDetailed": [
+          {
+            "item": "Advanced Mechanical Components",
+            "quantity": 2
+          },
+          {
+            "item": "Heavy Gun Parts",
+            "quantity": 3
+          }
+        ],
+        "craftingMaterials": [
+          "Advanced Mechanical Components x2",
+          "Heavy Gun Parts x3"
+        ],
+        "fromScratchMaterialsDetailed": [
+          {
+            "item": "Advanced Mechanical Components",
+            "quantity": 5
+          },
+          {
+            "item": "Exodus Modules",
+            "quantity": 1
+          },
+          {
+            "item": "Heavy Gun Parts",
+            "quantity": 9
+          },
+          {
+            "item": "Magnetic Accelerator",
+            "quantity": 1
+          }
+        ],
+        "fromScratchMaterials": [
+          "Advanced Mechanical Components x5",
+          "Exodus Modules x1",
+          "Heavy Gun Parts x9",
+          "Magnetic Accelerator x1"
+        ],
+        "craftValue": 5600,
+        "fromScratchCraftValue": 23300
       }
     ],
     "modSlots": [
@@ -3189,9 +6280,49 @@ window.WEAPON_DATA = {
       {
         "level": 1,
         "sellPrice": 27500,
-        "durability": null,
+        "durability": 100,
         "effects": [],
-        "perkTexts": []
+        "perkTexts": [],
+        "craftingMaterialsDetailed": [
+          {
+            "item": "Magnetic Accelerator",
+            "quantity": 3
+          },
+          {
+            "item": "Complex Gun Parts",
+            "quantity": 3
+          },
+          {
+            "item": "Queen Reactor",
+            "quantity": 1
+          }
+        ],
+        "craftingMaterials": [
+          "Magnetic Accelerator x3",
+          "Complex Gun Parts x3",
+          "Queen Reactor x1"
+        ],
+        "fromScratchMaterialsDetailed": [
+          {
+            "item": "Complex Gun Parts",
+            "quantity": 3
+          },
+          {
+            "item": "Magnetic Accelerator",
+            "quantity": 3
+          },
+          {
+            "item": "Queen Reactor",
+            "quantity": 1
+          }
+        ],
+        "fromScratchMaterials": [
+          "Complex Gun Parts x3",
+          "Magnetic Accelerator x3",
+          "Queen Reactor x1"
+        ],
+        "craftValue": 36500,
+        "fromScratchCraftValue": 36500
       }
     ],
     "modSlots": []

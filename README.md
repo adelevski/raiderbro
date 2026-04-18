@@ -12,8 +12,8 @@ Lightweight static utility tools for ARC Raiders.
 
 ## Commands
 
-- `python scripts/fetch_weapon_wiki.py`: refresh the reusable weapon-level and weapon-mod source data from the live wiki
-- `python scripts/convert_wiki_tables.py`: regenerate CSVs and tracker data
+- `python scripts/fetch_weapon_wiki.py`: refresh live weapon and weapon-mod source data
+- `python scripts/convert_wiki_tables.py`: refresh live loot data and regenerate CSVs plus browser datasets
 - `python scripts/validate_data.py`: validate source data without rewriting outputs
 
 ## App

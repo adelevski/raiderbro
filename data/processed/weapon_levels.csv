@@ -1,76 +1,81 @@
-weapon,level,sell_price,durability,magazine_size,effects
-Kettle,1,840,50,20,
-Kettle,2,2000,55,20,25% Increased Bullet Velocity | 13% Reduced Reload Time | +10 Durability
-Kettle,3,3000,60,20,50% Increased Bullet Velocity | 26% Reduced Reload Time | +20 Durability
-Kettle,4,5000,65,20,75% Increased Bullet Velocity | 40% Reduced Reload Time | +30 Durability
-Rattler,1,1750,50,12,
-Rattler,2,3000,55,16,+4 Magazine Size | +10 Durability
-Rattler,3,5000,60,20,+8 Magazine Size | +20 Durability
-Rattler,4,7000,65,24,+12 Magazine Size | +30 Durability
-Arpeggio,1,5500,50,24,
-Arpeggio,2,8000,55,24,20% Increased Fire Rate | 12.5% Reduced Reload Time | +10 Durability
-Arpeggio,3,11500,60,24,40% Increased Fire Rate | 25% Reduced Reload Time | +20 Durability
-Arpeggio,4,15000,65,24,60% Increased Fire Rate | 50% Reduced Reload Time | +30 Durability
-Tempest,1,13000,,25,
-Tempest,2,17000,,25,16.6% Reduced Horizontal Recoil | 13% Reduced Reload Time | +10 Durability
-Tempest,3,22000,,25,33.3% Reduced Horizontal Recoil | 26% Reduced Reload Time | +20 Durability
-Tempest,4,27000,,25,50% Reduced Horizontal Recoil | 40% Reduced Reload Time | +30 Durability
-Bettina,1,8000,50,22,
-Bettina,2,11000,55,22,5% Increased Fire Rate | 11.1% Reduced Reload Time | +10 Durability
-Bettina,3,14000,60,22,10% Increased Fire Rate | 22.2% Reduced Reload Time | +20 Durability
-Bettina,4,18000,65,22,15% Increased Fire Rate | 33.3% Reduced Reload Time | +30 Durability
-Renegade,1,7000,50,8,
-Renegade,2,10000,55,8,16.6% Reduced Dispersion Recovery Time | 25% Increased Fire Rate | +10 Durability
-Renegade,3,13000,60,8,33.3% Reduced Dispersion Recovery Time | 50% Increased Fire Rate | +20 Durability
-Renegade,4,17000,65,8,50% Reduced Dispersion Recovery Time | 75% Increased Fire Rate | +30 Durability
-Ferro,1,475,50,1,
-Ferro,2,1000,55,1,13% Reduced Reload Time | +10 Durability
-Ferro,3,2000,60,1,26% Reduced Reload Time | +20 Durability
-Ferro,4,2900,65,1,39% Reduced Reload Time | +30 Durability
-Aphelion,1,27500,,10,
-Stitcher,1,800,,20,
-Stitcher,2,2000,,20,16.6% Reduced Horizontal Recoil | 13% Reduced Reload Time | +10 Durability
-Stitcher,3,3000,,20,33.3% Reduced Horizontal Recoil | 26% Reduced Reload Time | +20 Durability
-Stitcher,4,5000,,20,50% Reduced Horizontal Recoil | 40% Reduced Reload Time | +30 Durability
-Bobcat,1,13000,50,20,
-Bobcat,2,17000,55,20,15% Reduced Max Shot Dispersion | 15% Reduced Horizontal Recoil | 13% Reduced Reload Time | +10 Durability
-Bobcat,3,22000,60,20,30% Reduced Max Shot Dispersion | 30% Reduced Horizontal Recoil | 26% Reduced Reload Time | +20 Durability
-Bobcat,4,27000,65,20,50% Reduced Max Shot Dispersion | 45% Reduced Horizontal Recoil | 40% Reduced Reload Time | +30 Durability
-Il Toro,1,5000,50,5,
-Il Toro,2,7000,55,6,17.5% Increased Fire Rate | +1 Magazine Size | +10 Durability
-Il Toro,3,10000,60,7,35% Increased Fire Rate | +2 Magazine Size | +20 Durability
-Il Toro,4,13000,65,8,50% Increased Fire Rate | +3 Magazine Size | +30 Durability
-Vulcano,1,10000,,6,
-Vulcano,2,13000,,6,10% Increased Fire Rate | 13% Reduced Reload Time | +10 Durability
-Vulcano,3,17000,,6,20% Increased Fire Rate | 26% Reduced Reload Time | +20 Durability
-Vulcano,4,22000,,6,30% Increased Fire Rate | 40% Reduced Reload Time | +30 Durability
-Hairpin,1,450,50,8,
-Hairpin,2,1000,55,8,10% Increased Fire Rate | 13% Reduced Reload Time | +10 Durability
-Hairpin,3,2000,60,8,20% Increased Fire Rate | 26% Reduced Reload Time | +20 Durability
-Hairpin,4,2900,65,8,30% Increased Fire Rate | 40% Reduced Reload Time | +30 Durability
-Burletta,1,2900,50,12,
-Burletta,2,5000,55,12,16.6% Reduced Reload Time | +10 Durability
-Burletta,3,7000,60,12,33.3% Reduced Reload Time | +20 Durability
-Burletta,4,10000,65,12,50% Reduced Reload Time | +30 Durability
-Venator,1,7000,50,10,
-Venator,2,10000,55,10,13% Increased Fire Rate | 16% Reduced Reload Time | +10 Durability
-Venator,3,13000,60,10,26% Increased Fire Rate | 33% Reduced Reload Time | +20 Durability
-Venator,4,17000,65,10,40% Increased Fire Rate | 50% Reduced Reload Time | +30 Durability
-Anvil,1,5000,50,6,
-Anvil,2,7000,55,6,6.5% Reduced Dispersion Recovery Time | 25% Increased Fire Rate | +10 Durability
-Anvil,3,10000,60,6,12.5% Reduced Dispersion Recovery Time | 50% Increased Fire Rate | +20 Durability
-Anvil,4,13000,65,6,18.75% Reduced Dispersion Recovery Time | 75% Increased Fire Rate | +30 Durability
-Torrente,1,7000,50,60,
-Torrente,2,10000,55,70,+10 Magazine Size | 15% Reduced Reload Time | +10 Durability
-Torrente,3,13000,60,80,+20 Magazine Size | 30% Reduced Reload Time | +20 Durability
-Torrente,4,17000,65,90,+30 Magazine Size | 45% Reduced Reload Time | +30 Durability
-Osprey,1,7000,50,8,
-Osprey,2,10000,55,8,20% Reduced Bolt Action Time | 12.5% Reduced Reload Time | +10 Durability
-Osprey,3,13000,60,8,40% Reduced Bolt Action Time | 25% Reduced Reload Time | +20 Durability
-Osprey,4,17000,65,8,60% Reduced Bolt Action Time | 37.5% Reduced Reload Time | +30 Durability
-Jupiter,1,27500,,5,
-Hullcracker,1,10000,50,5,
-Hullcracker,2,13000,55,5,18% Increased Fire Rate | +10 Durability
-Hullcracker,3,17000,60,5,35% Increased Fire Rate | +20 Durability
-Hullcracker,4,22000,65,5,53% Increased Fire Rate | +30 Durability
-Equalizer,1,27500,,50,
+weapon,level,sell_price,durability,magazine_size,crafting_materials,craft_value,from_scratch_materials,from_scratch_craft_value,effects
+Kettle,1,840,100,20,Metal Parts x6 | Rubber Parts x8,850,Metal Parts x6 | Rubber Parts x8,850,
+Kettle,2,2000,110,20,Metal Parts x8 | Plastic Parts x10,1200,Metal Parts x14 | Plastic Parts x10 | Rubber Parts x8,2050,25% Increased Bullet Velocity | 13% Reduced Reload Time | +10 Durability
+Kettle,3,3000,120,20,Metal Parts x10 | Simple Gun Parts x1,1080,Metal Parts x24 | Plastic Parts x10 | Rubber Parts x8 | Simple Gun Parts x1,3130,50% Increased Bullet Velocity | 26% Reduced Reload Time | +20 Durability
+Kettle,4,5000,130,20,Mechanical Components x3 | Simple Gun Parts x1,2250,Mechanical Components x3 | Metal Parts x24 | Plastic Parts x10 | Rubber Parts x8 | Simple Gun Parts x2,5380,75% Increased Bullet Velocity | 40% Reduced Reload Time | +30 Durability
+Rattler,1,1750,100,12,Metal Parts x16 | Rubber Parts x12,1800,Metal Parts x16 | Rubber Parts x12,1800,
+Rattler,2,3000,110,16,Metal Parts x10 | Rubber Parts x10,1250,Metal Parts x26 | Rubber Parts x22,3050,+4 Magazine Size | +10 Durability
+Rattler,3,5000,120,20,Mechanical Components x3 | Simple Gun Parts x1,2250,Mechanical Components x3 | Metal Parts x26 | Rubber Parts x22 | Simple Gun Parts x1,5300,+8 Magazine Size | +20 Durability
+Rattler,4,7000,130,24,Mechanical Components x3 | Simple Gun Parts x1,2250,Mechanical Components x6 | Metal Parts x26 | Rubber Parts x22 | Simple Gun Parts x2,7550,+12 Magazine Size | +30 Durability
+Arpeggio,1,5500,100,24,Mechanical Components x6 | Simple Gun Parts x6,5820,Mechanical Components x6 | Simple Gun Parts x6,5820,
+Arpeggio,2,8000,110,24,Mechanical Components x4 | Simple Gun Parts x1,2890,Mechanical Components x10 | Simple Gun Parts x7,8710,20% Increased Fire Rate | 12.5% Reduced Reload Time | +10 Durability
+Arpeggio,3,11500,120,24,Mechanical Components x5 | Medium Gun Parts x1,3900,Mechanical Components x15 | Medium Gun Parts x1 | Simple Gun Parts x7,12610,40% Increased Fire Rate | 25% Reduced Reload Time | +20 Durability
+Arpeggio,4,15000,130,24,Mechanical Components x5 | Medium Gun Parts x1,3900,Mechanical Components x20 | Medium Gun Parts x2 | Simple Gun Parts x7,16510,60% Increased Fire Rate | 50% Reduced Reload Time | +30 Durability
+Tempest,1,13000,100,25,Magnetic Accelerator x1 | Medium Gun Parts x3 | Exodus Modules x2,13100,Exodus Modules x2 | Magnetic Accelerator x1 | Medium Gun Parts x3,13100,
+Tempest,2,17000,110,25,Advanced Mechanical Components x2 | Medium Gun Parts x1,4200,Advanced Mechanical Components x2 | Exodus Modules x2 | Magnetic Accelerator x1 | Medium Gun Parts x4,17300,16.6% Reduced Horizontal Recoil | 13% Reduced Reload Time | +10 Durability
+Tempest,3,22000,120,25,Advanced Mechanical Components x2 | Medium Gun Parts x3,5600,Advanced Mechanical Components x4 | Exodus Modules x2 | Magnetic Accelerator x1 | Medium Gun Parts x7,22900,33.3% Reduced Horizontal Recoil | 26% Reduced Reload Time | +20 Durability
+Tempest,4,27000,130,25,Advanced Mechanical Components x2 | Medium Gun Parts x3,5600,Advanced Mechanical Components x6 | Exodus Modules x2 | Magnetic Accelerator x1 | Medium Gun Parts x10,28500,50% Reduced Horizontal Recoil | 40% Reduced Reload Time | +30 Durability
+Bettina,1,8000,100,22,Advanced Mechanical Components x3 | Heavy Gun Parts x3 | Canister x3,8250,Advanced Mechanical Components x3 | Canister x3 | Heavy Gun Parts x3,8250,
+Bettina,2,11000,110,22,Advanced Mechanical Components x1 | Heavy Gun Parts x2,3150,Advanced Mechanical Components x4 | Canister x3 | Heavy Gun Parts x5,11400,5% Increased Fire Rate | 11.1% Reduced Reload Time | +10 Durability
+Bettina,3,14000,120,22,Advanced Mechanical Components x1 | Heavy Gun Parts x2,3150,Advanced Mechanical Components x5 | Canister x3 | Heavy Gun Parts x7,14550,10% Increased Fire Rate | 22.2% Reduced Reload Time | +20 Durability
+Bettina,4,18000,130,22,Advanced Mechanical Components x2 | Heavy Gun Parts x2,4900,Advanced Mechanical Components x7 | Canister x3 | Heavy Gun Parts x9,19450,15% Increased Fire Rate | 33.3% Reduced Reload Time | +30 Durability
+Ferro,1,475,100,1,Metal Parts x5 | Rubber Parts x2,475,Metal Parts x5 | Rubber Parts x2,475,
+Ferro,2,1000,110,1,Metal Parts x7,525,Metal Parts x12 | Rubber Parts x2,1000,13% Reduced Reload Time | +10 Durability
+Ferro,3,2000,120,1,Metal Parts x9 | Simple Gun Parts x1,1005,Metal Parts x21 | Rubber Parts x2 | Simple Gun Parts x1,2005,26% Reduced Reload Time | +20 Durability
+Ferro,4,2900,130,1,Mechanical Components x1 | Simple Gun Parts x1,970,Mechanical Components x1 | Metal Parts x21 | Rubber Parts x2 | Simple Gun Parts x2,2975,39% Reduced Reload Time | +30 Durability
+Renegade,1,7000,100,8,Advanced Mechanical Components x2 | Medium Gun Parts x3 | Oil x5,7100,Advanced Mechanical Components x2 | Medium Gun Parts x3 | Oil x5,7100,
+Renegade,2,10000,110,8,Advanced Mechanical Components x1 | Medium Gun Parts x2,3150,Advanced Mechanical Components x3 | Medium Gun Parts x5 | Oil x5,10250,16.6% Reduced Dispersion Recovery Time | 25% Increased Fire Rate | +10 Durability
+Renegade,3,13000,120,8,Advanced Mechanical Components x1 | Medium Gun Parts x2,3150,Advanced Mechanical Components x4 | Medium Gun Parts x7 | Oil x5,13400,33.3% Reduced Dispersion Recovery Time | 50% Increased Fire Rate | +20 Durability
+Renegade,4,17000,130,8,Advanced Mechanical Components x2 | Medium Gun Parts x2,4900,Advanced Mechanical Components x6 | Medium Gun Parts x9 | Oil x5,18300,50% Reduced Dispersion Recovery Time | 75% Increased Fire Rate | +30 Durability
+Aphelion,1,27500,100,10,Magnetic Accelerator x3 | Complex Gun Parts x3 | Matriarch Reactor x1,36500,Complex Gun Parts x3 | Magnetic Accelerator x3 | Matriarch Reactor x1,36500,
+Stitcher,1,800,100,20,Metal Parts x8 | Rubber Parts x4,800,Metal Parts x8 | Rubber Parts x4,800,
+Stitcher,2,2000,110,20,Metal Parts x8 | Rubber Parts x12,1200,Metal Parts x16 | Rubber Parts x16,2000,16.6% Reduced Horizontal Recoil | 13% Reduced Reload Time | +10 Durability
+Stitcher,3,3000,120,20,Metal Parts x10 | Simple Gun Parts x1,1080,Metal Parts x26 | Rubber Parts x16 | Simple Gun Parts x1,3080,33.3% Reduced Horizontal Recoil | 26% Reduced Reload Time | +20 Durability
+Stitcher,4,5000,130,20,Mechanical Components x3 | Simple Gun Parts x1,2250,Mechanical Components x3 | Metal Parts x26 | Rubber Parts x16 | Simple Gun Parts x2,5330,50% Reduced Horizontal Recoil | 40% Reduced Reload Time | +30 Durability
+Canto,1,7000,100,18,Advanced Mechanical Components x2 | Magnet x5 | Medium Gun Parts x3,7100,Advanced Mechanical Components x2 | Magnet x5 | Medium Gun Parts x3,7100,
+Canto,2,7000,110,18,Mechanical Components x1 | Medium Gun Parts x2,2040,Advanced Mechanical Components x2 | Magnet x5 | Mechanical Components x1 | Medium Gun Parts x5,9140,15% Reduced Max Shot Dispersion | +2 Magazine Size | 14% Reduced Reload Time | +10 Durability
+Canto,3,7000,120,18,Mechanical Components x1 | Medium Gun Parts x2,2040,Advanced Mechanical Components x2 | Magnet x5 | Mechanical Components x2 | Medium Gun Parts x7,11180,30% Reduced Max Shot Dispersion | +4 Magazine Size | 29% Reduced Reload Time | +20 Durability
+Canto,4,7000,130,18,Mechanical Components x2 | Medium Gun Parts x2,2680,Advanced Mechanical Components x2 | Magnet x5 | Mechanical Components x4 | Medium Gun Parts x9,13860,45% Reduced Max Shot Dispersion | +6 Magazine Size | 43% Reduced Reload Time | +30 Durability
+Bobcat,1,13000,100,20,Magnetic Accelerator x1 | Light Gun Parts x3 | Exodus Modules x2,13100,Exodus Modules x2 | Light Gun Parts x3 | Magnetic Accelerator x1,13100,
+Bobcat,2,17000,110,20,Advanced Mechanical Components x2 | Light Gun Parts x1,4200,Advanced Mechanical Components x2 | Exodus Modules x2 | Light Gun Parts x4 | Magnetic Accelerator x1,17300,15% Reduced Max Shot Dispersion | 15% Reduced Horizontal Recoil | 13% Reduced Reload Time | +10 Durability
+Bobcat,3,22000,120,20,Advanced Mechanical Components x2 | Light Gun Parts x3,5600,Advanced Mechanical Components x4 | Exodus Modules x2 | Light Gun Parts x7 | Magnetic Accelerator x1,22900,30% Reduced Max Shot Dispersion | 30% Reduced Horizontal Recoil | 26% Reduced Reload Time | +20 Durability
+Bobcat,4,27000,130,20,Advanced Mechanical Components x2 | Light Gun Parts x3,5600,Advanced Mechanical Components x6 | Exodus Modules x2 | Light Gun Parts x10 | Magnetic Accelerator x1,28500,50% Reduced Max Shot Dispersion | 45% Reduced Horizontal Recoil | 40% Reduced Reload Time | +30 Durability
+Il Toro,1,5000,100,5,Mechanical Components x5 | Simple Gun Parts x6,5180,Mechanical Components x5 | Simple Gun Parts x6,5180,
+Il Toro,2,7000,110,6,Mechanical Components x3 | Simple Gun Parts x1,2250,Mechanical Components x8 | Simple Gun Parts x7,7430,17.5% Increased Fire Rate | +1 Magazine Size | +10 Durability
+Il Toro,3,10000,120,7,Mechanical Components x4 | Heavy Gun Parts x1,3260,Heavy Gun Parts x1 | Mechanical Components x12 | Simple Gun Parts x7,10690,35% Increased Fire Rate | +2 Magazine Size | +20 Durability
+Il Toro,4,13000,130,8,Mechanical Components x4 | Heavy Gun Parts x1,3260,Heavy Gun Parts x2 | Mechanical Components x16 | Simple Gun Parts x7,13950,50% Increased Fire Rate | +3 Magazine Size | +30 Durability
+Vulcano,1,10000,100,6,Magnetic Accelerator x1 | Heavy Gun Parts x3 | Exodus Modules x1,10350,Exodus Modules x1 | Heavy Gun Parts x3 | Magnetic Accelerator x1,10350,
+Vulcano,2,13000,110,6,Advanced Mechanical Components x1 | Heavy Gun Parts x1,2450,Advanced Mechanical Components x1 | Exodus Modules x1 | Heavy Gun Parts x4 | Magnetic Accelerator x1,12800,10% Increased Fire Rate | 13% Reduced Reload Time | +10 Durability
+Vulcano,3,17000,120,6,Advanced Mechanical Components x2 | Heavy Gun Parts x1,4200,Advanced Mechanical Components x3 | Exodus Modules x1 | Heavy Gun Parts x5 | Magnetic Accelerator x1,17000,20% Increased Fire Rate | 26% Reduced Reload Time | +20 Durability
+Vulcano,4,22000,130,6,Advanced Mechanical Components x2 | Heavy Gun Parts x3,5600,Advanced Mechanical Components x5 | Exodus Modules x1 | Heavy Gun Parts x8 | Magnetic Accelerator x1,22600,30% Increased Fire Rate | 40% Reduced Reload Time | +30 Durability
+Dolabra,1,27500,100,8,Shredder Gyro x3 | Magnetic Accelerator x3 | Vaporizer Regulator x2,34500,Magnetic Accelerator x3 | Shredder Gyro x3 | Vaporizer Regulator x2,34500,
+Hairpin,1,450,100,8,Metal Parts x2 | Plastic Parts x5,450,Metal Parts x2 | Plastic Parts x5,450,
+Hairpin,2,1000,110,8,Metal Parts x8,600,Metal Parts x10 | Plastic Parts x5,1050,10% Increased Fire Rate | 13% Reduced Reload Time | +10 Durability
+Hairpin,3,2000,120,8,Metal Parts x9 | Simple Gun Parts x1,1005,Metal Parts x19 | Plastic Parts x5 | Simple Gun Parts x1,2055,20% Increased Fire Rate | 26% Reduced Reload Time | +20 Durability
+Hairpin,4,2900,130,8,Mechanical Components x1 | Simple Gun Parts x1,970,Mechanical Components x1 | Metal Parts x19 | Plastic Parts x5 | Simple Gun Parts x2,3025,30% Increased Fire Rate | 40% Reduced Reload Time | +30 Durability
+Burletta,1,2900,100,12,Mechanical Components x3 | Simple Gun Parts x3,2910,Mechanical Components x3 | Simple Gun Parts x3,2910,
+Burletta,2,5000,110,12,Mechanical Components x3 | Simple Gun Parts x1,2250,Mechanical Components x6 | Simple Gun Parts x4,5160,16.6% Reduced Reload Time | +10 Durability
+Burletta,3,7000,120,12,Mechanical Components x3 | Simple Gun Parts x1,2250,Mechanical Components x9 | Simple Gun Parts x5,7410,33.3% Reduced Reload Time | +20 Durability
+Burletta,4,10000,130,12,Mechanical Components x4 | Light Gun Parts x1,3260,Light Gun Parts x1 | Mechanical Components x13 | Simple Gun Parts x5,10670,50% Reduced Reload Time | +30 Durability
+Venator,1,7000,100,10,Advanced Mechanical Components x2 | Medium Gun Parts x3 | Magnet x5,7100,Advanced Mechanical Components x2 | Magnet x5 | Medium Gun Parts x3,7100,
+Venator,2,10000,110,10,Advanced Mechanical Components x1 | Medium Gun Parts x2,3150,Advanced Mechanical Components x3 | Magnet x5 | Medium Gun Parts x5,10250,13% Increased Fire Rate | 16% Reduced Reload Time | +10 Durability
+Venator,3,13000,120,10,Advanced Mechanical Components x1 | Medium Gun Parts x2,3150,Advanced Mechanical Components x4 | Magnet x5 | Medium Gun Parts x7,13400,26% Increased Fire Rate | 33% Reduced Reload Time | +20 Durability
+Venator,4,17000,130,10,Advanced Mechanical Components x2 | Medium Gun Parts x2,4900,Advanced Mechanical Components x6 | Magnet x5 | Medium Gun Parts x9,18300,40% Increased Fire Rate | 50% Reduced Reload Time | +30 Durability
+Anvil,1,5000,100,6,Mechanical Components x5 | Simple Gun Parts x6,5180,Mechanical Components x5 | Simple Gun Parts x6,5180,
+Anvil,2,7000,110,6,Mechanical Components x3 | Simple Gun Parts x1,2250,Mechanical Components x8 | Simple Gun Parts x7,7430,6.5% Reduced Dispersion Recovery Time | 25% Increased Fire Rate | +10 Durability
+Anvil,3,10000,120,6,Mechanical Components x4 | Heavy Gun Parts x1,3260,Heavy Gun Parts x1 | Mechanical Components x12 | Simple Gun Parts x7,10690,12.5% Reduced Dispersion Recovery Time | 50% Increased Fire Rate | +20 Durability
+Anvil,4,13000,130,6,Mechanical Components x4 | Heavy Gun Parts x1,3260,Heavy Gun Parts x2 | Mechanical Components x16 | Simple Gun Parts x7,13950,18.75% Reduced Dispersion Recovery Time | 75% Increased Fire Rate | +30 Durability
+Torrente,1,7000,100,60,Advanced Mechanical Components x2 | Medium Gun Parts x3 | Steel Spring x6,7400,Advanced Mechanical Components x2 | Medium Gun Parts x3 | Steel Spring x6,7400,
+Torrente,2,10000,110,70,Advanced Mechanical Components x1 | Medium Gun Parts x2,3150,Advanced Mechanical Components x3 | Medium Gun Parts x5 | Steel Spring x6,10550,+10 Magazine Size | 15% Reduced Reload Time | +10 Durability
+Torrente,3,13000,120,80,Advanced Mechanical Components x1 | Medium Gun Parts x2,3150,Advanced Mechanical Components x4 | Medium Gun Parts x7 | Steel Spring x6,13700,+20 Magazine Size | 30% Reduced Reload Time | +20 Durability
+Torrente,4,17000,130,90,Advanced Mechanical Components x2 | Medium Gun Parts x2,4900,Advanced Mechanical Components x6 | Medium Gun Parts x9 | Steel Spring x6,18600,+30 Magazine Size | 45% Reduced Reload Time | +30 Durability
+Osprey,1,7000,100,8,Advanced Mechanical Components x2 | Medium Gun Parts x3 | Wires x7,7000,Advanced Mechanical Components x2 | Medium Gun Parts x3 | Wires x7,7000,
+Osprey,2,10000,110,8,Advanced Mechanical Components x1 | Medium Gun Parts x2,3150,Advanced Mechanical Components x3 | Medium Gun Parts x5 | Wires x7,10150,20% Reduced Bolt Action Time | 12.5% Reduced Reload Time | +10 Durability
+Osprey,3,13000,120,8,Advanced Mechanical Components x1 | Medium Gun Parts x2,3150,Advanced Mechanical Components x4 | Medium Gun Parts x7 | Wires x7,13300,40% Reduced Bolt Action Time | 25% Reduced Reload Time | +20 Durability
+Osprey,4,17000,130,8,Advanced Mechanical Components x2 | Medium Gun Parts x2,4900,Advanced Mechanical Components x6 | Medium Gun Parts x9 | Wires x7,18200,60% Reduced Bolt Action Time | 37.5% Reduced Reload Time | +30 Durability
+Jupiter,1,27500,100,5,Magnetic Accelerator x3 | Complex Gun Parts x3 | Queen Reactor x1,36500,Complex Gun Parts x3 | Magnetic Accelerator x3 | Queen Reactor x1,36500,
+Hullcracker,1,10000,100,5,Magnetic Accelerator x1 | Heavy Gun Parts x3 | Exodus Modules x1,10350,Exodus Modules x1 | Heavy Gun Parts x3 | Magnetic Accelerator x1,10350,
+Hullcracker,2,13000,110,5,Advanced Mechanical Components x1 | Heavy Gun Parts x2,3150,Advanced Mechanical Components x1 | Exodus Modules x1 | Heavy Gun Parts x5 | Magnetic Accelerator x1,13500,18% Increased Fire Rate | +10 Durability
+Hullcracker,3,17000,120,5,Advanced Mechanical Components x2 | Heavy Gun Parts x1,4200,Advanced Mechanical Components x3 | Exodus Modules x1 | Heavy Gun Parts x6 | Magnetic Accelerator x1,17700,35% Increased Fire Rate | +20 Durability
+Hullcracker,4,22000,130,5,Advanced Mechanical Components x2 | Heavy Gun Parts x3,5600,Advanced Mechanical Components x5 | Exodus Modules x1 | Heavy Gun Parts x9 | Magnetic Accelerator x1,23300,53% Increased Fire Rate | +30 Durability
+Equalizer,1,27500,100,50,Magnetic Accelerator x3 | Complex Gun Parts x3 | Queen Reactor x1,36500,Complex Gun Parts x3 | Magnetic Accelerator x3 | Queen Reactor x1,36500,
