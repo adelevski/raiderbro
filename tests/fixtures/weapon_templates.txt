@@ -1,0 +1,14 @@
+{{Infobox weapon
+| image = Test Weapon.png
+| rarity = Rare
+| type = Assault Rifle
+| firerate = 12.5 (750 RPM)
+| sellprice = 1,000<br>2,000
+}}
+
+{{Crafting
+| ingredients = 2 [[Metal Parts]] + 3 {{Icon|Rubber Parts}} [[Rubber Parts]]
+| station = Gunsmith II
+| blueprint = y
+| result = 1
+}}

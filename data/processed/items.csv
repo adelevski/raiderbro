@@ -25,7 +25,6 @@ image_src,item,rarity,recycles_to,sell_price,stack_size,category,uses,found_in
 /w/images/thumb/f/f5/Antiseptic.png/75px-Antiseptic.png.webp,Antiseptic,Rare,10x Chemicals,1000,5,Refined Material,Workshop | Medical Lab 3 (8x) | Quests | Doctor's Orders (2x),Medical
 /w/images/thumb/e/ef/Anvil_Splitter.png/75px-Anvil_Splitter.png.webp,Anvil Splitter,Legendary,1x Mod Components | 1x Processor,7000,1,Mods,,
 /w/images/thumb/f/fc/Apricot.png/75px-Apricot.png.webp,Apricot,Uncommon,3x Assorted Seeds,640,10,Nature,Workshop | Scrappy 3 (3x) | Scrappy 5 (12x),Nature
-/w/images/thumb/1/18/Assessor_Matrix.png/75px-Assessor_Matrix.png.webp,Assessor Matrix,Epic,1x Advanced Mechanical Components | 3x Advanced ARC Powercell,5000,1,Recyclable,Projects | High-Gain Antenna (18x) | High-Gain Antenna (6x),
 https://arcraiders.wiki/w/images/1/18/Assessor_Matrix.png,Assessor Matrix,Epic,1x Advanced Mechanical Components | 3x Advanced ARC Powercell,5000,1,Recyclable,projects | High-Gain Antenna Data Logger (6x) | projects | High-Gain Antenna Parabolic Dish (18x),ARC
 /w/images/thumb/5/51/Assorted_Seeds.png/75px-Assorted_Seeds.png.webp,Assorted Seeds,Common,Cannot be recycled,100,100,Nature,,
 /w/images/thumb/0/0c/Bandage.png/75px-Bandage.png.webp,Bandage,Common,2x Fabric,250,5,Quick Use,,
@@ -336,7 +335,6 @@ https://arcraiders.wiki/w/images/1/18/Assessor_Matrix.png,Assessor Matrix,Epic,1
 /w/images/thumb/c/cc/Tropical_Duck.png/75px-Tropical_Duck.png.webp,Tropical Duck,Uncommon,Cannot be recycled,1000,15,Trinket,,
 /w/images/thumb/f/f1/Turbo_Pump.png/75px-Turbo_Pump.png.webp,Turbo Pump,Rare,1x Mechanical Components | 3x Oil,2000,3,Recyclable,,
 /w/images/thumb/3/37/Unusable_Weapon.png/75px-Unusable_Weapon.png.webp,Unusable Weapon,Rare,4x Metal Parts | 5x Simple Gun Parts,2000,3,Recyclable,,
-/w/images/thumb/b/b8/Vaporizer_Regulator.png/75px-Vaporizer_Regulator.png.webp,Vaporizer Regulator,Epic,1x Advanced Electrical Components | 2x ARC Circuitry,6000,1,Recyclable,Projects | High-Gain Antenna (15x) | High-Gain Antenna (4x),
 https://arcraiders.wiki/w/images/b/b8/Vaporizer_Regulator.png,Vaporizer Regulator,Epic,1x Advanced Electrical Components | 2x ARC Circuitry,6000,1,Recyclable,projects | High-Gain Antenna Data Logger (4x) | projects | High-Gain Antenna Parabolic Dish (15x) | workshop | Gunsmith 3 (2x),ARC
 /w/images/thumb/6/6e/Vase.png/75px-Vase.png.webp,Vase,Rare,Cannot be recycled,3000,3,Trinket,,
 /w/images/thumb/4/4d/Vertical_Grip_I.png/75px-Vertical_Grip_I.png.webp,Vertical Grip I,Common,6x Plastic Parts,640,1,Mods,,

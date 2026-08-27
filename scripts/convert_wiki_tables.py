@@ -3,12 +3,11 @@
 
 from __future__ import annotations
 
+import argparse
 import csv
 import hashlib
 import json
 import re
-import urllib.request
-from datetime import datetime, timezone
 from dataclasses import dataclass
 from html.parser import HTMLParser
 from pathlib import Path
@@ -144,16 +143,6 @@ def absolute_wiki_url(path: str) -> str:
     return path
 
 
-def fetch_live_wiki_html(title: str, fallback_path: Path) -> str:
-    normalized = normalize_mediawiki_filename(title)
-    url = f"{WIKI_BASE_URL}/wiki/{normalized}"
-    try:
-        with urllib.request.urlopen(url, timeout=30) as response:
-            return response.read().decode("utf-8", "ignore")
-    except Exception:
-        return fallback_path.read_text(encoding="utf-8")
-
-
 def load_json(path: Path) -> object:
     return json.loads(path.read_text(encoding="utf-8"))
 
@@ -255,9 +244,15 @@ def load_supplemental_items() -> dict[str, dict[str, object]]:
 def normalize_reward_entries(entries: list[dict[str, object]]) -> list[dict[str, object]]:
     normalized_entries: list[dict[str, object]] = []
     for entry in entries:
+        item = str(entry.get("item", "")).strip()
+        quantity = int(entry.get("quantity", 1))
+        if not item:
+            raise ValueError("Reward entries must name an item.")
+        if quantity <= 0:
+            raise ValueError(f"Reward quantity must be positive for {item}: {quantity}")
         normalized_entry = {
-            "item": str(entry["item"]),
-            "quantity": int(entry.get("quantity", 1)),
+            "item": item,
+            "quantity": quantity,
         }
         normalized_entries.append(normalized_entry)
     return normalized_entries
@@ -511,10 +506,17 @@ def validate_tracker_data(
     reward_catalog: dict[str, dict[str, object]],
     weapon_records: list[dict[str, str]],
 ) -> None:
-    item_names = {record["item"] for record in item_records}
-    weapon_names = {record["name"] for record in weapon_records}
+    item_name_list = [record["item"] for record in item_records]
+    weapon_name_list = [record["name"] for record in weapon_records]
+    item_names = set(item_name_list)
+    weapon_names = set(weapon_name_list)
     item_categories = {record["category"] for record in item_records if record.get("category")}
     card_ids = [str(card["id"]) for card in cards]
+
+    if len(item_names) != len(item_name_list):
+        raise ValueError("Item names must be unique.")
+    if len(weapon_names) != len(weapon_name_list):
+        raise ValueError("Weapon names must be unique.")
 
     if len(set(card_ids)) != len(card_ids):
         raise ValueError(f"Card ids must be unique. Got: {card_ids}")
@@ -636,7 +638,6 @@ def build_requirement_tracker_payload(
     build_id = hashlib.sha1(json.dumps(payload_without_meta, sort_keys=True).encode("utf-8")).hexdigest()[:8]
     return {
         "schemaVersion": 3,
-        "generatedAt": datetime.now(timezone.utc).isoformat(),
         "buildId": build_id,
         **payload_without_meta,
     }
@@ -687,7 +688,7 @@ def split_sections(text: str) -> list[tuple[str, str]]:
 def write_csv(path: Path, fieldnames: list[str], rows: list[dict[str, str]]) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     with path.open("w", encoding="utf-8", newline="") as handle:
-        writer = csv.DictWriter(handle, fieldnames=fieldnames)
+        writer = csv.DictWriter(handle, fieldnames=fieldnames, lineterminator="\n")
         writer.writeheader()
         writer.writerows(rows)
 
@@ -762,7 +763,7 @@ def parse_item_records(
         "Uses": "uses",
     }
 
-    headers, rows = extract_table(find_table(fetch_live_wiki_html("Loot", ITEMS_TXT)))
+    headers, rows = extract_table(find_table(ITEMS_TXT.read_text(encoding="utf-8")))
     if headers != list(header_map):
         raise ValueError(f"Unexpected items headers: {headers}")
 
@@ -916,7 +917,13 @@ def parse_requirement(text: str) -> tuple[str, str]:
     match = REQUIREMENT_RE.fullmatch(text.strip())
     if not match:
         raise ValueError(f"Unexpected requirement format: {text}")
-    return match.group("quantity"), match.group("item")
+    quantity = int(match.group("quantity"))
+    item = match.group("item").strip()
+    if quantity <= 0:
+        raise ValueError(f"Requirement quantity must be positive: {text}")
+    if not item:
+        raise ValueError(f"Requirement item must not be empty: {text}")
+    return str(quantity), item
 
 
 def write_requirement_tracker_data(
@@ -987,51 +994,7 @@ def parse_legacy_weapon_records() -> list[dict[str, str]]:
 
 
 def parse_weapon_records() -> list[dict[str, str]]:
-    header_map = {
-        "Name": "name",
-        "Ammo Type": "ammo_type",
-        "Firing Mode": "firing_mode",
-        "Damage": "damage",
-        "Fire Rate": "fire_rate",
-        "Range": "range",
-        "Mod Slots": "mod_slots",
-    }
-    legacy_relative_dps = {
-        record["name"]: record.get("relative_dps", "")
-        for record in parse_legacy_weapon_records()
-    }
-    html = fetch_live_wiki_html("Weapons", WEAPONS_TXT)
-    section_pattern = re.compile(
-        r"<h3 id=\"(?P<section_id>[^\"]+)\">(?P<section_title>[^<]+)</h3></div>\s*<table\b.*?</table>",
-        re.IGNORECASE | re.DOTALL,
-    )
-
-    records: list[dict[str, str]] = []
-    for match in section_pattern.finditer(html):
-        weapon_type = normalize_text(match.group("section_title"))
-        table_html = match.group(0)
-        headers, rows = extract_table(find_table(table_html))
-        if headers != list(header_map):
-            continue
-
-        for row in rows:
-            record: dict[str, str] = {}
-            for header, cell in zip(headers, row):
-                key = header_map[header]
-                value = cell.text
-                if key == "name":
-                    value = normalize_weapon_name(value)
-                if key in {"damage", "fire_rate", "range"}:
-                    value = normalize_number(value)
-                record[key] = value
-                if header == "Name":
-                    record["image_url"] = absolute_wiki_url(cell.image_src)
-                    record["page_url"] = wiki_page_url(record["name"])
-            record["relative_dps"] = legacy_relative_dps.get(record["name"], "")
-            record["type"] = weapon_type
-            records.append(record)
-
-    return records
+    return parse_legacy_weapon_records()
 
 
 def build_weapon_mod_slot_entries(
@@ -1500,13 +1463,30 @@ def load_manual_tracker_config() -> tuple[
     return found_in_by_item, ui_icons, manual_cards, manual_rewards, supplemental_items
 
 
+def read_csv(path: Path) -> list[dict[str, str]]:
+    with path.open(encoding="utf-8", newline="") as handle:
+        return list(csv.DictReader(handle))
+
+
+def load_normalized_snapshots() -> tuple[
+    list[dict[str, str]],
+    list[dict[str, str]],
+    list[dict[str, str]],
+    list[dict[str, str]],
+]:
+    return (
+        read_csv(ITEMS_CSV),
+        read_csv(WORKSHOP_REQUIREMENTS_CSV),
+        read_csv(WORKSHOP_CRAFTS_CSV),
+        read_csv(WEAPONS_CSV),
+    )
+
+
 def validate_source_data() -> dict[str, int]:
-    found_in_by_item, ui_icons, manual_cards, manual_rewards, supplemental_items = load_manual_tracker_config()
+    found_in_by_item, ui_icons, manual_cards, manual_rewards, _ = load_manual_tracker_config()
     weapon_metadata = load_weapon_metadata()
     weapon_optimizer_data = load_weapon_optimizer_data()
-    item_records = parse_item_records(found_in_by_item, supplemental_items)
-    requirement_records, craft_records = parse_workshop_records()
-    weapon_records = parse_weapon_records()
+    item_records, requirement_records, craft_records, weapon_records = load_normalized_snapshots()
     validate_weapon_metadata(weapon_records, weapon_metadata, ui_icons, weapon_optimizer_data, item_records)
     payload = build_requirement_tracker_payload(
         requirement_records,
@@ -1528,7 +1508,7 @@ def validate_source_data() -> dict[str, int]:
     }
 
 
-def main() -> None:
+def rebuild_normalized_snapshots() -> None:
     found_in_by_item, ui_icons, manual_cards, manual_rewards, supplemental_items = load_manual_tracker_config()
     weapon_metadata = load_weapon_metadata()
     weapon_optimizer_data = load_weapon_optimizer_data()
@@ -1558,6 +1538,56 @@ def main() -> None:
     print(f"Wrote {weapons_count} rows to {WEAPONS_CSV.name}")
     print(f"Wrote weapon levels to {WEAPON_LEVELS_CSV.relative_to(ROOT)}")
     print(f"Wrote weapon mods to {WEAPON_MODS_CSV.relative_to(ROOT)}")
+
+
+def build_browser_datasets() -> None:
+    found_in_by_item, ui_icons, manual_cards, manual_rewards, _ = load_manual_tracker_config()
+    weapon_metadata = load_weapon_metadata()
+    weapon_optimizer_data = load_weapon_optimizer_data()
+    item_records, requirement_records, craft_records, weapon_records = load_normalized_snapshots()
+
+    validate_weapon_metadata(
+        weapon_records,
+        weapon_metadata,
+        ui_icons,
+        weapon_optimizer_data,
+        item_records,
+    )
+    write_item_data(item_records, found_in_by_item, ui_icons)
+    write_weapon_data(
+        weapon_records,
+        weapon_metadata,
+        ui_icons,
+        weapon_optimizer_data,
+        item_records,
+    )
+    write_requirement_tracker_data(
+        requirement_records,
+        craft_records,
+        item_records,
+        weapon_records,
+        weapon_metadata,
+        manual_cards,
+        manual_rewards,
+        found_in_by_item,
+        ui_icons,
+    )
+    print(f"Built browser datasets for {len(item_records)} items and {len(weapon_records)} weapons.")
+
+
+def main() -> None:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument(
+        "--rebuild-snapshots",
+        action="store_true",
+        help="replace normalized CSV snapshots from local raw/manual inputs before building browser data",
+    )
+    args = parser.parse_args()
+
+    if args.rebuild_snapshots:
+        rebuild_normalized_snapshots()
+    else:
+        build_browser_datasets()
 
 
 if __name__ == "__main__":
