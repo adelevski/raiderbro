@@ -1,10 +1,10 @@
 {
   "name": "raiderbro",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "description": "Static ARC Raiders requirement-tracking and weapon-comparison tools.",
   "engines": {
-    "node": ">=20"
+    "node": ">=22"
   },
   "scripts": {
     "build": "python3 scripts/convert_wiki_tables.py",

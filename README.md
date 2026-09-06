@@ -7,7 +7,7 @@ or runtime API key.
 ## Requirements
 
 - Python 3.11 or newer (data conversion and validation; standard library only)
-- Node.js 20 or newer (JavaScript tests and syntax checks)
+- Node.js 22 or newer (JavaScript tests and syntax checks)
 
 ## Quick start
 
