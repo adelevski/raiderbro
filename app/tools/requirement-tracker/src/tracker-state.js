@@ -1,6 +1,6 @@
 (function () {
   function normalizeTrackerData(rawTrackerData) {
-    if (!rawTrackerData) {
+    if (!isPlainObject(rawTrackerData)) {
       return null;
     }
 
@@ -16,7 +16,7 @@
     }
 
     if (!Array.isArray(rawTrackerData.stations)) {
-      return rawTrackerData;
+      return null;
     }
 
     const cards = rawTrackerData.stations.map(function (card) {
@@ -104,13 +104,21 @@
 
   function sortCards(cards) {
     return cards.slice().sort(function (left, right) {
-      const leftOrder = Number(left.sortOrder || 9999);
-      const rightOrder = Number(right.sortOrder || 9999);
+      const leftOrder = getSortOrder(left.sortOrder);
+      const rightOrder = getSortOrder(right.sortOrder);
       if (leftOrder !== rightOrder) {
         return leftOrder - rightOrder;
       }
       return String(left.title || "").localeCompare(String(right.title || ""));
     });
+  }
+
+  function getSortOrder(value) {
+    if (value === null || value === undefined || value === "") {
+      return 9999;
+    }
+    const numericValue = Number(value);
+    return Number.isFinite(numericValue) ? numericValue : 9999;
   }
 
   function isPlainObject(value) {
@@ -124,9 +132,16 @@
 
     const sanitized = {};
     Object.keys(value).forEach(function (key) {
-      const numericValue = Number(value[key]);
-      if (Number.isFinite(numericValue)) {
-        sanitized[key] = numericValue;
+      const rawValue = value[key];
+      if (typeof rawValue !== "number" && typeof rawValue !== "string") {
+        return;
+      }
+      if (typeof rawValue === "string" && !rawValue.trim()) {
+        return;
+      }
+      const numericValue = Number(rawValue);
+      if (Number.isFinite(numericValue) && numericValue >= 0) {
+        sanitized[key] = Math.floor(numericValue);
       }
     });
     return sanitized;
@@ -156,7 +171,10 @@
       progress: sanitizeNumberMap(candidate.progress),
       variants: sanitizeStringMap(candidate.variants),
       cardOrder: Array.isArray(candidate.cardOrder)
-        ? candidate.cardOrder.map(function (entry) { return String(entry); }).filter(Boolean)
+        ? Array.from(new Set(candidate.cardOrder
+          .filter(function (entry) { return typeof entry === "string"; })
+          .map(function (entry) { return entry.trim(); })
+          .filter(Boolean)))
         : [],
       shoppingMode: candidate.shoppingMode === "found" ? "found" : "card",
       includeFutureNeeds: Boolean(candidate.includeFutureNeeds),
