@@ -47,7 +47,9 @@ cache behavior, and permission to hotlink those assets remain external concerns.
 
 ## Unresolved licensing decisions
 
-- The repository currently has no project license; none was inferred or added.
+- Project-authored software uses [MIT](../LICENSE). Data under this directory,
+  generated browser datasets, wiki-derived fixtures, game imagery, and trademarks
+  are excluded from that code license; no new data/content license is selected.
 - The reuse terms for community-wiki table content and image URLs need a human
   review before choosing a data/content license.
 - ARC Raiders names, artwork, and trademarks belong to their respective owners;

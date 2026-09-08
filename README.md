@@ -71,5 +71,13 @@ build-time secrets or server functions are needed. Run `npm run check` before
 publishing. The application hotlinks wiki/game imagery, so deployed clients need
 network access to those external hosts.
 
-See [data/README.md](data/README.md) for data provenance and unresolved licensing
-questions. This repository intentionally does not declare a license yet.
+See [data/README.md](data/README.md) for data provenance and unresolved
+redistribution questions before public deployment.
+
+## License and third-party material
+
+Project-authored software and documentation are licensed under [MIT](LICENSE).
+The code license does not cover wiki/game content under `data/`, browser datasets
+in `app/generated/`, wiki-derived test fixtures, hotlinked imagery, names, or
+trademarks. Those materials retain their existing rights and terms; selecting MIT
+for the code does not resolve their public redistribution requirements.

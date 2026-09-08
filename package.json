@@ -1,6 +1,6 @@
 {
   "name": "raiderbro",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "private": true,
   "description": "Static ARC Raiders requirement-tracking and weapon-comparison tools.",
   "engines": {
@@ -14,5 +14,6 @@
     "check:generated": "python3 scripts/check_generated.py",
     "check:static": "python3 scripts/check_static.py",
     "check": "npm test && npm run validate:data && npm run check:generated && npm run check:static"
-  }
+  },
+  "license": "MIT"
 }

@@ -24,8 +24,9 @@ deterministic, and use committed snapshots; there is no server or runtime API ke
   before accepting new snapshots.
 - Keep tracker-state validation and local persistence compatible. Explain
   consequential comparisons and calculations in the interface.
-- Deployment root is `app/`. No license is declared yet; third-party wiki/game
-  data and hotlinked imagery need a provenance/terms decision before publication.
+- Deployment root is `app/`. Project-authored software uses [MIT](LICENSE);
+  wiki/game data and hotlinked imagery retain separate terms and still need a
+  provenance/redistribution decision before public deployment.
 
 ## Working agreements
 
