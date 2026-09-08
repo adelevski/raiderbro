@@ -33,6 +33,15 @@
       { "label": "Unlocks", "value": "Light Gun Parts" }
     ]
   },
+  "Heavy Gun Parts Blueprint": {
+    "kindLabel": "Blueprint Reward",
+    "iconItemRef": "Heavy Gun Parts",
+    "description": "Unlocks the crafting recipe for Heavy Gun Parts.",
+    "details": [
+      { "label": "Type", "value": "Blueprint Reward" },
+      { "label": "Unlocks", "value": "Heavy Gun Parts" }
+    ]
+  },
   "Vita Shot Blueprint": {
     "kindLabel": "Blueprint Reward",
     "iconItemRef": "Vita Shot",
@@ -80,6 +89,17 @@
       { "label": "Weapon Level", "value": "IV" }
     ]
   },
+  "Anvil IV": {
+    "kindLabel": "Weapon Reward",
+    "iconWeaponRef": "Anvil",
+    "rarity": "Uncommon",
+    "description": "A level IV Anvil weapon reward.",
+    "details": [
+      { "label": "Type", "value": "Weapon Reward" },
+      { "label": "Base Weapon", "value": "Anvil" },
+      { "label": "Weapon Level", "value": "IV" }
+    ]
+  },
   "Torrente II": {
     "kindLabel": "Weapon Reward",
     "iconWeaponRef": "Torrente",
@@ -89,6 +109,30 @@
       { "label": "Type", "value": "Weapon Reward" },
       { "label": "Base Weapon", "value": "Torrente" },
       { "label": "Weapon Level", "value": "II" }
+    ]
+  },
+  "Gel Patches": {
+    "kindLabel": "Cosmetic Reward",
+    "iconFilename": "Placeholder.png",
+    "description": "A cosmetic reward from Avian Alarm.",
+    "details": [
+      { "label": "Type", "value": "Cosmetic Reward" }
+    ]
+  },
+  "Bird House": {
+    "kindLabel": "Cosmetic Reward",
+    "iconFilename": "Placeholder.png",
+    "description": "A cosmetic reward from Avian Alarm.",
+    "details": [
+      { "label": "Type", "value": "Cosmetic Reward" }
+    ]
+  },
+  "Fist In Air": {
+    "kindLabel": "Cosmetic Reward",
+    "iconFilename": "Placeholder.png",
+    "description": "A cosmetic reward from Avian Alarm.",
+    "details": [
+      { "label": "Type", "value": "Cosmetic Reward" }
     ]
   }
 }

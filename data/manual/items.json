@@ -7,7 +7,67 @@
     "stack_size": "1",
     "category": "Recyclable",
     "found_in": ["ARC"],
-    "uses": "projects | High-Gain Antenna Data Logger (6x) | projects | High-Gain Antenna Parabolic Dish (18x)"
+    "uses": ""
+  },
+  "Dockmaster's Detector": {
+    "imageFilename": "Dockmaster's Detector.png",
+    "rarity": "Uncommon",
+    "recycles_to": "Cannot be recycled",
+    "sell_price": "1000",
+    "stack_size": "1",
+    "category": "Quick Use",
+    "found_in": [],
+    "uses": ""
+  },
+  "\"Leviathan's Crown\" Ship Model": {
+    "imageFilename": "Leviathan's Crown Ship Model.png",
+    "rarity": "Legendary",
+    "recycles_to": "Cannot be recycled",
+    "sell_price": "10000",
+    "stack_size": "1",
+    "category": "Trinket",
+    "found_in": [],
+    "uses": "projects | Avian Alarm Critical Warning Birds (1x)"
+  },
+  "Riven Tides Hotel Keycard No. 311": {
+    "imageFilename": "Riven Tides Hotel Keycard.png",
+    "rarity": "Common",
+    "recycles_to": "Cannot be recycled",
+    "sell_price": "100",
+    "stack_size": "1",
+    "category": "Key",
+    "found_in": [],
+    "uses": ""
+  },
+  "\"Sirena Dorata\" Ship Model": {
+    "imageFilename": "Sirena Dorata Ship Model.png",
+    "rarity": "Epic",
+    "recycles_to": "Cannot be recycled",
+    "sell_price": "7000",
+    "stack_size": "1",
+    "category": "Trinket",
+    "found_in": [],
+    "uses": "projects | Avian Alarm Heightened Alert Birds (5x) | expedition | Expedition 4 Outfitting (2x)"
+  },
+  "\"Twilight Compass\" Ship Model": {
+    "imageFilename": "Twilight Compass Ship Model.png",
+    "rarity": "Uncommon",
+    "recycles_to": "Cannot be recycled",
+    "sell_price": "1000",
+    "stack_size": "1",
+    "category": "Trinket",
+    "found_in": [],
+    "uses": "projects | Avian Alarm Preliminary Signal Birds (5x)"
+  },
+  "\"Velocity\" Ship Model": {
+    "imageFilename": "Velocity Ship Model.png",
+    "rarity": "Rare",
+    "recycles_to": "Cannot be recycled",
+    "sell_price": "3000",
+    "stack_size": "1",
+    "category": "Trinket",
+    "found_in": [],
+    "uses": "projects | Avian Alarm Secondary Validation Birds (5x)"
   },
   "Vaporizer Regulator": {
     "imageFilename": "Vaporizer_Regulator.png",
@@ -17,6 +77,6 @@
     "stack_size": "1",
     "category": "Recyclable",
     "found_in": ["ARC"],
-    "uses": "projects | High-Gain Antenna Data Logger (4x) | projects | High-Gain Antenna Parabolic Dish (15x) | workshop | Gunsmith 3 (2x)"
+    "uses": "projects | Avian Alarm Heightened Alert Birds (1x) | expedition | Expedition 4 Outfitting (3x) | workshop | Gunsmith 3 (2x)"
   }
 }

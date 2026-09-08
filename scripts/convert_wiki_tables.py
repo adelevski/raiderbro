@@ -778,20 +778,24 @@ def parse_item_records(
         record["found_in"] = " | ".join(found_in_by_item.get(record["item"], []))
         records.append(record)
 
+    record_index_by_item = {record["item"]: index for index, record in enumerate(records)}
     for item_name, item_definition in supplemental_items.items():
-        records.append(
-            {
-                "image_src": icon_url_from_filename(str(item_definition.get("imageFilename", ""))),
-                "item": item_name,
-                "rarity": str(item_definition.get("rarity", "")),
-                "recycles_to": str(item_definition.get("recycles_to", "")),
-                "sell_price": normalize_number(str(item_definition.get("sell_price", ""))),
-                "stack_size": normalize_number(str(item_definition.get("stack_size", ""))),
-                "category": str(item_definition.get("category", "")),
-                "uses": str(item_definition.get("uses", "")),
-                "found_in": " | ".join(str(value) for value in item_definition.get("found_in", [])),
-            }
-        )
+        supplemental_record = {
+            "image_src": icon_url_from_filename(str(item_definition.get("imageFilename", ""))),
+            "item": item_name,
+            "rarity": str(item_definition.get("rarity", "")),
+            "recycles_to": str(item_definition.get("recycles_to", "")),
+            "sell_price": normalize_number(str(item_definition.get("sell_price", ""))),
+            "stack_size": normalize_number(str(item_definition.get("stack_size", ""))),
+            "category": str(item_definition.get("category", "")),
+            "uses": str(item_definition.get("uses", "")),
+            "found_in": " | ".join(str(value) for value in item_definition.get("found_in", [])),
+        }
+        if item_name in record_index_by_item:
+            records[record_index_by_item[item_name]] = supplemental_record
+        else:
+            record_index_by_item[item_name] = len(records)
+            records.append(supplemental_record)
 
     records.sort(key=lambda record: record["item"])
     return records

@@ -1,0 +1,99 @@
+{
+  "id": "avian-alarm",
+  "title": "Avian Alarm",
+  "kindLabel": "Project",
+  "scope": "projects",
+  "iconFilename": "Avian Alarm card.png",
+  "sortOrder": 31,
+  "resetOnWipe": false,
+  "minLevel": 0,
+  "zeroLabel": "Stage 1 in progress",
+  "completeLabel": "Project completed",
+  "levels": [
+    {
+      "level": 1,
+      "label": "Initial Flock Intake (1/5)",
+      "progressLabel": "Initial Flock Intake complete",
+      "description": "Lay a bird trap next to the buoys along the Seabed in Riven Tides.",
+      "requirements": [],
+      "rewards": [
+        { "item": "Dockmaster's Detector", "quantity": 1 },
+        { "item": "Raider Tokens", "quantity": 25 }
+      ],
+      "crafts": []
+    },
+    {
+      "level": 2,
+      "label": "Preliminary Signal Birds (2/5)",
+      "progressLabel": "Preliminary Signal Birds complete",
+      "description": "Gather early signal materials for the Avian Alarm network.",
+      "requirements": [
+        { "item": "Tick Pod", "quantity": 7 },
+        { "item": "Canister", "quantity": 20 },
+        { "item": "Moss", "quantity": 12 },
+        { "item": "\"Twilight Compass\" Ship Model", "quantity": 5 }
+      ],
+      "rewards": [
+        { "item": "Heavy Gun Parts Blueprint", "quantity": 1 },
+        { "item": "Surge Coil", "quantity": 3 },
+        { "item": "Raider Tokens", "quantity": 25 }
+      ],
+      "crafts": []
+    },
+    {
+      "level": 3,
+      "label": "Secondary Validation Birds (3/5)",
+      "progressLabel": "Secondary Validation Birds complete",
+      "description": "Validate the next layer of signal birds with stronger components.",
+      "requirements": [
+        { "item": "Comet Igniter", "quantity": 3 },
+        { "item": "Fertilizer", "quantity": 10 },
+        { "item": "Rusted Tools", "quantity": 8 },
+        { "item": "\"Velocity\" Ship Model", "quantity": 5 }
+      ],
+      "rewards": [
+        { "item": "Anvil IV", "quantity": 1 },
+        { "item": "Anvil Splitter", "quantity": 1 },
+        { "item": "Raider Tokens", "quantity": 50 }
+      ],
+      "crafts": []
+    },
+    {
+      "level": 4,
+      "label": "Heightened Alert Birds (4/5)",
+      "progressLabel": "Heightened Alert Birds complete",
+      "description": "Upgrade the alert network with higher-grade monitoring materials.",
+      "requirements": [
+        { "item": "Vaporizer Regulator", "quantity": 1 },
+        { "item": "Water Filter", "quantity": 3 },
+        { "item": "Agave", "quantity": 8 },
+        { "item": "\"Sirena Dorata\" Ship Model", "quantity": 5 }
+      ],
+      "rewards": [
+        { "item": "Gel Patches", "quantity": 1 },
+        { "item": "Riven Tides Hotel Keycard No. 311", "quantity": 1 },
+        { "item": "Raider Tokens", "quantity": 50 }
+      ],
+      "crafts": []
+    },
+    {
+      "level": 5,
+      "label": "Critical Warning Birds (5/5)",
+      "progressLabel": "Critical Warning Birds complete",
+      "description": "Finish the critical warning layer for the Avian Alarm network.",
+      "requirements": [
+        { "item": "Turbine Compressor", "quantity": 2 },
+        { "item": "Red Coral Jewelry", "quantity": 3 },
+        { "item": "Roots", "quantity": 4 },
+        { "item": "\"Leviathan's Crown\" Ship Model", "quantity": 1 }
+      ],
+      "rewards": [
+        { "item": "Bird House", "quantity": 1 },
+        { "item": "Fist In Air", "quantity": 1 },
+        { "item": "Acoustic Guitar", "quantity": 1 },
+        { "item": "Raider Tokens", "quantity": 100 }
+      ],
+      "crafts": []
+    }
+  ]
+}

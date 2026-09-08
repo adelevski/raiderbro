@@ -422,7 +422,12 @@
   }
 
   function isLevelCompleteForProgress(context, levelInfo) {
-    return (levelInfo.requirements || []).every(function (requirement) {
+    const requirements = levelInfo.requirements || [];
+    if (requirements.length === 0) {
+      return false;
+    }
+
+    return requirements.every(function (requirement) {
       const key = progressKey(context, levelInfo.level, requirement.item);
       const have = Number(state.progress[key] || 0);
       const clampedHave = Math.max(0, Math.min(have, Number(requirement.quantity)));
@@ -1315,6 +1320,13 @@
 
     const requirementList = document.createElement("div");
     requirementList.className = "requirement-list";
+
+    if (levelInfo.requirements.length === 0) {
+      const empty = document.createElement("p");
+      empty.className = "empty-upgrade";
+      empty.textContent = "No item requirements for this stage.";
+      requirementList.appendChild(empty);
+    }
 
     levelInfo.requirements.forEach(function (requirement) {
       const key = progressKey(context, levelInfo.level, requirement.item);

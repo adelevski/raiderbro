@@ -188,6 +188,67 @@
           "crafts": []
         }
       ]
+    },
+    {
+      "id": "expedition-4",
+      "title": "Expedition 4",
+      "minLevel": 0,
+      "zeroLabel": "Not started",
+      "completeLabel": "Outfitting complete",
+      "levels": [
+        {
+          "level": 1,
+          "label": "Foundation (1/6)",
+          "progressLabel": "Foundation complete",
+          "description": "Building the base structure and frame of the caravan.",
+          "requirements": [
+            { "item": "Metal Parts", "quantity": 150 },
+            { "item": "Chemicals", "quantity": 100 },
+            { "item": "ARC Alloy", "quantity": 80 },
+            { "item": "Canister", "quantity": 15 }
+          ],
+          "crafts": []
+        },
+        {
+          "level": 2,
+          "label": "Core Systems (2/6)",
+          "progressLabel": "Core Systems complete",
+          "description": "Connecting wiring, ventilation, and essential power systems.",
+          "requirements": [
+            { "item": "Durable Cloth", "quantity": 30 },
+            { "item": "Oil", "quantity": 25 },
+            { "item": "Electrical Components", "quantity": 20 },
+            { "item": "Industrial Charger", "quantity": 3 }
+          ],
+          "crafts": []
+        },
+        {
+          "level": 3,
+          "label": "Framework (3/6)",
+          "progressLabel": "Framework complete",
+          "description": "Building walls and roof, installing core systems, and defining the interior layout.",
+          "requirements": [
+            { "item": "ARC Motion Core", "quantity": 20 },
+            { "item": "Speaker Component", "quantity": 15 },
+            { "item": "Turbine Compressor", "quantity": 5 },
+            { "item": "Exodus Modules", "quantity": 2 }
+          ],
+          "crafts": []
+        },
+        {
+          "level": 4,
+          "label": "Outfitting (4/6)",
+          "progressLabel": "Outfitting complete",
+          "description": "Adding storage, workbenches, utilities, and personal touches.",
+          "requirements": [
+            { "item": "Portable TV", "quantity": 1 },
+            { "item": "Advanced Electrical Components", "quantity": 5 },
+            { "item": "\"Sirena Dorata\" Ship Model", "quantity": 2 },
+            { "item": "Vaporizer Regulator", "quantity": 3 }
+          ],
+          "crafts": []
+        }
+      ]
     }
   ]
 }
