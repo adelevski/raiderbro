@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.2.3 — 2026-09-10
+
+- Give generated datasets content-based URLs so browsers fetch updated weapon
+  image references after deployment instead of reusing cached datasets.
+
 ## 0.2.2 — 2026-09-10
 
 - Repair renamed wiki weapon image URLs in the picker, selected builds and
