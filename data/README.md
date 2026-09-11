@@ -16,6 +16,18 @@ Two duplicate item rows (`Assessor Matrix` and `Vaporizer Regulator`) were remov
 on 2026-08-27. Their later curated rows were retained, matching the records that
 the browser dataset already selected by key.
 
+### Weapon image repair — 2026-09-10
+
+Updated only `image_url` in 20 of the 23 weapon rows after the old wiki filenames
+started returning HTTP 404. URLs come from the [Weapons page, revision 39658](https://arcraiders.wiki/w/index.php?title=Weapons&oldid=39658),
+retrieved September 10, 2026. All 23 resulting thumbnail URLs were checked for
+successful image responses. The wiki’s current overview uses `_IV` artwork for
+most weapons; these are representative weapon thumbnails, not previews of the
+selected upgrade level. No weapon statistics, levels, mods or calculations changed.
+
+Historical raw captures retain their old links; an explicit snapshot rebuild
+must review image references as well as statistics before replacing these inputs.
+
 ### Raw captures (`raw/`)
 
 `items.txt`, `weapons.txt`, and `workshops.txt` are HTML table captures from the

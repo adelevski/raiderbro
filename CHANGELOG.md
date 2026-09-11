@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.2.2 — 2026-09-10
+
+- Repair renamed wiki weapon image URLs in the picker, selected builds and
+  tooltips. Verify all 23 thumbnails without changing gameplay statistics.
+
 ## 0.2.1 — 2026-09-10
 
 - Restore the original circular ARC Raiders stripe identity across the app,
