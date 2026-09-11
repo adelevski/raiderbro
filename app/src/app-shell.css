@@ -68,7 +68,7 @@ body::before {
   gap: 14px;
 }
 
-.project-icon { padding: 5px; background: #f1f3e9; border-radius: 12px; flex: 0 0 auto; }
+.project-icon { border-radius: 50%; flex: 0 0 auto; }
 
 .brand-title,
 .workspace-title {

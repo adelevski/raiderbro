@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.2.1 — 2026-09-10
+
+- Restore the original circular ARC Raiders stripe identity across the app,
+  favicons and snowball project card, using locally served assets.
+- Record the current official artwork source and separate third-party rights.
+
 ## 0.2.0 — 2026-09-10
 
 - Transfer the existing repository to snowball and publish both tools on GitHub

@@ -94,7 +94,7 @@ dates are incomplete. Do not describe this as current game-balance data.
 
 Project-authored software and documentation are licensed under [MIT](LICENSE).
 The code license does not cover wiki/game content under `data/`, browser datasets
-in `app/generated/`, wiki-derived test fixtures, hotlinked imagery, names, or
+in `app/generated/`, wiki-derived test fixtures, [stripe icon artwork](assets/README.md), hotlinked imagery, names, or
 trademarks. Those materials retain their existing rights and terms; selecting MIT
 for the code does not resolve their public redistribution requirements.
 
