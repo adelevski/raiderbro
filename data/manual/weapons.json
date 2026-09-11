@@ -23,13 +23,13 @@
     "Vulcano": "Epic"
   },
   "modSlotIcons": {
-    "Light Magazine": "Mods Light-Mag.png",
-    "Medium Magazine": "Mods Medium-Mag.png",
-    "Muzzle": "Mods Muzzle.png",
-    "Shotgun Magazine": "Mods Shotgun-Mag.png",
-    "Shotgun Muzzle": "Mods Shotgun-Muzzle.png",
-    "Stock": "Mods Stock.png",
-    "Tech Mod": "Mods Tech-Mod.png",
-    "Underbarrel": "Mods Underbarrel.png"
+    "Light Magazine": "Icon_Mod_LightMag.png",
+    "Medium Magazine": "Icon_Mod_MediumMag.png",
+    "Muzzle": "Icon_Mod_Muzzle.png",
+    "Shotgun Magazine": "Icon_Mod_ShotgunMag.png",
+    "Shotgun Muzzle": "Icon_Mod_ShotgunMuzzle.png",
+    "Stock": "Icon_Mod_Stock.png",
+    "Tech Mod": "Icon_Mod_TechMod.png",
+    "Underbarrel": "Icon_Mod_Underbarrel.png"
   }
 }

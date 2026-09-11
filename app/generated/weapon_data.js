@@ -6,7 +6,7 @@ window.WEAPON_DATA = {
     "rarity": "Common",
     "type": "Assault Rifles",
     "ammoType": "Light Ammo",
-    "ammoTypeIconUrl": "https://arcraiders.wiki/w/images/a/af/Ammo_Light.png",
+    "ammoTypeIconUrl": "https://arcraiders.wiki/w/images/1/18/Icon_Ammo_Light.png",
     "firingMode": "Semi-Automatic",
     "damage": "8.5",
     "fireRate": "30",
@@ -286,7 +286,7 @@ window.WEAPON_DATA = {
     "modSlots": [
       {
         "name": "Muzzle",
-        "iconUrl": "https://arcraiders.wiki/w/images/4/4b/Mods_Muzzle.png",
+        "iconUrl": "https://arcraiders.wiki/w/images/3/3f/Icon_Mod_Muzzle.png",
         "options": [
           "Compensator I",
           "Muzzle Brake I",
@@ -302,7 +302,7 @@ window.WEAPON_DATA = {
       },
       {
         "name": "Underbarrel",
-        "iconUrl": "https://arcraiders.wiki/w/images/0/01/Mods_Underbarrel.png",
+        "iconUrl": "https://arcraiders.wiki/w/images/3/3c/Icon_Mod_Underbarrel.png",
         "options": [
           "Angled Grip I",
           "Vertical Grip I",
@@ -315,7 +315,7 @@ window.WEAPON_DATA = {
       },
       {
         "name": "Light Magazine",
-        "iconUrl": "https://arcraiders.wiki/w/images/6/60/Mods_Light-Mag.png",
+        "iconUrl": "https://arcraiders.wiki/w/images/2/29/Icon_Mod_LightMag.png",
         "options": [
           "Extended Light Mag I",
           "Extended Light Mag II",
@@ -324,7 +324,7 @@ window.WEAPON_DATA = {
       },
       {
         "name": "Stock",
-        "iconUrl": "https://arcraiders.wiki/w/images/f/f5/Mods_Stock.png",
+        "iconUrl": "https://arcraiders.wiki/w/images/c/c9/Icon_Mod_Stock.png",
         "options": [
           "Stable Stock I",
           "Stable Stock II",
@@ -342,7 +342,7 @@ window.WEAPON_DATA = {
     "rarity": "Common",
     "type": "Assault Rifles",
     "ammoType": "Medium Ammo",
-    "ammoTypeIconUrl": "https://arcraiders.wiki/w/images/b/b6/Ammo_Medium.png",
+    "ammoTypeIconUrl": "https://arcraiders.wiki/w/images/1/11/Icon_Ammo_Medium.png",
     "firingMode": "Fully-Automatic",
     "damage": "9",
     "fireRate": "33.3",
@@ -591,7 +591,7 @@ window.WEAPON_DATA = {
     "modSlots": [
       {
         "name": "Muzzle",
-        "iconUrl": "https://arcraiders.wiki/w/images/4/4b/Mods_Muzzle.png",
+        "iconUrl": "https://arcraiders.wiki/w/images/3/3f/Icon_Mod_Muzzle.png",
         "options": [
           "Compensator I",
           "Muzzle Brake I",
@@ -607,7 +607,7 @@ window.WEAPON_DATA = {
       },
       {
         "name": "Underbarrel",
-        "iconUrl": "https://arcraiders.wiki/w/images/0/01/Mods_Underbarrel.png",
+        "iconUrl": "https://arcraiders.wiki/w/images/3/3c/Icon_Mod_Underbarrel.png",
         "options": [
           "Angled Grip I",
           "Vertical Grip I",
@@ -620,7 +620,7 @@ window.WEAPON_DATA = {
       },
       {
         "name": "Stock",
-        "iconUrl": "https://arcraiders.wiki/w/images/f/f5/Mods_Stock.png",
+        "iconUrl": "https://arcraiders.wiki/w/images/c/c9/Icon_Mod_Stock.png",
         "options": [
           "Stable Stock I",
           "Stable Stock II",
@@ -638,7 +638,7 @@ window.WEAPON_DATA = {
     "rarity": "Uncommon",
     "type": "Assault Rifles",
     "ammoType": "Medium Ammo",
-    "ammoTypeIconUrl": "https://arcraiders.wiki/w/images/b/b6/Ammo_Medium.png",
+    "ammoTypeIconUrl": "https://arcraiders.wiki/w/images/1/11/Icon_Ammo_Medium.png",
     "firingMode": "3-Round Burst",
     "damage": "9.5",
     "fireRate": "18.3",
@@ -898,7 +898,7 @@ window.WEAPON_DATA = {
     "modSlots": [
       {
         "name": "Muzzle",
-        "iconUrl": "https://arcraiders.wiki/w/images/4/4b/Mods_Muzzle.png",
+        "iconUrl": "https://arcraiders.wiki/w/images/3/3f/Icon_Mod_Muzzle.png",
         "options": [
           "Compensator I",
           "Muzzle Brake I",
@@ -914,7 +914,7 @@ window.WEAPON_DATA = {
       },
       {
         "name": "Underbarrel",
-        "iconUrl": "https://arcraiders.wiki/w/images/0/01/Mods_Underbarrel.png",
+        "iconUrl": "https://arcraiders.wiki/w/images/3/3c/Icon_Mod_Underbarrel.png",
         "options": [
           "Angled Grip I",
           "Vertical Grip I",
@@ -927,7 +927,7 @@ window.WEAPON_DATA = {
       },
       {
         "name": "Medium Magazine",
-        "iconUrl": "https://arcraiders.wiki/w/images/c/c6/Mods_Medium-Mag.png",
+        "iconUrl": "https://arcraiders.wiki/w/images/3/3d/Icon_Mod_MediumMag.png",
         "options": [
           "Extended Medium Mag I",
           "Extended Medium Mag II",
@@ -936,7 +936,7 @@ window.WEAPON_DATA = {
       },
       {
         "name": "Stock",
-        "iconUrl": "https://arcraiders.wiki/w/images/f/f5/Mods_Stock.png",
+        "iconUrl": "https://arcraiders.wiki/w/images/c/c9/Icon_Mod_Stock.png",
         "options": [
           "Stable Stock I",
           "Stable Stock II",
@@ -954,7 +954,7 @@ window.WEAPON_DATA = {
     "rarity": "Epic",
     "type": "Assault Rifles",
     "ammoType": "Medium Ammo",
-    "ammoTypeIconUrl": "https://arcraiders.wiki/w/images/b/b6/Ammo_Medium.png",
+    "ammoTypeIconUrl": "https://arcraiders.wiki/w/images/1/11/Icon_Ammo_Medium.png",
     "firingMode": "Fully-Automatic",
     "damage": "10",
     "fireRate": "36.7",
@@ -1244,7 +1244,7 @@ window.WEAPON_DATA = {
     "modSlots": [
       {
         "name": "Muzzle",
-        "iconUrl": "https://arcraiders.wiki/w/images/4/4b/Mods_Muzzle.png",
+        "iconUrl": "https://arcraiders.wiki/w/images/3/3f/Icon_Mod_Muzzle.png",
         "options": [
           "Compensator I",
           "Muzzle Brake I",
@@ -1260,7 +1260,7 @@ window.WEAPON_DATA = {
       },
       {
         "name": "Underbarrel",
-        "iconUrl": "https://arcraiders.wiki/w/images/0/01/Mods_Underbarrel.png",
+        "iconUrl": "https://arcraiders.wiki/w/images/3/3c/Icon_Mod_Underbarrel.png",
         "options": [
           "Angled Grip I",
           "Vertical Grip I",
@@ -1273,7 +1273,7 @@ window.WEAPON_DATA = {
       },
       {
         "name": "Medium Magazine",
-        "iconUrl": "https://arcraiders.wiki/w/images/c/c6/Mods_Medium-Mag.png",
+        "iconUrl": "https://arcraiders.wiki/w/images/3/3d/Icon_Mod_MediumMag.png",
         "options": [
           "Extended Medium Mag I",
           "Extended Medium Mag II",
@@ -1288,7 +1288,7 @@ window.WEAPON_DATA = {
     "rarity": "Epic",
     "type": "Assault Rifles",
     "ammoType": "Heavy Ammo",
-    "ammoTypeIconUrl": "https://arcraiders.wiki/w/images/e/e8/Ammo_Heavy.png",
+    "ammoTypeIconUrl": "https://arcraiders.wiki/w/images/6/66/Icon_Ammo_Heavy.png",
     "firingMode": "Fully-Automatic",
     "damage": "16",
     "fireRate": "28.7",
@@ -1563,7 +1563,7 @@ window.WEAPON_DATA = {
     "modSlots": [
       {
         "name": "Muzzle",
-        "iconUrl": "https://arcraiders.wiki/w/images/4/4b/Mods_Muzzle.png",
+        "iconUrl": "https://arcraiders.wiki/w/images/3/3f/Icon_Mod_Muzzle.png",
         "options": [
           "Compensator I",
           "Muzzle Brake I",
@@ -1579,7 +1579,7 @@ window.WEAPON_DATA = {
       },
       {
         "name": "Underbarrel",
-        "iconUrl": "https://arcraiders.wiki/w/images/0/01/Mods_Underbarrel.png",
+        "iconUrl": "https://arcraiders.wiki/w/images/3/3c/Icon_Mod_Underbarrel.png",
         "options": [
           "Angled Grip I",
           "Vertical Grip I",
@@ -1592,7 +1592,7 @@ window.WEAPON_DATA = {
       },
       {
         "name": "Stock",
-        "iconUrl": "https://arcraiders.wiki/w/images/f/f5/Mods_Stock.png",
+        "iconUrl": "https://arcraiders.wiki/w/images/c/c9/Icon_Mod_Stock.png",
         "options": [
           "Stable Stock I",
           "Stable Stock II",
@@ -1610,7 +1610,7 @@ window.WEAPON_DATA = {
     "rarity": "Common",
     "type": "Battle Rifles",
     "ammoType": "Heavy Ammo",
-    "ammoTypeIconUrl": "https://arcraiders.wiki/w/images/e/e8/Ammo_Heavy.png",
+    "ammoTypeIconUrl": "https://arcraiders.wiki/w/images/6/66/Icon_Ammo_Heavy.png",
     "firingMode": "Break-Action",
     "damage": "40",
     "fireRate": "6.6",
@@ -1846,7 +1846,7 @@ window.WEAPON_DATA = {
     "modSlots": [
       {
         "name": "Muzzle",
-        "iconUrl": "https://arcraiders.wiki/w/images/4/4b/Mods_Muzzle.png",
+        "iconUrl": "https://arcraiders.wiki/w/images/3/3f/Icon_Mod_Muzzle.png",
         "options": [
           "Compensator I",
           "Muzzle Brake I",
@@ -1862,7 +1862,7 @@ window.WEAPON_DATA = {
       },
       {
         "name": "Underbarrel",
-        "iconUrl": "https://arcraiders.wiki/w/images/0/01/Mods_Underbarrel.png",
+        "iconUrl": "https://arcraiders.wiki/w/images/3/3c/Icon_Mod_Underbarrel.png",
         "options": [
           "Angled Grip I",
           "Vertical Grip I",
@@ -1875,7 +1875,7 @@ window.WEAPON_DATA = {
       },
       {
         "name": "Stock",
-        "iconUrl": "https://arcraiders.wiki/w/images/f/f5/Mods_Stock.png",
+        "iconUrl": "https://arcraiders.wiki/w/images/c/c9/Icon_Mod_Stock.png",
         "options": [
           "Stable Stock I",
           "Stable Stock II",
@@ -1893,7 +1893,7 @@ window.WEAPON_DATA = {
     "rarity": "Rare",
     "type": "Battle Rifles",
     "ammoType": "Medium Ammo",
-    "ammoTypeIconUrl": "https://arcraiders.wiki/w/images/b/b6/Ammo_Medium.png",
+    "ammoTypeIconUrl": "https://arcraiders.wiki/w/images/1/11/Icon_Ammo_Medium.png",
     "firingMode": "Lever-Action",
     "damage": "35",
     "fireRate": "21",
@@ -2168,7 +2168,7 @@ window.WEAPON_DATA = {
     "modSlots": [
       {
         "name": "Muzzle",
-        "iconUrl": "https://arcraiders.wiki/w/images/4/4b/Mods_Muzzle.png",
+        "iconUrl": "https://arcraiders.wiki/w/images/3/3f/Icon_Mod_Muzzle.png",
         "options": [
           "Compensator I",
           "Muzzle Brake I",
@@ -2184,7 +2184,7 @@ window.WEAPON_DATA = {
       },
       {
         "name": "Medium Magazine",
-        "iconUrl": "https://arcraiders.wiki/w/images/c/c6/Mods_Medium-Mag.png",
+        "iconUrl": "https://arcraiders.wiki/w/images/3/3d/Icon_Mod_MediumMag.png",
         "options": [
           "Extended Medium Mag I",
           "Extended Medium Mag II",
@@ -2193,7 +2193,7 @@ window.WEAPON_DATA = {
       },
       {
         "name": "Stock",
-        "iconUrl": "https://arcraiders.wiki/w/images/f/f5/Mods_Stock.png",
+        "iconUrl": "https://arcraiders.wiki/w/images/c/c9/Icon_Mod_Stock.png",
         "options": [
           "Stable Stock I",
           "Stable Stock II",
@@ -2211,7 +2211,7 @@ window.WEAPON_DATA = {
     "rarity": "Legendary",
     "type": "Battle Rifles",
     "ammoType": "Energy Clip",
-    "ammoTypeIconUrl": "https://arcraiders.wiki/w/images/9/95/Ammo_Energy.png",
+    "ammoTypeIconUrl": "https://arcraiders.wiki/w/images/e/e8/Icon_Ammo_Energy.png",
     "firingMode": "2-Round Burst",
     "damage": "25",
     "fireRate": "9",
@@ -2282,7 +2282,7 @@ window.WEAPON_DATA = {
     "modSlots": [
       {
         "name": "Underbarrel",
-        "iconUrl": "https://arcraiders.wiki/w/images/0/01/Mods_Underbarrel.png",
+        "iconUrl": "https://arcraiders.wiki/w/images/3/3c/Icon_Mod_Underbarrel.png",
         "options": [
           "Angled Grip I",
           "Vertical Grip I",
@@ -2295,7 +2295,7 @@ window.WEAPON_DATA = {
       },
       {
         "name": "Stock",
-        "iconUrl": "https://arcraiders.wiki/w/images/f/f5/Mods_Stock.png",
+        "iconUrl": "https://arcraiders.wiki/w/images/c/c9/Icon_Mod_Stock.png",
         "options": [
           "Stable Stock I",
           "Stable Stock II",
@@ -2313,7 +2313,7 @@ window.WEAPON_DATA = {
     "rarity": "Common",
     "type": "SMGs",
     "ammoType": "Light Ammo",
-    "ammoTypeIconUrl": "https://arcraiders.wiki/w/images/a/af/Ammo_Light.png",
+    "ammoTypeIconUrl": "https://arcraiders.wiki/w/images/1/18/Icon_Ammo_Light.png",
     "firingMode": "Fully-Automatic",
     "damage": "6.5",
     "fireRate": "45.3",
@@ -2578,7 +2578,7 @@ window.WEAPON_DATA = {
     "modSlots": [
       {
         "name": "Muzzle",
-        "iconUrl": "https://arcraiders.wiki/w/images/4/4b/Mods_Muzzle.png",
+        "iconUrl": "https://arcraiders.wiki/w/images/3/3f/Icon_Mod_Muzzle.png",
         "options": [
           "Compensator I",
           "Muzzle Brake I",
@@ -2594,7 +2594,7 @@ window.WEAPON_DATA = {
       },
       {
         "name": "Underbarrel",
-        "iconUrl": "https://arcraiders.wiki/w/images/0/01/Mods_Underbarrel.png",
+        "iconUrl": "https://arcraiders.wiki/w/images/3/3c/Icon_Mod_Underbarrel.png",
         "options": [
           "Angled Grip I",
           "Vertical Grip I",
@@ -2607,7 +2607,7 @@ window.WEAPON_DATA = {
       },
       {
         "name": "Light Magazine",
-        "iconUrl": "https://arcraiders.wiki/w/images/6/60/Mods_Light-Mag.png",
+        "iconUrl": "https://arcraiders.wiki/w/images/2/29/Icon_Mod_LightMag.png",
         "options": [
           "Extended Light Mag I",
           "Extended Light Mag II",
@@ -2616,7 +2616,7 @@ window.WEAPON_DATA = {
       },
       {
         "name": "Stock",
-        "iconUrl": "https://arcraiders.wiki/w/images/f/f5/Mods_Stock.png",
+        "iconUrl": "https://arcraiders.wiki/w/images/c/c9/Icon_Mod_Stock.png",
         "options": [
           "Stable Stock I",
           "Stable Stock II",
@@ -2634,7 +2634,7 @@ window.WEAPON_DATA = {
     "rarity": "Rare",
     "type": "SMGs",
     "ammoType": "Medium Ammo",
-    "ammoTypeIconUrl": "https://arcraiders.wiki/w/images/b/b6/Ammo_Medium.png",
+    "ammoTypeIconUrl": "https://arcraiders.wiki/w/images/1/11/Icon_Ammo_Medium.png",
     "firingMode": "Fully-Automatic",
     "damage": "6.5",
     "fireRate": "56.7",
@@ -2948,7 +2948,7 @@ window.WEAPON_DATA = {
     "modSlots": [
       {
         "name": "Muzzle",
-        "iconUrl": "https://arcraiders.wiki/w/images/4/4b/Mods_Muzzle.png",
+        "iconUrl": "https://arcraiders.wiki/w/images/3/3f/Icon_Mod_Muzzle.png",
         "options": [
           "Compensator I",
           "Muzzle Brake I",
@@ -2964,7 +2964,7 @@ window.WEAPON_DATA = {
       },
       {
         "name": "Underbarrel",
-        "iconUrl": "https://arcraiders.wiki/w/images/0/01/Mods_Underbarrel.png",
+        "iconUrl": "https://arcraiders.wiki/w/images/3/3c/Icon_Mod_Underbarrel.png",
         "options": [
           "Angled Grip I",
           "Vertical Grip I",
@@ -2977,7 +2977,7 @@ window.WEAPON_DATA = {
       },
       {
         "name": "Light Magazine",
-        "iconUrl": "https://arcraiders.wiki/w/images/6/60/Mods_Light-Mag.png",
+        "iconUrl": "https://arcraiders.wiki/w/images/2/29/Icon_Mod_LightMag.png",
         "options": [
           "Extended Light Mag I",
           "Extended Light Mag II",
@@ -2986,7 +2986,7 @@ window.WEAPON_DATA = {
       },
       {
         "name": "Stock",
-        "iconUrl": "https://arcraiders.wiki/w/images/f/f5/Mods_Stock.png",
+        "iconUrl": "https://arcraiders.wiki/w/images/c/c9/Icon_Mod_Stock.png",
         "options": [
           "Stable Stock I",
           "Stable Stock II",
@@ -3004,7 +3004,7 @@ window.WEAPON_DATA = {
     "rarity": "Epic",
     "type": "SMGs",
     "ammoType": "Light Ammo",
-    "ammoTypeIconUrl": "https://arcraiders.wiki/w/images/a/af/Ammo_Light.png",
+    "ammoTypeIconUrl": "https://arcraiders.wiki/w/images/1/18/Icon_Ammo_Light.png",
     "firingMode": "Fully-Automatic",
     "damage": "6",
     "fireRate": "66.7",
@@ -3318,7 +3318,7 @@ window.WEAPON_DATA = {
     "modSlots": [
       {
         "name": "Muzzle",
-        "iconUrl": "https://arcraiders.wiki/w/images/4/4b/Mods_Muzzle.png",
+        "iconUrl": "https://arcraiders.wiki/w/images/3/3f/Icon_Mod_Muzzle.png",
         "options": [
           "Compensator I",
           "Muzzle Brake I",
@@ -3334,7 +3334,7 @@ window.WEAPON_DATA = {
       },
       {
         "name": "Underbarrel",
-        "iconUrl": "https://arcraiders.wiki/w/images/0/01/Mods_Underbarrel.png",
+        "iconUrl": "https://arcraiders.wiki/w/images/3/3c/Icon_Mod_Underbarrel.png",
         "options": [
           "Angled Grip I",
           "Vertical Grip I",
@@ -3347,7 +3347,7 @@ window.WEAPON_DATA = {
       },
       {
         "name": "Light Magazine",
-        "iconUrl": "https://arcraiders.wiki/w/images/6/60/Mods_Light-Mag.png",
+        "iconUrl": "https://arcraiders.wiki/w/images/2/29/Icon_Mod_LightMag.png",
         "options": [
           "Extended Light Mag I",
           "Extended Light Mag II",
@@ -3356,7 +3356,7 @@ window.WEAPON_DATA = {
       },
       {
         "name": "Stock",
-        "iconUrl": "https://arcraiders.wiki/w/images/f/f5/Mods_Stock.png",
+        "iconUrl": "https://arcraiders.wiki/w/images/c/c9/Icon_Mod_Stock.png",
         "options": [
           "Stable Stock I",
           "Stable Stock II",
@@ -3374,7 +3374,7 @@ window.WEAPON_DATA = {
     "rarity": "Uncommon",
     "type": "Shotguns",
     "ammoType": "Shotgun Ammo",
-    "ammoTypeIconUrl": "https://arcraiders.wiki/w/images/c/cb/Ammo_Shotgun.png",
+    "ammoTypeIconUrl": "https://arcraiders.wiki/w/images/7/7d/Icon_Ammo_Shotgun.png",
     "firingMode": "Pump-Action",
     "damage": "67.5",
     "fireRate": "14",
@@ -3637,7 +3637,7 @@ window.WEAPON_DATA = {
     "modSlots": [
       {
         "name": "Shotgun Muzzle",
-        "iconUrl": "https://arcraiders.wiki/w/images/b/bd/Mods_Shotgun-Muzzle.png",
+        "iconUrl": "https://arcraiders.wiki/w/images/f/fe/Icon_Mod_ShotgunMuzzle.png",
         "options": [
           "Shotgun Choke I",
           "Shotgun Choke II",
@@ -3647,7 +3647,7 @@ window.WEAPON_DATA = {
       },
       {
         "name": "Underbarrel",
-        "iconUrl": "https://arcraiders.wiki/w/images/0/01/Mods_Underbarrel.png",
+        "iconUrl": "https://arcraiders.wiki/w/images/3/3c/Icon_Mod_Underbarrel.png",
         "options": [
           "Angled Grip I",
           "Vertical Grip I",
@@ -3660,7 +3660,7 @@ window.WEAPON_DATA = {
       },
       {
         "name": "Shotgun Magazine",
-        "iconUrl": "https://arcraiders.wiki/w/images/6/66/Mods_Shotgun-Mag.png",
+        "iconUrl": "https://arcraiders.wiki/w/images/c/cc/Icon_Mod_ShotgunMag.png",
         "options": [
           "Extended Shotgun Mag I",
           "Extended Shotgun Mag II",
@@ -3669,7 +3669,7 @@ window.WEAPON_DATA = {
       },
       {
         "name": "Stock",
-        "iconUrl": "https://arcraiders.wiki/w/images/f/f5/Mods_Stock.png",
+        "iconUrl": "https://arcraiders.wiki/w/images/c/c9/Icon_Mod_Stock.png",
         "options": [
           "Stable Stock I",
           "Stable Stock II",
@@ -3687,7 +3687,7 @@ window.WEAPON_DATA = {
     "rarity": "Epic",
     "type": "Shotguns",
     "ammoType": "Shotgun Ammo",
-    "ammoTypeIconUrl": "https://arcraiders.wiki/w/images/c/cb/Ammo_Shotgun.png",
+    "ammoTypeIconUrl": "https://arcraiders.wiki/w/images/7/7d/Icon_Ammo_Shotgun.png",
     "firingMode": "Semi-Automatic",
     "damage": "49.5",
     "fireRate": "26.3",
@@ -3977,7 +3977,7 @@ window.WEAPON_DATA = {
     "modSlots": [
       {
         "name": "Shotgun Muzzle",
-        "iconUrl": "https://arcraiders.wiki/w/images/b/bd/Mods_Shotgun-Muzzle.png",
+        "iconUrl": "https://arcraiders.wiki/w/images/f/fe/Icon_Mod_ShotgunMuzzle.png",
         "options": [
           "Shotgun Choke I",
           "Shotgun Choke II",
@@ -3987,7 +3987,7 @@ window.WEAPON_DATA = {
       },
       {
         "name": "Underbarrel",
-        "iconUrl": "https://arcraiders.wiki/w/images/0/01/Mods_Underbarrel.png",
+        "iconUrl": "https://arcraiders.wiki/w/images/3/3c/Icon_Mod_Underbarrel.png",
         "options": [
           "Angled Grip I",
           "Vertical Grip I",
@@ -4000,7 +4000,7 @@ window.WEAPON_DATA = {
       },
       {
         "name": "Shotgun Magazine",
-        "iconUrl": "https://arcraiders.wiki/w/images/6/66/Mods_Shotgun-Mag.png",
+        "iconUrl": "https://arcraiders.wiki/w/images/c/cc/Icon_Mod_ShotgunMag.png",
         "options": [
           "Extended Shotgun Mag I",
           "Extended Shotgun Mag II",
@@ -4009,7 +4009,7 @@ window.WEAPON_DATA = {
       },
       {
         "name": "Stock",
-        "iconUrl": "https://arcraiders.wiki/w/images/f/f5/Mods_Stock.png",
+        "iconUrl": "https://arcraiders.wiki/w/images/c/c9/Icon_Mod_Stock.png",
         "options": [
           "Stable Stock I",
           "Stable Stock II",
@@ -4027,7 +4027,7 @@ window.WEAPON_DATA = {
     "rarity": "Legendary",
     "type": "Shotguns",
     "ammoType": "Energy Clip",
-    "ammoTypeIconUrl": "https://arcraiders.wiki/w/images/9/95/Ammo_Energy.png",
+    "ammoTypeIconUrl": "https://arcraiders.wiki/w/images/e/e8/Icon_Ammo_Energy.png",
     "firingMode": "Semi-Automatic",
     "damage": "?",
     "fireRate": "?",
@@ -4103,7 +4103,7 @@ window.WEAPON_DATA = {
     "rarity": "Common",
     "type": "Pistols",
     "ammoType": "Light Ammo",
-    "ammoTypeIconUrl": "https://arcraiders.wiki/w/images/a/af/Ammo_Light.png",
+    "ammoTypeIconUrl": "https://arcraiders.wiki/w/images/1/18/Icon_Ammo_Light.png",
     "firingMode": "Slide-Action",
     "damage": "20",
     "fireRate": "9",
@@ -4363,7 +4363,7 @@ window.WEAPON_DATA = {
     "modSlots": [
       {
         "name": "Light Magazine",
-        "iconUrl": "https://arcraiders.wiki/w/images/6/60/Mods_Light-Mag.png",
+        "iconUrl": "https://arcraiders.wiki/w/images/2/29/Icon_Mod_LightMag.png",
         "options": [
           "Extended Light Mag I",
           "Extended Light Mag II",
@@ -4378,7 +4378,7 @@ window.WEAPON_DATA = {
     "rarity": "Uncommon",
     "type": "Pistols",
     "ammoType": "Light Ammo",
-    "ammoTypeIconUrl": "https://arcraiders.wiki/w/images/a/af/Ammo_Light.png",
+    "ammoTypeIconUrl": "https://arcraiders.wiki/w/images/1/18/Icon_Ammo_Light.png",
     "firingMode": "Semi-Automatic",
     "damage": "10",
     "fireRate": "28",
@@ -4609,7 +4609,7 @@ window.WEAPON_DATA = {
     "modSlots": [
       {
         "name": "Muzzle",
-        "iconUrl": "https://arcraiders.wiki/w/images/4/4b/Mods_Muzzle.png",
+        "iconUrl": "https://arcraiders.wiki/w/images/3/3f/Icon_Mod_Muzzle.png",
         "options": [
           "Compensator I",
           "Muzzle Brake I",
@@ -4625,7 +4625,7 @@ window.WEAPON_DATA = {
       },
       {
         "name": "Light Magazine",
-        "iconUrl": "https://arcraiders.wiki/w/images/6/60/Mods_Light-Mag.png",
+        "iconUrl": "https://arcraiders.wiki/w/images/2/29/Icon_Mod_LightMag.png",
         "options": [
           "Extended Light Mag I",
           "Extended Light Mag II",
@@ -4640,7 +4640,7 @@ window.WEAPON_DATA = {
     "rarity": "Rare",
     "type": "Pistols",
     "ammoType": "Medium Ammo",
-    "ammoTypeIconUrl": "https://arcraiders.wiki/w/images/b/b6/Ammo_Medium.png",
+    "ammoTypeIconUrl": "https://arcraiders.wiki/w/images/1/11/Icon_Ammo_Medium.png",
     "firingMode": "Semi-Automatic",
     "damage": "16",
     "fireRate": "36.7",
@@ -4915,7 +4915,7 @@ window.WEAPON_DATA = {
     "modSlots": [
       {
         "name": "Underbarrel",
-        "iconUrl": "https://arcraiders.wiki/w/images/0/01/Mods_Underbarrel.png",
+        "iconUrl": "https://arcraiders.wiki/w/images/3/3c/Icon_Mod_Underbarrel.png",
         "options": [
           "Angled Grip I",
           "Vertical Grip I",
@@ -4928,7 +4928,7 @@ window.WEAPON_DATA = {
       },
       {
         "name": "Medium Magazine",
-        "iconUrl": "https://arcraiders.wiki/w/images/c/c6/Mods_Medium-Mag.png",
+        "iconUrl": "https://arcraiders.wiki/w/images/3/3d/Icon_Mod_MediumMag.png",
         "options": [
           "Extended Medium Mag I",
           "Extended Medium Mag II",
@@ -4943,7 +4943,7 @@ window.WEAPON_DATA = {
     "rarity": "Uncommon",
     "type": "Hand Cannons",
     "ammoType": "Heavy Ammo",
-    "ammoTypeIconUrl": "https://arcraiders.wiki/w/images/e/e8/Ammo_Heavy.png",
+    "ammoTypeIconUrl": "https://arcraiders.wiki/w/images/6/66/Icon_Ammo_Heavy.png",
     "firingMode": "Single-Action",
     "damage": "40",
     "fireRate": "16.3",
@@ -5203,7 +5203,7 @@ window.WEAPON_DATA = {
     "modSlots": [
       {
         "name": "Muzzle",
-        "iconUrl": "https://arcraiders.wiki/w/images/4/4b/Mods_Muzzle.png",
+        "iconUrl": "https://arcraiders.wiki/w/images/3/3f/Icon_Mod_Muzzle.png",
         "options": [
           "Compensator I",
           "Muzzle Brake I",
@@ -5219,7 +5219,7 @@ window.WEAPON_DATA = {
       },
       {
         "name": "Tech Mod",
-        "iconUrl": "https://arcraiders.wiki/w/images/c/cc/Mods_Tech-Mod.png",
+        "iconUrl": "https://arcraiders.wiki/w/images/2/2f/Icon_Mod_TechMod.png",
         "options": [
           "Anvil Splitter"
         ]
@@ -5232,7 +5232,7 @@ window.WEAPON_DATA = {
     "rarity": "Rare",
     "type": "LMGs",
     "ammoType": "Medium Ammo",
-    "ammoTypeIconUrl": "https://arcraiders.wiki/w/images/b/b6/Ammo_Medium.png",
+    "ammoTypeIconUrl": "https://arcraiders.wiki/w/images/1/11/Icon_Ammo_Medium.png",
     "firingMode": "Fully-Automatic",
     "damage": "8",
     "fireRate": "58.3",
@@ -5510,7 +5510,7 @@ window.WEAPON_DATA = {
     "modSlots": [
       {
         "name": "Muzzle",
-        "iconUrl": "https://arcraiders.wiki/w/images/4/4b/Mods_Muzzle.png",
+        "iconUrl": "https://arcraiders.wiki/w/images/3/3f/Icon_Mod_Muzzle.png",
         "options": [
           "Compensator I",
           "Muzzle Brake I",
@@ -5526,7 +5526,7 @@ window.WEAPON_DATA = {
       },
       {
         "name": "Medium Magazine",
-        "iconUrl": "https://arcraiders.wiki/w/images/c/c6/Mods_Medium-Mag.png",
+        "iconUrl": "https://arcraiders.wiki/w/images/3/3d/Icon_Mod_MediumMag.png",
         "options": [
           "Extended Medium Mag I",
           "Extended Medium Mag II",
@@ -5535,7 +5535,7 @@ window.WEAPON_DATA = {
       },
       {
         "name": "Stock",
-        "iconUrl": "https://arcraiders.wiki/w/images/f/f5/Mods_Stock.png",
+        "iconUrl": "https://arcraiders.wiki/w/images/c/c9/Icon_Mod_Stock.png",
         "options": [
           "Stable Stock I",
           "Stable Stock II",
@@ -5553,7 +5553,7 @@ window.WEAPON_DATA = {
     "rarity": "Rare",
     "type": "Sniper Rifles",
     "ammoType": "Medium Ammo",
-    "ammoTypeIconUrl": "https://arcraiders.wiki/w/images/b/b6/Ammo_Medium.png",
+    "ammoTypeIconUrl": "https://arcraiders.wiki/w/images/1/11/Icon_Ammo_Medium.png",
     "firingMode": "Bolt-Action",
     "damage": "45",
     "fireRate": "17.7",
@@ -5828,7 +5828,7 @@ window.WEAPON_DATA = {
     "modSlots": [
       {
         "name": "Muzzle",
-        "iconUrl": "https://arcraiders.wiki/w/images/4/4b/Mods_Muzzle.png",
+        "iconUrl": "https://arcraiders.wiki/w/images/3/3f/Icon_Mod_Muzzle.png",
         "options": [
           "Compensator I",
           "Muzzle Brake I",
@@ -5844,7 +5844,7 @@ window.WEAPON_DATA = {
       },
       {
         "name": "Underbarrel",
-        "iconUrl": "https://arcraiders.wiki/w/images/0/01/Mods_Underbarrel.png",
+        "iconUrl": "https://arcraiders.wiki/w/images/3/3c/Icon_Mod_Underbarrel.png",
         "options": [
           "Angled Grip I",
           "Vertical Grip I",
@@ -5857,7 +5857,7 @@ window.WEAPON_DATA = {
       },
       {
         "name": "Medium Magazine",
-        "iconUrl": "https://arcraiders.wiki/w/images/c/c6/Mods_Medium-Mag.png",
+        "iconUrl": "https://arcraiders.wiki/w/images/3/3d/Icon_Mod_MediumMag.png",
         "options": [
           "Extended Medium Mag I",
           "Extended Medium Mag II",
@@ -5866,7 +5866,7 @@ window.WEAPON_DATA = {
       },
       {
         "name": "Stock",
-        "iconUrl": "https://arcraiders.wiki/w/images/f/f5/Mods_Stock.png",
+        "iconUrl": "https://arcraiders.wiki/w/images/c/c9/Icon_Mod_Stock.png",
         "options": [
           "Stable Stock I",
           "Stable Stock II",
@@ -5884,7 +5884,7 @@ window.WEAPON_DATA = {
     "rarity": "Legendary",
     "type": "Sniper Rifles",
     "ammoType": "Energy Clip",
-    "ammoTypeIconUrl": "https://arcraiders.wiki/w/images/9/95/Ammo_Energy.png",
+    "ammoTypeIconUrl": "https://arcraiders.wiki/w/images/e/e8/Icon_Ammo_Energy.png",
     "firingMode": "Bolt-Action",
     "damage": "60",
     "fireRate": "7.7",
@@ -5960,7 +5960,7 @@ window.WEAPON_DATA = {
     "rarity": "Epic",
     "type": "Specials",
     "ammoType": "Launcher Ammo",
-    "ammoTypeIconUrl": "https://arcraiders.wiki/w/images/7/7e/Ammo_Launcher.png",
+    "ammoTypeIconUrl": "https://arcraiders.wiki/w/images/f/fb/Icon_Ammo_Launcher.png",
     "firingMode": "Pump-Action",
     "damage": "100",
     "fireRate": "20.3",
@@ -6226,7 +6226,7 @@ window.WEAPON_DATA = {
     "modSlots": [
       {
         "name": "Underbarrel",
-        "iconUrl": "https://arcraiders.wiki/w/images/0/01/Mods_Underbarrel.png",
+        "iconUrl": "https://arcraiders.wiki/w/images/3/3c/Icon_Mod_Underbarrel.png",
         "options": [
           "Angled Grip I",
           "Vertical Grip I",
@@ -6239,7 +6239,7 @@ window.WEAPON_DATA = {
       },
       {
         "name": "Stock",
-        "iconUrl": "https://arcraiders.wiki/w/images/f/f5/Mods_Stock.png",
+        "iconUrl": "https://arcraiders.wiki/w/images/c/c9/Icon_Mod_Stock.png",
         "options": [
           "Stable Stock I",
           "Stable Stock II",
@@ -6257,7 +6257,7 @@ window.WEAPON_DATA = {
     "rarity": "Legendary",
     "type": "Specials",
     "ammoType": "Energy Clip",
-    "ammoTypeIconUrl": "https://arcraiders.wiki/w/images/9/95/Ammo_Energy.png",
+    "ammoTypeIconUrl": "https://arcraiders.wiki/w/images/e/e8/Icon_Ammo_Energy.png",
     "firingMode": "Fully-Automatic",
     "damage": "8",
     "fireRate": "33.3",

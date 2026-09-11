@@ -28,6 +28,23 @@ selected upgrade level. No weapon statistics, levels, mods or calculations chang
 Historical raw captures retain their old links; an explicit snapshot rebuild
 must review image references as well as statistics before replacing these inputs.
 
+### Attachment and ammo icon repair — 2026-09-10
+
+Replaced obsolete `Mods ...` and `Ammo ...` filenames with the eight `Icon_Mod_*`
+and six `Icon_Ammo_*` files linked by the same Weapons revision 39658 above.
+These changes repair empty slots, slot menus, ammo labels and shared tracker
+icons. Only image references changed. All 74 distinct optimizer image URLs
+(weapons, mods, slots, ammo and currency) returned successful image responses
+after the repair.
+
+The historical `Extended Barrel` snapshot used the now-missing
+`https://arcraiders.wiki/w/images/2/2f/Extended_Barrel.png`. Its [source page,
+revision 35864](https://arcraiders.wiki/w/index.php?title=Extended_Barrel&oldid=35864)
+now disambiguates tiers I–III. The historical attachment uses the generic muzzle
+icon instead of implying it matches one of those current tiers; its name, stats
+and calculations remain unchanged. The original April snapshot timestamp still
+refers to gameplay data, not this September image-reference repair.
+
 ### Raw captures (`raw/`)
 
 `items.txt`, `weapons.txt`, and `workshops.txt` are HTML table captures from the

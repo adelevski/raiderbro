@@ -29,15 +29,15 @@
     "Raider Tokens": "Icon Raider Token.png"
   },
   "ammoTypes": {
-    "Energy Clip": "Ammo Energy.png",
-    "Heavy Ammo": "Ammo Heavy.png",
-    "Launcher Ammo": "Ammo Launcher.png",
-    "Light Ammo": "Ammo Light.png",
-    "Medium Ammo": "Ammo Medium.png",
-    "Shotgun Ammo": "Ammo Shotgun.png"
+    "Energy Clip": "Icon_Ammo_Energy.png",
+    "Heavy Ammo": "Icon_Ammo_Heavy.png",
+    "Launcher Ammo": "Icon_Ammo_Launcher.png",
+    "Light Ammo": "Icon_Ammo_Light.png",
+    "Medium Ammo": "Icon_Ammo_Medium.png",
+    "Shotgun Ammo": "Icon_Ammo_Shotgun.png"
   },
   "itemCategories": {
-    "Ammunition": "Ammo Light.png",
+    "Ammunition": "Icon_Ammo_Light.png",
     "Augment": "Icon Augment.png",
     "Basic Material": "Icon Material.png",
     "Key": "Icon Key.png",

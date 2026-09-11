@@ -2389,7 +2389,7 @@ window.ITEM_DATA = {
     "sellPrice": "200",
     "stackSize": "5",
     "category": "Ammunition",
-    "categoryIconUrl": "https://arcraiders.wiki/w/images/a/af/Ammo_Light.png",
+    "categoryIconUrl": "https://arcraiders.wiki/w/images/1/18/Icon_Ammo_Light.png",
     "sellPriceIconUrl": "https://arcraiders.wiki/w/images/7/7b/Icon_Coins.png",
     "recycleStatus": "Cannot be recycled"
   },
@@ -3328,7 +3328,7 @@ window.ITEM_DATA = {
     "sellPrice": "12",
     "stackSize": "60",
     "category": "Ammunition",
-    "categoryIconUrl": "https://arcraiders.wiki/w/images/a/af/Ammo_Light.png",
+    "categoryIconUrl": "https://arcraiders.wiki/w/images/1/18/Icon_Ammo_Light.png",
     "sellPriceIconUrl": "https://arcraiders.wiki/w/images/7/7b/Icon_Coins.png",
     "recycleStatus": "Cannot be recycled"
   },
@@ -3816,7 +3816,7 @@ window.ITEM_DATA = {
     "sellPrice": "250",
     "stackSize": "24",
     "category": "Ammunition",
-    "categoryIconUrl": "https://arcraiders.wiki/w/images/a/af/Ammo_Light.png",
+    "categoryIconUrl": "https://arcraiders.wiki/w/images/1/18/Icon_Ammo_Light.png",
     "sellPriceIconUrl": "https://arcraiders.wiki/w/images/7/7b/Icon_Coins.png",
     "recycleStatus": "Cannot be recycled"
   },
@@ -3930,7 +3930,7 @@ window.ITEM_DATA = {
     "sellPrice": "4",
     "stackSize": "100",
     "category": "Ammunition",
-    "categoryIconUrl": "https://arcraiders.wiki/w/images/a/af/Ammo_Light.png",
+    "categoryIconUrl": "https://arcraiders.wiki/w/images/1/18/Icon_Ammo_Light.png",
     "sellPriceIconUrl": "https://arcraiders.wiki/w/images/7/7b/Icon_Coins.png",
     "recycleStatus": "Cannot be recycled"
   },
@@ -4276,7 +4276,7 @@ window.ITEM_DATA = {
     "sellPrice": "6",
     "stackSize": "80",
     "category": "Ammunition",
-    "categoryIconUrl": "https://arcraiders.wiki/w/images/a/af/Ammo_Light.png",
+    "categoryIconUrl": "https://arcraiders.wiki/w/images/1/18/Icon_Ammo_Light.png",
     "sellPriceIconUrl": "https://arcraiders.wiki/w/images/7/7b/Icon_Coins.png",
     "recycleStatus": "Cannot be recycled"
   },
@@ -6152,7 +6152,7 @@ window.ITEM_DATA = {
     "sellPrice": "20",
     "stackSize": "20",
     "category": "Ammunition",
-    "categoryIconUrl": "https://arcraiders.wiki/w/images/a/af/Ammo_Light.png",
+    "categoryIconUrl": "https://arcraiders.wiki/w/images/1/18/Icon_Ammo_Light.png",
     "sellPriceIconUrl": "https://arcraiders.wiki/w/images/7/7b/Icon_Coins.png",
     "recycleStatus": "Cannot be recycled"
   },

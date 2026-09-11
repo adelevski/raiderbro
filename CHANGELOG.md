@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.2.4 — 2026-09-10
+
+- Repair eight attachment-slot and six ammo icon references across both tools.
+- Use a generic muzzle icon for the historical Extended Barrel attachment,
+  whose original artwork is no longer served. Preserve all saved stats.
+
 ## 0.2.3 — 2026-09-10
 
 - Give generated datasets content-based URLs so browsers fetch updated weapon
