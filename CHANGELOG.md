@@ -1,0 +1,12 @@
+# Changelog
+
+## 0.2.0 — 2026-09-10
+
+- Transfer the existing repository to snowball and publish both tools on GitHub
+  Pages with their existing design, snapshots and progress storage keys.
+- Resolve generated-data drift from the September merge: remove the obsolete
+  build-time timestamp through the deterministic generator. No records changed.
+- Add an original crate icon, favicons, source/data attribution and honest
+  snapshot/calculation limits, plus reproducible deployment instructions.
+
+Earlier releases and their notes remain in GitHub history.

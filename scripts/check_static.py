@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import subprocess
+import json
 from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import unquote, urlsplit
@@ -30,6 +31,12 @@ def is_local_reference(reference: str) -> bool:
 
 
 def main() -> None:
+    for name in ("LICENSE", "THIRD-PARTY-NOTICES.md"):
+        if (APP_DIR / name).read_bytes() != (ROOT / name).read_bytes():
+            raise SystemExit(f"Stale public notice: {name}; run npm run build")
+    version = json.loads((ROOT / "package.json").read_text())["version"]
+    if json.loads((APP_DIR / "version.json").read_text()) != {"version": version}:
+        raise SystemExit("Stale public version; run npm run build")
     missing: list[str] = []
     html_files = sorted(APP_DIR.rglob("*.html"))
     for html_file in html_files:

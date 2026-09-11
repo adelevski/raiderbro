@@ -1,6 +1,6 @@
 # Data provenance
 
-Raiderbro separates live-source refreshes from reproducible builds so ordinary
+raiderbro separates live-source refreshes from reproducible builds so ordinary
 validation never changes with the network.
 
 ## Data classes
@@ -45,14 +45,20 @@ The repository does not vendor game or wiki images. Generated records and HTML
 refer to images hosted by `arcraiders.wiki` and an ARC Raiders CMS host. Availability,
 cache behavior, and permission to hotlink those assets remain external concerns.
 
-## Unresolved licensing decisions
+## Attribution and scope
 
-- Project-authored software uses [MIT](../LICENSE). Data under this directory,
-  generated browser datasets, wiki-derived fixtures, game imagery, and trademarks
-  are excluded from that code license; no new data/content license is selected.
-- The reuse terms for community-wiki table content and image URLs need a human
-  review before choosing a data/content license.
-- ARC Raiders names, artwork, and trademarks belong to their respective owners;
-  this project has no documented affiliation or endorsement.
-- Future refreshes should record page URL, retrieval time, and ideally revision ID
-  for every raw source snapshot.
+The wiki footer and general disclaimer were reviewed September 10, 2026. They
+identify community contributions as CC BY-SA 4.0 unless otherwise noted, and
+separately reserve game content/materials and marks to Embark Studios AB.
+[Third-party notices](../THIRD-PARTY-NOTICES.md) preserve those terms, source links,
+and a description of adaptations. The public About page carries the attribution.
+This records the source's terms; it does not grant new rights over game assets.
+
+The launch retains existing snapshots and external image links. No data was
+refetched or relicensed as MIT. The removed `generatedAt` field was a stale
+build-time timestamp restored by the recent merge, not a verified source date;
+regenerating from the committed snapshots changes no records.
+
+Future refreshes must record page URLs, retrieval dates and preferably revision
+IDs. Review source-specific exceptions before importing new content. Keep the
+software license separate from wiki contributions, game imagery and trademarks.

@@ -62,7 +62,7 @@
     if (toolFrame.getAttribute("src") !== activeTool.page) {
       toolFrame.setAttribute("src", activeTool.page);
     }
-    document.title = "Raiderbro | " + activeTool.label;
+    document.title = "raiderbro | " + activeTool.label;
   }
 
   window.addEventListener("hashchange", renderActiveTool);

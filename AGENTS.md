@@ -25,8 +25,8 @@ deterministic, and use committed snapshots; there is no server or runtime API ke
 - Keep tracker-state validation and local persistence compatible. Explain
   consequential comparisons and calculations in the interface.
 - Deployment root is `app/`. Project-authored software uses [MIT](LICENSE);
-  wiki/game data and hotlinked imagery retain separate terms and still need a
-  provenance/redistribution decision before public deployment.
+  wiki/game data and hotlinked imagery retain the separate terms documented in
+  `THIRD-PARTY-NOTICES.md` and `data/README.md`. Keep attribution in public builds.
 
 ## Working agreements
 
@@ -42,5 +42,6 @@ deterministic, and use committed snapshots; there is no server or runtime API ke
 - Test changed behavior with the relevant checks below. Use offline fixtures
   for automated tests; report skipped checks and unresolved release blockers.
 - Before publishing, inspect the staged diff and confirm the target remote,
-  branch, source license, and data provenance. Do not change repository visibility
-  or rewrite published history as part of routine cleanup.
+  branch, source license, and data provenance. The owner authorized the public
+  snowball launch; preserve its Git history. `npm run build` also copies notices
+  and version metadata into `app/`. CI deploys only that directory.

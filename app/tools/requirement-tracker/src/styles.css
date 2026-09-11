@@ -1300,3 +1300,6 @@ button.secondary {
   }
 
 }
+
+.public-notice { padding: 16px 24px; font-size: 14px; color: #b8c8d8; }
+.public-notice a { color: inherit; text-underline-offset: 3px; }

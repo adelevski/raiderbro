@@ -1,8 +1,12 @@
 # raiderbro
 
+[Open raiderbro](https://snowball-projects.github.io/raiderbro/) · [snowball](https://snowball-projects.github.io/)
+
 Static ARC Raiders utilities for tracking upgrade requirements and comparing
-weapon builds. The deployed app has no server, database, package dependencies,
-or runtime API key.
+weapon builds. The browser app has no server, database, package dependencies,
+or runtime API key. Progress stays in local browser storage; no game account
+integration or telemetry is implemented. External image hosts and GitHub Pages
+receive ordinary resource requests.
 
 ## Requirements
 
@@ -71,8 +75,20 @@ build-time secrets or server functions are needed. Run `npm run check` before
 publishing. The application hotlinks wiki/game imagery, so deployed clients need
 network access to those external hosts.
 
-See [data/README.md](data/README.md) for data provenance and unresolved
-redistribution questions before public deployment.
+The canonical repository is `snowball-projects/raiderbro`, transferred with its
+history from `adelevski`. Pushes to `main` run checks and deploy `app/` through
+GitHub Actions. Set Pages source to GitHub Actions; a manual workflow dispatch
+can redeploy it. No Render service is needed. Verify the workflow and live
+`version.json` before tagging releases.
+
+Use the tracker’s Export/Import Progress controls to migrate from local hosting.
+Browser storage does not automatically follow a different hostname or port.
+Storage keys are unchanged; existing progress on the same origin remains compatible.
+
+See [data provenance](data/README.md) and [third-party notices](THIRD-PARTY-NOTICES.md).
+The launch preserves 374 items, 10 tracker cards, 23 weapons and 37 mods; it is
+not a source refresh. Weapon metadata dates to April 16, 2026 and other snapshot
+dates are incomplete. Do not describe this as current game-balance data.
 
 ## License and third-party material
 
@@ -81,3 +97,11 @@ The code license does not cover wiki/game content under `data/`, browser dataset
 in `app/generated/`, wiki-derived test fixtures, hotlinked imagery, names, or
 trademarks. Those materials retain their existing rights and terms; selecting MIT
 for the code does not resolve their public redistribution requirements.
+
+## Next iteration
+
+- Review snapshots against current game patches with recorded page revisions.
+- Extend behavioral coverage for weapon comparisons and real browser interactions.
+- Improve handling of unavailable browser storage and image failures.
+- Keep the existing tracker and comparison experience; this launch is packaging
+  and preservation, not a redesign or a new game-data validation claim.

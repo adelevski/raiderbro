@@ -1,13 +1,13 @@
 {
   "name": "raiderbro",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "private": true,
   "description": "Static ARC Raiders requirement-tracking and weapon-comparison tools.",
   "engines": {
     "node": ">=22"
   },
   "scripts": {
-    "build": "python3 scripts/convert_wiki_tables.py",
+    "build": "python3 scripts/convert_wiki_tables.py && python3 scripts/prepare_public.py",
     "serve": "python3 -m http.server 8000 --directory app",
     "test": "python3 -m unittest discover -s tests -p 'test_*.py' && node --test tests/*.test.js",
     "validate:data": "python3 scripts/validate_data.py",
