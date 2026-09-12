@@ -105,3 +105,5 @@ for the code does not resolve their public redistribution requirements.
 - Improve handling of unavailable browser storage and image failures.
 - Keep the existing tracker and comparison experience; this launch is packaging
   and preservation, not a redesign or a new game-data validation claim.
+
+[Operations](https://snowball-projects.github.io/operations/#raiderbro)
