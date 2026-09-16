@@ -8,12 +8,10 @@ or runtime API key. Progress stays in local browser storage; no game account
 integration or telemetry is implemented. External image hosts and GitHub Pages
 receive ordinary resource requests.
 
-## Requirements
+## Run
 
-- Python 3.11 or newer (data conversion and validation; standard library only)
-- Node.js 22 or newer (JavaScript tests and syntax checks)
-
-## Quick start
+Python 3.11 or newer (data conversion and validation; standard library only)
+and Node.js 22 or newer (JavaScript tests and syntax checks).
 
 ```bash
 npm ci
