@@ -1,6 +1,6 @@
 # raiderbro
 
-[Open raiderbro](https://snowball-projects.github.io/raiderbro/) · [snowball](https://snowball-projects.github.io/)
+[Open raiderbro](https://adelevski.github.io/raiderbro/)
 
 Static ARC Raiders utilities for tracking upgrade requirements and comparing
 weapon builds. The browser app has no server, database, package dependencies,
@@ -73,7 +73,7 @@ build-time secrets or server functions are needed. Run `npm run check` before
 publishing. The application hotlinks wiki/game imagery, so deployed clients need
 network access to those external hosts.
 
-The canonical repository is `snowball-projects/raiderbro`, transferred with its
+The canonical repository is `adelevski/raiderbro`, transferred with its
 history from `adelevski`. Pushes to `main` run checks and deploy `app/` through
 GitHub Actions. Set Pages source to GitHub Actions; a manual workflow dispatch
 can redeploy it. No Render service is needed. Verify the workflow and live
@@ -104,4 +104,3 @@ for the code does not resolve their public redistribution requirements.
 - Keep the existing tracker and comparison experience; this launch is packaging
   and preservation, not a redesign or a new game-data validation claim.
 
-[Operations](https://snowball-projects.github.io/operations/#raiderbro)

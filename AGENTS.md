@@ -50,8 +50,7 @@ key.
 
 ## Stewardship
 
-- Write `raiderbro` and `snowball` in lowercase. Product direction remains with
-  its founder, Nas Delevski. Do not invent product categories.
+- Write `raiderbro` in lowercase. Do not invent product categories.
 - Project-authored software uses [MIT](LICENSE). Wiki and game data and
   hotlinked imagery retain the separate terms documented in
   `THIRD-PARTY-NOTICES.md` and `data/README.md`. Keep attribution in public

@@ -32,8 +32,8 @@ artifact. Their ownership, availability and terms remain with their respective
 owners. Attribution is not a blanket permission to reuse game assets in other
 contexts.
 
-The app icon, favicons and snowball project-card image reuse the ARC Raiders
+The app icon and favicons reuse the ARC Raiders
 stripe artwork in the circular framing from raiderbro’s original interface.
 Source: [official stripe asset](https://assets.arcraiders.com/static/stripes/stripes.png),
 retrieved September 10, 2026. The artwork belongs to Embark Studios AB and is
-excluded from the software license. See [icon provenance](https://github.com/snowball-projects/raiderbro/blob/main/assets/README.md).
+excluded from the software license. See [icon provenance](https://github.com/adelevski/raiderbro/blob/main/assets/README.md).
