@@ -4,7 +4,7 @@
   "private": true,
   "description": "Static ARC Raiders requirement-tracking and weapon-comparison tools.",
   "engines": {
-    "node": ">=22"
+    "node": ">=24 <25"
   },
   "scripts": {
     "build": "python3 scripts/convert_wiki_tables.py && python3 scripts/prepare_public.py",

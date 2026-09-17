@@ -10,8 +10,8 @@ receive ordinary resource requests.
 
 ## Run
 
-Python 3.11 or newer (data conversion and validation; standard library only)
-and Node.js 22 or newer (JavaScript tests and syntax checks).
+Python 3.12 or newer (data conversion and validation; standard library only)
+and Node.js 24 or newer (JavaScript tests and syntax checks).
 
 ```bash
 npm ci

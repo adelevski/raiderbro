@@ -18,7 +18,7 @@ key.
 
 ## Development and verification
 
-- Use Python 3.11 or newer and Node.js 22 or newer.
+- Use Python 3.12 or newer and Node.js 24 or newer.
 - Run `npm ci`, then `npm run check` for parser and state tests, data
   validation, generated-output consistency, JavaScript syntax, and local static
   references.
